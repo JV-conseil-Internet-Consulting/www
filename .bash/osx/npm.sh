@@ -34,5 +34,5 @@ _jvcl_::npm_package_version() {
 
 if _jvcl_::brew_install_formula "node"; then
   _jvcl_::update_npm
-  _jvcl_::webpack
+  # _jvcl_::webpack
 fi
