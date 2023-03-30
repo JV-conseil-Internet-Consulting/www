@@ -19,6 +19,7 @@ Mar 30 2023
 * Minor adjustments
 * Updated dependencies
 * Mastodon icomoon added
+* meta property="og:image" added
 
 ## v9.1.6
 
