@@ -4,8 +4,6 @@
 
 <img src="https://user-images.githubusercontent.com/8126807/179803740-189004f1-938a-4834-a144-52a9d7a7988c.png" width="100%" alt="Full Stack Developer • Web App Architect • Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) • Paris, France 🇫🇷">
 
----
-
 [![Django 4.1.7](https://img.shields.io/badge/Django-4-green)][Django]
 [![PostgreSQL 15](https://img.shields.io/badge/PostgreSQL-15-green.svg)][PostgreSQL]
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-green)][Python]
