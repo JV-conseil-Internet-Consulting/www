@@ -73,7 +73,7 @@
     "minisearch": "^3.3.0",
     "npm": "^9.6.2",
     "rxjs": "^7.8.0",
-    "scroll-into-view-if-needed": "^2.2.31",
+    "scroll-into-view-if-needed": "^3.0.6",
     "tippy.js": "^6.3.7",
     "tslib": "^2.5.0",
     "web-animations-js": "^2.3.2",
