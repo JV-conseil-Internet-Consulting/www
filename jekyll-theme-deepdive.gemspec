@@ -8,12 +8,12 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://www.jv-conseil.net/"
   spec.license       = "EUPL-1.2"
   spec.metadata = {
-    "bug_tracker_uri"   => "https://github.com/JV-conseil-Internet-Consulting/www/issues",
-    "changelog_uri"     => "https://hydejack.com/changelog/",
-    "documentation_uri" => "https://hydejack.com/docs/",
-    "homepage_uri"      => "https://www.jv-conseil.net/",
-    "source_code_uri"   => "https://github.com/JV-conseil-Internet-Consulting/www/",
-    "github_repo"       => "ssh://github.com/JV-conseil-Internet-Consulting/www"
+    "bug_tracker_uri"   => "https://github.com/JV-conseil/jekyll-theme-deepdive/issues",
+    "changelog_uri"     => "https://jv-conseil.github.io/jekyll-theme-deepdive/CHANGELOG/",
+    "documentation_uri" => "https://jv-conseil.github.io/jekyll-theme-deepdive/docs/",
+    "homepage_uri"      => "https://jv-conseil.github.io/jekyll-theme-deepdive/",
+    "source_code_uri"   => "https://github.com/JV-conseil/jekyll-theme-deepdive/",
+    "github_repo"       => "ssh://github.com/JV-conseil/jekyll-theme-deepdive"
   }
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|_layouts|_includes|_sass|_config.yml|README|LICENSE|NOTICE|CHANGELOG)}i) }
