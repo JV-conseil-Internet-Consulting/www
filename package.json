@@ -69,7 +69,7 @@
     "dom4": "^2.1.6",
     "intersection-observer": "^0.12.2",
     "kv-storage-polyfill": "^2.0.0",
-    "lit-html": "^1.4.1",
+    "lit-html": "^2.7.0",
     "minisearch": "^3.3.0",
     "npm": "^9.6.2",
     "rxjs": "^7.8.0",
