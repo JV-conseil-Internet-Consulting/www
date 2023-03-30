@@ -55,12 +55,14 @@ e(t)
 {% endcomment %}
 
 <script>
-  !(function (window, document) {
-    'use strict';
+  document.getElementById('_pushState').addEventListener('hy-push-state-load', function (e) {
+    !(function () {
+      'use strict';
 
-    /** <span id="currentYear">2021</span> */
-    const date = new Date();
-    const copyrightEndYear = document.getElementById('copyrightEndYear');
-    copyrightEndYear.innerHTML = date.getFullYear();
-  })(window, document);
+      /** <span id="currentYear">2021</span> */
+      const date = new Date();
+      const copyrightEndYear = document.getElementById('copyrightEndYear');
+      copyrightEndYear.innerHTML = date.getFullYear();
+    })();
+  });
 </script>
