@@ -18,5 +18,6 @@
 
   /** <span id="currentYear">2021</span> */
   const date = new Date();
-  document.getElementById('copyrightEndYear').text(date.getFullYear());
+  const copyrightEndYear = document.getElementById('copyrightEndYear');
+  copyrightEndYear.innerHTML = date.getFullYear();
 })(window, document);
