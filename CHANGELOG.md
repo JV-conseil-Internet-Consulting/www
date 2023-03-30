@@ -18,6 +18,7 @@ Mar 30 2023
 * Source filetype converted from `.html` to `.liquid`
 * Minor adjustments
 * Updated dependencies
+* Mastodon icomoon added
 
 ## v9.1.6
 
