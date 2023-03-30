@@ -7,7 +7,7 @@
 // During development you can run `npm run watch:css`
 // to continuosly rebuild this file.
 
-// Copyright (c) 2017 JV conseil <https://www.jv-conseil.net/>
+// Copyright (c) 2023 JV conseil <https://www.jv-conseil.net/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -27,11 +27,11 @@ $navbar-height: 5rem;
 
 
 .navbar {
-//   @extend .color-transition; 
+//   @extend .color-transition;
   > .content {
-    
 
-    
+
+
     $shadow-padding: 3rem;
     &::before {
       content: "";
@@ -44,10 +44,10 @@ $navbar-height: 5rem;
       box-shadow: 0 0 2rem rgba(0,0,0,0.25);
       z-index: -1;
     }
-    
+
   }
 
-  
+
   &.fixed-top {
     > .content {
       &::before {
@@ -63,7 +63,7 @@ $navbar-height: 5rem;
       }
     }
   }
-  
+
 }
 
 
