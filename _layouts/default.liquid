@@ -1,5 +1,5 @@
 ---
-# Copyright (c) 2018 JV conseil <https://www.jv-conseil.net/>
+# Copyright (c) 2023 JV conseil <https://www.jv-conseil.net/>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,28 +21,28 @@ layout: base
 
 <article class="page" role="article">
   <header>
-    <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
+    <h1 class="page-title">{{ page.title | default: strings.home | default: "Home" }}</h1>
     {% include components/message.liquid text=page.description hide=page.hide_description %}
   </header>
 
   {{ content }}
 
-  <hr class="dingbat related"/>
+  <hr class="dingbat related" />
 
   {% if site.posts.size > 0 %}
-    <h2 class="hr-bottom">{{ strings.posts | default:"Posts" }}</h2>
+    <h2 class="hr-bottom">{{ strings.posts | default: "Posts" }}</h2>
     <ul class="related-posts">
-      {% for post in site.posts limit:5 %}
+      {% for post in site.posts limit: 5 %}
         {% include_cached components/post-list-item.liquid post=post %}
       {% endfor %}
     </ul>
   {% endif %}
 
-  {% assign pages = site.html_pages | where:"layout","page" | where_exp:"page","page.sitemap != false" %}
+  {% assign pages = site.html_pages | where: "layout", "page" | where_exp: "page", "page.sitemap != false" %}
   {% if pages.size > 0 %}
-    <h2 class="hr-bottom">{{ strings.pages | default:"Pages" }}</h2>
+    <h2 class="hr-bottom">{{ strings.pages | default: "Pages" }}</h2>
     <ul class="related-posts">
-      {% for page in pages limit:5 %}
+      {% for page in pages limit: 5 %}
         {% if page.layout == 'page' %}
           <li class="h4">
             <a href="{{ page.url | relative_url }}" class="flip-title">
