@@ -167,7 +167,6 @@ defaults:
     values:
       layout:          plain
       sitemap:         false
-      toc:             true
 
   # Don't include site verification file(for google) in the sitemap
   - scope:
