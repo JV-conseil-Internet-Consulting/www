@@ -23,8 +23,8 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 hy-push-state a {
-  color: var(--body-color);
-
+  color: var(--body-color); 
+  
   @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
     text-decoration: none;
     border-bottom: 2px solid;
@@ -35,27 +35,27 @@ hy-push-state a {
     text-underline-offset: .35rem;
     text-decoration-thickness: 2px;
   }
+  
 
+  
 
-
-
-
+  
   &.no-hover {
     border-bottom: none;
     text-decoration-thickness: unset;
     text-underline-offset: unset;
   }
-
+  
 }
 
 .content a:not(.btn):not(.no-hover) {
-
+  
   @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
     text-decoration-color: var(--accent-color-faded);
   }
   border-color: var(--accent-color-faded);
-
-
+  
+  
 }
 
 
