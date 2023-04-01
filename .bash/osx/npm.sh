@@ -21,6 +21,7 @@ _jvcl_::update_npm() {
 
 _jvcl_::webpack() {
   npm run format
+  # npm run dev
   npm run build
 }
 
