@@ -64,7 +64,7 @@
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "abortcontroller-polyfill": "^1.7.5",
     "broadcastchannel-polyfill": "^1.0.1",
-    "core-js": "^3.29.1",
+    "core-js": "^2.6.12",
     "create-element-x": "^1.2.0",
     "dom4": "^2.1.6",
     "intersection-observer": "^0.12.2",
