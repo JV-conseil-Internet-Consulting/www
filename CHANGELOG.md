@@ -29,6 +29,24 @@ Mar 30 2023
 * 'mapTo' is deprecated use map instead: map(() => value)
 * Observable's toPromise() method is deprecated
 * It is recommended to either pass an Object or an Array to 'combineLatest' operators
+* Removed unusued npm dependencies with `npx depcheck --detailed`
+
+  ```json
+  "dependencies": {
+      "@webcomponents/webcomponentsjs": "^2.8.0",
+      "dom4": "^2.1.6",
+      "kv-storage-polyfill": "^2.0.0",
+      "lit-html": "^1.4.1",
+      "minisearch": "^6.0.1",
+      "scroll-into-view-if-needed": "^2.2.31",
+      "tslib": "^2.5.0",
+  },
+  "devDependencies": {
+      "json2yaml": "^1.1.0",
+      "re-template-tag": "^2.0.1",
+  }
+  ```
+
 * LICENSE.md with toc
 
 ## v9.1.6

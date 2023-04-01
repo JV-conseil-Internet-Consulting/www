@@ -35,7 +35,7 @@
 <meta property="twitter:title" content="CHANGELOG" />
 <meta name="google-site-verification" content="1pTCDpV_U3xrS7x86hcODGIIslvs5EI8Hkf9Xr12htI" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"JV conseil"},"dateModified":"2023-04-01T20:33:40+02:00","description":"Full Stack Developer • Web App Architect Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) Greater Paris Metropolitan Region, France 🇫🇷","headline":"CHANGELOG","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"JV conseil"},"url":"http://localhost:4000/CHANGELOG.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"JV conseil"},"dateModified":"2023-04-01T21:13:10+02:00","description":"Full Stack Developer • Web App Architect Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) Greater Paris Metropolitan Region, France 🇫🇷","headline":"CHANGELOG","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"JV conseil"},"url":"http://localhost:4000/CHANGELOG.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -106,7 +106,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2023-04-01T21:11:07+02:00',
+    INDEX_KEY: 'index--2023-04-01T23:29:41+02:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -435,6 +435,25 @@
   <li>‘mapTo’ is deprecated use map instead: map(() =&gt; value)</li>
   <li>Observable’s toPromise() method is deprecated</li>
   <li>It is recommended to either pass an Object or an Array to ‘combineLatest’ operators</li>
+  <li>
+    <p>Removed unusued npm dependencies with <code class="language-plaintext highlighter-rouge">npx depcheck --detailed</code></p>
+
+    <div class="language-json highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@webcomponents/webcomponentsjs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.8.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"dom4"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.1.6"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"kv-storage-polyfill"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.0.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"lit-html"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.4.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"minisearch"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^6.0.1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"scroll-into-view-if-needed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.2.31"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"tslib"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.5.0"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="nl">"devDependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"json2yaml"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"re-template-tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^2.0.1"</span><span class="p">,</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
   <li>LICENSE.md with toc</li>
 </ul>
 

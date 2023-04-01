@@ -64,6 +64,6 @@ assignees: "JV-conseil"
 
 <!-- links -->
 
-[discussions]: https://github.com/JV-conseil/jekyll-theme-read-the-docs/discussions
-[issues]: https://github.com/JV-conseil/jekyll-theme-read-the-docs/issues
-[latest]: https://github.com/JV-conseil/jekyll-theme-read-the-docs/releases/latest
+[discussions]: https://github.com/JV-conseil/jekyll-theme-deepdive/discussions
+[issues]: https://github.com/JV-conseil/jekyll-theme-deepdive/issues
+[latest]: https://github.com/JV-conseil/jekyll-theme-deepdive/releases/latest
