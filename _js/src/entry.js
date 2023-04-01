@@ -13,7 +13,9 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import '@babel/polyfill';
+// import '@babel/polyfill';
+
+import 'core-js/stable';
 
 import '../lib/modernizr-custom';
 import { hasFeatures } from './common';

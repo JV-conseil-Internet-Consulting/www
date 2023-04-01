@@ -22,8 +22,9 @@ Mar 30 2023
 * meta property="og:image" added
 * Bump yargs from 16.2.0 to 17.7.1
 * Bump minisearch from 3.3.0 to 6.0.1
-* LICENSE.md with toc
 * Bump webpack from 4.46.0 to 5.77.0
+* Bump core-js from 2.6.12 to 3.29.1
+* LICENSE.md with toc
 
 ## v9.1.6
 

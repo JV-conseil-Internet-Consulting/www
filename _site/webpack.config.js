@@ -3,6 +3,7 @@ const { resolve } = require('path');
 
 const { EnvironmentPlugin } = require('webpack');
 const WorkerPlugin = require('worker-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const { merge } = require('webpack-merge');
 const {
@@ -46,7 +47,8 @@ const envConfig = (() => {
 const sharedPreset = {
   modules: false,
   useBuiltIns: 'entry',
-  corejs: 2,
+  // useBuiltIns: 'usage',
+  corejs: 3,
 };
 
 const babelPresetLegacy = {
@@ -62,6 +64,7 @@ const babelPresetLegacy = {
       },
     ],
   ],
+  plugins: ['@babel/plugin-proposal-class-properties'],
 };
 
 const babelPresetModern = {
@@ -77,6 +80,7 @@ const babelPresetModern = {
       },
     ],
   ],
+  plugins: ['@babel/plugin-proposal-class-properties'],
 };
 
 const sharedConfig = {
@@ -95,6 +99,11 @@ const sharedConfig = {
     symlinks: true,
   },
   optimization: {
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+    ],
     splitChunks: {
       // chunks: 'all',
       // minSize: 30000,
