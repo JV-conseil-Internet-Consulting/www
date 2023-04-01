@@ -46,7 +46,7 @@
     "webpack-cli": "^4.10.0",
     "webpack-merge": "^5.8.0",
     "worker-plugin": "^5.0.1",
-    "yargs": "^16.2.0"
+    "yargs": "^17.7.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
@@ -64,13 +64,13 @@
     "@webcomponents/webcomponentsjs": "^2.8.0",
     "abortcontroller-polyfill": "^1.7.5",
     "broadcastchannel-polyfill": "^1.0.1",
-    "core-js": "^2.6.12",
+    "core-js": "^3.29.1",
     "create-element-x": "^1.2.0",
     "dom4": "^2.1.6",
     "intersection-observer": "^0.12.2",
     "kv-storage-polyfill": "^2.0.0",
     "lit-html": "^1.4.1",
-    "minisearch": "^3.3.0",
+    "minisearch": "^6.0.1",
     "npm": "^9.6.3",
     "rxjs": "^7.8.0",
     "scroll-into-view-if-needed": "^2.2.31",

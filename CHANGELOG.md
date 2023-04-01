@@ -20,6 +20,10 @@ Mar 30 2023
 * Updated dependencies
 * Mastodon icomoon added
 * meta property="og:image" added
+* Bump yargs from 16.2.0 to 17.7.1
+* Bump minisearch from 3.3.0 to 6.0.1
+* LICENSE.md with toc
+*
 
 ## v9.1.6
 
