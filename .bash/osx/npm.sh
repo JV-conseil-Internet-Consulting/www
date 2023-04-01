@@ -13,6 +13,7 @@
 _jvcl_::update_npm() {
   _jvcl_::h1 "Update Node.js packages..."
   npm install npm@latest --verbose
+  npm audit || :
   npm update --save --verbose
   npm list --omit=dev
   npm list
