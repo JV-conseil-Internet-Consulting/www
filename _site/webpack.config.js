@@ -132,6 +132,9 @@ module.exports = [
           test: /(\.jsx|\.js)$/,
           loader: 'babel-loader',
           options: babelPresetModern,
+          resolve: {
+            fullySpecified: false,
+          },
         },
         {
           test: /modernizr-custom/,
@@ -155,6 +158,9 @@ module.exports = [
           test: /(\.jsx|\.js)$/,
           loader: 'babel-loader',
           options: babelPresetLegacy,
+          resolve: {
+            fullySpecified: false,
+          },
         },
       ],
     },
