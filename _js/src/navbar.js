@@ -53,16 +53,22 @@ import { hasCSSOM, getScrollTop, stylesheetReady, filterWhen } from './common';
   // To disable the navbar while the "scroll into view" animation is active.
   // Wait for 50ms after scrolling has stopped before unlocking the navbar.
   const notScrollIntoView$ = hashchange$.pipe(
-    switchMap(() => fromEvent(document, 'scroll').pipe(debounceTime(50), mapTo(true), startWith(false))),
+    switchMap(() =>
+      fromEvent(document, 'scroll').pipe(
+        debounceTime(50),
+        map(() => true),
+        startWith(false),
+      ),
+    ),
     startWith(true),
   );
 
   // Certain events should make the navbar "jump" to a new position.
   const jump$ = merge(
     // Focusing any navbar element should show the navbar to enable keyboard-only interaction.
-    fromEvent(navbarEl, 'focus', { capture: true }).pipe(mapTo(2 * height)),
+    fromEvent(navbarEl, 'focus', { capture: true }).pipe(map(() => 2 * height)),
     // Scrolling to a certain headline should hide the navbar to prevent hiding it.
-    hashchange$.pipe(mapTo(-2 * height)),
+    hashchange$.pipe(map(() => -2 * height)),
   );
 
   fromEvent(document, 'scroll', { passive: true })

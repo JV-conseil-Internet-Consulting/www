@@ -86,7 +86,7 @@
   "bugs": {
     "url": "https://github.com/JV-conseil-Internet-Consulting/www/issues"
   },
-  "homepage": "http://www.jv-conseil.net/",
+  "homepage": "https://www.jv-conseil.net/",
   "engines": {
     "node": ">=11"
   }

@@ -5,6 +5,8 @@ sitemap: false
 
 # CHANGELOG
 
+<!-- markdownlint-disable MD024 MD048 -->
+
 {:.no_toc}
 
 * this list will be replaced by the toc
@@ -24,6 +26,9 @@ Mar 30 2023
 * Bump minisearch from 3.3.0 to 6.0.1
 * Bump webpack from 4.46.0 to 5.77.0
 * Bump core-js from 2.6.12 to 3.29.1
+* 'mapTo' is deprecated use map instead: map(() => value)
+* Observable's toPromise() method is deprecated
+* It is recommended to either pass an Object or an Array to 'combineLatest' operators
 * LICENSE.md with toc
 
 ## v9.1.6
@@ -1461,11 +1466,13 @@ Oct 1 2016
 {:.heading.post-date}
 
 a11y improvements
+
 * Use HTML5 semantics tags + roles
 * Don't set `maximum-scale=1`
 * Fix bug with `sr-only` class
 
 Math support improvements
+
 * LaTeX syntax errors will no longer prevent correct math blocks from being rendered
 * LaTeX syntax errors logged to console
 
@@ -1482,6 +1489,7 @@ Sep 28 2016
 {:.heading.post-date}
 
 Cross-browser compatibility improvements:
+
 * Added features tests
 * Fixed layout in IE 10 and 11
 * Disabled stylesheets and JS in IE 9 and below.
@@ -1502,7 +1510,8 @@ Future versions might address this, but it is the currency in which loading spee
 
 ### Major
 
-- HTML, CSS and JS served minified.
+* HTML, CSS and JS served minified.
+
 * JS downloading starts only after the rest of the page is renderd.
 * Critical CSS (above-the-fold) is inlined into the document, the rest is fetched later.
 
@@ -1510,7 +1519,8 @@ In order to minify the CSS and make it more modular it has been rewritten in SCS
 
 ### Minor
 
-- Colored focus outline in page color
+* Colored focus outline in page color
+
 * Tabindex for tab navigation
 * Social media icons easier tappable with finger
 
@@ -1532,30 +1542,33 @@ Aug 30 2016
 
 ### Breaking
 
-- Structure of `_config.yml` has changed
+* Structure of `_config.yml` has changed
   * Social media usernames are now located under `author: social: <platform>: <username>`.
   * `disqus` is now a top-level entry (moved from `author`).
   * Now has `font`, `font_accent` and `google_fonts` fields that are mandatory.
+
 * Now defaults to the `blog` layout, old style is available via `blog-by-tag` layout, see `archive.html`.
 
 ### New features
 
-- Added _a lot_ of social media icons, configurable via `_config.yml`.
+* Added _a lot_ of social media icons, configurable via `_config.yml`.
+
 * New `blog` layout. Classic, paginated.
 * Fonts are configurable via `_config.yml`.
 
 ### Design
 
-- Link underlines are now fixed-sized for all font sizes (no thicker lines for headlines, etc)
+* Link underlines are now fixed-sized for all font sizes (no thicker lines for headlines, etc)
 
 ### Fixes
 
-- Correctly set the meta description field using either the `description` field or `post.excerpt` as a fallback (used to contain the unmodified markdown).
+* Correctly set the meta description field using either the `description` field or `post.excerpt` as a fallback (used to contain the unmodified markdown).
+
 * Fixed various URL bugs relating to `site.baseurl`.
 
 ### Internal
 
-- Refactoring, preventing code duplications, heavier usage of `includes`.
+* Refactoring, preventing code duplications, heavier usage of `includes`.
 
 ## v3.0.0 (Hydejack)
 

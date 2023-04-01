@@ -35,7 +35,7 @@
 <meta property="twitter:title" content="CHANGELOG" />
 <meta name="google-site-verification" content="1pTCDpV_U3xrS7x86hcODGIIslvs5EI8Hkf9Xr12htI" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"JV conseil"},"dateModified":"2023-04-01T20:02:36+02:00","description":"Full Stack Developer • Web App Architect Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) Greater Paris Metropolitan Region, France 🇫🇷","headline":"CHANGELOG","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"JV conseil"},"url":"http://localhost:4000/CHANGELOG.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"JV conseil"},"dateModified":"2023-04-01T20:33:40+02:00","description":"Full Stack Developer • Web App Architect Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) Greater Paris Metropolitan Region, France 🇫🇷","headline":"CHANGELOG","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"JV conseil"},"url":"http://localhost:4000/CHANGELOG.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -106,7 +106,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2023-04-01T20:33:02+02:00',
+    INDEX_KEY: 'index--2023-04-01T21:11:07+02:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -199,8 +199,9 @@
 
   </header>
 
-  
-<ul class="large-only" id="markdown-toc">
+  <!-- markdownlint-disable MD024 MD048 -->
+
+<ul class="no_toc large-only" id="markdown-toc">
   <li><a href="#v917" id="markdown-toc-v917">v9.1.7</a></li>
   <li><a href="#v916" id="markdown-toc-v916">v9.1.6</a></li>
   <li><a href="#v915" id="markdown-toc-v915">v9.1.5</a></li>
@@ -431,6 +432,9 @@
   <li>Bump minisearch from 3.3.0 to 6.0.1</li>
   <li>Bump webpack from 4.46.0 to 5.77.0</li>
   <li>Bump core-js from 2.6.12 to 3.29.1</li>
+  <li>‘mapTo’ is deprecated use map instead: map(() =&gt; value)</li>
+  <li>Observable’s toPromise() method is deprecated</li>
+  <li>It is recommended to either pass an Object or an Array to ‘combineLatest’ operators</li>
   <li>LICENSE.md with toc</li>
 </ul>
 
@@ -2108,6 +2112,7 @@ If an issue can’t be resolved, there’s now the option to disable push state 
 <p class="heading post-date">Oct 1 2016</p>
 
 <p>a11y improvements</p>
+
 <ul>
   <li>Use HTML5 semantics tags + roles</li>
   <li>Don’t set <code class="language-plaintext highlighter-rouge">maximum-scale=1</code>
@@ -2116,6 +2121,7 @@ If an issue can’t be resolved, there’s now the option to disable push state 
 </ul>
 
 <p>Math support improvements</p>
+
 <ul>
   <li>LaTeX syntax errors will no longer prevent correct math blocks from being rendered</li>
   <li>LaTeX syntax errors logged to console</li>
@@ -2132,6 +2138,7 @@ If an issue can’t be resolved, there’s now the option to disable push state 
 <p class="heading post-date">Sep 28 2016</p>
 
 <p>Cross-browser compatibility improvements:</p>
+
 <ul>
   <li>Added features tests</li>
   <li>Fixed layout in IE 10 and 11</li>
@@ -2154,7 +2161,9 @@ Future versions might address this, but it is the currency in which loading spee
 <h3 id="major-2">Major</h3>
 
 <ul>
-  <li>HTML, CSS and JS served minified.</li>
+  <li>
+    <p>HTML, CSS and JS served minified.</p>
+  </li>
   <li>JS downloading starts only after the rest of the page is renderd.</li>
   <li>Critical CSS (above-the-fold) is inlined into the document, the rest is fetched later.</li>
 </ul>
@@ -2164,7 +2173,9 @@ Future versions might address this, but it is the currency in which loading spee
 <h3 id="minor-4">Minor</h3>
 
 <ul>
-  <li>Colored focus outline in page color</li>
+  <li>
+    <p>Colored focus outline in page color</p>
+  </li>
   <li>Tabindex for tab navigation</li>
   <li>Social media icons easier tappable with finger</li>
 </ul>
@@ -2200,7 +2211,9 @@ Future versions might address this, but it is the currency in which loading spee
 <h3 id="new-features">New features</h3>
 
 <ul>
-  <li>Added <em>a lot</em> of social media icons, configurable via <code class="language-plaintext highlighter-rouge">_config.yml</code>.</li>
+  <li>
+    <p>Added <em>a lot</em> of social media icons, configurable via <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+  </li>
   <li>New <code class="language-plaintext highlighter-rouge">blog</code> layout. Classic, paginated.</li>
   <li>Fonts are configurable via <code class="language-plaintext highlighter-rouge">_config.yml</code>.</li>
 </ul>
@@ -2214,8 +2227,12 @@ Future versions might address this, but it is the currency in which loading spee
 <h3 id="fixes-13">Fixes</h3>
 
 <ul>
-  <li>Correctly set the meta description field using either the <code class="language-plaintext highlighter-rouge">description</code> field or <code class="language-plaintext highlighter-rouge">post.excerpt</code> as a fallback (used to contain the unmodified markdown).</li>
-  <li>Fixed various URL bugs relating to <code class="language-plaintext highlighter-rouge">site.baseurl</code>.</li>
+  <li>
+    <p>Correctly set the meta description field using either the <code class="language-plaintext highlighter-rouge">description</code> field or <code class="language-plaintext highlighter-rouge">post.excerpt</code> as a fallback (used to contain the unmodified markdown).</p>
+  </li>
+  <li>
+    <p>Fixed various URL bugs relating to <code class="language-plaintext highlighter-rouge">site.baseurl</code>.</p>
+  </li>
 </ul>
 
 <h3 id="internal">Internal</h3>
