@@ -8,7 +8,10 @@
 #====================================================
 
 # shellcheck disable=SC2034
-declare -i BASH_STRICT_MODE DEBUG
+{
+  declare -i BASH_STRICT_MODE DEBUG
+  declare -x JEKYLL_ENV PAGES_REPO_NWO
+}
 
 # shellcheck source=/dev/null
 {
