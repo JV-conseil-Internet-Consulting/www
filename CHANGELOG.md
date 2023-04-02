@@ -18,8 +18,7 @@ Mar 30 2023
 {:.heading.post-date}
 
 * Source filetype converted from `.html` to `.liquid`
-* Minor adjustments
-* Updated dependencies
+* `analytics_gdpr_compliant.liquid` added
 * Mastodon icomoon added
 * meta property="og:image" added
 * Bump yargs from 16.2.0 to 17.7.1

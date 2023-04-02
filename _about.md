@@ -78,7 +78,7 @@ The Hydejack blog, as seen by the text browser `w3m`.
 **Hydejack** features syntax highlighting, powered by [Rouge].
 
 ```html
-<!-- file: `_includes/my-body.html` -->
+<!-- file: `_includes/my-body.liquid` -->
 <script type="module">
   document.querySelector("hy-push-state").addEventListener("hy-push-state-load", () => {
     const supportsCodeHighlights = false; // TBD!!

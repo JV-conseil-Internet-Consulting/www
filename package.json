@@ -3,7 +3,7 @@
   "version": "9.1.7",
   "description": "A boutique Jekyll theme for hackers, nerds, and academics",
   "scripts": {
-    "clean": "rm -f assets/js/*.min.js && rm -f assets/js/legacy/*.min.js",
+    "clean": "rm -f assets/js/*{.min.js,.map} && rm -f assets/js/legacy/*{.min.js,.map}",
     "test": "exit 0",
     "format": "prettier --write \"_js/src/**/*.js\"",
     "build": "npm run clean && npm run build:js & npm run build:css & npm run build:scripts & wait",

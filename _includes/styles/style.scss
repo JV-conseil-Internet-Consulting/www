@@ -52,6 +52,8 @@
   @import "deepdive/__link__/katex";
   @import "deepdive/__link__/footer";
 
+  @import "projects";
+
   // @import "bootstrap-mod/bootstrap";
 
   {% unless site.deepdive.no_mark_external or site.no_mark_external %}
@@ -90,6 +92,8 @@
   @import "deepdive/_avatar.pre.scss";
   @import "deepdive/_katex.pre.scss";
   @import "deepdive/_footer.pre.scss";
+
+  @import "projects";
 
   // @import "bootstrap-mod/bootstrap";
 
