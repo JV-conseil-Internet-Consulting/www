@@ -29,7 +29,7 @@ layout: about
           {% assign featured = page.featured | default: project.featured | default: page.big_project | default: project.big_project %}
           <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
             {% if project %}
-              {% include_cached pro/project-card.html project=project featured=featured %}
+              {% include_cached pro/project-card.liquid project=project featured=featured %}
             {% else %}
               Project with path
               <code>{{ project_path }}</code>
@@ -44,7 +44,7 @@ layout: about
         {% for project in ordered_projects limit: 2 %}
           {% assign featured = page.featured | default: project.featured | default: page.big_project | default: project.big_project %}
           <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
-            {% include_cached pro/project-card.html project=project featured=featured %}
+            {% include_cached pro/project-card.liquid project=project featured=featured %}
           </div>
         {% endfor %}
       </div>
@@ -92,7 +92,7 @@ layout: about
           {% endif %}
           <div class="column column-1-2">
             {% if post %}
-              {% include_cached pro/post-card.html post=post %}
+              {% include_cached post-card.liquid post=post %}
             {% else %}
               Post with path
               <code>{{ post_path }}</code>
@@ -105,7 +105,7 @@ layout: about
       <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
         {% for post in site.posts limit: 4 %}
           <div class="column column-1-2">
-            {% include_cached pro/post-card.html post=post %}
+            {% include_cached post-card.liquid post=post %}
           </div>
         {% endfor %}
       </div>

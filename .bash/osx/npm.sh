@@ -23,8 +23,11 @@ _jvcl_::update_npm() {
 
 _jvcl_::webpack() {
   npm run format
-  # npm run dev
-  npm run build
+  if [ "${DEBUG}" -gt 2 ]; then
+    npm run dev
+  else
+    npm run build
+  fi
 }
 
 _jvcl_::npm_package_version() {
