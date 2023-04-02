@@ -29,7 +29,7 @@ layout: about
           {% assign featured = page.featured | default: project.featured | default: page.big_project | default: project.big_project %}
           <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
             {% if project %}
-              {% include_cached pro/project-card.liquid project=project featured=featured %}
+              {% include_cached project-card.liquid project=project featured=featured %}
             {% else %}
               Project with path
               <code>{{ project_path }}</code>
@@ -44,7 +44,7 @@ layout: about
         {% for project in ordered_projects limit: 2 %}
           {% assign featured = page.featured | default: project.featured | default: page.big_project | default: project.big_project %}
           <div class="column {% if featured %}column-1{% else %}column-1-2{% endif %}">
-            {% include_cached pro/project-card.liquid project=project featured=featured %}
+            {% include_cached project-card.liquid project=project featured=featured %}
           </div>
         {% endfor %}
       </div>
@@ -151,7 +151,7 @@ layout: about
               {% assign post = site.posts | where_exp: "post", "post_path == post.url" | first %}{% endunless %}
           {% endif %}
           {% if post %}
-            {% include_cached components/post-list-item.html post=post %}
+            {% include_cached components/post-list-item.liquid post=post %}
           {% else %}
             <li>Post with path
               <code>{{ post_path }}</code>
@@ -162,7 +162,7 @@ layout: about
     {% elsif site.posts.size > 1 %}
       <ul class="related-posts mt2">
         {% for post in site.posts limit: 5 %}
-          {% include_cached components/post-list-item.html post=post %}
+          {% include_cached components/post-list-item.liquid post=post %}
         {% endfor %}
       </ul>
     {% endif %}

@@ -48,19 +48,6 @@
       },
       "detail": "Update your Node.js packages for this repository",
       "problemMatcher": []
-    },
-    {
-      "label": "pipenv",
-      "type": "shell",
-      "isBackground": false,
-      "osx": {
-        "command": ".bash/osx/pipenv.sh"
-      },
-      "linux": {
-        "command": ".bash/osx/pipenv.sh"
-      },
-      "detail": "Update your Virtual Environment (VM) for this repository",
-      "problemMatcher": []
     }
   ]
 }
