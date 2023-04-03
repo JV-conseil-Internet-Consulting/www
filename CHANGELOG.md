@@ -25,6 +25,8 @@ Mar 30 2023
 * Bump minisearch from 3.3.0 to 6.0.1
 * Bump webpack from 4.46.0 to 5.77.0
 * Bump core-js from 2.6.12 to 3.29.1
+* Bump webpack-cli from 4.10.0 to 5.0.1
+* Bump babel-loader from 8.3.0 to 9.1.2
 * 'mapTo' is deprecated use map instead: map(() => value)
 * Observable's toPromise() method is deprecated
 * It is recommended to either pass an Object or an Array to 'combineLatest' operators
