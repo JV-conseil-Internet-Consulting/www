@@ -2,10 +2,10 @@
 {% assign username = include.username %}
 
 {% if username.size > 0 %}
-  {% assign = data_social = site.data.social[platform] | default:site.data_social[platform] %}
+  {% assign = data_social = site.data.social[platform] | default: site.data_social[platform] %}
 
-  {% assign name = data_social.name | default:include.platform %}
-  {% assign icon = data_social.icon | default:'icon-link' %}
+  {% assign name = data_social.name | default: include.platform %}
+  {% assign icon = data_social.icon | default: 'icon-link' %}
   {% assign app = data_social.append %}
   {% assign prep = data_social.prepend %}
 
@@ -28,11 +28,15 @@
   {% if username contains "//" or username contains "mailto:" %}
     {% assign url = username %}
   {% else %}
-    {% assign url = username | prepend:prep | append:app %}
+    {% assign url = username | prepend: prep | append: app %}
   {% endif %}
 
   <li>
-    <a href="{{ url }}" title="{{ name }}" class="no-mark-external">
+    <a
+      href="{{ url }}"
+      title="{{ name }}"
+      class="no-mark-external"
+      rel="me">
       <span class="{{ icon }}"></span>
       <span class="sr-only">{{ name }}</span>
     </a>
