@@ -8,7 +8,7 @@
     {% assign related_posts_2 = site.posts | where_exp:"post", "page.related_posts contains post.url" %}
     {% assign related_posts = related_posts_1 | concat:related_posts_2 %}
   {% endif %}
-{% elsif site.hydejack.use_lsi or site.use_lsi %}
+{% elsif site.deepdive.use_lsi or site.use_lsi %}
   {% assign related_posts = site.related_posts %}
 {% elsif post.categories.first %}
   {% assign related_posts = site.categories[post.categories.first] | where_exp:"post", "post.url != page.url" %}
