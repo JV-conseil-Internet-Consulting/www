@@ -79,7 +79,12 @@ async function getFiles(dir) {
 
     const pJSCSS = rename(resolve(`./assets/css/deepdive-${vPrev}.css`), resolve(`./assets/css/deepdive-${vNext}.css`));
 
-    await Promise.all([pUnlink, pFiles, pJSCSS]);
+    const pSearchW = rename(
+      resolve(`./assets/js/search-worker-${vPrev}.js`),
+      resolve(`./assets/js/search-worker-${vNext}.js`),
+    );
+
+    await Promise.all([pUnlink, pFiles, pJSCSS, pSearchW]);
 
     await writeFile('./assets/version.json', JSON.stringify({ version: vNext, prevVersion: vPrev }, null, 2));
 

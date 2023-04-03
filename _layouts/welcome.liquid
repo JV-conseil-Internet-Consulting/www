@@ -9,7 +9,7 @@ layout: about
 {% assign patch = version[2] | plus: 0 %}
 
 {% assign strings = site.data.strings %}
-{% assign no_third_column = page.no_third_column | default: site.hydejack.no_third_column | default: false %}
+{% assign no_third_column = page.no_third_column | default: site.deepdive.no_third_column | default: false %}
 
 {% assign nodes = site.html_pages | concat: site.documents %}
 

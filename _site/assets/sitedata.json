@@ -1,0 +1,36 @@
+
+
+
+{
+  "pages": [
+    {
+      
+      
+      
+      "content": "\n",
+      "url": "/404.html"
+    },{
+      
+      "title": "JV conseil – Internet Consulting 👨‍💻",
+      
+      "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFull Stack Developer • Web App Architect\n\nPython 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)\n\nGreater Paris Metropolitan Region, France 🇫🇷\n\n\n\n\n\n",
+      "url": "/"
+    },{
+      
+      "title": "Posts",
+      "description": "This is the grid layout for showing blog posts, which shows just the title and groups them by year of publication. Check out the blog layout for comparison.\n",
+      "content": "\n",
+      "url": "/posts.html"
+    },{
+      
+      "title": "Projects",
+      "description": "All the projects I’ve done so far.\n",
+      "content": "\n",
+      "url": "/projects.html"
+    }
+  ],
+  "documents": [
+    
+  ]
+}
+

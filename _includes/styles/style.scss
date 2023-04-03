@@ -53,8 +53,10 @@
   @import "deepdive/__link__/footer";
 
   @import "projects";
-
   // @import "bootstrap-mod/bootstrap";
+  {% unless site.deepdive.no_search %}
+    @import "search";
+  {% endunless %}
 
   {% unless site.deepdive.no_mark_external or site.no_mark_external %}
     @import "deepdive/__link__/mark-external";
@@ -94,8 +96,10 @@
   @import "deepdive/_footer.pre.scss";
 
   @import "projects";
-
   // @import "bootstrap-mod/bootstrap";
+  {% unless site.deepdive.no_search %}
+  @import "search";
+{% endunless %}
 
   {% unless site.deepdive.no_mark_external or site.no_mark_external %}
     @import "deepdive/_mark-external.pre.scss";

@@ -4,8 +4,7 @@
       window.ga = window.ga || function() {
         (ga.q = ga.q || []).push(arguments)
       };
-      ga.l = + new Date;{% if site.deepdive.cookies_banner %}
-        if (navigator.CookiesOK) {
+      ga.l = + new Date;{% if site.deepdive.cookies_banner %}if (navigator.CookiesOK) {
           ga('create', '{{ site.google_analytics }}', 'auto');
         } else if (localStorage && localStorage.getItem('hy:cookiesOK')) {
           ga('create', '{{ site.google_analytics }}', {
@@ -18,15 +17,14 @@
           ga('set', 'anonymizeIp', true);
         }
       {% else %}
-        ga('create', '{{ site.google_analytics }}', 'auto');{% endif %}
-      ga('send', 'pageview');
+        ga('create', '{{ site.google_analytics }}', 'auto');{% endif %}ga('send', 'pageview');
       loadJSDeferred('https://www.google-analytics.com/analytics.js');
     </script>
   {% endif %}
 
   <!--[if gt IE 9]><!---->
   {% capture js_url %}
-    {% link assets/js/hydejack-7.5.2.js %}{% endcapture %}
+    {% link assets/js/deepdive-7.5.2.min.js %}{% endcapture %}
   <script>
     loadJSDeferred('{{ js_url | relative_url }}');
   </script>

@@ -10,7 +10,7 @@ layout: base
 
 {% assign project = page %}
 {% assign separator = site.data.strings.separator | default: "|" %}
-{% assign nsd = site.hydejack.no_structured_data | default: site.no_structured_data %}
+{% assign nsd = site.deepdive.no_structured_data | default: site.no_structured_data %}
 {% assign proj_format = site.data.strings.date_formats.project | default: "%Y" %}
 {% assign from_to_separator = strings.from_to_separator | default: strings.resume.from_to_separator | default: "–" %}
 
@@ -37,7 +37,7 @@ layout: base
             property="genre">{{ parent.title }}</a>
         {% endif %}
 
-        {% unless site.hydejack.hide_dates %}
+        {% unless site.deepdive.hide_dates %}
           {% if parent %}
             {{ separator }}{% endif %}
           <time datetime="{{ project.date | date_to_xmlschema }}">{{ project.date | date: proj_format }}</time>
@@ -84,7 +84,7 @@ layout: base
 
 {% include components/dingbat.liquid %}
 
-{% assign addons = page.addons | default: site.hydejack.project_addons %}
+{% assign addons = page.addons | default: site.deepdive.project_addons %}
 {% unless addons %}
   {% assign addons = "about,newsletter,other" | split: "," %}{% endunless %}
 {% for addon in addons %}

@@ -31,11 +31,11 @@ if (hasFeatures(BASELINE)) {
   import(/* webpackMode: "eager" */ './upgrades');
 
   if (!window._noNavbar) import(/* webpackChunkName: "navbar" */ './navbar');
-  // if (!window._noSearch) import(/* webpackChunkName: "search" */ './pro/search');
+  // if (!window._noSearch) import(/* webpackChunkName: "search" */ './search');
 
   // if (hasFeatures(DARK_MODE_FEATURES)) {
   //   import(/* webpackMode: "eager" */ './pro/cookies-banner');
-  //   import(/* webpackMode: "eager" */ './pro/dark-mode');
+  //   import(/* webpackMode: "eager" */ './dark-mode');
   // }
 
   // "@getclaps/button": "^1.0.0-alpha.21",
