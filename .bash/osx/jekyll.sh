@@ -45,9 +45,9 @@ EOF
 
 _jvcl_::jekyll_serve() {
   _jvcl_::h1 "Launching Jekyll..."
-  bundle exec jekyll clean --config "_config_dev.yml"
-  bundle exec jekyll doctor --config "_config_dev.yml"
-  bundle exec jekyll serve --config "_config_dev.yml" --livereload
+  bundle exec jekyll clean --config "_config-dev.yml"
+  bundle exec jekyll doctor --config "_config-dev.yml"
+  bundle exec jekyll serve --config "_config-dev.yml" --livereload
 }
 
 _jvcl_::github_pages() {
