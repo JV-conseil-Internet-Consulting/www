@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Florian Klampfer <https://qwtel.com/>
+// Copyright (c) 2023 JV conseil <https://www.jv-conseil.net/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -47,7 +47,7 @@ async function getDocuments() {
 ///////////////////////////////////////////////////////////////////////////////
 
 importScripts('/assets/js/minisearch/dist/umd/index.min.js');
-const INDEX_KEY = 'index--2023-04-04T20:05:40+02:00';
+const INDEX_KEY = 'index--2023-04-04T23:11:09+02:00';
 const storage = new StorageArea('mini-search/');
 
 const OPTIONS = {

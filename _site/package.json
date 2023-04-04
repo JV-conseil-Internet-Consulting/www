@@ -3,7 +3,7 @@
   "version": "9.1.7",
   "description": "A boutique Jekyll theme for hackers, nerds, and academics",
   "scripts": {
-    "clean": "rm -f assets/js/*{.min.js,.map} && rm -f assets/js/legacy/*{.min.js,.map}",
+    "clean": "rm -f assets/js/*{.min.js,.map,.LICENSE.txt} && rm -f assets/js/legacy/*{.min.js,.map,.LICENSE.txt}",
     "test": "exit 0",
     "format": "prettier --write \"_js/src/**/*.js\"",
     "build": "npm run clean && npm run build:js & npm run build:css & npm run build:scripts & wait",
@@ -72,7 +72,6 @@
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1",
     "webpack-merge": "^5.8.0",
-    "worker-plugin": "^5.0.1",
     "yargs": "^17.7.1"
   },
   "repository": {

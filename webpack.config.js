@@ -2,7 +2,7 @@ const { readFileSync } = require('fs');
 const { resolve } = require('path');
 
 const { EnvironmentPlugin } = require('webpack');
-const WorkerPlugin = require('worker-plugin');
+// const WorkerPlugin = require('worker-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 const { merge } = require('webpack-merge');
@@ -20,7 +20,7 @@ const envConfig = (() => {
       return {
         devtool: false,
         plugins: [
-          new WorkerPlugin({ globalObject: 'self' }),
+          // new WorkerPlugin({ globalObject: 'self' }),
           new EnvironmentPlugin({
             DEBUG: false,
             ASSET_PATH,
@@ -33,7 +33,7 @@ const envConfig = (() => {
       return {
         devtool: 'source-map',
         plugins: [
-          new WorkerPlugin({ globalObject: 'self' }),
+          // new WorkerPlugin({ globalObject: 'self' }),
           new EnvironmentPlugin({
             DEBUG: true,
             ASSET_PATH,
@@ -105,26 +105,28 @@ const sharedConfig = {
       }),
     ],
     splitChunks: {
-      // automaticNameDelimiter: '~',
-      // automaticNameMaxLength: 30,
-      // cacheGroups: {
-      //   vendors: {
-      //     test: /[\\/]node_modules[\\/]/,
-      //     priority: -10
-      //   },
-      //   default: {
-      //     minChunks: 2,
-      //     priority: -20,
-      //     reuseExistingChunk: true
-      //   }
-      // },
-      // chunks: 'all',
-      // maxAsyncRequests: 5,
-      // maxInitialRequests: 3,
-      // maxSize: 0,
-      // minChunks: 1,
-      // minSize: 30000,
-      // name: true
+      hidePathInfo: true,
+      automaticNameDelimiter: '~',
+      chunks: 'async',
+      minSize: 20000,
+      minRemainingSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 30,
+      maxInitialRequests: 30,
+      enforceSizeThreshold: 50000,
+      cacheGroups: {
+        defaultVendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          idHint: 'vendors',
+          reuseExistingChunk: true,
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true,
+        },
+      },
     },
   },
 };
@@ -134,13 +136,12 @@ module.exports = [
     output: {
       filename: `${filename}-${version}.min.js`,
       chunkFilename: `[name]-${filename}-${version}.min.js`,
+      // chunkFilename: `[contenthash]-${filename}-${version}.min.js`,
     },
     module: {
       rules: [
         {
           test: /(\.jsx|\.js)$/,
-          // loader: 'babel-loader',
-          // options: babelPresetModern,
           use: {
             loader: 'babel-loader',
             options: babelPresetModern,

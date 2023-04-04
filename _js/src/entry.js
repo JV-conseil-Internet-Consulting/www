@@ -33,10 +33,10 @@ if (hasFeatures(BASELINE)) {
   if (!window._noNavbar) import(/* webpackChunkName: "navbar" */ './navbar');
   if (!window._noSearch) import(/* webpackChunkName: "search" */ './search');
 
-  // if (hasFeatures(DARK_MODE_FEATURES)) {
-  //   import(/* webpackMode: "eager" */ './pro/cookies-banner');
-  //   import(/* webpackMode: "eager" */ './dark-mode');
-  // }
+  if (hasFeatures(DARK_MODE_FEATURES)) {
+    // import(/* webpackMode: "eager" */ './pro/cookies-banner');
+    import(/* webpackMode: "eager" */ './dark-mode');
+  }
 
   // "@getclaps/button": "^1.0.0-alpha.21",
   // if (window._clapButton && hasFeatures(CLAP_BUTTON_FEATURES)) {

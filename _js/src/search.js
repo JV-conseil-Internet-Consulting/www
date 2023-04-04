@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Florian Klampfer <https://qwtel.com/>
+// Copyright (c) 2023 JV conseil <https://www.jv-conseil.net/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -25,9 +25,6 @@ import { tap, switchMap } from 'rxjs/operators';
 import { html, render } from 'lit/html.js';
 import { repeat } from 'lit/directives/repeat.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
-
-import { StorageArea } from 'kv-storage-polyfill';
-import MiniSearch from 'minisearch';
 
 import { importTemplate, postMessage, once, stylesheetReady } from './common';
 
@@ -94,7 +91,8 @@ const calcSrcSet = (srcset) =>
      * const worker = new Worker('./search.worker.js', { type: 'module' });
      */
     // const worker = new Worker(new URL('./search.worker.js', { type: 'module' }));
-    const worker = new Worker(new URL('./search.worker.js', import.meta.url));
+    // const worker = new Worker(new URL('./search.worker.js', import.meta.url));
+    const worker = new Worker(/* webpackChunkName: "search-worker" */ new URL('./search.worker.js', import.meta.url));
     postMessage(worker, window._search);
 
     let prevVal = '';
