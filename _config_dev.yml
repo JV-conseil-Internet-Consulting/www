@@ -56,8 +56,8 @@ author:
   email:               contact@jv-conseil.net
   picture:             /assets/img/logo.png
   social:
-    github:            JV-conseil-Internet-Consulting
     linkedin:          vieillefont
+    github:            JV-conseil-Internet-Consulting
     mastodon:          https://fosstodon.org/@JVconseil
     stackoverflow:     2477854
     twitter:           JVconseil
@@ -305,7 +305,7 @@ deepdive:
   # When enabled, no user-related data will be stored until the user gives consent.
   cookies_banner:      false
 
-  # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
+  # Set to `true` if you would like to add a "Powered by DeepDive" link in the footer.
   # Note that this setting has no effect when using the free version.
   advertise:           false
 
@@ -315,7 +315,7 @@ deepdive:
   hide_dates:          false
 
   hide_last_modified:  false
-  # Note that dark mode only works in the PRO version of Hydejack.
+  # Note that dark mode only works.
   dark_mode:
     # Set to `true` to always use the dark theme.
     always:            true
