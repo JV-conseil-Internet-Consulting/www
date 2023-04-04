@@ -14,18 +14,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import { fromEvent, timer, merge } from 'rxjs';
-import {
-  map,
-  filter,
-  pairwise,
-  mergeWith,
-  mapTo,
-  tap,
-  switchMap,
-  startWith,
-  share,
-  debounceTime,
-} from 'rxjs/operators';
+import { map, filter, pairwise, mergeWith, tap, switchMap, startWith, share, debounceTime } from 'rxjs/operators';
 
 import { hasCSSOM, getScrollTop, stylesheetReady, filterWhen } from './common';
 

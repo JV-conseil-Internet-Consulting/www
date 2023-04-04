@@ -24,7 +24,7 @@ const envConfig = (() => {
           new EnvironmentPlugin({
             DEBUG: false,
             ASSET_PATH,
-            GET_CLAPS_API: 'https://worker.getclaps.app',
+            // GET_CLAPS_API: 'https://worker.getclaps.app',
           }),
         ],
       };
@@ -37,7 +37,7 @@ const envConfig = (() => {
           new EnvironmentPlugin({
             DEBUG: true,
             ASSET_PATH,
-            GET_CLAPS_API: 'https://worker.getclaps.dev',
+            // GET_CLAPS_API: 'https://worker.getclaps.dev',
           }),
         ],
       };
@@ -74,9 +74,9 @@ const babelPresetModern = {
       '@babel/preset-env',
       {
         ...sharedPreset,
-        targets: {
-          esmodules: true,
-        },
+        // targets: {
+        //   esmodules: true,
+        // },
       },
     ],
   ],
@@ -105,15 +105,8 @@ const sharedConfig = {
       }),
     ],
     splitChunks: {
-      // chunks: 'all',
-      // minSize: 30000,
-      // maxSize: 0,
-      // minChunks: 1,
-      // maxAsyncRequests: 5,
-      // maxInitialRequests: 3,
       // automaticNameDelimiter: '~',
       // automaticNameMaxLength: 30,
-      // name: true,
       // cacheGroups: {
       //   vendors: {
       //     test: /[\\/]node_modules[\\/]/,
@@ -124,7 +117,14 @@ const sharedConfig = {
       //     priority: -20,
       //     reuseExistingChunk: true
       //   }
-      // }
+      // },
+      // chunks: 'all',
+      // maxAsyncRequests: 5,
+      // maxInitialRequests: 3,
+      // maxSize: 0,
+      // minChunks: 1,
+      // minSize: 30000,
+      // name: true
     },
   },
 };
@@ -139,8 +139,12 @@ module.exports = [
       rules: [
         {
           test: /(\.jsx|\.js)$/,
-          loader: 'babel-loader',
-          options: babelPresetModern,
+          // loader: 'babel-loader',
+          // options: babelPresetModern,
+          use: {
+            loader: 'babel-loader',
+            options: babelPresetModern,
+          },
           resolve: {
             fullySpecified: false,
           },
@@ -156,22 +160,24 @@ module.exports = [
       ],
     },
   }),
-  merge(envConfig, sharedConfig, {
-    output: {
-      filename: `legacy/${filename}-${version}.min.js`,
-      chunkFilename: `legacy/[name]-${filename}-${version}.min.js`,
-    },
-    module: {
-      rules: [
-        {
-          test: /(\.jsx|\.js)$/,
-          loader: 'babel-loader',
-          options: babelPresetLegacy,
-          resolve: {
-            fullySpecified: false,
-          },
-        },
-      ],
-    },
-  }),
+  // merge(envConfig, sharedConfig, {
+  //   output: {
+  //     filename: `legacy/${filename}-${version}.min.js`,
+  //     chunkFilename: `legacy/[name]-${filename}-${version}.min.js`,
+  //   },
+  //   module: {
+  //     rules: [
+  //       {
+  //         test: /(\.jsx|\.js)$/,
+  //         use: {
+  //           loader: 'babel-loader',
+  //           options: babelPresetLegacy,
+  //         },
+  //         resolve: {
+  //           fullySpecified: false,
+  //         },
+  //       },
+  //     ],
+  //   },
+  // }),
 ];

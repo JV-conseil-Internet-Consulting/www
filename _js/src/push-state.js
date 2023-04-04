@@ -14,18 +14,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import { fromEvent, lastValueFrom, merge, timer, zip } from 'rxjs';
-import {
-  tap,
-  exhaustMap,
-  map,
-  mapTo,
-  mergeMap,
-  pairwise,
-  share,
-  startWith,
-  switchMap,
-  takeUntil,
-} from 'rxjs/operators';
+import { tap, exhaustMap, map, mergeMap, pairwise, share, startWith, switchMap, takeUntil } from 'rxjs/operators';
 
 import { animate, empty, importTemplate, webComponentsReady } from './common';
 import { CrossFader } from './cross-fader';

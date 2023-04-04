@@ -173,8 +173,11 @@ async function cacheShell(cache) {
     /*{% if site.kramdown.math_engine == 'mathjax' %}*/ getMathJaxFiles() /*{% endif %}*/,
   ]);
 
+  // const jsFiles = STATIC_FILES.filter(
+  //   (url) => url.startsWith('{{ "/assets/js/" | relative_url }}') && url.endsWith('.js') && !url.includes('LEGACY'),
+  // );
   const jsFiles = STATIC_FILES.filter(
-    (url) => url.startsWith('{{ "/assets/js/" | relative_url }}') && url.endsWith('.js') && !url.includes('LEGACY'),
+    (url) => url.startsWith('{{ "/assets/js/" | relative_url }}') && url.endsWith('.js') && !url.includes('legacy/'),
   );
 
   const urls = SHELL_FILES.concat(jsFiles, ...fontFiles).filter((x) => !!x);

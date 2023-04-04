@@ -31,7 +31,7 @@ if (hasFeatures(BASELINE)) {
   import(/* webpackMode: "eager" */ './upgrades');
 
   if (!window._noNavbar) import(/* webpackChunkName: "navbar" */ './navbar');
-  // if (!window._noSearch) import(/* webpackChunkName: "search" */ './search');
+  if (!window._noSearch) import(/* webpackChunkName: "search" */ './search');
 
   // if (hasFeatures(DARK_MODE_FEATURES)) {
   //   import(/* webpackMode: "eager" */ './pro/cookies-banner');
@@ -52,7 +52,7 @@ if (hasFeatures(BASELINE)) {
     import(/* webpackChunkName: "push-state" */ './push-state');
   }
 
-  // if (!window._noToc && hasFeatures(TOC_FEATURES)) {
-  //   import(/* webpackChunkName: "toc" */ './pro/toc');
-  // }
+  if (!window._noToc && hasFeatures(TOC_FEATURES)) {
+    import(/* webpackChunkName: "toc" */ './toc');
+  }
 }
