@@ -23,10 +23,10 @@ _jvcl_::update_npm() {
 
 _jvcl_::webpack() {
   npm run format
-  if [ "${DEBUG}" -gt 2 ]; then
-    npm run dev
-  else
+  if [ "${WEBPACK_MODE}" == "production" ]; then
     npm run build
+  else
+    npm run dev
   fi
 }
 
