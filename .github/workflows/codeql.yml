@@ -74,6 +74,7 @@ jobs:
       with:
         category: "/language:${{matrix.language}}"
 
+
     # Ignore Files in GitHub CodeQL Analysis
     # See <https://josh-ops.com/posts/github-codeql-ignore-files/>
     - name: filter-sarif
