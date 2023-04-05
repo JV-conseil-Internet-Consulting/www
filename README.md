@@ -8,7 +8,7 @@
 [![PostgreSQL 15](https://img.shields.io/badge/PostgreSQL-15-green.svg)][PostgreSQL]
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-green)][Python]
 [![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.net%2F)](https://www.jv-conseil.net)
-[![CodeQL](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/github-code-scanning/codeql)
+[![CodeQL](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml/badge.svg)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml)
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil "Become a sponsor to JV-conseil")
 [![Follow JV conseil on StackOverflow](https://img.shields.io/stackexchange/stackoverflow/r/2477854)](https://stackoverflow.com/users/2477854/jv-conseil "Follow JV conseil on StackOverflow")
 [![Follow JVconseil on Twitter](https://img.shields.io/twitter/follow/JVconseil.svg?style=social&logo=twitter)](https://twitter.com/JVconseil "Follow JVconseil on Twitter")
