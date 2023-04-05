@@ -7,5 +7,9 @@ name: "CodeQL config"
 # paths:
 #   - src
 paths-ignore:
-  - 'assets/js/service-worker.js'
-  - 'assets/js/sw.js'
+  # - 'assets/js/bower_components/*'
+  # - 'assets/js/legacy/*'
+  # - 'assets/js/service-worker.js'
+  # - 'assets/js/sw.js'
+  - 'assets/*'
+  - '_site/*'
