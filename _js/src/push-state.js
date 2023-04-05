@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import { fromEvent, lastValueFrom, merge, timer, zip } from 'rxjs';
+import { fromEvent, firstValueFrom, merge, timer, zip } from 'rxjs';
 import { tap, exhaustMap, map, mergeMap, pairwise, share, startWith, switchMap, takeUntil } from 'rxjs/operators';
 
 import { animate, empty, importTemplate, webComponentsReady } from './common';
@@ -144,7 +144,7 @@ import { setupFLIP } from './flip';
   const fadeIn$ = after$.pipe(
     switchMap((context) => {
       // const p = animateFadeIn(context).toPromise();
-      const p = lastValueFrom(animateFadeIn(context));
+      const p = firstValueFrom(animateFadeIn(context));
       context.transitionUntil(p);
       return p;
     }),
@@ -160,7 +160,7 @@ import { setupFLIP } from './flip';
     .pipe(
       switchMap((context) => {
         // const promise = zip(timer(duration), fadeOut$, flip$).toPromise();
-        const promise = lastValueFrom(animateFadeIn(zip(timer(duration), fadeOut$, flip$)));
+        const promise = firstValueFrom(zip(timer(duration), fadeOut$, flip$));
         context.transitionUntil(promise);
         return promise;
       }),

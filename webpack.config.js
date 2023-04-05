@@ -161,24 +161,24 @@ module.exports = [
       ],
     },
   }),
-  // merge(envConfig, sharedConfig, {
-  //   output: {
-  //     filename: `legacy/${filename}-${version}.min.js`,
-  //     chunkFilename: `legacy/[name]-${filename}-${version}.min.js`,
-  //   },
-  //   module: {
-  //     rules: [
-  //       {
-  //         test: /(\.jsx|\.js)$/,
-  //         use: {
-  //           loader: 'babel-loader',
-  //           options: babelPresetLegacy,
-  //         },
-  //         resolve: {
-  //           fullySpecified: false,
-  //         },
-  //       },
-  //     ],
-  //   },
-  // }),
+  merge(envConfig, sharedConfig, {
+    output: {
+      filename: `legacy/${filename}-${version}.min.js`,
+      chunkFilename: `legacy/[name]-${filename}-${version}.min.js`,
+    },
+    module: {
+      rules: [
+        {
+          test: /(\.jsx|\.js)$/,
+          use: {
+            loader: 'babel-loader',
+            options: babelPresetLegacy,
+          },
+          resolve: {
+            fullySpecified: false,
+          },
+        },
+      ],
+    },
+  }),
 ];
