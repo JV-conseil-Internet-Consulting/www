@@ -34,7 +34,7 @@ layout: base
     {% when 'about' %}
     {% include_cached components/about.liquid author=page.author %}
     {% when 'related' %}
-    {% include if-non-null try = "components/related-posts.html" %}
+    {% include if-non-null try = "components/related-posts.liquid" %}
     {% when 'comments' %}
     {% include body/comments.liquid %}
 {% else %}
