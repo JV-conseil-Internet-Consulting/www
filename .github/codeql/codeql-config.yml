@@ -4,11 +4,11 @@
 
 name: "CodeQL config"
 
-paths:
-  - _includes/js
-  - _includes/scripts
-  - _js
-  - .scripts
+# paths:
+#   - _includes/js
+#   - _includes/scripts
+#   - _js
+#   - .scripts
 paths-ignore:
   - 'assets/*'
   # - 'assets/js/bower_components/*'
