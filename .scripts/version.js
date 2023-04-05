@@ -19,6 +19,7 @@ const FILES = [
   './_includes/head/links-static.liquid',
   './_includes/head/styles-inline.liquid',
   './_includes/head/styles-no-inline.liquid',
+  './_includes/js/service-worker.js',
   './_layouts/compress.liquid',
 ].map((f) => resolve(f));
 
@@ -77,7 +78,10 @@ async function getFiles(dir) {
       (await getFiles('./assets/js')).filter((f) => f.match(/assets\/js\/(.*)deepdive-(.*)/i)).map(unlink),
     );
 
-    const pJSCSS = rename(resolve(`./assets/css/deepdive-${vPrev}.css`), resolve(`./assets/css/deepdive-${vNext}.css`));
+    const pJSCSS = rename(
+      resolve(`./assets/css/deepdive-${vPrev}.min.css`),
+      resolve(`./assets/css/deepdive-${vNext}.min.css`),
+    );
 
     const pSearchW = rename(
       resolve(`./assets/js/search-worker-${vPrev}.js`),
