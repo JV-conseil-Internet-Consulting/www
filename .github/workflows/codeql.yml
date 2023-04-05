@@ -35,13 +35,6 @@ jobs:
       contents: read
       security-events: write
 
-    # Specifying directories to scan
-    # See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
-    paths-ignore:
-      - 'assets/css/deepdive-9.1.7.min.css'
-      - 'assets/js/service-worker.js'
-      - 'assets/js/sw.js'
-
     strategy:
       fail-fast: false
       matrix:
@@ -86,3 +79,9 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
+        # Specifying directories to scan
+        # See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
+        paths-ignore:
+          - 'assets/css/deepdive-9.1.7.min.css'
+          - 'assets/js/service-worker.js'
+          - 'assets/js/sw.js'
