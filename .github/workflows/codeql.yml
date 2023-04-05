@@ -14,6 +14,12 @@ name: "CodeQL"
 on:
   push:
     branches: [ "main" ]
+    # Specifying directories to scan
+    # See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
+    paths-ignore:
+      - '*assets/css/deepdive-9.1.7.min.css'
+      - '*assets/js/service-worker.js'
+      - '*assets/js/sw.js'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
@@ -73,29 +79,3 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
-
-
-    # Ignore Files in GitHub CodeQL Analysis
-    # See <https://josh-ops.com/posts/github-codeql-ignore-files/>
-    - name: filter-sarif
-      uses: advanced-security/filter-sarif@v1
-      with:
-        # filter out all test files unless they contain a sql-injection vulnerability
-        patterns: |
-          -*assets/js/service-worker.js
-          -*assets/js/sw.js
-        input: sarif-results/${{ matrix.language }}.sarif
-        output: sarif-results/${{ matrix.language }}.sarif
-
-    - name: Upload SARIF
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: sarif-results/${{ matrix.language }}.sarif
-
-    # optional: for debugging the uploaded sarif
-    - name: Upload loc as a Build Artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: sarif-results
-        path: sarif-results
-        retention-days: 1
