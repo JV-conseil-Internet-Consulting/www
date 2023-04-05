@@ -20,13 +20,6 @@ on:
   schedule:
     - cron: '22 9 * * 0'
 
-# Specifying directories to scan
-# See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
-paths-ignore:
-  - 'assets/css/deepdive-9.1.7.min.css'
-  - 'assets/js/service-worker.js'
-  - 'assets/js/sw.js'
-
 jobs:
   analyze:
     name: Analyze
@@ -45,6 +38,8 @@ jobs:
         # Use only 'javascript' to analyze code written in JavaScript, TypeScript or both
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
+
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -60,6 +55,13 @@ jobs:
 
         # Details on CodeQL's query packs refer to : https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
+
+        # Specifying directories to scan
+        # See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
+        paths-ignore:
+          - 'assets/css/deepdive-9.1.7.min.css'
+          - 'assets/js/service-worker.js'
+          - 'assets/js/sw.js'
 
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
