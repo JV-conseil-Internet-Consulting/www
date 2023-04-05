@@ -77,11 +77,12 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
+      # Specifying directories to scan
+      # See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
+      paths-ignore:
+        - 'assets/css/deepdive-9.1.7.min.css'
+        - 'assets/js/service-worker.js'
+        - 'assets/js/sw.js'
       with:
         category: "/language:${{matrix.language}}"
-        # Specifying directories to scan
-        # See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
-        paths-ignore:
-          - 'assets/css/deepdive-9.1.7.min.css'
-          - 'assets/js/service-worker.js'
-          - 'assets/js/sw.js'
+
