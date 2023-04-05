@@ -74,9 +74,9 @@ const babelPresetModern = {
       '@babel/preset-env',
       {
         ...sharedPreset,
-        // targets: {
-        //   esmodules: true,
-        // },
+        targets: {
+          esmodules: true,
+        },
       },
     ],
   ],
@@ -104,6 +104,8 @@ const sharedConfig = {
         extractComments: false,
       }),
     ],
+    // moduleIds: 'named',
+    providedExports: true,
     splitChunks: {
       hidePathInfo: true,
       automaticNameDelimiter: '~',
@@ -124,6 +126,7 @@ const sharedConfig = {
         default: {
           minChunks: 2,
           priority: -20,
+          usedExports: true,
           reuseExistingChunk: true,
         },
       },

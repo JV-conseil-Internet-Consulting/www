@@ -13,8 +13,19 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-import { fromEvent, firstValueFrom, merge, timer, zip } from 'rxjs';
-import { tap, exhaustMap, map, mergeMap, pairwise, share, startWith, switchMap, takeUntil } from 'rxjs/operators';
+import { fromEvent, merge, timer, zip } from 'rxjs';
+import {
+  tap,
+  exhaustMap,
+  map,
+  mapTo,
+  mergeMap,
+  pairwise,
+  share,
+  startWith,
+  switchMap,
+  takeUntil,
+} from 'rxjs/operators';
 
 import { animate, empty, importTemplate, webComponentsReady } from './common';
 import { CrossFader } from './cross-fader';
@@ -81,19 +92,10 @@ import { setupFLIP } from './flip';
     easing: 'ease',
   };
 
-  const animateFadeOut = ({ main }) =>
-    animate(main, FADE_OUT, { ...settings, fill: 'forwards' }).pipe(
-      map(() => {
-        main;
-      }),
-    );
+  const animateFadeOut = ({ main }) => animate(main, FADE_OUT, { ...settings, fill: 'forwards' }).pipe(mapTo({ main }));
 
   const animateFadeIn = ({ replaceEls: [main], flipType }) =>
-    animate(main, FADE_IN, settings).pipe(
-      map(() => {
-        main, flipType;
-      }),
-    );
+    animate(main, FADE_IN, settings).pipe(mapTo({ main, flipType }));
 
   const drawerEl = document.querySelector('hy-drawer');
   const navbarEl = document.querySelector(NAVBAR_SEL);
@@ -143,8 +145,7 @@ import { setupFLIP } from './flip';
 
   const fadeIn$ = after$.pipe(
     switchMap((context) => {
-      // const p = animateFadeIn(context).toPromise();
-      const p = firstValueFrom(animateFadeIn(context));
+      const p = animateFadeIn(context).toPromise();
       context.transitionUntil(p);
       return p;
     }),
@@ -159,8 +160,7 @@ import { setupFLIP } from './flip';
   start$
     .pipe(
       switchMap((context) => {
-        // const promise = zip(timer(duration), fadeOut$, flip$).toPromise();
-        const promise = firstValueFrom(zip(timer(duration), fadeOut$, flip$));
+        const promise = zip(timer(duration), fadeOut$, flip$).toPromise();
         context.transitionUntil(promise);
         return promise;
       }),
