@@ -14,15 +14,18 @@ name: "CodeQL"
 on:
   push:
     branches: [ "main" ]
-    paths-ignore:
-      - 'assets/css/deepdive-9.1.7.min.css'
-      - 'assets/js/service-worker.js'
-      - 'assets/js/sw.js'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
   schedule:
     - cron: '22 9 * * 0'
+
+# Specifying directories to scan
+# See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
+paths-ignore:
+  - 'assets/css/deepdive-9.1.7.min.css'
+  - 'assets/js/service-worker.js'
+  - 'assets/js/sw.js'
 
 jobs:
   analyze:
