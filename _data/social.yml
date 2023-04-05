@@ -101,6 +101,10 @@ dropbox:
 ondrive:
   name: OneDrive
   icon: icon-ondrive
+gist:
+  name: Gist
+  icon: icon-quill
+  prepend: "https://gist.github.com/"
 github:
   name: GitHub
   icon: icon-github

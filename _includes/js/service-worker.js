@@ -21,9 +21,9 @@
 // which won't change between content updates.
 // {% capture cache_version %}v{{ site.deepdive.offline.cache_version | default:"1" }}{% endcapture %}
 // {% capture site_key %}sw{{ '/' | relative_url }}{% endcapture %}
-const SHELL_CACHE = 'shell-9.1.6--{{ cache_version }}--{{ site_key }}';
+const SHELL_CACHE = 'shell-9.1.7--{{ cache_version }}--{{ site_key }}';
 
-// A separate assets cache that won't be invalidated when there's a newer version of Hydejack.
+// A separate assets cache that won't be invalidated when there's a newer version of DeepDive.
 // NOTE: Whenever you make changes to any of the files in yor `assets` folder,
 //       increase the cache number, otherwise the changes will *never* be visible to returning visitors.
 const ASSETS_CACHE = 'assets--{{ cache_version }}--{{ site_key }}';
@@ -68,13 +68,13 @@ const PRE_CACHED_ASSETS = [
 // Files we add on every service worker installation.
 const CONTENT_FILES = [
   "{{ '/'             | relative_url }}",
-  "{{ '/offline.html' | relative_url }}",
+  "{{ '/offline.liquid' | relative_url }}",
   /*{% for node in site.legal %}*/ '{% assign url = node.url | default: node.href %}{% include_cached smart-url url=url %}',
   /*{% endfor %}*/
 ];
 
 const SITE_URL = new URL("{{ '/' | relative_url }}", self.location);
-const OFFLINE_PAGE_URL = new URL("{{ '/offline.html' | relative_url }}", self.location);
+const OFFLINE_PAGE_URL = new URL("{{ '/offline.liquid' | relative_url }}", self.location);
 
 self.addEventListener('install', (e) => e.waitUntil(onInstall(e)));
 self.addEventListener('activate', (e) => e.waitUntil(onActivate(e)));
@@ -233,7 +233,7 @@ async function onActivate() {
 
   return Promise.all(
     keys
-      // Only consider caches created by this baseurl, i.e. allow multiple Hydejack installations on same domain.
+      // Only consider caches created by this baseurl, i.e. allow multiple installations on same domain.
       .filter((key) => key.endsWith("sw{{ '/' | relative_url }}"))
       // Delete old caches
       .filter((key) => key !== SHELL_CACHE && key !== ASSETS_CACHE && key !== CONTENT_CACHE)
@@ -310,7 +310,7 @@ async function onDeactivate() {
 
   return Promise.all(
     keys
-      // Only consider caches created by this baseurl, i.e. allow multiple Hydejack installations on same domain.
+      // Only consider caches created by this baseurl, i.e. allow multiple installations on same domain.
       .filter((key) => key.endsWith('{{ site_key }}'))
       // Delete *all* caches
       .map((key) => caches.delete(key)),

@@ -92,9 +92,9 @@ layout: base
     {% when 'about' %}
     {% include_cached components/about.liquid author=page.author %}
     {% when 'newsletter' %}
-    {% include if-non-null try = "pro/newsletter.html" %}
+    {% include if-non-null try = "pro/newsletter.liquid" %}
     {% when 'other' %}
-    {% include if-non-null try = "pro/other-projects.liquid" %}
+    {% include if-non-null try = "components/other-projects.liquid" %}
     {% when 'comments' %}
     {% include body/comments.liquid %}
 {% else %}

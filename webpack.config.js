@@ -104,7 +104,6 @@ const sharedConfig = {
         extractComments: false,
       }),
     ],
-    // moduleIds: 'named',
     providedExports: true,
     splitChunks: {
       hidePathInfo: true,

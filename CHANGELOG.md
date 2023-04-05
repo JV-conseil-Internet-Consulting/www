@@ -27,8 +27,7 @@ Mar 30 2023
 * Bump core-js from 2.6.12 to 3.29.1
 * Bump webpack-cli from 4.10.0 to 5.0.1
 * Bump babel-loader from 8.3.0 to 9.1.2
-* 'mapTo' is deprecated use map instead: map(() => value)
-* Observable's toPromise() method is deprecated
+* Deprecated WorkerPlugin = require('worker-plugin') Webpack 5 now includes worker bundling
 * It is recommended to either pass an Object or an Array to 'combineLatest' operators
 * Removed unusued npm dependencies with `npx depcheck --detailed`
 
@@ -165,9 +164,9 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
     ![Breadcrumbs](/assets/img/blog/9.1.0-2.png){:.border.lead width="1588" height="164" loading="lazy"}
 
-    Note that this requires a [directory-like URL pattern](https://qwtel.com/posts/software/urls-are-directories/) like `/blog/:categories/:year-:month-:day-:title/` (default for Hydejack).
+    Note that this requires a [directory-like URL pattern](https://qwtel.com/posts/software/urls-are-directories/) like `/blog/:categories/:year-:month-:day-:title/` (default for DeepDive).
 
-    Disable with `hydejack.no_breadcrumbs`.
+    Disable with `deepdive.no_breadcrumbs`.
 
 * Added "Last modified at" to post layout:
 
@@ -175,7 +174,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
     To enable this feature, the post needs to have a `last_modified_at` property with a valid date. You can either set it manually in the frontmatter (not recommended), or use the [`jekyll-last-modified-at` plugin](https://github.com/gjtorikian/jekyll-last-modified-at) to set it for you (Not available on GitHub Pages!).
 
-    You can remove this element by setting `hide_last_modified` in the front matter. You can disable it for all posts by setting `hydejack.hide_last_modified` in the config file. Setting `hydejack.hide_dates` (PRO version only) will also remove it, together with all other time-related UI elements.
+    You can remove this element by setting `hide_last_modified` in the front matter. You can disable it for all posts by setting `deepdive.hide_last_modified` in the config file. Setting `deepdive.hide_dates` (PRO version only) will also remove it, together with all other time-related UI elements.
 
     You can customize the hover text, icon, and date format in `_data/strings.yml` using the following keys: `last_modified_at` (hover text), `last_modified_at_icon` (icon name, default: `icon-history`) and `date_formats.last_modified_at` (date format, default: `%Y-%m-%d`).
 
@@ -193,7 +192,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
 * Added border radius to many elements
 * Modernized table design
-* [PRO] Setting `hydejack.advertise: false` will now remove the banner from the HTML and the JavaScript console.
+* [PRO] Setting `deepdive.advertise: false` will now remove the banner from the HTML and the JavaScript console.
 * Changed the box shadow of cards (projects, posts) to reduce the amount of painting the browser has to do on when mouse hovering them.
 * The layout when using the theme without the `no_break_layout` setting is now
 
@@ -326,10 +325,10 @@ July 3 2020
 
 * Added Built-In Search Functionality
 
-    Hydejack now has its own built-in search solution, that integrates well with the existing page style and the new navbar.
+    DeepDive now has its own built-in search solution, that integrates well with the existing page style and the new navbar.
 
     The solution is entirely browser-based which means it even works while offline and doesn't depend on an 3rd party.
-    This works, because Hydejack is designed for personal sites that generally have less than 1000 pages.
+    This works, because DeepDive is designed for personal sites that generally have less than 1000 pages.
     In my testing, Jekyll build times have been a problem long before search query times.
 
     The results of the search are surprisingly good, but have only been tested in English and (somewhat) German.
@@ -339,14 +338,14 @@ July 3 2020
 
 * Added Table of Contents that is prettier, sticky, and dynamic.
 
-    Adding a table of contents is part of kramdown and can be done in all versions of Hydejack.
+    Adding a table of contents is part of kramdown and can be done in all versions of DeepDive.
     However, v9 adds a dynamic version that will stick to the 3rd column on large screens and highlight the current section.
 
     Note that this will reduce the amount of space freed up by the `no_break_layout: false` setting (otherwise the ToC would overlap with code blocks, math blocks, etc).
 
 * Added a scroll-linked navbar that disappears when scrolling down and re-appears when scrolling up.
 
-* Math support has been revamped because the old solution stopped working with Jekyll 4. Hydejack now supports both KaTeX and MathJax.
+* Math support has been revamped because the old solution stopped working with Jekyll 4. DeepDive now supports both KaTeX and MathJax.
 
     The MathJax implementation is more similar to the old solution. It comes with a client-side runtime (MathJax in this case)
     and works on GitHub Pages. It is the more heavy-weight of the two and doesn't work without JavaScript enabled.
@@ -369,7 +368,7 @@ July 3 2020
 ### Minor
 
 * CSS variables are now configurable via `_data/variables.yml`. While there are other ways to change them, this has the broadest reach across HTML (`img[sizes]` attribute!), CSS and JS.
-* Many JS content features (such as `#` heading links) now work even when `hydejack.no_push_state` is enabled.
+* Many JS content features (such as `#` heading links) now work even when `deepdive.no_push_state` is enabled.
 * Linking to posts in the `home` and `post` layout now accept either paths or URLs. [Read more](docs/basics.md#adding-related-posts-to-a-post).
 * The star icons in the resume layout can now be disabled via `no_skill_icons` and `no_language_icons`.
 * Resume layout now supports the following keys: `born`, `citizenship`, and `maritalStatus`.
@@ -378,7 +377,7 @@ July 3 2020
 * The `projects`, `resume`, and `grid` layout now make better use of large screens, by letting content expand to the right of the screen. Restore the previous , set `no_break_columns` in front matter.
 * Removed smooth scroll polyfill for Safari/Webkit as it has caused problems with sticky content.
 * Figure captions can now be added to code blocks, math blocks, and tables in addition to just images using the `.figcaption` CSS class.
-* The order of the comment section relative to the about and related posts sections can now be customized via the `hydejack.post_addons` and `hydejack.project_addons` keys. See the example `_config.yml` for more.
+* The order of the comment section relative to the about and related posts sections can now be customized via the `deepdive.post_addons` and `deepdive.project_addons` keys. See the example `_config.yml` for more.
 * Clicking the image in the `blog` layout will now navigate to the blog post. In the PRO version it will do so with the classic "move image in place" animation.
 * Grouping projects by year can now be disabled. Use `no_groups: true` in the front matter. This also applies to the new `grid` layout and the old `list` layout.
 * hy-img has been removed and replaced with browser's native `loading=lazy` attribute
@@ -386,14 +385,14 @@ July 3 2020
 * JavaScript files are now chunked, so that only what is needed is loaded on demand.
 * hy-drawer and hy-push-state have been rewritten in TypeScript and LitHTML, fixing many bugs in the process.
 * Updated to Jekyll 4.1
-* Hydejack now has a dedicated offline page that will be shown when the client is offline and tries to open a page that hasn't been cached.
+* DeepDive now has a dedicated offline page that will be shown when the client is offline and tries to open a page that hasn't been cached.
   The content of the page can be customized by creating `offline.md` file in the root with `layout: offline`, similar to `404.md`.
 * The code font can now be customized in the config file via the `font_code` key.
 
 ### Design
 
-* Many layouts (`projects`, `resume`, `home`) will now use more space on large screens (disable via `hydejack.no_third_column`)
-* Headings now appear "oversized" on larger screens and extend to the right end of the screen (disable via `hydejack.no_large_headings`)
+* Many layouts (`projects`, `resume`, `home`) will now use more space on large screens (disable via `deepdive.no_third_column`)
+* Headings now appear "oversized" on larger screens and extend to the right end of the screen (disable via `deepdive.no_large_headings`)
 * The base font size is now smaller across screen sizes (can be configured in `_sass/_variables.scss`)
 * The content width is now larger across screen sizes (can be configured in `_sass/_variables.scss`)
 * The link style has been changed to make picking accent colors easier for dark mode. It's also possible to link images now without worrying about underlines.
@@ -520,7 +519,7 @@ Sep 1 2018
 Aug 18 2018
 {:.heading.post-date}
 
-This release adds Dark Mode for Hydejack PRO customers.
+This release adds Dark Mode for DeepDive PRO customers.
 
 ### Breaking
 
@@ -540,8 +539,8 @@ As software licenses go, nobody is stopping you from using the old code, but upd
 * Increased margin of `hr` elements.
 * Cookies banner can now be enabled without using Google Analytics
 * Clicking the cookie banner "Okay" button will now fire a `hy--cookies-ok` event on `document`, so that custom analytics solutions can plug in.
-* All Google Analytics code has been removed from Hydejack's core and moved to `_includes/body/analytics.js`.
-* All Disqus code has been removed from Hydejack's core and moved to `_includes/comments.html` and `_includes/my-comments.html`.
+* All Google Analytics code has been removed from DeepDive's core and moved to `_includes/body/analytics.js`.
+* All Disqus code has been removed from DeepDive's core and moved to `_includes/comments.html` and `_includes/my-comments.html`.
 * Using CSS Custom Properties instead of SASS variables for certain properties to enable style customization using only CSS.
 * Added shadow to sidebar
 * Navbar is longer positioned `fixed`
@@ -556,7 +555,7 @@ As software licenses go, nobody is stopping you from using the old code, but upd
 Jul 16 2018
 {:.heading.post-date}
 
-So far Hydejack has been a decent Jekyll theme, but with v8 it really starts stand out among the competition: Beautiful and unique landing pages, lazy-loading images, and experimental offline support are just the most prominent new features.
+So far DeepDive has been a decent Jekyll theme, but with v8 it really starts stand out among the competition: Beautiful and unique landing pages, lazy-loading images, and experimental offline support are just the most prominent new features.
 
 ### Breaking
 
@@ -569,7 +568,7 @@ So far Hydejack has been a decent Jekyll theme, but with v8 it really starts sta
 * The `about` and `welcome` layout no longer prepend the content with the author information.
   Instead, the author info can be shown by adding the `<!--author-->` marker to the top of the file. You can also place it anywhere else.
 
-  Comment: Showing the author description on the top of the `welcome` and `about` layouts felt like an imposition and was a left-over from when I was developing Hydejack primarily for myself.
+  Comment: Showing the author description on the top of the `welcome` and `about` layouts felt like an imposition and was a left-over from when I was developing DeepDive primarily for myself.
 
 * [PRO] The `welcome` layout no longer adds recent posts and projects to the bottom of the page. Instead, they have to be explicitly set using the `<!--posts-->` and `<!--projects-->` markers. The `content_separator` front matter opton is now ignored.
 
@@ -578,12 +577,12 @@ So far Hydejack has been a decent Jekyll theme, but with v8 it really starts sta
 * Setting the accent color and sidebar image for an entire category/tag/author is no longer possible.
   To achieve a similar effect, use [Front Matter defaults][ffd] instead.
 
-  E.g. to set the accent color and image for every post in the `hydejack` folder, use:
+  E.g. to set the accent color and image for every post in the `deepdive` folder, use:
 
   ~~~yml
   defaults:
     - scope:
-        path:         hydejack
+        path:         deepdive
       values:
         accent_color: rgb(38,139,210)
         accent_image: /assets/img/hydejack-bg.jpg
@@ -595,8 +594,8 @@ So far Hydejack has been a decent Jekyll theme, but with v8 it really starts sta
 
 * The drawer now responds to mouse inputs.
 * The default heading font is now less bold. To restore the old behavior, edit (create if it's missing) `_sass/my-variables.scss` and add `$font-weight-heading: 700;`.
-* Hydejack now uses lazy-loading hy-img tags instead of regular `img` tags.
-  To revert to using regular images, set `hydejack.no_img` in the config file to `true`.
+* DeepDive now uses lazy-loading hy-img tags instead of regular `img` tags.
+  To revert to using regular images, set `deepdive.no_img` in the config file to `true`.
 * Cookie consent is now stored as a cookie (instead of `LocalStorage`) and expires after 1 year.
 * Scrolling to a fragment link is now smooth.
 * Font loading now works differently, and will be cancelled on slow connections.
@@ -757,7 +756,7 @@ Nov 25 2017
 
   ~~~yml
   # file: `_config.yml`
-  hydejack:
+  deepdive:
     cookies_banner: true
   ~~~
 
@@ -891,8 +890,8 @@ Oct 24 2017
 
 ### License Change
 
-The _free version_ of Hydejack is now [GPL-3.0] licensed, which is a more restrictive license than MIT (but still _Open Source_).
-This was necessary because the two major components that make up Hydejack,
+The _free version_ of DeepDive is now [GPL-3.0] licensed, which is a more restrictive license than MIT (but still _Open Source_).
+This was necessary because the two major components that make up DeepDive,
 [hy-push-state](https://hydecorp.github.io/hy-push-state/){:.external} and
 [hy-drawer](https://hydecorp.github.io/hy-drawer/){:.external},
 are now GPL licensed in turn.
@@ -900,7 +899,7 @@ are now GPL licensed in turn.
 How will this affect you?
 
 * If you bought the _PRO version_ you are not affected at all.
-* You can continue to use previous versions of Hydejack according to their license (MIT).
+* You can continue to use previous versions of DeepDive according to their license (MIT).
 * If you upgrade, keep the source code in a public repository and make sure you include the new `LICENSE.md` file.
   DO NOT publish the _new code_ with an _old license_.
 * If you upgrade and make changes to the source code, you are required to make those changes available to the public
@@ -942,11 +941,11 @@ That being said, you should be aware of these (small) breaking changes:
 
 * `color` has been renamed to `accent_color` to be consistent with the new `accent_image` key, but `color` continues to work.
 
-* Various options that do not make sense outside the context of Hydejack (like `no_push_state` or `no_drawer`)
-  have been moved under a common `hydejack` key. However, the old options continue to work.
+* Various options that do not make sense outside the context of DeepDive (like `no_push_state` or `no_drawer`)
+  have been moved under a common `deepdive` key. However, the old options continue to work.
 
   ```yml
-  hydejack:
+  deepdive:
     no_push_state: false
     no_drawer: false
   ```
@@ -988,7 +987,7 @@ That being said, you should be aware of these (small) breaking changes:
 
 * All texts that were previously hard-coded into the theme can now be configured via `_data/strings.yml`.
   This makes it possible to change certain phases without having to change source files,
-  but it should also make it easier to use Hydejack with other languages.
+  but it should also make it easier to use DeepDive with other languages.
   Time and date formats can also be configured, using Ruby's
   [format directives](http://ruby-doc.org/core-2.4.1/Time.html#method-i-strftime).
 
@@ -1001,7 +1000,7 @@ That being said, you should be aware of these (small) breaking changes:
   * Added `ieconfig.xml` for "Pin to start menu" support in Windows 10.
   * Old icons and new ones are now located in `assets/icons`.
 
-* Hydejack now marks up content as _structured data_, to the extent possible.
+* DeepDive now marks up content as _structured data_, to the extent possible.
   The resume is provided as <https://schema.org/Person>
   as well as [hCard](http://microformats.org/wiki/hcard),
   while projects are provided as <https://schema.org/CreativeWork>.
@@ -1010,7 +1009,7 @@ That being said, you should be aware of these (small) breaking changes:
   If you do not want to expose your data in machine-readable form, you can set the `no_structured_data` flag to `true` in your config file.
 
   ```yml
-  hydejack:
+  deepdive:
     no_structured_data: true
   ```
 
@@ -1071,11 +1070,11 @@ That being said, you should be aware of these (small) breaking changes:
   to generate a redirect page, but this is optional.
 
 * You can now configure the order of complementary content below posts and projects.
-  By default, Hydejack will show the author first (if any), the newsletter box next (if any),
+  By default, DeepDive will show the author first (if any), the newsletter box next (if any),
   and related posts/projects last.
 
   ```yml
-  hydejack:
+  deepdive:
     post_addons:    [about, newsletter, related, random]
     project_addons: [about, newsletter, other]
   ```
@@ -1101,14 +1100,14 @@ That being said, you should be aware of these (small) breaking changes:
   ```
 
 * Added a new option called `no_inline_css`.
-  When `true`, Hydejack will generate a single CSS file to be fetched (synchronously) via `link` tag,
+  When `true`, DeepDive will generate a single CSS file to be fetched (synchronously) via `link` tag,
   instead of inlining half and including the rest via `link` tag.
 
   This option _may_ be useful when serving content over HTTP/2, but you should perform your own tests.
   For more on inlining CSS, [see this](https://varvy.com/pagespeed/inline-small-css.html).
 
   ```yml
-  hydejack:
+  deepdive:
     no_inline_css: true
   ```
 
@@ -1146,7 +1145,7 @@ That being said, you should be aware of these (small) breaking changes:
   If you do not like this change, you can set `no_break_layout` to `true` in your config file.
 
   ```yml
-  hydejack:
+  deepdive:
     no_break_layout: true
   ```
 
@@ -1197,7 +1196,7 @@ Aug 10 2017
 {:.heading.post-date}
 
 * Fixed sending incorrect paths to Google Analytics.
-  In previous versions, Hydejack would always send the URL of the initial page for all subsequent page views.
+  In previous versions, DeepDive would always send the URL of the initial page for all subsequent page views.
   Thanks [@dannydwarren](https://twitter.com/dannydwarren) for pointing this out.
 * Fixed `tagline` not showing up in the title.
 
@@ -1230,7 +1229,7 @@ This maintenance release includes various quality-of-life improvements when usin
 
 ### Added
 
-* Hydejack now uses additional Jekyll plugins by default, which make working with GitHub more convenient.
+* DeepDive now uses additional Jekyll plugins by default, which make working with GitHub more convenient.
   They have been added to the `Gemfile` and `_config.yml`.
   Note that existing users need to update their `_config.yml`:
 
@@ -1433,7 +1432,7 @@ May 15 2017
 May 3 2017
 {:.heading.post-date}
 
-Hydejack has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly. This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.
+DeepDive has always featured a JavaScript-heavy sidebar, but other than that, JS has been used sparingly. This changes with this release, which adds a ton of (optional) code that changes the feel of the theme dramatically.
 
 ### Major
 
@@ -1589,12 +1588,12 @@ Aug 30 2016
 
 * Refactoring, preventing code duplications, heavier usage of `includes`.
 
-## v3.0.0 (Hydejack)
+## v3.0.0 (DeepDive)
 
 May 7 2016
 {:.heading.post-date}
 
-Hydejack is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
+DeepDive is a pretentious two-column [Jekyll](http://jekyllrb.com) theme, stolen by [`@qwtel`](https://twitter.com/qwtel) from [Hyde](http://hyde.getpoole.com). You could say it was.. [hydejacked](http://media3.giphy.com/media/makedRIckZBW8/giphy.gif).
 
 ### Features
 

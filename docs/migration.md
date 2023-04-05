@@ -2,12 +2,12 @@
 layout: page
 title: Migration
 description: >
-  This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner.
+  This documents shows how to upgrade DeepDive from previous versions (v5) in a step-by-step manner.
 hide_description: true
-sitemap: false
+# sitemap: false
 ---
 
-This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner.
+This documents shows how to upgrade DeepDive from previous versions (v5) in a step-by-step manner.
 
 Unfortunately, upgrading form v5 and earlier is not straightforward. A lot of patterns and names have changed, motivated by a variety of reasons, including better integration with the rest of the Jekyll ecosystem and simplified workflows enabled by Jekyll Collections.
 
@@ -15,8 +15,10 @@ Unfortunately, upgrading form v5 and earlier is not straightforward. A lot of pa
 {:toc}
 
 ## From v5
+
 ### Updating the folder structure
-Copy the following folders and files from Hydejack v6 into your existing repository. Make sure you merge the folder contents.
+
+Copy the following folders and files from DeepDive v6 into your existing repository. Make sure you merge the folder contents.
 
 * `_data/`
 * `_includes/`
@@ -31,15 +33,16 @@ Note that the `public` folder has been renamed to `assets`.
 You'll want to move your static assets there.
 
 ### Updating the configuration
+
 `_config.yml` has changed considerably. Open it and make the following changes.
 
-1.  Rename the following keys
+1. Rename the following keys
 
     * `font_accent` => `font_heading`
     * `load_google_fonts` => `google_fonts`
     * `google_analytics_id` => `google_analytics`
 
-2.  Enable Jekyll Collections for categories and tags by adding
+2. Enable Jekyll Collections for categories and tags by adding
 
     ~~~yml
     collections:
@@ -51,7 +54,7 @@ You'll want to move your static assets there.
         output:    true
     ~~~
 
-3.  Delete `photo` and `photo2x` form the author key and add a `picture` hash instead that looks like
+3. Delete `photo` and `photo2x` form the author key and add a `picture` hash instead that looks like
 
     ~~~yml
     picture:
@@ -65,24 +68,23 @@ You'll want to move your static assets there.
 
     For more information, see [Adding an author](config.md#adding-an-author).
 
-4.  Rename `gems` to `plugins` and make sure the list contains `jekyll-seo-tag`.
+4. Rename `gems` to `plugins` and make sure the list contains `jekyll-seo-tag`.
 
     ~~~yml
     plugins:
       - jekyll-seo-tag
     ~~~
 
-
 When making changes to `_config.yml`, it is necessary to restart the Jekyll process for the changes to take effect.
 {:.note}
 
-
 ### Restoring the tags
-1.  Delete the `tag` folder.
-2.  Create a top-level folder called `_featured_tags`.
-3.  For each entry in `_data/tags.yml`, create a markdown file in `_features_tags` with the name of the tag as filename,
+
+1. Delete the `tag` folder.
+2. Create a top-level folder called `_featured_tags`.
+3. For each entry in `_data/tags.yml`, create a markdown file in `_features_tags` with the name of the tag as filename,
     e.g. `hyde.md` for tag "hyde".
-4.  For each tag, copy its contents from `_data/tags.yml` into the new file's front matter, e.g.
+4. For each tag, copy its contents from `_data/tags.yml` into the new file's front matter, e.g.
 
     ~~~yml
     ---
@@ -101,7 +103,8 @@ When making changes to `_config.yml`, it is necessary to restart the Jekyll proc
 6. Once you've copied all tags into their own files, delete `_data/tags.yml`.
 
 ### Restoring the sidebar entries
-Hydejack can now link to any kind of page in the sidebar.
+
+DeepDive can now link to any kind of page in the sidebar.
 
 1. Delete `sidebar_tags` in `_config.yml`.
 2. Open a file who's page you would like to add to the sidebar. If you want to add a tag, open `_featured_tags/<tagname>.md`.
@@ -109,10 +112,11 @@ Hydejack can now link to any kind of page in the sidebar.
 4. (Optional) Set `order: <number>`, where `<number>` is the number at which you would like the link to appear.
 
 ### Restoring the RSS feed
+
 The feed is now provided by the `jekyll-feed` plugin instead of a custom solution.
 
-1.  Delete `atom.xml`
-2.  Add `- jekyll-feed` to `gems` in `_config.yml`, e.g.
+1. Delete `atom.xml`
+2. Add `- jekyll-feed` to `gems` in `_config.yml`, e.g.
 
     ~~~yml
     gems:
@@ -120,7 +124,7 @@ The feed is now provided by the `jekyll-feed` plugin instead of a custom solutio
       - jekyll-feed
     ~~~
 
-3.  (Optional) Add the following to `_config.yml` to make the feed appear at the same URL as the old `atom.xml`.
+3. (Optional) Add the following to `_config.yml` to make the feed appear at the same URL as the old `atom.xml`.
 
     ~~~yml
     feed:
@@ -128,6 +132,7 @@ The feed is now provided by the `jekyll-feed` plugin instead of a custom solutio
     ~~~
 
 ### Restoring the comments
+
 The way comments are enabled has changed slightly.
 You now have to enable them per page by adding `comments: true` to the front matter
 (this is what the [Disqus integration guide](https://disqus.com/admin/install/platforms/jekyll/) suggests).
@@ -142,6 +147,7 @@ defaults:
 ```
 
 ### Restoring the about page
-Hydejack now has a dedicated layout for about pages.
+
+DeepDive now has a dedicated layout for about pages.
 To use it, open `about.md` and change the `layout` in the front matter to `about`
 and delete `{% raw %}{% include about-short.html author=site.author %}{% endraw %}`.

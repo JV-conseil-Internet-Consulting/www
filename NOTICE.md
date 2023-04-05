@@ -47,7 +47,7 @@ Appropriate credit as per Creative Commons licenses.
 
 Parts of this software are provided under separate licenses.
 
-### Hydejack
+### DeepDive
 
 This software also uses portions of the `hydecorp/hydejack`, which is [GPL-3.0] licensed with the following copyright:
 

@@ -2,22 +2,22 @@
 layout: page
 title: Basics
 description: >
-  This chapter covers the basics of content creation with Hydejack.
+  This chapter covers the basics of content creation with DeepDive.
 hide_description: true
-sitemap: false
+# sitemap: false
 ---
 
-This chapter covers the basics of content creation with Hydejack.
+This chapter covers the basics of content creation with DeepDive.
 
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-
 ## Adding images
-Adding good images is key to a engaging blog experience. You can provide an `image` attribute in in the front matter of posts, pages, and projects* that will be used by Hydejack in a variety of ways, 
+
+Adding good images is key to a engaging blog experience. You can provide an `image` attribute in in the front matter of posts, pages, and projects* that will be used by DeepDive in a variety of ways,
 such as header image in the `blog` and `post` layout, social media previews, cards in the `gird` and `projects` layout\*, thumbnails in the search dropdown\*, etc.
 
-The `image` attribute will accept an URL to an image, but it is recommended that you provide a `path` / `srcset` hash instead, e.g. 
+The `image` attribute will accept an URL to an image, but it is recommended that you provide a `path` / `srcset` hash instead, e.g.
 
 ```yml
 image:
@@ -28,11 +28,11 @@ image:
     480w:  /assets/img/projects/hyde-v2@0,25x.jpg
 ```
 
-Hydejack will show the image in various sizes depending on available screen width so that no specific size will fit all. 
+DeepDive will show the image in various sizes depending on available screen width so that no specific size will fit all.
 Instead, I recommend using a [mipmap]-like approach, providing the image in multiple sizes, each image half the width of the previous one.
-Since Hydejack provides an appropriate [`sizes` attribute][mdn-sizes], the browser can chose the best image from the provided source set.
+Since DeepDive provides an appropriate [`sizes` attribute][mdn-sizes], the browser can chose the best image from the provided source set.
 
-If you have [ImageMagick] installed, you can use the following commands to create images at 50%, 25%, and 12.5% of the original image. 
+If you have [ImageMagick] installed, you can use the following commands to create images at 50%, 25%, and 12.5% of the original image.
 Other image tools will provide similar capabilities.
 
     convert your-image.jpg -resize 50% -sampling-factor 4:2:0 -strip -quality 85 -interlace JPEG -colorspace RGB your-image@0,5x.jpg
@@ -51,9 +51,8 @@ For more information on `srcset`, see the [documentation at MDN][mdn-srcset], or
 [mdn-sizes]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-sizes
 [csstricks]: https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
 
-
-
 ## Adding an entry to the sidebar
+
 To add links to the sidebar, populate the `menu` entry in `_config.yml` with a list of `title`-`url` pairs, e.g.:
 
 ```yml
@@ -70,16 +69,18 @@ menu:
 ```
 
 ### Adding a link to an external page to the sidebar
+
 To add links to external sites, simply provide a fully qualified URL, e.g.
 
 ```yml
 menu:
   - title: "@qwtel"
     url:   https://qwtel.com/
-``` 
+```
 
 ## Adding a category or tag
-Hydejack allows you to use the `list` or `grid`\* layout to show all posts of a particular category or tag.
+
+DeepDive allows you to use the `list` or `grid`\* layout to show all posts of a particular category or tag.
 
 Before you start, make sure your config files contains the `features_categories` and `featured_tags` collections:
 
@@ -95,6 +96,7 @@ collections:
 ~~~
 
 ### Recap: Categories and tags in Jekyll
+
 Posts in Jekyll can belong to one or more categories, as well as one or more tags. They are defined in a post's front matter:
 
 ~~~yml
@@ -117,32 +119,34 @@ Posts can also be assigned to a category based on their position within the fold
 
 This will place "Welcome to Jekyll" in the categories `jekyll` and `update`.
 
-This is now the preferred way of assigning categories in Hydejack, as it makes URLs correspond more naturally to the underlying folder structure.
+This is now the preferred way of assigning categories in DeepDive, as it makes URLs correspond more naturally to the underlying folder structure.
 {:.note}
 
 Whether you use this method or not, categories will always be part of a posts URL, while tags will not.
 
-Type       | URL
------------|----
-Categories | `/jekyll/update/2017-04-07-welcome-to-jekyll/`
-Tags       | `/2017-04-07-welcome-to-jekyll/`
+| Type       | URL                                            |
+| ---------- | ---------------------------------------------- |
+| Categories | `/jekyll/update/2017-04-07-welcome-to-jekyll/` |
+| Tags       | `/2017-04-07-welcome-to-jekyll/`               |
 {:.scroll-table-small}
 
 As far as Jekyll is concerned, this is the only difference.
 
-### Categories and tags in Hydejack
-Categories and tags are displayed by Hydejack below the title, after the date. Categories are displayed with the preposition "in", while tags are displayed with the preposition "on", e.g.
+### Categories and tags in DeepDive
 
-Type       | Title
------------|------
-Categories | Welcome to Jekyll¬ 07 Apr 2017 **in** Jekyll / Update
-Tags       | Welcome to Jekyll¬ 07 Apr 2017 **on** Jekyll, Update
-Both       | Welcome to Jekyll¬ 07 Apr 2017 **in** Jekyll / Update **on** Jekyll, Update
+Categories and tags are displayed by DeepDive below the title, after the date. Categories are displayed with the preposition "in", while tags are displayed with the preposition "on", e.g.
+
+| Type       | Title                                                                       |
+| ---------- | --------------------------------------------------------------------------- |
+| Categories | Welcome to Jekyll¬ 07 Apr 2017 **in** Jekyll / Update                       |
+| Tags       | Welcome to Jekyll¬ 07 Apr 2017 **on** Jekyll, Update                        |
+| Both       | Welcome to Jekyll¬ 07 Apr 2017 **in** Jekyll / Update **on** Jekyll, Update |
 {:.scroll-table-small}
 
 You can adjust these in [`_data/string.yml`][strings].
 
 ### Creating a new category or tag
+
 By default, categories and tags are rendered as plain text. Further steps are necessary if you want them to link to a page that contains a list of all posts that belong to that category or tag.
 
 For each featured category or tag, a file called `<category-name>.md` or `<tag-name>.md` has to be created inside the `_featured_tags` and `_featured_categories` folders, respectively. Each file in these folders is part of a [Jekyll Collection](https://jekyllrb.com/docs/collections/).
@@ -178,9 +182,9 @@ description: >
 
 Once the file is created, the page can be found at `/category/<categoryname>/` or `/tag/<tagname>/`.
 
-
 ## Adding an about page
-About pages are a frequent use case, so Hydejack has a special layout for it. It is a slight modification of the `page` layout that allows showing the author information by adding the `<!--author-->` marker somewhere on the page.
+
+About pages are a frequent use case, so DeepDive has a special layout for it. It is a slight modification of the `page` layout that allows showing the author information by adding the `<!--author-->` marker somewhere on the page.
 
 To create an about page, make sure `layout` is set to `about`.
 For more on authors, see [Adding an author](config.md#adding-an-author).
@@ -197,9 +201,9 @@ Some content
 <!--author-->
 ~~~
 
-
 ## Adding a cover page
-Hydejack 8 introduces cover pages, i.e. pages witht he sidebar opened, so that it spans the entire screen. This feature is intended for landing pages. To enable it on a page, simply add `cover: true` to the front matter.
+
+DeepDive 8 introduces cover pages, i.e. pages witht he sidebar opened, so that it spans the entire screen. This feature is intended for landing pages. To enable it on a page, simply add `cover: true` to the front matter.
 
 ![Cover page example](../assets/img/blog/hydejack-8@0,5x.png){:.lead width="960" height="540" loading="lazy"}
 
@@ -213,6 +217,7 @@ cover:  true #!! Add this
 ~~~
 
 ## Adding related posts to a post
+
 You can choose which posts will appear in the "Related Posts" section below a post by adding the `related_posts` key to the front matter of a post
 
 ~~~yml
@@ -229,26 +234,27 @@ related_posts:
 ~~~
 
 ## Customization
+
 ### Adding custom CSS
-The quickest and safest way to add custom CSS to Hydejack is via the `_sass/my-inline.scss` and `_sass/my-style.scss` files (create the folder/the files if they don't exist).
+
+The quickest and safest way to add custom CSS to DeepDive is via the `_sass/my-inline.scss` and `_sass/my-style.scss` files (create the folder/the files if they don't exist).
 
 To add CSS that gets inlined into the page, i.e. is loaded with the first request, put the CSS rules into `my-inline.scss`. This is intended for above-the-fold content. Otherwise put the CSS rules into `my-style.scss`.
 Note that this distinction has no effect when `no_inline_css` is enabled.
 
-
 ### Adding custom HTML to the head
+
 To add custom HTML elements to the `<head>` of the document, open `_includes/my-head.html` (create the folder/the files if they don't exist) and add your elements there.
 
-
 ### Adding custom HTML to the body
+
 To add custom HTML elements to the `<body>` of the document, open `_includes/my-body.html` (create the folder/the files if they don't exist) and add your elements there.
 
 What's the difference to `my-scripts.html`?
-: This file was used in earlier versions of Hydejack to accomplish the same goal. However, there are still instances were you might want to prefer `my-scripts.html` over `my-body.html`, as it won't load scrips on redirect pages and will be ignored by browsers < IE10.
-
+: This file was used in earlier versions of DeepDive to accomplish the same goal. However, there are still instances were you might want to prefer `my-scripts.html` over `my-body.html`, as it won't load scrips on redirect pages and will be ignored by browsers < IE10.
 
 ## Adding a welcome page*
-If you bought the PRO version of Hydejack you have access to the `welcome` layout.
+
 It is intended to showcase your projects and blog posts in a compact way.
 Technically, it is a modified version of the `about` layout, so it allows showing the author information where the `<!--author-->` marker is put. [Demo][welcome].
 
@@ -264,6 +270,7 @@ cover:  true
 ~~~
 
 Without further configuration, the welcome page will just look like a regular page. However, it can be enhanced through the use of markers:
+
 - To show the two most recent projects, add the `<!--projects-->` marker to the content
 - To show the four most recent blog posts, add the `<!--posts-->` marker to the content
 - (To show the five most recent blog posts in list form, add the `<!--posts_list-->` marker to the content)
@@ -310,10 +317,10 @@ featured: false
   This setting takes precedence over the `featured` value of individual projects,
   i.e. it will apply to the entire page.
 
-
 ## Projects*
 
 ### Adding a projects page
+
 The projects page will show all projects of a particular collection.
 
 First, you need to make sure that you have the `projects` collection defined in `_config.yml`:
@@ -356,8 +363,8 @@ featured:        true
   This setting takes precedence over the `featured` value of individual projects,
   i.e. it will apply to the entire page.
 
-
 ### Adding a project
+
 Projects are organized using [Jekyll Collections](https://jekyllrb.com/docs/collections/).
 Each project generates an entry on the projects layout ([Demo][projects]) as well as its own detail page ([Demo][project]).
 
@@ -414,8 +421,8 @@ featured:    false
 `featured`
 : Optional. When `true`, the project preview will span the full content width. You can use this for projects that should receive more attention. You can set/override this for an entire page, by setting `featured` in the front matter (applies to the `projects` and `welcome` layout).
 
-
 ### Organizing Projects
+
 If you want to organize your projects using categories or tags, similar to the way you do with posts, the best way is to achieve this is via multiple collections. Categories and tags are reserved for posts, and adding them to collections has no effect.
 
 The default config file comes with one projects collection predefined, but we can easily add additional collections like so:
@@ -451,16 +458,15 @@ show_collection: other_projects #!!
 
 Note that the file name matches the `other-projects` path in the `permalink` we've defined above. This is to ensure that the directories match up.
 
-
 ## Adding a resume*
-Hydejack's PRO version features a generalized resume layout.
+
 [Demo][resume].
 
 It generates the resume page from a valid [JSON Resume](https://jsonresume.org/), which is good news if you already have a JSON resume. Otherwise, there are various ways of obtaining one:
 
-* You can edit the [example `resume.yml`][resumeyml] in `_data` directly. It contains example entries for each type of entry.
-* You can use the visual [JSON Resume Editor](http://registry.jsonresume.org/).
-* If you have a LinkedIn profile, you can try [LinkedIn to Json Résumé](https://jmperezperez.com/linkedin-to-json-resume/).
+- You can edit the [example `resume.yml`][resumeyml] in `_data` directly. It contains example entries for each type of entry.
+- You can use the visual [JSON Resume Editor](http://registry.jsonresume.org/).
+- If you have a LinkedIn profile, you can try [LinkedIn to Json Résumé](https://jmperezperez.com/linkedin-to-json-resume/).
 
 Once you have a JSON Resume, place it into `_data`.
 
@@ -473,7 +479,7 @@ layout: resume
 title:  Resume
 description: >
   A short description of the page for search engines (~150 characters long).
-hide_description: true 
+hide_description: true
 ---
 ~~~
 
@@ -481,6 +487,7 @@ You can download the final `resume.json` (minified) from the assets folder. When
 {:.note}
 
 ### Changing the layout
+
 You can customize the layout of the resume by rearranging the entries in the `left_column` and `right_columns` keys in the front matter, e.g.
 
 ~~~yml
@@ -502,16 +509,17 @@ right_column:
 ~~~
 
 ### Skill level icons
+
 By default, the layout will replace certain keywords with star icons. The keywords are as follows:
 
-| Icon | Skills | Languages |
-|--|--|--|
+| Icon                                                                                                            | Skills                                    | Languages                                            |
+| --------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------- |
 | <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-full"></span>    | 3/3, Master, Expert, Senior, Professional | 5/5, Native or bilingual proficiency, Native speaker |
-| <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>    |                                           | 4/5, Full professional proficiency |
-| <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>   | 2/3, Intermediate, Advanced, Amateur      | 3/5, Professional working proficiency |
-| <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>   |                                           | 2/5, Limited working proficiency |
-| <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>  | 1/3, Beginner, Novice, Junior             | 1/5, Elementary proficiency |
-| <span class="icon-star-empty"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span> | 0/3                                       | 0/5, No proficiency |
+| <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-half"></span>    |                                           | 4/5, Full professional proficiency                   |
+| <span class="icon-star-full"></span><span class="icon-star-full"></span><span class="icon-star-empty"></span>   | 2/3, Intermediate, Advanced, Amateur      | 3/5, Professional working proficiency                |
+| <span class="icon-star-full"></span><span class="icon-star-half"></span><span class="icon-star-empty"></span>   |                                           | 2/5, Limited working proficiency                     |
+| <span class="icon-star-full"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span>  | 1/3, Beginner, Novice, Junior             | 1/5, Elementary proficiency                          |
+| <span class="icon-star-empty"></span><span class="icon-star-empty"></span><span class="icon-star-empty"></span> | 0/3                                       | 0/5, No proficiency                                  |
 
 If a keyword is not recognized, the provided text will be spelled out  instead. To disable icons and always spell out the text,  set `no_skill_icons` and/or `no_langauge_icons` to `true`.
 
@@ -522,6 +530,7 @@ no_skill_icons: true
 ~~~
 
 ### Adding a specialized resume or multiple resumes
+
 You can add a specialized resume or multiple resumes by adding the resume YAML to the front matter under the `resume` key.
 E.g.:
 
@@ -542,7 +551,8 @@ resume:
 ~~~
 
 ### Downloads
-You can add buttons to let readers print or download your resume in various formats. 
+
+You can add buttons to let readers print or download your resume in various formats.
 Add the following to the front matter to add all 4 buttons:
 
 ```yml
@@ -554,18 +564,17 @@ buttons:
   json: /assets/resume.json
 ```
 
-To remove a button remove the corresponding key from the hash. 
+To remove a button remove the corresponding key from the hash.
 
 While the `resume.json` is can be generated by Jekyll itself, and the vCard can be generated by an [external service][h2vx],
 the PDF needs to be pre-generated by you.
 
-You can render a PDF from the resume page itself by using your browser's "Print to PDF" feature (Chrome works best). 
+You can render a PDF from the resume page itself by using your browser's "Print to PDF" feature (Chrome works best).
 For best results, check the following options in the print popup:
 
 [h2vx]: http://h2vx.com/vcf/
 
 ![Uncheck Headers and footers, check Background graphics](/assets/img/docs/chrome-print.png){:width="299" height="588" loading="lazy"}
-
 
 Continue with [Writing](writing.md){:.heading.flip-title}
 {:.read-more}

@@ -2,12 +2,12 @@
 layout: page
 title: Config
 description: >
-  This chapter covers the many configuration options of Hydejack, allowing you to tailor it to your needs.
+  This chapter covers the many configuration options of DeepDive, allowing you to tailor it to your needs.
 hide_description: true
-sitemap: false
+# sitemap: false
 ---
 
-Once Jekyll is running, you can start with basic configuration by adding various entries to `_config.yml`. 
+Once Jekyll is running, you can start with basic configuration by adding various entries to `_config.yml`.
 Besides the documentation here, you can also read the [annotated config file][config].
 
 When making changes to `_config.yml`, it is necessary to restart the Jekyll process for changes to take effect.
@@ -16,8 +16,8 @@ When making changes to `_config.yml`, it is necessary to restart the Jekyll proc
 0. this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-
 ## Setting `url` and `baseurl`
+
 The first order of business should be to set the correct `url` and `baseurl` values in `_config.yml`.
 
 The `url` is the domain of your site, including the protocol (`http` or `https`). For this site, it is
@@ -35,7 +35,7 @@ e.g.
 
 ~~~yml
 # file: `_config.yml`
-baseurl: /hydejack
+baseurl: /deepdive
 ~~~
 
 Otherwise, provide the empty string `''`
@@ -44,6 +44,7 @@ You don't need to provide this property when hosting on GitHub Pages or Netlify.
 {:.note}
 
 ### GitHub Pages
+
 When hosting on [GitHub Pages](https://pages.github.com/) the `url` is `https://<username>.github.io`
 (unless you are using a custom domain).
 
@@ -55,9 +56,9 @@ The `baseurl` depends on the kind of page you are hosting.
 For for information on the types of pages you can host on GitHub, see the
 [GitHub Help article](https://help.github.com/articles/user-organization-and-project-pages/).
 
-
 ## Changing accent colors and sidebar images
-Hydejack allows you to choose the background image of the sidebar, as well as the accent color
+
+DeepDive allows you to choose the background image of the sidebar, as well as the accent color
 (color of the links, selection and focus outline, etc...).
 
 ~~~yml
@@ -73,7 +74,7 @@ If you save a blurred image as JPG, it will also drastically reduce its file siz
 The `accent_image` property also accepts the special value `none` which will remove the default image.
 
 If your sidebar image contains bright colors, the white text can be difficult to read. In this case, consider setting
-`invert_sidebar: true` in the front matter to invert the text colors in the sidebar. 
+`invert_sidebar: true` in the front matter to invert the text colors in the sidebar.
 Use [front matter defaults][fmd] to enable this on all pages (see below).
 
 Note that these values can be overwritten on a per-page basis, i.e. you can create a unique look for each page.
@@ -83,14 +84,15 @@ You can also apply a certain look to all posts in a category via [front matter d
 # file: `_config.yml`
 defaults:
   - scope:
-      path:         hydejack/
+      path:         deepdive/
     values:
       accent_image: /assets/img/hydejack-bg.jpg
       accent_color: rgb(38,139,210)
 ```
 
 ### Theme color
-Hydejack also supports the `theme_color` property. When set, it will change the background color of the sidebar, as well as set the `theme_color` property in the [Web App Manifest][wam]. In some browsers, such as Chrome on Android, this will change the color of the browser's UI components.
+
+DeepDive also supports the `theme_color` property. When set, it will change the background color of the sidebar, as well as set the `theme_color` property in the [Web App Manifest][wam]. In some browsers, such as Chrome on Android, this will change the color of the browser's UI components.
 
 ~~~yml
 # file: `_config.yml`
@@ -102,7 +104,8 @@ Just like `accent_*` properties, the theme color can be overridden on a per-page
 [wam]: https://web.dev/add-manifest/#theme-color
 
 ## Changing fonts
-Hydejack lets you configure the font of regular text and headlines, and it has built-in support for Google Fonts.
+
+DeepDive lets you configure the font of regular text and headlines, and it has built-in support for Google Fonts.
 There are three keys in `_config.yml` associated with this: `font`, `font_heading` and `google_fonts`.
 The defaults are:
 
@@ -120,25 +123,25 @@ You can get it from the download page at [Google Fonts](https://fonts.google.com
 
 ![Where to get the google_fonts string](../assets/img/docs/google-fonts.png){:width="600" height="398" loading="lazy"}
 
-
 ### Removing Google Fonts
+
 If you prefer not to use Google Fonts and remove all associated code from the site,
 set the `google_fonts` key to `false`.
 
 The `no_google_fonts` parameter has been removed in v9 and no longer has any effect.
 {:.note }
 
-
 ## Choosing a blog layout
-Hydejack features three layouts for showing your blog posts.
+
+DeepDive features three layouts for showing your blog posts.
 
 * The [`list` layout][posts] only shows the title and groups the posts by year of publication.
-* The [`grid` layout][grid]\* is exclusive to the PRO Version and will show a content card (with `image`) for each post.
+* The [`grid` layout][grid]\* will show a content card (with `image`) for each post.
 * The [`blog` layout][blog] is a traditional paginated layout and shows the title and an excerpt of each post.
 
-[blog]: https://hydejack.com/blog/
-[posts]: https://hydejack.com/posts/
-[grid]: https://hydejack.com/blog/hydejack/
+[blog]: https://deepdive.com/blog/
+[posts]: https://deepdive.com/posts/
+[grid]: https://deepdive.com/blog/deepdive/
 
 In order to use the `list` or `grid` layout add the following front-matter to a new markdown file:
 
@@ -184,8 +187,8 @@ title: Blog
 
 For more information see [Pagination](https://jekyllrb.com/docs/pagination/).
 
-
 ### Using the `blog` layout in a subdirectory
+
 If you want to use the blog layout at a URL like `/my-blog/`, create the following folder structure:
 
 ~~~
@@ -214,8 +217,8 @@ paginate_path: /my-blog/:num/ #!!
 
 To add an entry in the sidebar to your blog directory, see [Adding an entry to the sidebar](./basics.md#adding-an-entry-to-the-sidebar).
 
-
 ## Adding an author
+
 At a bare minimum, you should add an `author` key with a `name` and `email` sub-key
 (used by the [feed plugin](https://github.com/jekyll/jekyll-feed)) to to your config file:
 
@@ -239,8 +242,8 @@ author:
     This is another paragraph.
 ~~~
 
-
 ### Adding an author's picture
+
 If you'd like for the author's picture to appear in addition the about text (see above), you can either use the [`jekyll-avatar`](https://github.com/benbalter/jekyll-avatar) plugin or provide URLs to images manually.
 
 To use the plugin, add it to your `Gemfile` and the list of `plugins` in your config file:
@@ -288,11 +291,11 @@ The keys of the `srcset` hash will be used as image descriptors. For more inform
 [mdnsrcset]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-srcset
 [csssrcset]: https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
 
-
 ### Adding social media icons
-Hydejack supports a variety of social media icons out of the box. These are defined on a per-author basis, so make sure you've followed the steps in [Adding an author](#adding-an-author).
 
-If you are using the gem-based version of Hydejack, download [`social.yml`][social] and put it into `_data` in the root directory. This is necessary because gem-based themes do not support including `_data`.
+DeepDive supports a variety of social media icons out of the box. These are defined on a per-author basis, so make sure you've followed the steps in [Adding an author](#adding-an-author).
+
+If you are using the gem-based version of DeepDive, download [`social.yml`][social] and put it into `_data` in the root directory. This is necessary because gem-based themes do not support including `_data`.
 {:.note}
 
 You can add a link to a social network by adding an entry to the `social` key in to an author.
@@ -334,8 +337,8 @@ author:
 You can add any platform, even if it's not defined in [`social.yml`][social], by providing a complete URL. However, a fallback icon <span class="icon-link"></span> will be used when no icon is available. Supplying your own icons is an [advanced topic](advanced.md).
 {:.note}
 
-
 ### Adding an email, RSS icon or download icon
+
 If you'd like to add an email <span class="icon-mail"></span>, RSS <span class="icon-rss2"></span>, or download <span class="icon-box-add"></span> icon to the list, add the `email`, `rss`, or `download` key, e.g.:
 
 ~~~yml
@@ -344,12 +347,12 @@ author:
   social:
     email:    mail@qwtel.com
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
-    download: https://github.com/hydecorp/hydejack/archive/v9.1.6.zip
+    download: https://github.com/hydecorp/deepdive/archive/v9.1.6.zip
 ~~~
 
-
 ## Enabling comments
-Hydejack supports comments via [Disqus](https://disqus.com/). Before you can add comments to a page you need to register and add your site to Disqus' admin console. Once you have obtained your "Disqus shortname", you include it in your config file:
+
+DeepDive supports comments via [Disqus](https://disqus.com/). Before you can add comments to a page you need to register and add your site to Disqus' admin console. Once you have obtained your "Disqus shortname", you include it in your config file:
 
 ~~~yml
 # file: `_config.yml`
@@ -380,8 +383,8 @@ defaults:
 
 [fmd]: https://jekyllrb.com/docs/configuration/#front-matter-defaults
 
-
 ## Enabling Google Analytics
+
 Enabling Google Analytics is as simple as setting the `google_analytics` key.
 
 ~~~yml
@@ -391,12 +394,13 @@ google_analytics: UA-XXXXXXXX-X
 
 To remove Google Analytics and all associated code from the site, set the `google_analytics` key to `false`.
 
-
 ### Using a custom analytics provider
+
 If you want to use a different analytics provider such as [Matomo](https://matomo.org/), you can add its code snippet to `_includes/my-body.html` (create if it doesn't exist).
 The [default file][mybody] contains an example.
 
 ## Changing built-in strings
+
 You can change the wording of built-in strings like "Related Posts" or "Read more" in `_data/strings.yml`.
 
 If you are using the gem-based version the file doesn't exist, but you can get the default file [here][strings].
@@ -416,8 +420,8 @@ where `cc` is the 2-letter country code and `ll` specifies a 2-letter location c
 
 You may also change the strings used for formatting dates and times (look out for the `date_formats` key), but be aware that the values you provide need to be valid Ruby [format directives](http://ruby-doc.org/core-2.4.1/Time.html#method-i-strftime).
 
-
 ## Adding legal documents
+
 If you have pages for contact data, privacy policy, cookie policy, etc. you can add links to them in the footer by listing them under the `legal` key in your config file as follows:
 
 ```yml
@@ -429,17 +433,17 @@ legal:
     url:  /cookies-policy/
 ```
 
-When using Hydejack's offline feature, the pages listed here will be downloaded and cached when loading the page for the first time.
+When using DeepDive's offline feature, the pages listed here will be downloaded and cached when loading the page for the first time.
 
 ## Enabling math blocks
 
-Hydejack supports [math blocks][ksynmath] with either [KaTeX] or [MathJax]. 
+DeepDive supports [math blocks][ksynmath] with either [KaTeX] or [MathJax].
 
-The _MathJax implementation_ comes with a client-side runtime and works on GitHub Pages. 
-It is the more heavy-weight of the two and doesn't work without JavaScript enabled. 
+The *MathJax implementation* comes with a client-side runtime and works on GitHub Pages.
+It is the more heavy-weight of the two and doesn't work without JavaScript enabled.
 Due to the size of the complete MathJax package, it only works partially with offline support enabled.
 
-The _KaTeX implementation_ pre-renders the KaTeX output during site building.
+The *KaTeX implementation* pre-renders the KaTeX output during site building.
 It's more lightweight because it does not ship a client-side runtime and therefore works without JavaScript.
 In my opinion, it is the more elegant solution, but it requires a JavaScript runtime on the machine that builds the site,
 i.e. it does not work on GitHub Pages.
@@ -453,7 +457,7 @@ kramdown:
   math_engine_opts:    {}
 ```
 
-The KaTeX implementation also requires the `kramdown-math-katex` gem in your `Gemfile`. 
+The KaTeX implementation also requires the `kramdown-math-katex` gem in your `Gemfile`.
 If you intend to use MathJax instead, this step is not required.
 
 ```ruby
@@ -462,11 +466,12 @@ gem "kramdown-math-katex"
 ```
 
 There are a couple of things to know about this gem:
-*  It is not supported on GitHub Pages. 
+
+* It is not supported on GitHub Pages.
    You have to build the site on your machine before uploading to GitHub,
-   or use a more permissive cloud building tool such as Netlify. 
-*  You need some kind of JavaScript runtime on your machine.
-   Usually installing [NodeJS](https://nodejs.org/en/download/) will suffice. 
+   or use a more permissive cloud building tool such as Netlify.
+* You need some kind of JavaScript runtime on your machine.
+   Usually installing [NodeJS](https://nodejs.org/en/download/) will suffice.
    Alternatively, adding `gem "duktape"` will also do.
    For more, see <https://github.com/kramdown/math-katex#documentation>
 
@@ -476,10 +481,11 @@ Before you add math content, remember to run `bundle install` and restart Jekyll
 [katex]: https://khan.github.io/KaTeX/
 [mathjax]: https://www.mathjax.org/
 
-
 ## Adding custom Favicons and App Icons
+
 ### Changing the Favicon
-By default, Hydejack will use the Favicon from `/assets/icons/favicon.ico` and Apple Touch Icon from `/assets/icons/icon-192x192.png`.
+
+By default, DeepDive will use the Favicon from `/assets/icons/favicon.ico` and Apple Touch Icon from `/assets/icons/icon-192x192.png`.
 You can either override these files, or override the path in the config file via `favicon` and `app_touch_icon` keys:
 
 ```yml
@@ -489,10 +495,11 @@ apple_touch_icon: /assets/img/logo.png
 ```
 
 ### Changing the App Icons
-By default, Hydejack includes its own favicon, as well as app icons in 8 different resolutions.
+
+By default, DeepDive includes its own favicon, as well as app icons in 8 different resolutions.
 
 | Name               | Resolution |
-|:-------------------|-----------:|
+| :----------------- | ---------: |
 | `icon-512x512.png` |  `512x512` |
 | `icon-384x384.png` |  `384x384` |
 | `icon-192x192.png` |  `192x192` |
@@ -504,21 +511,20 @@ By default, Hydejack includes its own favicon, as well as app icons in 8 differe
 
 To change the default icons you have to replce all of them. To make this manageable, I recommend using the following tools:
 
-First, use the [Maskable.app Editor](https://maskable.app/editor) to confine your logo/picture to the "minimum safe area". More on maskable app icons, see [this article on web.dev](https://web.dev/maskable-icon). 
+First, use the [Maskable.app Editor](https://maskable.app/editor) to confine your logo/picture to the "minimum safe area". More on maskable app icons, see [this article on web.dev](https://web.dev/maskable-icon).
 Make sure the base image is at least 512x512 pixels in size.
 
-Then use the [Web App Manifest Generator](https://app-manifest.firebaseapp.com/) to automatically resize the icons. 
-Upload the icon downloaded from Maskable.app and then click "Generate .zip". 
+Then use the [Web App Manifest Generator](https://app-manifest.firebaseapp.com/) to automatically resize the icons.
+Upload the icon downloaded from Maskable.app and then click "Generate .zip".
 In the zip, ignore the `manifest.json` and look for the `icons` folder. Copy it into the `assets` folder of your site.
 
 To change the favicon, place your own `favicon.ico` (32x32, PNG) into `assets/icons`.
-
 
 ## Adding a cookies banner*
 
 ~~~yml
 # file: `_config.yml`
-hydejack:
+deepdive:
   cookies_banner: true
 ~~~
 
@@ -533,8 +539,8 @@ cookies_banner:
   okay: Okay
 ~~~
 
-
 ## Enabling newsletter boxes*
+
 To enable showing newsletter subscription boxes below each post and project,
 provide your [Tinyletter] username to the `tinyletter` key in the config file.
 
@@ -551,15 +557,15 @@ To build a completely new from, you can use [the same CSS classes as Bootstrap](
 
 [tinyletter]: https://tinyletter.com/
 
-
 ## Enabling Dark Mode*
-Buyers of the PRO version have access to a dark-themed version of Hydejack.
 
-Dark mode can be enabled in `config.yml` under the `hydejack` key and has three settings and two adjustments:
+Dark-themed version of DeepDive.
+
+Dark mode can be enabled in `config.yml` under the `deepdive` key and has three settings and two adjustments:
 
 ```yml
 # file: `_config.yml`
-hydejack:
+deepdive:
   dark_mode:
     dynamic: true
     sunrise: 6
@@ -576,7 +582,6 @@ Finally, setting `always` will cause dark mode to become the default theme at al
 
 Continue with [Basics](basics.md){:.heading.flip-title}
 {:.read-more}
-
 
 [config]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_config.yml
 [social]: https://github.com/hydecorp/hydejack-starter-kit/blob/v9/_data/social.yml

@@ -5,7 +5,7 @@ description: >
   There are two ways of adding third party scripts.
   Embedding is ideal for one-off scripts, while global scripts are loaded on every page.
 hide_description: true
-sitemap: false
+# sitemap: false
 ---
 
 There are two ways of adding third party scripts.
@@ -16,7 +16,8 @@ Adding [global scripts](#global-scripts) is for scripts that should be loaded on
 {:toc}
 
 ## Embedding
-Hydejack supports embedding third party scripts directly inside markdown content. This will work in most cases, except when a script can not be loaded on a page more than once (this will occur when a user navigates to the same page twice).
+
+DeepDive supports embedding third party scripts directly inside markdown content. This will work in most cases, except when a script can not be loaded on a page more than once (this will occur when a user navigates to the same page twice).
 
 Example:
 
@@ -24,7 +25,7 @@ Example:
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet" data-lang="en">
   <p lang="en" dir="ltr">
-    The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts,
+    The next version of DeepDive (v6.3.0) will allow embedding 3rd party scripts,
     like the one that comes with this tweet for example.
   </p>
   &mdash; Florian Klampfer (@qwtel)
@@ -33,9 +34,10 @@ Example:
 ~~~
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts, like the one that comes with this tweet for example.</p>&mdash; Florian Klampfer (@qwtel) <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The next version of DeepDive (v6.3.0) will allow embedding 3rd party scripts, like the one that comes with this tweet for example.</p>&mdash; Florian Klampfer (@qwtel) <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a></blockquote>
 
 ## Global scripts
+
 If you have scripts that should be included on every page you can add them globally by
 opening (or creating) `_includes/my-scripts.html` and adding them like you normally would:
 
@@ -50,7 +52,8 @@ opening (or creating) `_includes/my-scripts.html` and adding them like you norma
 `my-scripts.html` will be included at the end of the `body` tag.
 
 ## Registering push state event listeners
-When embedding scripts globally you might want to run some init code after each page load. However, the problem with push state-based page loads is that the `load` event won't fire again. Luckily, Hydejack's push state component exposes an event that you can listen to instead.
+
+When embedding scripts globally you might want to run some init code after each page load. However, the problem with push state-based page loads is that the `load` event won't fire again. Luckily, DeepDive's push state component exposes an event that you can listen to instead.
 
 ```html
 <!-- file: `_includes/my-scripts.html` -->
@@ -80,15 +83,15 @@ Note that the above code must only run once, so include it in your `my-scripts.h
 : All embedded script tags have been inserted into the document and have finished loading.
 
 ## If everything else fails
-If you can't make an external script work with Hydejack's push state approach to page loading,
+
+If you can't make an external script work with DeepDive's push state approach to page loading,
 you can disable push state by adding to your config file:
 
 ```yml
 # file: `_config.yml`
-hydejack:
+deepdive:
   no_push_state: true
 ```
-
 
 Continue with [Build](build.md){:.heading.flip-title}
 {:.read-more}

@@ -21,15 +21,15 @@
 // which won't change between content updates.
 // 
 // 
-const SHELL_CACHE = 'shell-9.1.6--v13--sw/';
+const SHELL_CACHE = 'shell-9.1.7--v13--sw/';
 
-// A separate assets cache that won't be invalidated when there's a newer version of Hydejack.
+// A separate assets cache that won't be invalidated when there's a newer version of DeepDive.
 // NOTE: Whenever you make changes to any of the files in yor `assets` folder,
 //       increase the cache number, otherwise the changes will *never* be visible to returning visitors.
 const ASSETS_CACHE = 'assets--v13--sw/';
 
 // The cache for regular content, which will be invalidated every time you make a new build.
-const CONTENT_CACHE = 'content--2023-04-05T16:16:59+02:00--sw/';
+const CONTENT_CACHE = 'content--2023-04-05T19:54:39+02:00--sw/';
 
 // A URL search parameter you can add to external assets to cache them in the service worker.
 const SW_CACHE_SEARCH_PARAM = 'sw-cache';
@@ -296,7 +296,6 @@ const STATIC_FILES = [
   /**/ '/assets/img/blog/louis-hansel.jpg',
   /**/ '/assets/img/blog/louis-hansel@0,25x.jpg',
   /**/ '/assets/img/blog/louis-hansel@0,5x.jpg',
-  /**/ '/assets/img/blog/nuage-de-mots-1200x800.jpg',
   /**/ '/assets/img/blog/resume.png',
   /**/ '/assets/img/blog/steve-harvey.jpg',
   /**/ '/assets/img/blog/steve-harvey@0,125x.jpg',
@@ -307,6 +306,7 @@ const STATIC_FILES = [
   /**/ '/assets/img/docs/chrome-print.png',
   /**/ '/assets/img/docs/google-fonts.png',
   /**/ '/assets/img/logo.png',
+  /**/ '/assets/img/nuage-de-mots-1200x800.jpg',
   /**/ '/assets/img/sidebar-bg-0.jpg',
   /**/ '/assets/img/sidebar-bg-1.jpg',
   /**/ '/assets/img/sidebar-bg-2.jpg',
@@ -315,98 +315,55 @@ const STATIC_FILES = [
   /**/ '/assets/img/sidebar-bg.jpg',
   /**/ '/assets/img/social-media-preview.png',
   /**/ '/assets/img/swipe.svg',
+  /**/ '/assets/js/121-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/412-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/421-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/443-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/634-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/649-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/708-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/765-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/908-deepdive-9.1.7.min.js',
   /**/ '/assets/js/deepdive-9.1.7.min.js',
-  /**/ '/assets/js/deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/drawer-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/drawer-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/fetch-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/fetch-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/intersection-observer-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/intersection-observer-deepdive-9.1.7.min.js.map',
+  /**/ '/assets/js/legacy/121-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/412-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/421-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/443-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/461-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/634-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/708-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/737-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/765-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/874-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/908-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/drawer-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/drawer-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/fetch-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/fetch-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/intersection-observer-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/intersection-observer-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/navbar-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/navbar-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/push-state-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/push-state-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/resize-observer-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/resize-observer-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/search-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/search-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/search-worker-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/search-worker-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/shadydom-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/shadydom-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/toc-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/toc-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_abortcontroller-polyfill_dist_polyfill-patch-fetch_js-node_modules_whatw-d9768c-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_abortcontroller-polyfill_dist_polyfill-patch-fetch_js-node_modules_whatw-d9768c-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_juggle_resize-observer_lib_exports_resize-observer_js-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_juggle_resize-observer_lib_exports_resize-observer_js-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_lit-html_lit-html_js-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_lit-html_lit-html_js-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_lit_directives_if-defined_js-node_modules_lit_directives_repeat_js-node_-43f7be-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_lit_directives_if-defined_js-node_modules_lit_directives_repeat_js-node_-43f7be-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_minisearch_dist_es_index_js-node_modules_kv-storage-polyfill_dist_kv-sto-b36c5d-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_minisearch_dist_es_index_js-node_modules_kv-storage-polyfill_dist_kv-sto-b36c5d-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_BehaviorSubject_js-node_modules_rxjs_dist_esm5_i-e68938-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_BehaviorSubject_js-node_modules_rxjs_dist_esm5_i-e68938-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_observable_combineLatest_js-node_modules_rxjs_di-7f5a75-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_observable_combineLatest_js-node_modules_rxjs_di-7f5a75-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_operators_exhaustMap_js-node_modules_hydecorp_pu-976709-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_operators_exhaustMap_js-node_modules_hydecorp_pu-976709-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_operators_throttleTime_js-node_modules_hydecorp_-ce9e75-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_rxjs_dist_esm5_internal_operators_throttleTime_js-node_modules_hydecorp_-ce9e75-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_webcomponents_custom-elements_custom-elements_min_js-node_modules_webcom-66572f-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_webcomponents_custom-elements_custom-elements_min_js-node_modules_webcom-66572f-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/legacy/vendors-node_modules_webcomponents_shadycss_entrypoints_scoping-shim_js-node_modules_webcompo-1611f4-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/vendors-node_modules_webcomponents_shadycss_entrypoints_scoping-shim_js-node_modules_webcompo-1611f4-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/webanimations-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/webanimations-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/legacy/webcomponents-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/webcomponents-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/navbar-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/navbar-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/push-state-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/push-state-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/resize-observer-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/resize-observer-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/search-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/search-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/search-worker-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/search-worker-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/shadydom-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/shadydom-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/toc-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/toc-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_abortcontroller-polyfill_dist_polyfill-patch-fetch_js-node_modules_whatw-d9768c-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_abortcontroller-polyfill_dist_polyfill-patch-fetch_js-node_modules_whatw-d9768c-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_juggle_resize-observer_lib_exports_resize-observer_js-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_juggle_resize-observer_lib_exports_resize-observer_js-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_lit-html_lit-html_js-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_lit-html_lit-html_js-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_minisearch_dist_es_index_js-node_modules_kv-storage-polyfill_dist_kv-sto-b36c5d-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_minisearch_dist_es_index_js-node_modules_kv-storage-polyfill_dist_kv-sto-b36c5d-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_rxjs_dist_esm5_internal_BehaviorSubject_js-node_modules_rxjs_dist_esm5_i-e68938-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_rxjs_dist_esm5_internal_BehaviorSubject_js-node_modules_rxjs_dist_esm5_i-e68938-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_rxjs_dist_esm5_internal_operators_exhaustMap_js-node_modules_hydecorp_pu-976709-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_rxjs_dist_esm5_internal_operators_exhaustMap_js-node_modules_hydecorp_pu-976709-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_rxjs_dist_esm5_internal_operators_throttleTime_js-node_modules_hydecorp_-ce9e75-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_rxjs_dist_esm5_internal_operators_throttleTime_js-node_modules_hydecorp_-ce9e75-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_webcomponents_custom-elements_custom-elements_min_js-node_modules_webcom-66572f-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_webcomponents_custom-elements_custom-elements_min_js-node_modules_webcom-66572f-deepdive-9.1.7.min.js.map',
-  /**/ '/assets/js/vendors-node_modules_webcomponents_shadycss_entrypoints_scoping-shim_js-node_modules_webcompo-1611f4-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/vendors-node_modules_webcomponents_shadycss_entrypoints_scoping-shim_js-node_modules_webcompo-1611f4-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/webanimations-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/webanimations-deepdive-9.1.7.min.js.map',
   /**/ '/assets/js/webcomponents-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/webcomponents-deepdive-9.1.7.min.js.map',
+  /**/ '/assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg',
+  /**/ '/assets/posts/2021-01-16-whatsapp-vs-signal.jpg',
+  /**/ '/assets/posts/2021-04-21-attestation-de-deplacement-derogatoire-numerique-bug-nodejs.jpg',
   /**/ '/assets/version.json',
   /**/ '/jekyll-theme-deepdive.gemspec',
   /**/ '/package-lock.json',
@@ -426,7 +383,9 @@ const PRE_CACHED_ASSETS = [
 // Files we add on every service worker installation.
 const CONTENT_FILES = [
   "/",
-  "/offline.html",
+  "/offline.liquid",
+  /**/ '/blog/',
+  /**/ 'https://gist.github.com/JV-conseil',
   /**/ '/LICENSE',
   /**/ '/NOTICE',
   /**/ '/CHANGELOG',
@@ -434,7 +393,7 @@ const CONTENT_FILES = [
 ];
 
 const SITE_URL = new URL("/", self.location);
-const OFFLINE_PAGE_URL = new URL("/offline.html", self.location);
+const OFFLINE_PAGE_URL = new URL("/offline.liquid", self.location);
 
 self.addEventListener('install', (e) => e.waitUntil(onInstall(e)));
 self.addEventListener('activate', (e) => e.waitUntil(onActivate(e)));
@@ -593,7 +552,7 @@ async function onActivate() {
 
   return Promise.all(
     keys
-      // Only consider caches created by this baseurl, i.e. allow multiple Hydejack installations on same domain.
+      // Only consider caches created by this baseurl, i.e. allow multiple installations on same domain.
       .filter((key) => key.endsWith("sw/"))
       // Delete old caches
       .filter((key) => key !== SHELL_CACHE && key !== ASSETS_CACHE && key !== CONTENT_CACHE)
