@@ -9,3 +9,4 @@ vendor
 #<removed/js>
 #<removed/css>
 .DS_Store
+*.map
