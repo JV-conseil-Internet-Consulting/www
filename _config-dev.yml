@@ -30,7 +30,7 @@ timezone:              Europe/Paris
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Full Stack Developer • Web App Architect
+  DevOps • Full Stack Developer • Web App Architect
 
   Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
 
@@ -38,6 +38,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
+  DevOps<br>
   Full Stack Developer<br>
   Web App Architect
 
@@ -242,11 +243,11 @@ lightbox:              true
 deepdive:
   # Configure the order of complementary content on blog posts
   # post_addons:         [about, newsletter, related, random, comments]
-  post_addons:         [about, comments]
+  post_addons:         [about]
 
   # Configure the order of complementary content on project pages
   # project_addons:      [about, newsletter, other, comments]
-  project_addons:      [about, other, comments]
+  project_addons:      [about, other]
 
   # Set to `true` if you don't want to show an icon indicating external links
   no_mark_external:    true
