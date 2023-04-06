@@ -1,0 +1,4 @@
+# naked domain redirect
+RewriteEngine on
+# RewriteCond %{HTTP_HOST} ^jv-conseil\.net [NC]
+RewriteRule ^(.*)$ https://www.jv-conseil.net/$1 [QSA,L,R=301]
