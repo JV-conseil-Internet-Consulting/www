@@ -27,11 +27,14 @@ JV-conseil:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    # twitter:         <username>
-    # github:            JV-conseil
+    linkedin:          vieillefont
+    github:            JV-conseil-Internet-Consulting
     # gist:              JV-conseil
-    # mastodon:          https://fosstodon.org/@JVconseil
-    # stackoverflow:     2477854
+    mastodon:          https://fosstodon.org/@JVconseil
+    stackoverflow:     2477854
+    twitter:           JVconseil
+    email:             contact@jv-conseil.net
+    # twitter:         <username>
     # email:           <mail@domain.tld>
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
