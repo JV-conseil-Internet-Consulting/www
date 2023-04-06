@@ -114,7 +114,7 @@ excerpt_separator:     <!--more-->
 # accent_image:
 #   background:          center / cover url(/assets/img/music-cat-no-loop.gif)
 #   overlay:             false
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/sidebar/bg.jpg
 accent_color:          rgb(141,128,45)
 
 # This is used for the `theme-color` meta tag,

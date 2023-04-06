@@ -29,7 +29,7 @@ const SHELL_CACHE = 'shell-9.1.7--v13--sw/';
 const ASSETS_CACHE = 'assets--v13--sw/';
 
 // The cache for regular content, which will be invalidated every time you make a new build.
-const CONTENT_CACHE = 'content--2023-04-05T19:55:36+02:00--sw/';
+const CONTENT_CACHE = 'content--2023-04-06T01:57:47+02:00--sw/';
 
 // A URL search parameter you can add to external assets to cache them in the service worker.
 const SW_CACHE_SEARCH_PARAM = 'sw-cache';
@@ -307,13 +307,14 @@ const STATIC_FILES = [
   /**/ '/assets/img/docs/google-fonts.png',
   /**/ '/assets/img/logo.png',
   /**/ '/assets/img/nuage-de-mots-1200x800.jpg',
-  /**/ '/assets/img/sidebar-bg-0.jpg',
-  /**/ '/assets/img/sidebar-bg-1.jpg',
-  /**/ '/assets/img/sidebar-bg-2.jpg',
-  /**/ '/assets/img/sidebar-bg-3.jpg',
-  /**/ '/assets/img/sidebar-bg-4.jpg',
-  /**/ '/assets/img/sidebar-bg.jpg',
-  /**/ '/assets/img/social-media-preview.png',
+  /**/ '/assets/img/open-graph-image.png',
+  /**/ '/assets/img/sidebar/bg.jpg',
+  /**/ '/assets/img/sidebar/jeremy-bishop-1braZySlEKA.jpg',
+  /**/ '/assets/img/sidebar/submarine-naval-group-0.jpg',
+  /**/ '/assets/img/sidebar/submarine-naval.jpg',
+  /**/ '/assets/img/sidebar/submarine-sea.jpg',
+  /**/ '/assets/img/sidebar/submarine-suffren.jpg',
+  /**/ '/assets/img/sidebar/submarine-surfacing.jpg',
   /**/ '/assets/img/swipe.svg',
   /**/ '/assets/js/121-deepdive-9.1.7.min.js',
   /**/ '/assets/js/412-deepdive-9.1.7.min.js',
@@ -374,7 +375,7 @@ const STATIC_FILES = [
 
 const PRE_CACHED_ASSETS = [
   '/assets/icons/favicon.ico',
-  /**/ '/assets/img/sidebar-bg.jpg' /**/,
+  /**/ '/assets/img/sidebar/bg.jpg' /**/,
   /**/ '/assets/img/logo.png' /**/,
   /**/ '/assets/img/swipe.svg',
   /**/
