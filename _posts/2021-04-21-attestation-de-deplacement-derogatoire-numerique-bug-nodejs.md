@@ -31,11 +31,14 @@ Correction du bug de la valeur de retour de `getIdealFontSize() null --> 0` 🐛
 
 Simple test en langage Python pour connaître le nombre de villes dont l'intitulé compte un nombre de caractères supérieur à 19.
 
-```py
+~~~py
+// File: 'simple-test.py'
+
 #!/usr/bin/env python3.8
 # -*- coding: UTF-8 -*-
 
-"""Simple test en langage Python pour connaître le nombre de villes
+"""
+Simple test en langage Python pour connaître le nombre de villes
 dont l'intitulé compte un nombre de caractères supérieur à 19.
 
 Base officielle des codes postaux fournie par data.gouv.fr (28 mars 2017 10:15) :
@@ -83,8 +86,7 @@ try:
 
 except Exception as e:
     logger.exception(e)
-
-```
+~~~
 
 ## Les 2109 villes où l'Attestation de déplacement ne fonctionnera pas 🚫
 
@@ -99,6 +101,9 @@ Si votre lieu de résidence et/ou de naissance compte parmi les 2109 villes list
 7. AILLEVILLERS ET LYAUMONT (70320)
 8. AILLY LE HAUT CLOCHER (80690)
 9. ALCAY ALCABEHETY SUNHARETTE (64470)
+<details>
+<summary>... cliquer pour lister les 2100 autres villes</summary>
+<div markdown="1">
 10. AMELIE LES BAINS PALALDA (66110)
 11. AMFREVILLE LA MI VOIE (76920)
 12. AMFREVILLE LES CHAMPS (27380)
@@ -2199,3 +2204,5 @@ Si votre lieu de résidence et/ou de naissance compte parmi les 2109 villes list
 2107. WESTHOUSE MARMOUTIER (67440)
 2108. WINGERSHEIM LES QUATRE BANS (67170)
 2109. WOELFLING LES SARREGUEMINES (57200)
+</div>
+</details>

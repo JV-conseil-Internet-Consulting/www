@@ -269,10 +269,8 @@ PLATFORMS
 
 DEPENDENCIES
   duktape
-  execjs
   faraday-retry (~> 2.0)
   github-pages (~> 228)
-  http_parser.rb (~> 0.6.0)
   jekyll (~> 3.9.3)
   jekyll-avatar (~> 0.7.0)
   jekyll-compose
@@ -291,7 +289,6 @@ DEPENDENCIES
   jekyll-titles-from-headings
   jemoji (~> 0.12.0)
   kramdown-math-katex
-  kramdown-parser-gfm
   sass (~> 3.7)
   tzinfo (>= 1, < 3)
   tzinfo-data

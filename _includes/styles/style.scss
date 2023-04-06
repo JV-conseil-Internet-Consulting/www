@@ -54,6 +54,7 @@
 
   @import "projects";
   @import "bootstrap-mod/bootstrap";
+
   {% unless site.deepdive.no_search %}
     @import "search";
   {% endunless %}
@@ -97,9 +98,10 @@
 
   @import "projects";
   @import "bootstrap-mod/bootstrap";
+
   {% unless site.deepdive.no_search %}
-  @import "search";
-{% endunless %}
+    @import "search";
+  {% endunless %}
 
   {% unless site.deepdive.no_mark_external or site.no_mark_external %}
     @import "deepdive/_mark-external.pre.scss";
@@ -119,6 +121,7 @@
 @import "tippy";
 
 @import "syntax";
+@import "syntax-dark";
 {% if site.deepdive.dark_mode.dynamic %}
   @import "dark-mode-dynamic-syntax";
 {% endif %}

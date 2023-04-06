@@ -29,7 +29,7 @@ const SHELL_CACHE = 'shell-9.1.7--v13--sw/';
 const ASSETS_CACHE = 'assets--v13--sw/';
 
 // The cache for regular content, which will be invalidated every time you make a new build.
-const CONTENT_CACHE = 'content--2023-04-06T02:15:48+02:00--sw/';
+const CONTENT_CACHE = 'content--2023-04-06T20:42:04+02:00--sw/';
 
 // A URL search parameter you can add to external assets to cache them in the service worker.
 const SW_CACHE_SEARCH_PARAM = 'sw-cache';
@@ -307,6 +307,7 @@ const STATIC_FILES = [
   /**/ '/assets/img/docs/google-fonts.png',
   /**/ '/assets/img/logo.png',
   /**/ '/assets/img/nuage-de-mots-1200x800.jpg',
+  /**/ '/assets/img/nuage-de-mots-1600x400.png',
   /**/ '/assets/img/open-graph-image.png',
   /**/ '/assets/img/sidebar/bg.jpg',
   /**/ '/assets/img/sidebar/jeremy-bishop-1braZySlEKA.jpg',
@@ -365,6 +366,7 @@ const STATIC_FILES = [
   /**/ '/assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg',
   /**/ '/assets/posts/2021-01-16-whatsapp-vs-signal.jpg',
   /**/ '/assets/posts/2021-04-21-attestation-de-deplacement-derogatoire-numerique-bug-nodejs.jpg',
+  /**/ '/assets/posts/2022-01-31-happy-new-year.png',
   /**/ '/assets/version.json',
   /**/ '/jekyll-theme-deepdive.gemspec',
   /**/ '/package-lock.json',
