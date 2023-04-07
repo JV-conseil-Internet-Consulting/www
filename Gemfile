@@ -8,9 +8,9 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-# gem "jekyll", "~> 3.9.3"
+gem "jekyll", "~> 3.9.3"
 # gem "jekyll", github: "jekyll/jekyll"
-gem "jekyll", "~> 4.3.2"
+# gem "jekyll", "~> 4.3.2"
 
 # IMPORTANT: The followign gem is used to compile math formulas to
 # KaTeX during site building.
@@ -43,7 +43,6 @@ group :jekyll_plugins do
   gem "jekyll-default-layout"
   gem "jekyll-feed"
   gem "jekyll-include-cache"
-  # gem "jekyll-mentions", "~> 1.6"
   gem "jekyll-mentions"
   gem "jekyll-optional-front-matter"
   gem "jekyll-paginate"
@@ -60,7 +59,7 @@ group :jekyll_plugins do
 
   # Non-Jekyll plugins:
   gem "jemoji", "~> 0.12.0"
-  # gem "github-pages", "~> 228"
+  gem "github-pages", "~> 228"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -85,6 +84,6 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 group :development do
   gem "faraday-retry", "~> 2.0"
   gem "sass", "~> 3.7"
-  # gem "webrick", "~> 1.8"
+  gem "webrick", "~> 1.8"
 end
 
