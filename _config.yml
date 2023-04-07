@@ -30,7 +30,7 @@ timezone:              Europe/Paris
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Full Stack Developer • Web App Architect
+  DevOps • Full Stack Developer • Web App Architect
 
   Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
 
@@ -38,6 +38,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
+  DevOps<br>
   Full Stack Developer<br>
   Web App Architect
 
@@ -91,7 +92,8 @@ legal:
 # copyright:             © 2021. All rights reserved.
 
 # Format of the permalinks
-permalink:             /blog/:categories/:year-:month-:day-:title/
+# permalink:             /blog/:categories/:year-:month-:day-:title/
+permalink:             /blog/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
@@ -242,11 +244,11 @@ lightbox:              true
 deepdive:
   # Configure the order of complementary content on blog posts
   # post_addons:         [about, newsletter, related, random, comments]
-  post_addons:         [about, comments]
+  post_addons:         [about]
 
   # Configure the order of complementary content on project pages
   # project_addons:      [about, newsletter, other, comments]
-  project_addons:      [about, other, comments]
+  project_addons:      [about, other]
 
   # Set to `true` if you don't want to show an icon indicating external links
   no_mark_external:    true
@@ -382,7 +384,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-last-modified-at
-  - jekyll-mention
+  - jekyll-mentions
   - jekyll-optional-front-matter
   - jekyll-paginate
   - jekyll-readme-index
@@ -449,6 +451,9 @@ compress_html:
     envs:              [development]
 
 sass:
+  load_paths:
+    - _sass
+    - node_modules
   style:               compressed
 
 
@@ -463,21 +468,21 @@ jekyll_compose:
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/sidebar/bg.jpg
     posts:
       layout: post
       description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/sidebar/bg.jpg
     projects:
       layout: project
       description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar-bg.jpg
+        path: /assets/img/sidebar/bg.jpg
       links:
         - title: Project Link
           url: https://example.com

@@ -27,6 +27,9 @@ Mar 30 2023
 * Bump core-js from 2.6.12 to 3.29.1
 * Bump webpack-cli from 4.10.0 to 5.0.1
 * Bump babel-loader from 8.3.0 to 9.1.2
+* Bump bootstrap from v4 to v5
+* Deprecated mapTo replaced by map(() => value)
+* Deprecated toPromise() replaced by lastValueFrom
 * Deprecated WorkerPlugin = require('worker-plugin') Webpack 5 now includes worker bundling
 * It is recommended to either pass an Object or an Array to 'combineLatest' operators
 * Removed unusued npm dependencies with `npx depcheck --detailed`
@@ -848,7 +851,7 @@ Nov 2 2017
   Since this feature isn't yet documented outside of the change log, the old name _will not_ continue to work.
 * When providing images to `image`, `image.path`, `image.src`, `image.srcset` and `accent_image`,
   it is no longer necessary to prepend the url with the `baseurl` of the site,
-  e.g. values like `accent_image: /assets/img/sidebar-bg.jpg` are now valid.
+  e.g. values like `accent_image: /assets/img/sidebar/bg.jpg` are now valid.
 * Limited scope of `a` and `img` styles to content areas.
 * Upgraded KaTeX to v0.8.3
 * Upgraded `jekyll-relative-links` to v5.0.1

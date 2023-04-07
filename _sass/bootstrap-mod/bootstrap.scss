@@ -5,22 +5,22 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import "functions";
+@import "bootstrap/scss/functions";
 @import "variables";
-@import "mixins";
+@import "bootstrap/scss/mixins";
 // @import "root";
 // @import "reboot";
 // @import "type";
 // @import "images";
 // @import "code";
-@import "grid";
+@import "bootstrap/scss/grid";
 // @import "tables";
-@import "forms";
+@import "bootstrap/scss/forms";
 @import "buttons";
 // @import "transitions";
 // @import "dropdown";
 // @import "button-group";
-@import "input-group";
+@import "bootstrap/scss/input-group";
 // @import "custom-forms";
 // @import "nav";
 // @import "navbar";
@@ -38,7 +38,7 @@
 // @import "tooltip";
 // @import "popover";
 // @import "carousel";
-@import "utilities";
+@import "bootstrap/scss/utilities";
 // @import "print";
 
 .btn-primary {
