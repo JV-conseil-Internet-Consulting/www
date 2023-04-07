@@ -454,6 +454,7 @@ sass:
   load_paths:
     - _sass
     - node_modules
+    - /github/workspace/node_modules
   style:               compressed
 
 

@@ -16,7 +16,7 @@
 # ---------------------------------------------------------------------------------------
 
 url: https://www.jv-conseil.net
-# baseurl: ''
+baseurl: ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
@@ -454,6 +454,7 @@ sass:
   load_paths:
     - _sass
     - node_modules
+    - /github/workspace/node_modules
   style:               compressed
 
 
