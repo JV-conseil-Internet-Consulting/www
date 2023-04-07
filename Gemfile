@@ -8,7 +8,9 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.9.3"
+# gem "jekyll", "~> 3.9.3"
+# gem "jekyll", github: "jekyll/jekyll"
+gem "jekyll", "~> 4.3.2"
 
 # IMPORTANT: The followign gem is used to compile math formulas to
 # KaTeX during site building.
@@ -26,7 +28,7 @@ gem "kramdown-math-katex"
 
 # A JavaScript runtime for ruby that helps with running the katex gem above.
 gem "duktape"
-gem "execjs"
+# gem "execjs"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.0"
@@ -41,7 +43,8 @@ group :jekyll_plugins do
   gem "jekyll-default-layout"
   gem "jekyll-feed"
   gem "jekyll-include-cache"
-  gem "jekyll-mentions", "~> 1.6"
+  # gem "jekyll-mentions", "~> 1.6"
+  gem "jekyll-mentions"
   gem "jekyll-optional-front-matter"
   gem "jekyll-paginate"
   gem "jekyll-readme-index"
@@ -57,7 +60,7 @@ group :jekyll_plugins do
 
   # Non-Jekyll plugins:
   gem "jemoji", "~> 0.12.0"
-  gem "github-pages", "~> 228"
+  # gem "github-pages", "~> 228"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -72,16 +75,16 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 
 # kramdown v2 ships without the gfm parser by default. If you're using
 # kramdown v1, comment out this line.
-gem "kramdown-parser-gfm"
+# gem "kramdown-parser-gfm"
 
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
-gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+# gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Development
 group :development do
   gem "faraday-retry", "~> 2.0"
   gem "sass", "~> 3.7"
-  gem "webrick", "~> 1.8"
+  # gem "webrick", "~> 1.8"
 end
 

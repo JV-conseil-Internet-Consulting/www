@@ -58,11 +58,11 @@ e(t)
   document.getElementById('_pushState').addEventListener('hy-push-state-load', function(e) {
     !(function() {
       'use strict';
-
-/** <span id="currentYear">2021</span> */
-      const date = new Date();
-      const copyrightEndYear = document.getElementById('copyrightEndYear');
-      copyrightEndYear.innerHTML = date.getFullYear();
+      const copyrightEndYear = document.getElementById('copyrightEndYear') || null;
+      if (copyrightEndYear !== null) {
+        const date = new Date();
+        copyrightEndYear.innerHTML = date.getFullYear();
+      }
     })();
   });
 </script>
