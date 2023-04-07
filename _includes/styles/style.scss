@@ -98,7 +98,7 @@
   @import "deepdive/_footer.pre.scss";
 
   @import "projects";
-  //@import "bootstrap-mod/bootstrap";
+  // @import "bootstrap-mod/bootstrap";
   @import "bootstrap/main";
 
   {% unless site.deepdive.no_search %}
