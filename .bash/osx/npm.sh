@@ -39,7 +39,12 @@ _jvcl_::npm_package_version() {
   npm info "${1}" version
 }
 
+_jvcl_::copy_node_modules_to_assets() {
+  cp -pvrf "node_modules/bootstrap/scss/"{_functions,_variables,_maps,_mixins,_utilities,_grid,_forms,_buttons,forms,mixins,vendor}* "_sass/bootstrap"
+}
+
 if _jvcl_::brew_install_formula "node"; then
   _jvcl_::update_npm
+  _jvcl_::copy_node_modules_to_assets
   _jvcl_::webpack
 fi
