@@ -58,6 +58,6 @@ _jvcl_::github_pages() {
 if _jvcl_::brew_install_formula "ruby"; then
   _jvcl_::gem_update
   _jvcl_::bundle_update
-  _jvcl_::github_pages
+  # _jvcl_::github_pages
   _jvcl_::jekyll_serve
 fi
