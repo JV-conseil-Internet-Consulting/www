@@ -451,9 +451,9 @@ compress_html:
     envs:              [development]
 
 sass:
-  load_paths:
-    - _sass
-    - node_modules
+  # load_paths:
+  #   - _sass
+  #   - node_modules
   style:               compressed
 
 

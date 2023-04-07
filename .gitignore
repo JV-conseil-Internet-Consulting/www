@@ -1,13 +1,10 @@
-node_modules
-vendor
-.bundle
-.sass-cache
-.jekyll-metadata
+_ovh
+.DS_Store
 .jekyll-cache
 *.gem
-
-#<removed/js>
-#<removed/css>
-.DS_Store
 *.map
-_ovh
+# .bundle
+# .jekyll-metadata
+# .sass-cache
+# vendor
+node_modules
