@@ -83,7 +83,6 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 # Development
 group :development do
   gem "faraday-retry", "~> 2.0"
-  # gem "sass", "~> 3.7"
+  gem "sass", "~> 3.7"
   # gem "webrick", "~> 1.8"
 end
-
