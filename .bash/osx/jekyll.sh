@@ -51,13 +51,14 @@ _jvcl_::jekyll_serve() {
 }
 
 _jvcl_::github_pages() {
-  bundle exec github-pages health-check || :
+  # bundle exec github-pages health-check || :
+  /opt/homebrew/lib/ruby/gems/3.2.0/gems/github-pages-health-check-1.18.1/script/check www.jv-conseil.net || :
 }
 
 # shellcheck disable=SC2317
 if _jvcl_::brew_install_formula "ruby"; then
   _jvcl_::gem_update
   _jvcl_::bundle_update
-  # _jvcl_::github_pages
+  _jvcl_::github_pages
   _jvcl_::jekyll_serve
 fi
