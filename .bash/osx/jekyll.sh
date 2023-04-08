@@ -47,7 +47,7 @@ _jvcl_::jekyll_serve() {
   _jvcl_::h1 "Launching Jekyll..."
   bundle exec jekyll clean --config "_config-dev.yml"
   bundle exec jekyll doctor --config "_config-dev.yml"
-  bundle exec jekyll serve --config "_config-dev.yml" --livereload --trace
+  bundle exec jekyll serve --config "_config-dev.yml" --livereload
 }
 
 _jvcl_::github_pages() {
@@ -58,6 +58,6 @@ _jvcl_::github_pages() {
 if _jvcl_::brew_install_formula "ruby"; then
   _jvcl_::gem_update
   _jvcl_::bundle_update
-  # _jvcl_::github_pages
+  _jvcl_::github_pages
   _jvcl_::jekyll_serve
 fi
