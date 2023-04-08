@@ -20,6 +20,8 @@ _Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud �
 
 Greater Paris Metropolitan Region, France 🇫🇷
 
+![visitors](https://visitor-badge.laobi.icu/badge?page_id=JV-conseil-Internet-Consulting.www)
+
 <!--
 
 [![Django 4.1.7](https://img.shields.io/badge/Django-4-green)][Django]
