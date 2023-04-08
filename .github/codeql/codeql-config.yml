@@ -1,6 +1,7 @@
 
 # Specifying directories to scan
 # See <https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/customizing-code-scanning#specifying-directories-to-scan>
+# Copyright (c) 2019-2023 JV-conseil, All rights reserved
 
 name: "CodeQL config"
 
