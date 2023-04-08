@@ -848,7 +848,7 @@ Nov 2 2017
   Since this feature isn't yet documented outside of the change log, the old name _will not_ continue to work.
 * When providing images to `image`, `image.path`, `image.src`, `image.srcset` and `accent_image`,
   it is no longer necessary to prepend the url with the `baseurl` of the site,
-  e.g. values like `accent_image: /assets/img/sidebar-bg.jpg` are now valid.
+  e.g. values like `accent_image: /assets/img/sidebar/bg.jpg` are now valid.
 * Limited scope of `a` and `img` styles to content areas.
 * Upgraded KaTeX to v0.8.3
 * Upgraded `jekyll-relative-links` to v5.0.1
