@@ -92,8 +92,7 @@ legal:
 # copyright:             © 2021. All rights reserved.
 
 # Format of the permalinks
-# permalink:             /blog/:categories/:year-:month-:day-:title/
-permalink:             /blog/:year-:month-:day-:title/
+permalink:             /blog/:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
@@ -384,7 +383,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-last-modified-at
-  - jekyll-mentions
+  - jekyll-mention
   - jekyll-optional-front-matter
   - jekyll-paginate
   - jekyll-readme-index
@@ -451,9 +450,6 @@ compress_html:
     envs:              [development]
 
 sass:
-  # load_paths:
-  #   - _sass
-  #   - node_modules
   style:               compressed
 
 
@@ -468,21 +464,21 @@ jekyll_compose:
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar/bg.jpg
+        path: /assets/img/sidebar-bg.jpg
     posts:
       layout: post
       description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar/bg.jpg
+        path: /assets/img/sidebar-bg.jpg
     projects:
       layout: project
       description: >
         A short ~160 character description of your post for search engines,
         social media previews, etc.
       image:
-        path: /assets/img/sidebar/bg.jpg
+        path: /assets/img/sidebar-bg.jpg
       links:
         - title: Project Link
           url: https://example.com

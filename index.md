@@ -2,21 +2,9 @@
 layout: welcome
 title: JV conseil – Internet Consulting 👨‍💻
 cover: true
-selected_posts:
-  - _posts/2023-02-17-githubbing-on-ucloud.md
-  - _posts/2023-03-12-bash.md
 ---
 
 {% include_cached my-description.liquid %}
-
-<!--
-## Latest Posts
--->
-
-<!--posts-->
-
-See [Blog](/posts/) for more
-{:.read-more}
 
 <!--
 

@@ -5,7 +5,6 @@ image:
   path: /assets/posts/2021-04-21-attestation-de-deplacement-derogatoire-numerique-bug-nodejs.jpg
 description: >
   Si l'intitulé de votre lieu de résidence et/ou de naissance compte plus de dix-neuf caractères l'Attestation de déplacement dérogatoire numérique ne fonctionnera pas 🚫
-slug: JavaScript
 # sitemap: false
 ---
 
@@ -33,15 +32,10 @@ Correction du bug de la valeur de retour de `getIdealFontSize() null --> 0` 🐛
 Simple test en langage Python pour connaître le nombre de villes dont l'intitulé compte un nombre de caractères supérieur à 19.
 
 ~~~py
-# file: `list-cities.py`
-#!/usr/bin/env python
+// File: 'simple-test.py'
+
+#!/usr/bin/env python3.8
 # -*- coding: UTF-8 -*-
-#
-# author        : JV-conseil
-# credits       : JV-conseil
-# copyright     : Copyright (c) 2019-2023 JV-conseil
-#                 All rights reserved
-#====================================================
 
 """
 Simple test en langage Python pour connaître le nombre de villes
