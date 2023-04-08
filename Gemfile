@@ -9,8 +9,6 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 3.9.3"
-# gem "jekyll", github: "jekyll/jekyll"
-# gem "jekyll", "~> 4.3.2"
 
 # IMPORTANT: The followign gem is used to compile math formulas to
 # KaTeX during site building.
@@ -43,7 +41,7 @@ group :jekyll_plugins do
   gem "jekyll-default-layout"
   gem "jekyll-feed"
   gem "jekyll-include-cache"
-  gem "jekyll-mentions"
+  gem "jekyll-mentions", "~> 1.6"
   gem "jekyll-optional-front-matter"
   gem "jekyll-paginate"
   gem "jekyll-readme-index"
@@ -86,3 +84,4 @@ group :development do
   gem "sass", "~> 3.7"
   gem "webrick", "~> 1.8"
 end
+

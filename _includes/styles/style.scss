@@ -53,8 +53,7 @@
   @import "deepdive/__link__/footer";
 
   @import "projects";
-  //@import "bootstrap-mod/bootstrap";
-  @import "bootstrap/main";
+  @import "bootstrap-mod/bootstrap";
 
   {% unless site.deepdive.no_search %}
     @import "search";
@@ -98,8 +97,7 @@
   @import "deepdive/_footer.pre.scss";
 
   @import "projects";
-  //@import "bootstrap-mod/bootstrap";
-  @import "bootstrap/main";
+  @import "bootstrap-mod/bootstrap";
 
   {% unless site.deepdive.no_search %}
     @import "search";
