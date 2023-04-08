@@ -1,5 +1,7 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-# name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+# Jekyll Builder for GitHub Pages (Action)
+# See <https://github.com/marketplace/actions/jekyll-builder-for-github-pages>
+# Copyright (c) 2019-2023 JV-conseil, All rights reserved
 name: Deploy Jekyll v4.3.2 to GitHub Pages
 
 on:
@@ -34,17 +36,13 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      # Configuration file: /github/workspace/./_config.yml
-      # GitHub Pages: github-pages v228
-      # GitHub Pages: jekyll v3.9.3
       # - name: Build with Jekyll
       #   uses: actions/jekyll-build-pages@v1
       #   with:
       #     source: ./
       #     destination: ./_site
 
-      # <https://github.com/JV-conseil-Internet-Consulting/www/new/main?filename=.github%2Fworkflows%2Fjekyll-docker.yml&workflow_template=ci%2Fjekyll-docker>
-      - name: Build the site in the jekyll/builder container
+      - name: Build with Jekyll v4.3.2 container
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \

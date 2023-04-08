@@ -9,6 +9,7 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
+# Copyright (c) 2019-2023 JV-conseil, All rights reserved
 name: "CodeQL"
 
 on:
@@ -56,6 +57,7 @@ jobs:
 
         # Configuration file
         # See <https://github.com/github/codeql-action#configuration-file>
+        # Copyright (c) 2019-2023 JV-conseil, All rights reserved
         config-file: ./.github/codeql/codeql-config.yml
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).

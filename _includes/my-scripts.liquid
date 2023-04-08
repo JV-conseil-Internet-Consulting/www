@@ -53,24 +53,3 @@ e(t)
 });
 </script>
 {% endcomment %}
-
-<script>
-  document.getElementById('_pushState').addEventListener('hy-push-state-load', function(e) {
-    !(function() {
-      'use strict';
-      
-      const copyrightEndYear = document.getElementById('copyrightEndYear') || null;
-      if (copyrightEndYear !== null) {
-        const date = new Date();
-        copyrightEndYear.innerHTML = date.getFullYear();
-      }
-
-      const _links = document.getElementsByTagName('a');
-      for (const [i, href] of Object.entries(_links)) {
-        if (!href.toString().startsWith("http")) 
-          continue;
-        _links[i].setAttribute("target", "_blank");
-      }
-    })();
-  });
-</script>
