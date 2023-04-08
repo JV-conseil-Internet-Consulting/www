@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>https://www.jv-conseil.net/tag-azure/</loc>
+<lastmod>2023-04-08T22:15:25+02:00</lastmod>
+</url>
+<url>
+<loc>https://www.jv-conseil.net/tag-bash/</loc>
+<lastmod>2023-04-08T21:52:54+02:00</lastmod>
+</url>
+<url>
+<loc>https://www.jv-conseil.net/tag-python/</loc>
+<lastmod>2023-04-08T21:38:12+02:00</lastmod>
+</url>
+<url>
 <loc>https://www.jv-conseil.net/blog/2009-12-22-init/</loc>
 <lastmod>2023-04-06T20:43:46+02:00</lastmod>
 </url>
@@ -19,6 +31,10 @@
 <url>
 <loc>https://www.jv-conseil.net/blog/2022-01-31-happy-new-year/</loc>
 <lastmod>2023-04-06T20:43:46+02:00</lastmod>
+</url>
+<url>
+<loc>https://www.jv-conseil.net/blog/2022-07-18-django-azure-active-directory-signin/</loc>
+<lastmod>2023-04-08T22:17:16+02:00</lastmod>
 </url>
 <url>
 <loc>https://www.jv-conseil.net/blog/2023-02-17-githubbing-on-ucloud/</loc>

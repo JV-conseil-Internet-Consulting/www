@@ -491,9 +491,9 @@ jekyll_compose:
 # jekyll-feed settings
 feed:
   categories:
-    - devlog
-    - review
-    - studylog
+    - cheatsheet
+    - cloud
+  tags: true
 
 
 # Analytics GDPR compliant

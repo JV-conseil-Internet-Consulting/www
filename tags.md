@@ -1,6 +1,6 @@
 ---
 layout: tags
-title: Tags
+title: Categories & Tags
 permalink: /tags/
 sidebar: true
 order: 6

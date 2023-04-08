@@ -20,5 +20,5 @@ no_groups: true
 sitemap: false
 
 #for tags and categories overview page
-type: category
+type: tag
 ---

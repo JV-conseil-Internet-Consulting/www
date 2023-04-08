@@ -455,6 +455,7 @@ sass:
   #   - _sass
   #   - node_modules
   style:               compressed
+  verbose:             true
 
 
 # Jekyll Compose Defaults
@@ -490,9 +491,9 @@ jekyll_compose:
 # jekyll-feed settings
 feed:
   categories:
-    - devlog
-    - review
-    - studylog
+    - cheatsheet
+    - cloud
+  tags: true
 
 
 # Analytics GDPR compliant
