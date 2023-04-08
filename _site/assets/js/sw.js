@@ -29,7 +29,7 @@ const SHELL_CACHE = 'shell-9.1.7--v13--sw/';
 const ASSETS_CACHE = 'assets--v13--sw/';
 
 // The cache for regular content, which will be invalidated every time you make a new build.
-const CONTENT_CACHE = 'content--2023-04-08T22:17:17+02:00--sw/';
+const CONTENT_CACHE = 'content--2023-04-08T22:43:59+02:00--sw/';
 
 // A URL search parameter you can add to external assets to cache them in the service worker.
 const SW_CACHE_SEARCH_PARAM = 'sw-cache';
@@ -363,10 +363,12 @@ const STATIC_FILES = [
   /**/ '/assets/js/toc-deepdive-9.1.7.min.js',
   /**/ '/assets/js/webanimations-deepdive-9.1.7.min.js',
   /**/ '/assets/js/webcomponents-deepdive-9.1.7.min.js',
+  /**/ '/assets/posts/2019-11-17-dkim-php-mail-signature.png',
   /**/ '/assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg',
   /**/ '/assets/posts/2021-01-16-whatsapp-vs-signal.jpg',
   /**/ '/assets/posts/2021-04-21-attestation-de-deplacement-derogatoire-numerique-bug-nodejs.jpg',
   /**/ '/assets/posts/2022-01-31-happy-new-year.png',
+  /**/ '/assets/posts/2022-03-06-git.png',
   /**/ '/assets/posts/2022-07-18-django-azure-active-directory-signin.png',
   /**/ '/assets/posts/2023-03-11-githubbing-on-ucloud.png',
   /**/ '/assets/posts/2023-03-12-bash.png',
