@@ -155,7 +155,7 @@ No substantial changes to the software were made.
 
 This software also uses portions of the
 `jquery/jquery`
-project, which [MIT] licensed with the following copyright:
+project, which is [MIT] licensed with the following copyright:
 
 > Copyright OpenJS Foundation and other contributors.
 
