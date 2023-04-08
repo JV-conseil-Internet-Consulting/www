@@ -455,6 +455,7 @@ sass:
   #   - _sass
   #   - node_modules
   style:               compressed
+  verbose:             true
 
 
 # Jekyll Compose Defaults

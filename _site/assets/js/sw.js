@@ -29,7 +29,7 @@ const SHELL_CACHE = 'shell-9.1.7--v13--sw/';
 const ASSETS_CACHE = 'assets--v13--sw/';
 
 // The cache for regular content, which will be invalidated every time you make a new build.
-const CONTENT_CACHE = 'content--2023-04-08T15:55:30+02:00--sw/';
+const CONTENT_CACHE = 'content--2023-04-08T16:56:24+02:00--sw/';
 
 // A URL search parameter you can add to external assets to cache them in the service worker.
 const SW_CACHE_SEARCH_PARAM = 'sw-cache';
@@ -323,9 +323,9 @@ const STATIC_FILES = [
   /**/ '/assets/js/443-deepdive-9.1.7.min.js',
   /**/ '/assets/js/634-deepdive-9.1.7.min.js',
   /**/ '/assets/js/649-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/708-deepdive-9.1.7.min.js',
   /**/ '/assets/js/765-deepdive-9.1.7.min.js',
   /**/ '/assets/js/908-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/970-deepdive-9.1.7.min.js',
   /**/ '/assets/js/deepdive-9.1.7.min.js',
   /**/ '/assets/js/drawer-deepdive-9.1.7.min.js',
   /**/ '/assets/js/fetch-deepdive-9.1.7.min.js',
@@ -336,11 +336,11 @@ const STATIC_FILES = [
   /**/ '/assets/js/legacy/443-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/461-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/634-deepdive-9.1.7.min.js',
-  /**/ '/assets/js/legacy/708-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/737-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/765-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/874-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/908-deepdive-9.1.7.min.js',
+  /**/ '/assets/js/legacy/970-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/drawer-deepdive-9.1.7.min.js',
   /**/ '/assets/js/legacy/fetch-deepdive-9.1.7.min.js',
