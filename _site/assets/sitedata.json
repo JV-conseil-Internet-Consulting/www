@@ -83,6 +83,12 @@
       "url": "/docs/scripts/"
     },{
       
+      "title": "Tags",
+      "description": "List of all categories &amp; tags of the blog.\n",
+      "content": "\n",
+      "url": "/tags/"
+    },{
+      
       "title": "Upgrade",
       "description": "This chapter shows how to upgrade DeepDive to a newer version. The method depends on how you’ve installed DeepDive.\n",
       "content": "This chapter shows how to upgrade DeepDive to a newer version. The method depends on how you’ve installed DeepDive.\n\n\n  Free version\n  GitHub Pages\n\n\nBefore upgrading to v7+, make sure you’ve read the CHANGELOG,\nespecially the part about the license change!\n\nFree version\n\nUpgrading the free version of the theme is as easy as running\n\nbundle update jekyll-theme-deepdive\n\n\nGitHub Pages\n\nWhen building on GitHub Pages, upgrading DeepDive is as simple as setting the remote_theme key in _config.yml to the desired version.\n\nremote_theme: hydecorp/deepdive@v9.1.6\n\n\nTo use the latest version on the v9 branch on each build, you can use  hydecorp/deepdive@v9.\n\nContinue with Config\n",

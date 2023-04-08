@@ -27,6 +27,9 @@ Mar 30 2023
 * Bump core-js from 2.6.12 to 3.29.1
 * Bump webpack-cli from 4.10.0 to 5.0.1
 * Bump babel-loader from 8.3.0 to 9.1.2
+* Bump bootstrap from v4 to v5
+* Deprecated mapTo replaced by map(() => value)
+* Deprecated toPromise() replaced by lastValueFrom
 * Deprecated WorkerPlugin = require('worker-plugin') Webpack 5 now includes worker bundling
 * It is recommended to either pass an Object or an Array to 'combineLatest' operators
 * Removed unusued npm dependencies with `npx depcheck --detailed`
