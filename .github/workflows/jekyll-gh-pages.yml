@@ -31,22 +31,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Get cached gems
-        uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      # Configuration file: /github/workspace/./_config.yml
+      # GitHub Pages: github-pages v228
+      # GitHub Pages: jekyll v3.9.3
+      # - name: Build with Jekyll
+      #   uses: actions/jekyll-build-pages@v1
+      #   with:
+      #     source: ./
+      #     destination: ./_site
+
+      # <https://github.com/JV-conseil-Internet-Consulting/www/new/main?filename=.github%2Fworkflows%2Fjekyll-docker.yml&workflow_template=ci%2Fjekyll-docker>
+      - name: Build the site in the jekyll/builder container
+        run: |
+          docker run \
+          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
