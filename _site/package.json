@@ -42,6 +42,7 @@
     "@webcomponents/url": "^0.7.9",
     "@webcomponents/webcomponents-platform": "^1.0.1",
     "abortcontroller-polyfill": "^1.7.5",
+    "bootstrap": "^5.2.3",
     "broadcastchannel-polyfill": "^1.0.1",
     "core-js": "^3.30.0",
     "create-element-x": "^1.2.0",

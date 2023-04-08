@@ -3,6 +3,7 @@
 ignores: [
   "@babel/*",
   "bower",
+  "bootstrap",
   "depcheck",
   "webpack-cli"
 ]
