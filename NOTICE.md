@@ -249,6 +249,14 @@ project, which is [MIT] licensed with the following copyright:
 
 > Copyright (c) 2014 Alexander Farkas (aFarkas).
 
+### Tippy.js
+
+This software also uses portions of the
+`atomiks/tippyjs`
+project, which is [MIT] licensed with the following copyright:
+
+> Copyright (c) 2017-present atomiks.
+
 ### Web Animations
 
 This software also uses portions of the

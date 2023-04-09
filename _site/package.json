@@ -52,7 +52,7 @@
     "minisearch": "^6.0.1",
     "npm": "^9.6.4",
     "rxjs": "^7.8.0",
-    "scroll-into-view-if-needed": "^3.0.7",
+    "scroll-into-view-if-needed": "^3.0.8",
     "tippy.js": "^6.3.7",
     "web-animations-js": "^2.3.2",
     "whatwg-fetch": "^3.6.2"
