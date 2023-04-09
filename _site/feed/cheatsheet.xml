@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-FR, en-US"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.jv-conseil.net/feed/cheatsheet.xml" rel="self" type="application/atom+xml" /><link href="https://www.jv-conseil.net/" rel="alternate" type="text/html" hreflang="fr-FR, en-US" /><updated>2023-04-09T04:56:25+02:00</updated><id>https://www.jv-conseil.net/feed/cheatsheet.xml</id><title type="html">JV conseil | Cheatsheet</title><subtitle>DevOps • Full Stack Developer • Web App Architect
+Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
+Greater Paris Metropolitan Region, France 🇫🇷
+</subtitle><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><entry><title type="html">Bash</title><link href="https://www.jv-conseil.net/blog/2023-03-12-bash/" rel="alternate" type="text/html" title="Bash" /><published>2023-03-12T00:00:00+01:00</published><updated>2023-04-08T22:18:27+02:00</updated><id>https://www.jv-conseil.net/blog/bash</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2023-03-12-bash/"><![CDATA[<ul class="large-only" id="markdown-toc">
+  <li><a href="#extract-a-substring-from-a-string" id="markdown-toc-extract-a-substring-from-a-string">Extract a substring from a string</a></li>
+  <li><a href="#extract-a-value-from-a-file" id="markdown-toc-extract-a-value-from-a-file">Extract a value from a file</a></li>
+  <li><a href="#read-a-json-stream" id="markdown-toc-read-a-json-stream">Read a JSON stream</a></li>
+  <li><a href="#tools-for-shell-script-development-️" id="markdown-toc-tools-for-shell-script-development-️">Tools for Shell Script Development ⚙️</a></li>
+  <li><a href="#general-" id="markdown-toc-general-">General 📚</a></li>
+  <li><a href="#features-" id="markdown-toc-features-">Features 🔎</a></li>
+  <li><a href="#coding-guidelines-style-linter-️" id="markdown-toc-coding-guidelines-style-linter-️">Coding Guidelines, Style, Linter ✍️</a></li>
+  <li><a href="#sponsorship" id="markdown-toc-sponsorship">Sponsorship</a></li>
+</ul>
+
+<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/-Made%20with%20Bash-1f425f.svg?logo=image%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTExIDc5LjE1ODMyNSwgMjAxNS8wOS8xMC0wMToxMDoyMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkE3MDg2QTAyQUZCMzExRTVBMkQxRDMzMkJDMUQ4RDk3IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkE3MDg2QTAzQUZCMzExRTVBMkQxRDMzMkJDMUQ4RDk3Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QTcwODZBMDBBRkIzMTFFNUEyRDFEMzMyQkMxRDhEOTciIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QTcwODZBMDFBRkIzMTFFNUEyRDFEMzMyQkMxRDhEOTciLz4gPC9yZGY6RGVzY3JpcHRpb24%2BIDwvcmRmOlJERj4gPC94OnhtcG1ldGE%2BIDw%2FeHBhY2tldCBlbmQ9InIiPz6lm45hAAADkklEQVR42qyVa0yTVxzGn7d9Wy03MS2ii8s%2BeokYNQSVhCzOjXZOFNF4jx%2BMRmPUMEUEqVG36jo2thizLSQSMd4N8ZoQ8RKjJtooaCpK6ZoCtRXKpRempbTv5ey83bhkAUphz8fznvP8znn%2B%2F3NeEEJgNBoRRSmz0ub%2FfuxEacBg%2FDmYtiCjgo5NG2mBXq%2BH5I1ogMRk9Zbd%2BQU2e1ML6VPLOyf5tvBQ8yT1lG10imxsABm7SLs898GTpyYynEzP60hO3trHDKvMigUwdeaceacqzp7nOI4n0SSIIjl36ao4Z356OV07fSQAk6xJ3XGg%2BLCr1d1OYlVHp4eUHPnerU79ZA%2F1kuv1JQMAg%2BE4O2P23EumF3VkvHprsZKMzKwbRUXFEyTvSIEmTVbrysp%2BWr8wfQHGK6WChVa3bKUmdWou%2BjpArdGkzZ41c1zG%2Fu5uGH4swzd561F%2BuhIT4%2BLnSuPsv9%2BJKIpjNr9dXYOyk7%2FBZrcjIT4eCnoKgedJP4BEqhG77E3NKP31FO7cfQA5K0dSYuLgz2TwCWJSOBzG6crzKK%2BohNfni%2Bx6OMUMMNe%2Fgf7ocbw0v0acKg6J8Ql0q%2BT%2FAXR5PNi5dz9c71upuQqCKFAD%2BYhrZLEAmpodaHO3Qy6TI3NhBpbrshGtOWKOSMYwYGQM8nJzoFJNxP2HjyIQho4PewK6hBktoDcUwtIln4PjOWzflQ%2Be5yl0yCCYgYikTclGlxadio%2BBQCSiW1UXoVGrKYwH4RgMrjU1HAB4vR6LzWYfFUCKxfS8Ftk5qxHoCUQAUkRJaSEokkV6Y%2F%2BJUOC4hn6A39NVXVBYeNP8piH6HeA4fPbpdBQV5KOx0QaL1YppX3Jgk0TwH2Vg6S3u%2BdB91%2B%2FpuNYPYFl5uP5V7ZqvsrX7jxqMXR6ff3gCQSTzFI0a1TX3wIs8ul%2Bq4HuWAAiM39vhOuR1O1fQ2gT%2F26Z8Z5vrl2OHi9OXZn995nLV9aFfS6UC9JeJPfuK0NBohWpCHMSAAsFe74WWP%2BvT25wtP9Bpob6uGqqyDnOtaeumjRu%2ByFu36VntK%2FPA5umTJeUtPWZSU9BCgud661odVp3DZtkc7AnYR33RRC708PrVi1larW7XwZIjLnd7R6SgSqWSNjU1B3F72pz5TZbXmX5vV81Yb7Lg7XT%2FUXriu8XLVqw6c6XqWnBKiiYU%2BMt3wWF7u7i91XlSEITwSAZ%2FCzAAHsJVbwXYFFEAAAAASUVORK5CYII%3D" alt="made-with-bash" /></a>
+<a href="https://releases.ubuntu.com/kinetic/"><img src="https://img.shields.io/badge/Ubuntu-22.10-brightgreen" alt="Ubuntu 22.10" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a>
+<!--
+[![License BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-green)](https://www.python.org/downloads/release/python-3112/)
+[![PostgreSQL 14.6](https://img.shields.io/badge/PostgreSQL-14.6-green.svg)](https://www.postgresql.org/docs/14.6/)
+<img alt="https://img.shields.io/badge/stack-overflow-orange.svg" src="https://img.shields.io/badge/stack-overflow-orange.svg">
+--></p>
+
+<blockquote>
+  <p><em>The only way to really learn scripting is to write scripts – <a href="https://tldp.org/LDP/abs/html/index.html">Mendel Cooper</a></em></p>
+
+  <p><em>Writing shell scripts leaves a lot of room to make mistakes, in ways that will cause your scripts to break on certain input, or (if some input is untrusted) open up security vulnerabilities… The simplest step is to avoid using shell at all – <a href="https://sipb.mit.edu/doc/safe-shell/">MIT Student Information Processing Board</a></em></p>
+</blockquote>
+
+<h2 id="extract-a-substring-from-a-string">Extract a substring from a string</h2>
+
+<p>With <code class="language-plaintext highlighter-rouge">grep -Eo</code> and a <a href="https://regex101.com/library/wUcSv4">regex</a> pattern</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-Eo</span> <span class="s2">"http[^ ']+"</span> <span class="o">&lt;&lt;</span><span class="no">EOF</span><span class="sh">
+curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&amp;includeOthers=true&amp;sortDirection=ascending'
+-H 'Accept-Language: en-US,en;q=0.5'
+-H 'Accept-Encoding: gzip, deflate, br'
+-H 'Authorization: Bearer ****'
+-H 'Content-Type: application/json; charset=utf-8'
+-H 'Cookie: refreshToken=cf6220bd%2D650c%2D4a48%2D9836%2D58ea9ecb7567'
+-H 'Sec-Fetch-Dest: empty'
+-H 'Sec-Fetch-Mode: cors'
+-H 'Sec-Fetch-Site: same-origin'
+-H 'Pragma: no-cache'
+-H 'Cache-Control: no-cache'
+</span><span class="no">EOF
+</span></code></pre></div></div>
+
+<p>will output</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage<span class="o">=</span>100&amp;includeOthers<span class="o">=</span><span class="nb">true</span>&amp;sortDirection<span class="o">=</span>ascending
+</code></pre></div></div>
+
+<p><em>src 👉 <a href="https://stackoverflow.com/a/13373256/2477854">stackoverflow.com</a></em></p>
+
+<h2 id="extract-a-value-from-a-file">Extract a value from a file</h2>
+
+<p>Example of a pyproject.toml file</p>
+
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[tool.poetry]</span>
+<span class="py">name</span> <span class="p">=</span> <span class="s">"docs"</span>
+<span class="py">version</span> <span class="p">=</span> <span class="s">"0.1.0"</span>
+<span class="py">description</span> <span class="p">=</span> <span class="s">"Collection of Cheatsheets 🗒️ PostgreSQL 🐘, Git..."</span>
+<span class="py">repository</span> <span class="p">=</span> <span class="s">"https://github.com/JV-conseil/docs"</span>
+</code></pre></div></div>
+
+<p>With <code class="language-plaintext highlighter-rouge">grep</code> and <code class="language-plaintext highlighter-rouge">sed</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-Eo</span> <span class="s2">"^repository.+$"</span> pyproject.toml | <span class="nb">sed</span> <span class="nt">-E</span> <span class="s1">'s/^repository = "(.+)"$/\1/'</span>
+</code></pre></div></div>
+
+<p>will output</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://github.com/JV-conseil/docs
+</code></pre></div></div>
+
+<h2 id="read-a-json-stream">Read a JSON stream</h2>
+
+<p>With <code class="language-plaintext highlighter-rouge">jq</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="s1">'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&amp;includeOthers=true&amp;sortDirection=ascending'</span> <span class="se">\</span>
+<span class="nt">-H</span> <span class="s1">'Accept-Language: en-US,en;q=0.5'</span> <span class="se">\</span>
+<span class="nt">-H</span> <span class="s1">'Accept-Encoding: gzip, deflate, br'</span> <span class="nt">-H</span> <span class="s1">'Authorization: Bearer *****'</span> <span class="se">\</span>
+<span class="nt">-H</span> <span class="s1">'Content-Type: application/json; charset=utf-8'</span> <span class="se">\</span>
+<span class="nt">--compressed</span> | jq <span class="s1">'.items[].specification.domain'</span> <span class="o">&gt;</span>~/Downloads/example.json
+</code></pre></div></div>
+
+<p>will output</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"app-9a7f8023b8b09392140f3ff9f12c91f2.cloud.sdu.dk"</span>
+<span class="s2">"app-githubbing.cloud.sdu.dk"</span>
+<span class="s2">"app-health-check.cloud.sdu.dk"</span>
+<span class="s2">"app-health-status.cloud.sdu.dk"</span>
+<span class="s2">"app-mission-ocean.cloud.sdu.dk"</span>
+<span class="s2">"app-research-funding.cloud.sdu.dk"</span>
+<span class="s2">"app-santa-maria-josefina-do-coracao-de-jesus-sancho-de-guerra.cloud.sdu.dk"</span>
+<span class="s2">"app-thalassa.cloud.sdu.dk"</span>
+<span class="s2">"app-yerun.cloud.sdu.dk"</span>
+</code></pre></div></div>
+
+<p><em>src 👉 <a href="https://stedolan.github.io/jq/manual/">jq/manual</a></em></p>
+
+<h2 id="tools-for-shell-script-development-️">Tools for Shell Script Development ⚙️</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th><img src="https://timonwong.gallerycdn.vsassets.io/extensions/timonwong/shellcheck/0.29.4/1676233151659/Microsoft.VisualStudio.Services.Icons.Default" style="height:5rem;margin:.5rem" /></th>
+      <th style="text-align: left"><a href="https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck">ShellCheck</a><br />Integrates <a href="https://github.com/koalaman/shellcheck">ShellCheck</a> into VS Code, a linter for Shell scripts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src="https://foxundermoon.gallerycdn.vsassets.io/extensions/foxundermoon/shell-format/7.2.5/1676969811685/Microsoft.VisualStudio.Services.Icons.Default" style="height:5rem;margin:.5rem" /></td>
+      <td style="text-align: left"><a href="https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format"><strong>shell-format</strong></a><br />A formatter for shell scripts implementing <a href="https://github.com/mvdan/sh">shfmt</a> parser, formatter, and interpreter<br />See <a href="https://google.github.io/styleguide/shellguide.html">Google Shell Style Guide</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- omit in toc -->
+<h2 id="general-">General 📚</h2>
+
+<ul>
+  <li><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">Bash Reference Manual</a> - The definitive reference on shell behavior</li>
+  <li><a href="https://tldp.org/LDP/abs/html/index.html">Advanced Bash-Scripting Guide</a> - An in-depth exploration of the art of shell scripting by Mendel Cooper</li>
+  <li><a href="https://github.com/awesome-lists/awesome-bash">Awesome Bash</a> - A curated list of delightful Bash scripts and resources</li>
+  <li><a href="https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/">Shell Scripting for Beginners</a> - How to Write Bash Scripts in Linux</li>
+</ul>
+
+<h2 id="features-">Features 🔎</h2>
+
+<ul>
+  <li>The Ultimate Guide to <a href="https://medium.com/mkdir-awesome/the-ultimate-guide-to-modularizing-bash-script-code-f4a4d53000c2">Modularizing Bash Script Code</a> by Shinichi Okada</li>
+  <li>How to use a <a href="https://www.xmodulo.com/key-value-dictionary-bash.html">key-value dictionary</a> in Bash</li>
+  <li>Bash <a href="https://devhints.io/bash#parameter-expansions">Parameter expansions</a></li>
+</ul>
+
+<h2 id="coding-guidelines-style-linter-️">Coding Guidelines, Style, Linter ✍️</h2>
+
+<ul>
+  <li><a href="https://google.github.io/styleguide/shellguide.html">Google Shell Style Guide</a> revision 2.02</li>
+  <li>The <a href="http://redsymbol.net/articles/unofficial-bash-strict-mode/">Unofficial Bash Strict Mode</a> - <em>These lines deliberately cause your script to fail. Wait, what? Believe me, this is a good thing…</em></li>
+  <li><a href="https://sipb.mit.edu/doc/safe-shell/">Writing Safe Shell Scripts</a> - MIT Student Information Processing Board</li>
+</ul>
+
+<!-- omit in toc -->
+<h2 id="sponsorship">Sponsorship</h2>
+
+<p>If this project helps you, you can offer me a cup of coffee ☕️ :-)</p>
+
+<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>
+
+<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="cheatsheet" /><category term="bash" /><summary type="html"><![CDATA[Collection of Cheatsheets 🗒️ Bash, PostgreSQL 🐘, Git...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2023-03-12-bash.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2023-03-12-bash.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Git</title><link href="https://www.jv-conseil.net/blog/2022-03-06-git/" rel="alternate" type="text/html" title="Git" /><published>2022-03-06T00:00:00+01:00</published><updated>2023-04-08T22:45:48+02:00</updated><id>https://www.jv-conseil.net/blog/git</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-03-06-git/"><![CDATA[<ul class="large-only" id="markdown-toc">
+  <li><a href="#config" id="markdown-toc-config">Config</a></li>
+  <li><a href="#clone-a-specific-branch" id="markdown-toc-clone-a-specific-branch">Clone a specific branch</a></li>
+  <li><a href="#force-a-git-pull" id="markdown-toc-force-a-git-pull">Force a “git pull”</a></li>
+  <li><a href="#revert-to-a-good-commit" id="markdown-toc-revert-to-a-good-commit">Revert to a good commit</a></li>
+  <li><a href="#tags" id="markdown-toc-tags">Tags</a></li>
+  <li><a href="#references-" id="markdown-toc-references-">References 📚</a></li>
+  <li><a href="#sponsorship" id="markdown-toc-sponsorship">Sponsorship</a></li>
+</ul>
+
+<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><img src="https://img.shields.io/badge/Git-F05033.svg?logo=git&amp;logoColor=white" alt="Git" />
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-EUPL--1.2-blue.svg" alt="License EUPL 1.2" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a></p>
+
+<h2 id="config">Config</h2>
+
+<p>Review your git configuration and settings</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git <span class="nt">--version</span>
+git config <span class="nt">--list</span>
+</code></pre></div></div>
+
+<h2 id="clone-a-specific-branch">Clone a specific branch</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="nt">--branch</span> development https://github.com/username/project.git
+</code></pre></div></div>
+
+<p><em>src :point_right: <a href="https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-git-clone-a-specific-branch-only">theserverside.com</a></em></p>
+
+<h2 id="force-a-git-pull">Force a “git pull”</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git fetch <span class="nt">--all</span>
+git reset <span class="nt">--hard</span>
+git clean <span class="nt">-f</span> <span class="nt">-d</span>
+git pull
+</code></pre></div></div>
+
+<p><em>src :point_right: <a href="https://stackoverflow.com/a/5361169/2477854/">stackoverflow.com</a></em></p>
+
+<h2 id="revert-to-a-good-commit">Revert to a good commit</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> <span class="o">{</span>your-git-repo<span class="o">}</span>
+git log
+git push origin +<span class="o">{</span>good-commit-sha<span class="o">}</span>:master
+</code></pre></div></div>
+
+<p><em>src :point_right: <a href="https://stackoverflow.com/a/35291514/2477854/">stackoverflow.com</a></em></p>
+
+<h2 id="tags">Tags</h2>
+
+<p>List tags</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag <span class="nt">--list</span> <span class="nt">--column</span> <span class="nt">--sort</span> tag
+</code></pre></div></div>
+
+<p>Signing tag with <code class="language-plaintext highlighter-rouge">-s</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag <span class="nt">--sign</span> <span class="s2">"2.0"</span> <span class="nt">--message</span> <span class="s2">"Stable ✨"</span>
+git push origin <span class="nt">--tags</span>
+</code></pre></div></div>
+
+<p><em>src :point_right: <a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags">Signing tags</a></em></p>
+
+<p>Delete tags</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git tag <span class="nt">--delete</span> <span class="s2">"2.0"</span>
+git push origin <span class="nt">--delete</span> <span class="s2">"2.0"</span>
+</code></pre></div></div>
+
+<!-- omit in toc -->
+<h2 id="references-">References 📚</h2>
+
+<ul>
+  <li><a href="https://git-scm.com/docs">Complete list of all commands</a> - Git official manual</li>
+  <li><a href="https://training.github.com/downloads/github-git-cheat-sheet/">Git Cheat Sheets</a> - GitHub Training Kit, open source courseware from the GitHub Professional Services team</li>
+  <li><a href="https://education.github.com/git-cheat-sheet-education.pdf">Git Cheat Sheets</a> - GitHub Git Cheatsheet (PDF)</li>
+  <li><a href="https://about.gitlab.com/images/press/git-cheat-sheet.pdf">Git Cheat Sheets</a> - GitLab Git Cheatsheet</li>
+</ul>
+
+<!-- omit in toc -->
+<h2 id="sponsorship">Sponsorship</h2>
+
+<p>If this project helps you, you can offer me a cup of coffee ☕️ :-)</p>
+
+<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="cheatsheet" /><category term="git" /><summary type="html"><![CDATA[Collection of Cheatsheets 🗒️ Bash, PostgreSQL 🐘, Git...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2022-03-06-git.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2022-03-06-git.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
