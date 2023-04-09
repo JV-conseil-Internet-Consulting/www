@@ -2,11 +2,12 @@
 layout: post
 title: Snappy New Year 🎇
 image:
-  path: /assets/posts/2022-01-31-happy-new-year.png
+  path: /assets/posts/2022-01-31-snappy-new-year.png
 description: >
   Can Happy New Year 🎇 be a Codable 👨‍💻 Task ⁉️
 # hide_description: true
 hide_image: true
+tag: [python]
 ---
 
 ![Can Happy New Year 🎇 be a Codable 👨‍💻 Task ⁉️](/assets/posts/2022-01-31-happy-new-year.png)
