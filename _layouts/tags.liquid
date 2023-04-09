@@ -41,13 +41,12 @@ layout: page
 {% for tag in featured_tags %}
   <h2 id="{{ tag.slug }}" class="hr">
     <a href="{{ tag.url | relative_url }}">{{ tag.title }}</a>
-    <!--
-    {% for site_category in categories %}
-    {% if site_category[0] == category.slug %}
-    <span class="faded fine">{{ site_category | last | size }}</span>
-    {% endif %}
+    {% for site_tag in tags %}
+      {% if site_tag[0] == tag.slug %}
+        <span class="faded fine">{{ site_tag | last | size }}</span>
+      {% endif %}
     {% endfor %}
-    --></h2>
+  </h2>
   <ul class="related-posts">
     {% for tag in featured_tags %}
       {% if tag.tag == tag.slug %}
