@@ -9,7 +9,6 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 # gem "jekyll", "~> 3.9.3"
-# gem "jekyll", github: "jekyll/jekyll"
 gem "jekyll", "~> 4.3.2"
 
 # IMPORTANT: The followign gem is used to compile math formulas to
@@ -83,7 +82,6 @@ gem "wdm", "~> 0.1.0", :install_if => Gem.win_platform?
 # Development
 group :development do
   gem "faraday-retry", "~> 2.0"
-  # gem 'jekyll-sass-converter', '~> 3.0'
   # gem "sass", "~> 3.7"
   # gem "webrick", "~> 1.8"
 end

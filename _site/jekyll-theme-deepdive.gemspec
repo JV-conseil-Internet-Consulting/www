@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["JV conseil"]
   spec.email         = ["contact@jv-conseil.net"]
 
-  spec.summary       = %q{"A boutique Jekyll theme for hackers, nerds, and academics"}
+  spec.summary       = %q{"Why DeepDive 🌊 Because the format is liquid 💦 😉"}
   spec.homepage      = "https://www.jv-conseil.net/"
   spec.license       = "EUPL-1.2"
   spec.metadata = {
