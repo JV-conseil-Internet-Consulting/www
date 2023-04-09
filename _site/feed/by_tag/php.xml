@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-FR, en-US"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.jv-conseil.net/feed/by_tag/php.xml" rel="self" type="application/atom+xml" /><link href="https://www.jv-conseil.net/" rel="alternate" type="text/html" hreflang="fr-FR, en-US" /><updated>2023-04-09T19:09:05+02:00</updated><id>https://www.jv-conseil.net/feed/by_tag/php.xml</id><title type="html">JV conseil</title><subtitle>DevOps • Full Stack Developer • Web App Architect
+Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
+Greater Paris Metropolitan Region, France 🇫🇷
+</subtitle><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><entry><title type="html">Dkim Php Mail Signature</title><link href="https://www.jv-conseil.net/blog/2019-11-17-dkim-php-mail-signature.png/" rel="alternate" type="text/html" title="Dkim Php Mail Signature" /><published>2019-11-17T00:00:00+01:00</published><updated>2023-04-08T22:45:48+02:00</updated><id>https://www.jv-conseil.net/blog/dkim-php-mail-signature.png</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2019-11-17-dkim-php-mail-signature.png/"><![CDATA[<ul class="large-only" id="markdown-toc">
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
+  <li><a href="#installation--loading" id="markdown-toc-installation--loading">Installation &amp; loading</a></li>
+  <li><a href="#make-your-own-copy-of-config-file" id="markdown-toc-make-your-own-copy-of-config-file">Make your own copy of config file</a></li>
+  <li><a href="#generate-your-public--private-encryption-keys" id="markdown-toc-generate-your-public--private-encryption-keys">Generate your Public &amp; Private Encryption keys</a></li>
+  <li><a href="#edit-your-dns-with-a-new-dkim-record" id="markdown-toc-edit-your-dns-with-a-new-dkim-record">Edit your DNS with a new DKIM record</a></li>
+  <li><a href="#edit-your-config-file" id="markdown-toc-edit-your-config-file">Edit your Config File</a></li>
+  <li><a href="#simple-use" id="markdown-toc-simple-use">Simple Use</a></li>
+  <li><a href="#introducing-dkimmail-class" id="markdown-toc-introducing-dkimmail-class">Introducing DKIMmail class</a></li>
+  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
+  <li><a href="#sponsorship" id="markdown-toc-sponsorship">Sponsorship</a></li>
+</ul>
+
+<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><a href="https://packagist.org/packages/jv-conseil/dkim-php-mail-signature"><img src="https://img.shields.io/packagist/v/jv-conseil/dkim-php-mail-signature?color=orange" alt="Packagist Version" /></a>
+<a href="https://packagist.org/packages/jv-conseil/dkim-php-mail-signature"><img src="https://img.shields.io/packagist/dependency-v/jv-conseil/dkim-php-mail-signature/php" alt="Packagist Dependency Version" /></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-EUPL--1.2-blue.svg" alt="License EUPL 1.2" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a>
+<!--
+[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P3DGL6EANDY96&source=url)
+--></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Sample lines to import into your mail code to start signing with DKIM:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span> <span class="p">;</span> <span class="c1">// Autoload files using Composer autoload</span>
+<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMsign</span> <span class="p">;</span>
+<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMconfig</span> <span class="p">;</span>
+
+<span class="c1">// init</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMconfig</span><span class="p">(</span><span class="s1">'/www/inc/config/jv-conseil/dkim-php-mail-signature/config.inc.php'</span><span class="p">)</span> <span class="p">;</span>
+<span class="nv">$sign</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMsign</span><span class="p">(</span>
+ <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">private_key</span><span class="p">,</span>
+ <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">passphrase</span><span class="p">,</span>
+ <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">domain</span><span class="p">,</span>
+ <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">selector</span>
+<span class="p">)</span> <span class="p">;</span>
+
+<span class="c1">// sign</span>
+<span class="nv">$signed_headers</span> <span class="o">=</span> <span class="nv">$sign</span><span class="o">-&gt;</span><span class="nf">get_signed_headers</span><span class="p">(</span><span class="nv">$to</span><span class="p">,</span> <span class="nv">$subject</span><span class="p">,</span> <span class="nv">$message</span><span class="p">,</span> <span class="nv">$headers</span><span class="p">)</span> <span class="p">;</span>
+
+<span class="c1">// send email</span>
+<span class="nb">mail</span><span class="p">(</span><span class="nv">$to</span><span class="p">,</span> <span class="nv">$subject</span><span class="p">,</span> <span class="nv">$message</span><span class="p">,</span> <span class="nv">$signed_headers</span><span class="mf">.</span><span class="nv">$headers</span><span class="p">)</span> <span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="installation">Installation</h2>
+
+<blockquote>
+  <p>Step by Step guide to generate your encryption keys and populate them through your DNS records.</p>
+</blockquote>
+
+<h2 id="installation--loading">Installation &amp; loading</h2>
+
+<p>DkimPhpMailSignature is available on <a href="https://packagist.org/packages/jv-conseil/dkim-php-mail-signature">Packagist</a> (using semantic versioning), and installation via <a href="https://getcomposer.org">Composer</a> is the recommended way to install DkimPhpMailSignature. Just add this line to your <code class="language-plaintext highlighter-rouge">composer.json</code> file:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"jv-conseil/dkim-php-mail-signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>or run</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer require jv-conseil/dkim-php-mail-signature
+</code></pre></div></div>
+
+<p>Note that the <code class="language-plaintext highlighter-rouge">vendor</code> folder and the <code class="language-plaintext highlighter-rouge">vendor/autoload.php</code> script are generated by Composer; they are not part of DkimPhpMailSignature.</p>
+
+<h2 id="make-your-own-copy-of-config-file">Make your own copy of config file</h2>
+
+<p>Before starting you should make a copy of folder <code class="language-plaintext highlighter-rouge">config/</code> and store it outside your <code class="language-plaintext highlighter-rouge">vendor/</code> Composer repository in a non-public area of your website e.g.:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/www/inc/config/jv-conseil/dkim-php-mail-signature/
+</code></pre></div></div>
+
+<p>Failing to do so will expose you to lose all your settings in case of a future Composer udpate.</p>
+
+<h2 id="generate-your-public--private-encryption-keys">Generate your Public &amp; Private Encryption keys</h2>
+
+<p>In Terminal enter this command line to start working under the path of your <code class="language-plaintext highlighter-rouge">config/</code> folder:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /www/inc/config/jv-conseil/dkim-php-mail-signature/
+</code></pre></div></div>
+
+<p>In Terminal enter this command line to generate a new <strong>private 2048 bit encryption key</strong>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl genrsa <span class="nt">-des3</span> <span class="nt">-out</span> private.pem 2048
+</code></pre></div></div>
+
+<p>Enter your <strong>Pass Phrase</strong> and save it for editing your <code class="language-plaintext highlighter-rouge">config.inc.php</code> file in the next step.</p>
+
+<p>Then retrieve your <strong>public key</strong>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl rsa <span class="nt">-in</span> private.pem <span class="nt">-out</span> public.pem <span class="nt">-outform</span> PEM <span class="nt">-pubout</span>
+</code></pre></div></div>
+
+<p><em>You can delete the two originals <code class="language-plaintext highlighter-rouge">*.pem</code> file keys stored in the <code class="language-plaintext highlighter-rouge">config/</code> folder if they create a conflict in the creation process of your keys.</em></p>
+
+<h2 id="edit-your-dns-with-a-new-dkim-record">Edit your DNS with a new DKIM record</h2>
+
+<p>Access your registrar interface (e.g.: OVH.com) and create a new <strong>DKIM record</strong> to declare your <strong>public key</strong>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>selector._domainkey  IN TXT  <span class="o">(</span> <span class="s2">"v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0ekggNf9vuzzL4SlVc8QZyyqbEwR5bVTPC9cEZ8hFqTKOc7go180n3RZilYJZvveaxBkLCVJSTQaMPtKuSptY5au6Pi3AkFlizzhUJ80+0zgZXSGx7gfbginbRwhD+XdGOe9NXpo0PfrD6dEJ49Ytx4/nHB0TKiL227C0kGWb7RfWTVWccgJq4+kQb4l+4"</span> <span class="s2">"oDU5rGomSYK+zmMV13QTSETcJnoXhmjoJ30omyJfEXAsK5Ny0LJo8rWCucLD31BxHrM9/+M/Ye+TWxcrD2mRh5Jxqcnyj00/7kCnWeGPTftVKkAJBP3JMRqCNShLUchLhaz0qeXUtxAe9dx7ltr8042QIDAQAB;"</span> <span class="o">)</span>
+</code></pre></div></div>
+
+<p>DKIM works better with <strong>SPF</strong> and <strong>DMARC</strong> records, you should consider editing them too:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3600     IN TXT  <span class="s2">"v=spf1 include:_spf.google.com ~all"</span>
+_dmarc   IN TXT  <span class="s2">"v=DMARC1; p=quarantine; rua=mailto:me@yourdomain.name"</span>
+</code></pre></div></div>
+
+<p>Further reading:</p>
+
+<ul>
+  <li><a href="https://support.google.com/a/answer/173535">Add DKIM domain key to domain DNS records</a></li>
+  <li><a href="https://support.google.com/a/answer/2466563?hl=en">Manage suspicious emails with DMARC</a></li>
+  <li><a href="https://support.google.com/a/answer/33786?hl=en">Help prevent email spoofing with SPF records</a></li>
+</ul>
+
+<h2 id="edit-your-config-file">Edit your Config File</h2>
+
+<p>Under <code class="language-plaintext highlighter-rouge">config/config.sample.inc.php</code> you will find a config file example to help you set your own details.</p>
+
+<p>Now you can drop <code class="language-plaintext highlighter-rouge">.sample</code> in the filename and start editing it:</p>
+
+<ul>
+  <li><strong>domain</strong>: your domain name e.g: google.com</li>
+  <li><strong>selector</strong>: <code class="language-plaintext highlighter-rouge">selector</code> used in your DKIM DNS record, e.g.: selector._domainkey.MAIL_DKIM_DOMAIN</li>
+  <li><strong>passphrase</strong>: your pass phrase used to generate your keys e.g.: myPassPhrase.</li>
+  <li>… other parameters can be omitted.</li>
+</ul>
+
+<h2 id="simple-use">Simple Use</h2>
+
+<p>Sample lines to import into your mail code to start signing with DKIM:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span> <span class="p">;</span> <span class="c1">// Autoload files using Composer autoload</span>
+<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMsign</span> <span class="p">;</span>
+<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMconfig</span> <span class="p">;</span>
+
+<span class="c1">// init</span>
+<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMconfig</span><span class="p">(</span><span class="s1">'/www/inc/config/jv-conseil/dkim-php-mail-signature/config.inc.php'</span><span class="p">)</span> <span class="p">;</span>
+
+<span class="c1">// set: this calls __set()</span>
+<span class="nv">$config</span><span class="o">-&gt;</span><span class="n">domain</span> <span class="o">=</span> <span class="s2">"mynewdomain.name"</span> <span class="p">;</span>
+
+<span class="c1">// get: this calls __get()</span>
+<span class="nv">$config</span><span class="o">-&gt;</span><span class="n">domain</span> <span class="p">;</span> <span class="c1">// =&gt; "mynewdomain.name" ;</span>
+</code></pre></div></div>
+
+<h2 id="introducing-dkimmail-class">Introducing DKIMmail class</h2>
+
+<blockquote>
+  <p>📬 Stand-alone class to send DKIM signed emails with a 2048 bit private key hashed with SHA-256 algorithm.</p>
+</blockquote>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// init</span>
+<span class="nv">$mail</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMmail</span><span class="p">(</span><span class="s1">'/www/inc/config/jv-conseil/dkim-php-mail-signature/config.inc.php'</span><span class="p">)</span> <span class="p">;</span>
+
+<span class="c1">// parameters</span>
+<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">from</span>    <span class="o">=</span> <span class="s2">"Sender"</span> <span class="o">&lt;</span><span class="n">sender</span><span class="o">@</span><span class="n">yourdomain</span><span class="mf">.</span><span class="n">com</span><span class="o">&gt;</span> <span class="p">;</span>
+<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">to</span>      <span class="o">=</span> <span class="s2">"Recipient"</span> <span class="o">&lt;</span><span class="n">recipient</span><span class="o">@</span><span class="n">yourdomain</span><span class="mf">.</span><span class="n">com</span><span class="o">&gt;</span> <span class="p">;</span>
+<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">subject</span> <span class="o">=</span> <span class="s2">"Your Mail Subject"</span> <span class="p">;</span>
+<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">body</span>    <span class="o">=</span> <span class="s2">"Your Mail Message."</span> <span class="p">;</span>
+<span class="nv">$mail</span><span class="o">-&gt;</span><span class="nf">attach</span><span class="p">(</span><span class="s2">"/path/to/your/attachment.jpg"</span><span class="p">,</span> <span class="s2">"NameOfYourAttachment.jpg"</span><span class="p">)</span> <span class="p">;</span>
+
+<span class="c1">// send!</span>
+<span class="nv">$mail</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">()</span> <span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="documentation">Documentation</h2>
+
+<p>Documentation is <a href="https://jv-conseil-internet-consulting.github.io/dkim-php-mail-signature/classes/JVconseil.DkimPhpMailSignature.DKIMconfig.html">available online</a>, though it may not be quite up to date or match your version exactly.</p>
+
+<p>You can generate API documentation by running <code class="language-plaintext highlighter-rouge">phpdoc</code> in the top-level folder of this project, and documentation will be generated in this folder:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php ~/vendor/bin/phpdoc <span class="nt">-d</span> ~/dkim-php-mail-signature/ <span class="nt">-t</span> ~/dkim-php-mail-signature/docs/
+</code></pre></div></div>
+
+<p>You will need to have <a href="https://www.phpdoc.org">phpDocumentor</a> installed.</p>
+
+<h2 id="sponsorship">Sponsorship</h2>
+
+<p>If this project helps you reduce time to develop, you can give me a cup of coffee ☕️ :-)</p>
+
+<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="php" /><summary type="html"><![CDATA[Stand-alone DKIM class to sign your emails with a 2048 bit private key hashed with SHA-256 algorithm 🔏]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2019-11-17-dkim-php-mail-signature.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2019-11-17-dkim-php-mail-signature.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
