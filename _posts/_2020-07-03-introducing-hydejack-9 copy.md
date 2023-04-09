@@ -74,10 +74,6 @@ The Free Version of DeepDive is now availabe on [RubyGems](https://rubygems.org/
 and for the first time also on [GitHub Packages](https://github.com/hydecorp/hydejack/packages).
 The source code is available on [GitHub](https://github.com/hydecorp/hydejack) as always.
 
-The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:
-
-<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
-
 [^1]: If you are a fan of the old two-column layout, or don't like modern design tropes such as mega headlines, DeepDive lets you revert these changes on a case-by-case basis via configuration options.
 
 [^2]:

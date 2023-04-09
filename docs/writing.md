@@ -2,14 +2,14 @@
 layout: page
 title: Writing
 description: >
-  Hydejack offers a few additional features to markup your content.
+  DeepDive offers a few additional features to markup your content.
   Don't worry, these are merely CSS classes added with kramdown's `{:...}` syntax,
   so that your content remains compatible with other Jekyll themes.
 hide_description: true
 # sitemap: false
 ---
 
-Hydejack offers a few additional features to markup your content.
+DeepDive offers a few additional features to markup your content.
 Don't worry, these are merely CSS classes added with kramdown's `{:...}` syntax,
 so that your content remains compatible with other Jekyll themes.
 
@@ -126,7 +126,7 @@ It is recommended to provide the dimension of the image via the `width` and `hei
 so that browsers can calculate the layout before the images are loaded. Combining this with the `loading="lazy"` attribute
 allows modern browsers to load the images just-in-time as the users scrolls.
 
-Previous versions of Hydejack shipped with a custom JavaScript-based lazy loading solution,
+Previous versions of DeepDive shipped with a custom JavaScript-based lazy loading solution,
 but it has been removed in v9 in favor of this more standards-based approach.
 {:.note}
 
@@ -197,7 +197,7 @@ Markdown:
 ~~~
 
 However, it gets tricker when adding large tables.
-In this case, Hydejack will break the layout and grant the table the entire available screen width to the right:
+In this case, DeepDive will break the layout and grant the table the entire available screen width to the right:
 
 | Default aligned   | Left aligned |  Center aligned   |    Right aligned | Default aligned   | Left aligned |  Center aligned   |    Right aligned | Default aligned   | Left aligned |  Center aligned   |    Right aligned | Default aligned   | Left aligned |  Center aligned   |    Right aligned |
 | ----------------- | :----------- | :---------------: | ---------------: | ----------------- | :----------- | :---------------: | ---------------: | ----------------- | :----------- | :---------------: | ---------------: | ----------------- | :----------- | :---------------: | ---------------: |
