@@ -10,7 +10,7 @@ sitemap: false
 * this list will be replaced by the toc
 {:toc .large-only}
 
-Copyright (c) 2009-<span id="copyrightEndYear">2022</span> JV conseil <https://www.jv-conseil.net/>
+Copyright (c) 2009-2023 JV conseil <https://www.jv-conseil.net/>
 
 This European Union Public Licence (the ‘EUPL’) applies to the Work (as defined
 below) which is provided under the terms of this Licence. Any use of the Work,
