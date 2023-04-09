@@ -5,6 +5,7 @@ cover: true
 selected_posts:
   - _posts/2023-02-17-githubbing-on-ucloud.md
   - _posts/2022-07-18-django-azure-active-directory-signin.md
+  - _posts/2023-02-28-jekyll-theme-read-the-docs.md
   - _posts/2019-11-17-dkim-php-mail-signature.png.md
   - _posts/2023-03-12-bash.md
   - _posts/2022-03-06-git.md

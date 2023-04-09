@@ -198,6 +198,12 @@ project, which is [MIT] licensed with the following copyright:
 > Stu Cox
 > Richard Herrera
 
+### Noto Sans
+
+This software also uses portions of the
+`fontsource/noto-sans`
+project, which is [Open Font](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL) licensed.
+
 ### Ratchet
 
 This software also uses portions of the
@@ -213,6 +219,12 @@ This software also uses portions of the
 project, which is [Apache-2.0] licensed with the following copyright:
 
 > Copyright 2019 JUGGLE LTD
+
+### Roboto Slab
+
+This software also uses portions of the
+`googlefonts/roboto`
+project, which is [Apache-2.0] licensed.
 
 ### RxJS
 

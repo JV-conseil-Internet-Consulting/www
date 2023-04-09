@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-FR, en-US"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.jv-conseil.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.jv-conseil.net/" rel="alternate" type="text/html" hreflang="fr-FR, en-US" /><updated>2023-04-09T04:56:25+02:00</updated><id>https://www.jv-conseil.net/feed.xml</id><title type="html">JV conseil</title><subtitle>DevOps • Full Stack Developer • Web App Architect
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-FR, en-US"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.jv-conseil.net/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.jv-conseil.net/" rel="alternate" type="text/html" hreflang="fr-FR, en-US" /><updated>2023-04-09T19:09:05+02:00</updated><id>https://www.jv-conseil.net/feed.xml</id><title type="html">JV conseil</title><subtitle>DevOps • Full Stack Developer • Web App Architect
 Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
 Greater Paris Metropolitan Region, France 🇫🇷
 </subtitle><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><entry><title type="html">Bash</title><link href="https://www.jv-conseil.net/blog/2023-03-12-bash/" rel="alternate" type="text/html" title="Bash" /><published>2023-03-12T00:00:00+01:00</published><updated>2023-04-08T22:18:27+02:00</updated><id>https://www.jv-conseil.net/blog/bash</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2023-03-12-bash/"><![CDATA[<ul class="large-only" id="markdown-toc">
@@ -157,7 +157,188 @@ curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&amp;includeOthe
 
 <p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>
 
-<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="cheatsheet" /><category term="bash" /><summary type="html"><![CDATA[Collection of Cheatsheets 🗒️ Bash, PostgreSQL 🐘, Git...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2023-03-12-bash.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2023-03-12-bash.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">GitHubbing on UCloud</title><link href="https://www.jv-conseil.net/blog/2023-02-17-githubbing-on-ucloud/" rel="alternate" type="text/html" title="GitHubbing on UCloud" /><published>2023-02-17T00:00:00+01:00</published><updated>2023-04-08T22:18:27+02:00</updated><id>https://www.jv-conseil.net/blog/githubbing-on-ucloud</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2023-02-17-githubbing-on-ucloud/"><![CDATA[<ul class="large-only" id="markdown-toc">
+<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="cheatsheet" /><category term="bash" /><summary type="html"><![CDATA[Collection of Cheatsheets 🗒️ Bash, PostgreSQL 🐘, Git...]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2023-03-12-bash.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2023-03-12-bash.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Jekyll Theme Read the Docs 📖</title><link href="https://www.jv-conseil.net/blog/2023-02-28-jekyll-theme-read-the-docs/" rel="alternate" type="text/html" title="Jekyll Theme Read the Docs 📖" /><published>2023-02-28T00:00:00+01:00</published><updated>2023-04-09T18:48:04+02:00</updated><id>https://www.jv-conseil.net/blog/jekyll-theme-read-the-docs</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2023-02-28-jekyll-theme-read-the-docs/"><![CDATA[<ul class="large-only" id="markdown-toc">
+  <li><a href="#what-it-does" id="markdown-toc-what-it-does">What it does?</a></li>
+  <li><a href="#quick-start" id="markdown-toc-quick-start">Quick start</a></li>
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#features" id="markdown-toc-features">Features</a></li>
+  <li><a href="#options" id="markdown-toc-options">Options</a></li>
+  <li><a href="#sponsorship" id="markdown-toc-sponsorship">Sponsorship</a></li>
+</ul>
+
+<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><img src="https://data.jsdelivr.com/v1/package/gh/JV-conseil/jekyll-theme-read-the-docs/badge" alt="jsDelivr" />
+<a href="https://github.com/JV-conseil/jekyll-theme-read-the-docs/actions/workflows/github-code-scanning/codeql"><img src="https://github.com/JV-conseil/jekyll-theme-read-the-docs/actions/workflows/github-code-scanning/codeql/badge.svg" alt="CodeQL" /></a>
+<a href="https://analytics.umami.is/share/M19mr5L7jVhHuFnb/jv-conseil.github.io" title="Umami - GDPR compliant alternative to Google Analytics"><img src="https://img.shields.io/badge/analytics-umami-green" alt="Umami - GDPR compliant alternative to Google Analytics" /></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-EUPL--1.2-blue.svg" alt="License EUPL 1.2" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a></p>
+
+<!--
+![CI](https://github.com/JV-conseil/jekyll-theme-read-the-docs/workflows/CI/badge.svg?branch=develop)
+[![License BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
+-->
+
+<p>Read the Docs 📖 like Jekyll Theme for GitHub Pages</p>
+
+<h2 id="what-it-does">What it does?</h2>
+
+<p>This theme is inspired by <a href="https://github.com/jekyll-theme-read-the-docs/sphinx_rtd_theme">sphinx-rtd-theme</a> and refactored with:</p>
+
+<ul>
+  <li><a href="https://github.com/primer/css">@primer/css</a></li>
+  <li><a href="https://github.com/github/pages-gem">github-pages</a> (<a href="https://pages.github.com/versions/">dependency versions</a>)</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s">https://github.com/JV-conseil/jekyll-theme-read-the-docs</span>
+</code></pre></div></div>
+
+<p>You can <a href="https://github.com/rundocs/starter">generate</a> with the same files and folders from <a href="https://github.com/rundocs/starter">rundocs/starter</a></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Documentation that can guide how to create with Github pages, please refer to <a href="https://github.com/rundocs/jekyll-rtd-theme">rundocs/jekyll-rtd-theme</a> for details</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Shortcodes (Toasts card, mermaid)</li>
+  <li>Pages Plugins (emoji, gist, avatar, mentions)</li>
+  <li>Auto generate sidebar</li>
+  <li><a href="https://kramdown.gettalong.org/syntax.html#attribute-list-definitions">Attribute List Definitions</a> (Primer/css utilities, Font Awesome 4)</li>
+  <li>Service worker (caches)</li>
+  <li>SEO (404, robots.txt, sitemap.xml)</li>
+  <li>Canonical Link (Open Graph, Twitter Card, Schema data)</li>
+</ul>
+
+<h2 id="options">Options</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>default value</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td>repo name</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td>repo description</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">url</code></td>
+      <td>user domain or cname</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">baseurl</code></td>
+      <td>repo name</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lang</code></td>
+      <td><code class="language-plaintext highlighter-rouge">en</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">direction</code></td>
+      <td><code class="language-plaintext highlighter-rouge">auto</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ltr</code> or <code class="language-plaintext highlighter-rouge">rtl</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">highlighter</code></td>
+      <td><code class="language-plaintext highlighter-rouge">rouge</code></td>
+      <td>Cannot be changed</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># folders sort</span>
+<span class="na">readme_index</span><span class="pi">:</span>
+  <span class="na">with_frontmatter</span><span class="pi">:</span> <span class="kc">true</span>
+
+<span class="na">meta</span><span class="pi">:</span>
+  <span class="na">key1</span><span class="pi">:</span> <span class="s">value1</span>
+  <span class="na">key2</span><span class="pi">:</span> <span class="s">value2</span>
+  <span class="s">.</span>
+  <span class="s">.</span>
+  <span class="s">.</span>
+
+<span class="na">google</span><span class="pi">:</span>
+  <span class="na">gtag</span><span class="pi">:</span>
+  <span class="na">adsense</span><span class="pi">:</span>
+  <span class="na">site_verification</span><span class="pi">:</span>
+
+<span class="c1"># GDPR compliant alternative to Google Analytics</span>
+<span class="na">mouseflow</span><span class="pi">:</span>
+  <span class="na">project_api_key</span><span class="pi">:</span>
+
+<span class="na">posthog</span><span class="pi">:</span>
+  <span class="na">project_api_key</span><span class="pi">:</span>
+
+<span class="na">telemetry</span><span class="pi">:</span>
+  <span class="na">app_id</span><span class="pi">:</span>
+  <span class="na">user_identifier</span><span class="pi">:</span>
+
+<span class="na">umami</span><span class="pi">:</span>
+  <span class="na">website_id</span><span class="pi">:</span>
+
+<span class="na">mathjax</span><span class="pi">:</span> <span class="c1"># this will prased to json, default: {}</span>
+
+<span class="c1"># NOTE: mermaid custom link are no longer supported</span>
+<span class="c1"># instead mermaid is updated to the lastest version</span>
+<span class="c1"># available through cdn.jsdelivr.net</span>
+<span class="c1"># mermaid:</span>
+<span class="c1">#   custom:     # mermaid link</span>
+<span class="c1">#   initialize: # this will prased to json, default: {}</span>
+
+<span class="na">scss</span><span class="pi">:</span>   <span class="c1"># also _includes/extra/styles.scss</span>
+<span class="na">script</span><span class="pi">:</span> <span class="c1"># also _includes/extra/script.js</span>
+
+<span class="na">translate</span><span class="pi">:</span>
+  <span class="c1"># shortcodes</span>
+  <span class="na">danger</span><span class="pi">:</span>
+  <span class="na">note</span><span class="pi">:</span>
+  <span class="na">tip</span><span class="pi">:</span>
+  <span class="na">warning</span><span class="pi">:</span>
+  <span class="c1"># 404</span>
+  <span class="na">not_found</span><span class="pi">:</span>
+  <span class="c1"># copyright</span>
+  <span class="na">revision</span><span class="pi">:</span>
+  <span class="c1"># search</span>
+  <span class="na">searching</span><span class="pi">:</span>
+  <span class="na">search</span><span class="pi">:</span>
+  <span class="na">search_docs</span><span class="pi">:</span>
+  <span class="na">search_results</span><span class="pi">:</span>
+  <span class="na">search_results_found</span><span class="pi">:</span> <span class="c1"># the "#" in this translate will replaced with results size!</span>
+  <span class="na">search_results_not_found</span><span class="pi">:</span>
+
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jemoji</span>
+  <span class="pi">-</span> <span class="s">jekyll-avatar</span>
+  <span class="pi">-</span> <span class="s">jekyll-mentions</span>
+</code></pre></div></div>
+
+<h2 id="sponsorship">Sponsorship</h2>
+
+<p>If this project helps you, you can offer me a cup of coffee ☕️ :-)</p>
+
+<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>
+
+<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="jekyll" /><summary type="html"><![CDATA[Read the Docs 📖 like Jekyll Theme for GitHub Pages]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2023-02-28-jekyll-theme-read-the-docs.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2023-02-28-jekyll-theme-read-the-docs.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">GitHubbing on UCloud</title><link href="https://www.jv-conseil.net/blog/2023-02-17-githubbing-on-ucloud/" rel="alternate" type="text/html" title="GitHubbing on UCloud" /><published>2023-02-17T00:00:00+01:00</published><updated>2023-04-08T22:18:27+02:00</updated><id>https://www.jv-conseil.net/blog/githubbing-on-ucloud</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2023-02-17-githubbing-on-ucloud/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#what-is-ucloud" id="markdown-toc-what-is-ucloud">What is UCloud</a></li>
   <li><a href="#getting-started-" id="markdown-toc-getting-started-">Getting Started 🚀</a></li>
   <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
@@ -269,7 +450,7 @@ curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&amp;includeOthe
 
 <p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>
 
-<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="bash" /><category term="cloud" /><summary type="html"><![CDATA[The missing repo to start GitHubbing on UCloud]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2023-03-11-githubbing-on-ucloud.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2023-03-11-githubbing-on-ucloud.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Django Azure Active Directory Sign-In 🔑</title><link href="https://www.jv-conseil.net/blog/2022-07-18-django-azure-active-directory-signin/" rel="alternate" type="text/html" title="Django Azure Active Directory Sign-In 🔑" /><published>2022-07-18T00:00:00+02:00</published><updated>2023-04-08T22:18:27+02:00</updated><id>https://www.jv-conseil.net/blog/django-azure-active-directory-signin</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-07-18-django-azure-active-directory-signin/"><![CDATA[<ul class="large-only" id="markdown-toc">
+<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="bash" /><category term="cloud" /><summary type="html"><![CDATA[The missing repo to start GitHubbing on UCloud]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2023-03-11-githubbing-on-ucloud.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2023-03-11-githubbing-on-ucloud.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Django Azure Active Directory Sign-In 🔑</title><link href="https://www.jv-conseil.net/blog/2022-07-18-django-azure-active-directory-signin/" rel="alternate" type="text/html" title="Django Azure Active Directory Sign-In 🔑" /><published>2022-07-18T00:00:00+02:00</published><updated>2023-04-09T05:00:26+02:00</updated><id>https://www.jv-conseil.net/blog/django-azure-active-directory-signin</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-07-18-django-azure-active-directory-signin/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#description" id="markdown-toc-description">Description</a></li>
   <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
   <li><a href="#configuration" id="markdown-toc-configuration">Configuration</a>    <ul>
@@ -525,7 +706,86 @@ improvements, code coverage and extended documentation.</p>
 
 <p>If this project helps you, you can offer me a cup of coffee ☕️ :-)</p>
 
-<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="python" /><category term="django" /><category term="azure" /><category term="cloud" /><summary type="html"><![CDATA[Sign-in users to your Django Web app with Azure Active Directory.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2022-07-18-django-azure-active-directory-signin.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2022-07-18-django-azure-active-directory-signin.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Git</title><link href="https://www.jv-conseil.net/blog/2022-03-06-git/" rel="alternate" type="text/html" title="Git" /><published>2022-03-06T00:00:00+01:00</published><updated>2023-04-08T22:45:48+02:00</updated><id>https://www.jv-conseil.net/blog/git</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-03-06-git/"><![CDATA[<ul class="large-only" id="markdown-toc">
+<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="python" /><category term="django" /><category term="azure" /><category term="cloud" /><summary type="html"><![CDATA[Sign-in users to your Django Web app with Azure Active Directory.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2022-07-18-django-azure-active-directory-signin.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2022-07-18-django-azure-active-directory-signin.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">PgBouncer and PostgreSQL Azure Flexible Server a bumpy road 🛣</title><link href="https://www.jv-conseil.net/blog/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server/" rel="alternate" type="text/html" title="PgBouncer and PostgreSQL Azure Flexible Server a bumpy road 🛣" /><published>2022-03-08T00:00:00+01:00</published><updated>2023-04-09T18:42:31+02:00</updated><id>https://www.jv-conseil.net/blog/pgbouncer-and-postgresql-azure-flexible-server</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server/"><![CDATA[<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><a href="https://www.postgresql.org/docs/14.6/"><img src="https://img.shields.io/badge/PostgreSQL-14.6-green.svg" alt="PostgreSQL 14.6" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a>
+<!--
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-green)](https://www.python.org/downloads/release/python-3112/)
+[![PostgreSQL 14.6](https://img.shields.io/badge/PostgreSQL-14.6-green.svg)](https://www.postgresql.org/docs/14.6/)
+<img alt="https://img.shields.io/badge/stack-overflow-orange.svg" src="https://img.shields.io/badge/stack-overflow-orange.svg">
+--></p>
+
+<p>The introduction of <a href="https://github.com/pgbouncer/pgbouncer">PgBouncer</a>, a lightweight connection pooler for PostgreSQL, on <a href="https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-pgbouncer#feedback">Azure PostgreSQL Flexible Server</a> has been bumpy to say the least 😉</p>
+
+<p>Here is an excerpt of the <a href="https://github.com/MicrosoftDocs/azure-docs/issues/89424">issue</a> that triggers the opening of a seven-month–long-to-be-solved support ticket 🎫</p>
+
+<p>PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure</p>
+
+<p>Once you have set up in your PostgreSQL flexible server parameters <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-full</code>, saved your changes and restarted your server, you end up with <code class="language-plaintext highlighter-rouge">SSL error: tlsv13 alert certificate required</code> when you attempt to run a <code class="language-plaintext highlighter-rouge">pqsl</code> connection command on your server.</p>
+
+<p>This happens also when setting <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-ca</code>.</p>
+
+<p>According to <a href="https://docs.microsoft.com/en-us/azure/postgresql/concepts-certificate-rotation#4-what-is-the-impact-if-using-app-service-with-azure-database-for-postgresql">documentation</a></p>
+
+<blockquote>
+  <p>This new certificate has been added to App Service at platform level. If you are using the SSL certificates included on App Service platform in your application, then no action is needed.</p>
+</blockquote>
+
+<p>Is <code class="language-plaintext highlighter-rouge">DigiCertGlobalRootG2.crt.pem</code> certificate only set for <code class="language-plaintext highlighter-rouge">postgresql</code> server but not for <code class="language-plaintext highlighter-rouge">pgbouncer</code>?</p>
+
+<p>As a workaround, the only way to successfully connect is by setting <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">require</code>.</p>
+
+<p>In the present issue the problem is being able to set the TLS mode to use for connections from clients to the highest level available which is <code class="language-plaintext highlighter-rouge">verify-full</code>.</p>
+
+<p><img src="https://user-images.githubusercontent.com/8126807/157479980-956367de-9da0-47fb-8924-8b00bab264c3.png" alt="set the TLS mode to use for connections from clients to the highest level available which is `verify-full`" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">sslmode=verify-full</code> activation implies providing to the connection string a path to an authentication certificate. For PostgreSQL that can be handle by <a href="https://www.postgresql.org/docs/current/libpq-envars.html#id-1.7.3.21.3.4.17.1.1">PGSSLROOTCERT</a> environment variable.</p>
+
+<p>There is a lack of information in <a href="https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-pgbouncer#feedback">PgBouncer - Azure Database for PostgreSQL - Flexible Server</a> on how <code class="language-plaintext highlighter-rouge">verify-full</code> is handle by <code class="language-plaintext highlighter-rouge">pgbouncer</code>.</p>
+
+<p>So far activating <code class="language-plaintext highlighter-rouge">verify-full</code> on <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> on Azure Database for PostgreSQL flexible server parameters triggers an <code class="language-plaintext highlighter-rouge">SSL error sslv3 alert handshake failure</code>.</p>
+
+<p>Here is an example of a <code class="language-plaintext highlighter-rouge">psql</code> connection attempt failing with <code class="language-plaintext highlighter-rouge">SSL error: tlsv13 alert certificate required</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql <span class="s2">"host=myPgServer.postgres.database.azure.com dbname=pgbouncer user=pgbouncer password=myPassword
+port=6432 sslmode=verify-full sslrootcert=~/.postgresql/root.crt"</span>
+
+psql: error: connection to server at <span class="s2">"myPgServer.postgres.database.azure.com"</span> <span class="o">(</span>ip<span class="o">)</span>, port 6432 failed: SSL
+error: tlsv13 alert certificate required
+</code></pre></div></div>
+
+<p>According to PostgreSQL <a href="https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS">documentation</a> here are the parameters to provide when establishing a <code class="language-plaintext highlighter-rouge">sslmode=verify-full</code> connection:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sslmode</code>: <code class="language-plaintext highlighter-rouge">verify-full</code> only try an SSL connection, verify that the server certificate is issued by a trusted CA and that the requested server host name matches that in the certificate.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sslrootcert</code>: This parameter specifies the name of a file containing SSL certificate authority (CA) certificate(s). If the file exists, the server’s certificate will be verified to be signed by one of these authorities. The default is ~/.postgresql/root.crt.</p>
+  </li>
+</ul>
+
+<p>According to pgBouncer <a href="http://www.pgbouncer.org/config.html#tls-settings">documentation</a> here are the parameters to provide when establishing a <code class="language-plaintext highlighter-rouge">sslmode=verify-full</code> connection:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">client_tls_sslmode</code>: <code class="language-plaintext highlighter-rouge">verify-full</code> Client must use TLS with valid client certificate.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">client_tls_ca_file</code>: Root certificate file to validate client certificates.</p>
+  </li>
+</ul>
+
+<p>On Azure PostgreSQL flexible server parameters, there is a panel to set <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-full</code>, but there is not a <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_ca_file</code> allowing to specify the path to the file containing SSL certificate authority (CA).</p>
+
+<p>The question is « When you activate  <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-full</code> how do you provide the accompanying file containing SSL certificate authority (CA) » ❓</p>
+
+<p>A subsidiary question could be « Does Azure assures the transmission of the SSL certificate authority (CA) from <code class="language-plaintext highlighter-rouge">pgBouncer</code> to <code class="language-plaintext highlighter-rouge">PostgreSQL</code> server when hitting first <code class="language-plaintext highlighter-rouge">pgBouncer</code> on port <code class="language-plaintext highlighter-rouge">6432</code> by collecting the value of <code class="language-plaintext highlighter-rouge">sslrootcert</code>in the connection string and converting it into <code class="language-plaintext highlighter-rouge">client_tls_ca_file</code> » ❓</p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="azure" /><category term="cloud" /><category term="postgresql" /><summary type="html"><![CDATA[Azure PostgreSQL Flexible Server and PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.jpg" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Git</title><link href="https://www.jv-conseil.net/blog/2022-03-06-git/" rel="alternate" type="text/html" title="Git" /><published>2022-03-06T00:00:00+01:00</published><updated>2023-04-08T22:45:48+02:00</updated><id>https://www.jv-conseil.net/blog/git</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-03-06-git/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#config" id="markdown-toc-config">Config</a></li>
   <li><a href="#clone-a-specific-branch" id="markdown-toc-clone-a-specific-branch">Clone a specific branch</a></li>
   <li><a href="#force-a-git-pull" id="markdown-toc-force-a-git-pull">Force a “git pull”</a></li>
@@ -3003,209 +3263,4 @@ Bits par échantillon : 32
 <span class="c1"># Note: for Python 2.7 compatibility, use ur"" to prefix the regex and u"" to prefix the test string and substitution.
 </span></code></pre></div></div>
 
-<p><em><a href="https://regex101.com/r/QzFpaY/1">France Musique .AAC link scraping on Regex101</a></em></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><summary type="html"><![CDATA[Les nouveaux flux web audio Hifi HD au format .aac des stations de Radio France 📻]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Dkim Php Mail Signature</title><link href="https://www.jv-conseil.net/blog/2019-11-17-dkim-php-mail-signature.png/" rel="alternate" type="text/html" title="Dkim Php Mail Signature" /><published>2019-11-17T00:00:00+01:00</published><updated>2023-04-08T22:45:48+02:00</updated><id>https://www.jv-conseil.net/blog/dkim-php-mail-signature.png</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2019-11-17-dkim-php-mail-signature.png/"><![CDATA[<ul class="large-only" id="markdown-toc">
-  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
-  <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
-  <li><a href="#installation--loading" id="markdown-toc-installation--loading">Installation &amp; loading</a></li>
-  <li><a href="#make-your-own-copy-of-config-file" id="markdown-toc-make-your-own-copy-of-config-file">Make your own copy of config file</a></li>
-  <li><a href="#generate-your-public--private-encryption-keys" id="markdown-toc-generate-your-public--private-encryption-keys">Generate your Public &amp; Private Encryption keys</a></li>
-  <li><a href="#edit-your-dns-with-a-new-dkim-record" id="markdown-toc-edit-your-dns-with-a-new-dkim-record">Edit your DNS with a new DKIM record</a></li>
-  <li><a href="#edit-your-config-file" id="markdown-toc-edit-your-config-file">Edit your Config File</a></li>
-  <li><a href="#simple-use" id="markdown-toc-simple-use">Simple Use</a></li>
-  <li><a href="#introducing-dkimmail-class" id="markdown-toc-introducing-dkimmail-class">Introducing DKIMmail class</a></li>
-  <li><a href="#documentation" id="markdown-toc-documentation">Documentation</a></li>
-  <li><a href="#sponsorship" id="markdown-toc-sponsorship">Sponsorship</a></li>
-</ul>
-
-<!-- markdownlint-disable MD026 MD033 MD041 -->
-
-<p><a href="https://packagist.org/packages/jv-conseil/dkim-php-mail-signature"><img src="https://img.shields.io/packagist/v/jv-conseil/dkim-php-mail-signature?color=orange" alt="Packagist Version" /></a>
-<a href="https://packagist.org/packages/jv-conseil/dkim-php-mail-signature"><img src="https://img.shields.io/packagist/dependency-v/jv-conseil/dkim-php-mail-signature/php" alt="Packagist Dependency Version" /></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-EUPL--1.2-blue.svg" alt="License EUPL 1.2" /></a>
-<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
-<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
-<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
-<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
-<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a>
-<!--
-[![Donate with PayPal](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=P3DGL6EANDY96&source=url)
---></p>
-
-<h2 id="usage">Usage</h2>
-
-<p>Sample lines to import into your mail code to start signing with DKIM:</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span> <span class="p">;</span> <span class="c1">// Autoload files using Composer autoload</span>
-<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMsign</span> <span class="p">;</span>
-<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMconfig</span> <span class="p">;</span>
-
-<span class="c1">// init</span>
-<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMconfig</span><span class="p">(</span><span class="s1">'/www/inc/config/jv-conseil/dkim-php-mail-signature/config.inc.php'</span><span class="p">)</span> <span class="p">;</span>
-<span class="nv">$sign</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMsign</span><span class="p">(</span>
- <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">private_key</span><span class="p">,</span>
- <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">passphrase</span><span class="p">,</span>
- <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">domain</span><span class="p">,</span>
- <span class="nv">$config</span><span class="o">-&gt;</span><span class="n">selector</span>
-<span class="p">)</span> <span class="p">;</span>
-
-<span class="c1">// sign</span>
-<span class="nv">$signed_headers</span> <span class="o">=</span> <span class="nv">$sign</span><span class="o">-&gt;</span><span class="nf">get_signed_headers</span><span class="p">(</span><span class="nv">$to</span><span class="p">,</span> <span class="nv">$subject</span><span class="p">,</span> <span class="nv">$message</span><span class="p">,</span> <span class="nv">$headers</span><span class="p">)</span> <span class="p">;</span>
-
-<span class="c1">// send email</span>
-<span class="nb">mail</span><span class="p">(</span><span class="nv">$to</span><span class="p">,</span> <span class="nv">$subject</span><span class="p">,</span> <span class="nv">$message</span><span class="p">,</span> <span class="nv">$signed_headers</span><span class="mf">.</span><span class="nv">$headers</span><span class="p">)</span> <span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="installation">Installation</h2>
-
-<blockquote>
-  <p>Step by Step guide to generate your encryption keys and populate them through your DNS records.</p>
-</blockquote>
-
-<h2 id="installation--loading">Installation &amp; loading</h2>
-
-<p>DkimPhpMailSignature is available on <a href="https://packagist.org/packages/jv-conseil/dkim-php-mail-signature">Packagist</a> (using semantic versioning), and installation via <a href="https://getcomposer.org">Composer</a> is the recommended way to install DkimPhpMailSignature. Just add this line to your <code class="language-plaintext highlighter-rouge">composer.json</code> file:</p>
-
-<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"jv-conseil/dkim-php-mail-signature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0"</span><span class="w">
-</span></code></pre></div></div>
-
-<p>or run</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>composer require jv-conseil/dkim-php-mail-signature
-</code></pre></div></div>
-
-<p>Note that the <code class="language-plaintext highlighter-rouge">vendor</code> folder and the <code class="language-plaintext highlighter-rouge">vendor/autoload.php</code> script are generated by Composer; they are not part of DkimPhpMailSignature.</p>
-
-<h2 id="make-your-own-copy-of-config-file">Make your own copy of config file</h2>
-
-<p>Before starting you should make a copy of folder <code class="language-plaintext highlighter-rouge">config/</code> and store it outside your <code class="language-plaintext highlighter-rouge">vendor/</code> Composer repository in a non-public area of your website e.g.:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/www/inc/config/jv-conseil/dkim-php-mail-signature/
-</code></pre></div></div>
-
-<p>Failing to do so will expose you to lose all your settings in case of a future Composer udpate.</p>
-
-<h2 id="generate-your-public--private-encryption-keys">Generate your Public &amp; Private Encryption keys</h2>
-
-<p>In Terminal enter this command line to start working under the path of your <code class="language-plaintext highlighter-rouge">config/</code> folder:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /www/inc/config/jv-conseil/dkim-php-mail-signature/
-</code></pre></div></div>
-
-<p>In Terminal enter this command line to generate a new <strong>private 2048 bit encryption key</strong>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl genrsa <span class="nt">-des3</span> <span class="nt">-out</span> private.pem 2048
-</code></pre></div></div>
-
-<p>Enter your <strong>Pass Phrase</strong> and save it for editing your <code class="language-plaintext highlighter-rouge">config.inc.php</code> file in the next step.</p>
-
-<p>Then retrieve your <strong>public key</strong>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openssl rsa <span class="nt">-in</span> private.pem <span class="nt">-out</span> public.pem <span class="nt">-outform</span> PEM <span class="nt">-pubout</span>
-</code></pre></div></div>
-
-<p><em>You can delete the two originals <code class="language-plaintext highlighter-rouge">*.pem</code> file keys stored in the <code class="language-plaintext highlighter-rouge">config/</code> folder if they create a conflict in the creation process of your keys.</em></p>
-
-<h2 id="edit-your-dns-with-a-new-dkim-record">Edit your DNS with a new DKIM record</h2>
-
-<p>Access your registrar interface (e.g.: OVH.com) and create a new <strong>DKIM record</strong> to declare your <strong>public key</strong>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>selector._domainkey  IN TXT  <span class="o">(</span> <span class="s2">"v=DKIM1;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0ekggNf9vuzzL4SlVc8QZyyqbEwR5bVTPC9cEZ8hFqTKOc7go180n3RZilYJZvveaxBkLCVJSTQaMPtKuSptY5au6Pi3AkFlizzhUJ80+0zgZXSGx7gfbginbRwhD+XdGOe9NXpo0PfrD6dEJ49Ytx4/nHB0TKiL227C0kGWb7RfWTVWccgJq4+kQb4l+4"</span> <span class="s2">"oDU5rGomSYK+zmMV13QTSETcJnoXhmjoJ30omyJfEXAsK5Ny0LJo8rWCucLD31BxHrM9/+M/Ye+TWxcrD2mRh5Jxqcnyj00/7kCnWeGPTftVKkAJBP3JMRqCNShLUchLhaz0qeXUtxAe9dx7ltr8042QIDAQAB;"</span> <span class="o">)</span>
-</code></pre></div></div>
-
-<p>DKIM works better with <strong>SPF</strong> and <strong>DMARC</strong> records, you should consider editing them too:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3600     IN TXT  <span class="s2">"v=spf1 include:_spf.google.com ~all"</span>
-_dmarc   IN TXT  <span class="s2">"v=DMARC1; p=quarantine; rua=mailto:me@yourdomain.name"</span>
-</code></pre></div></div>
-
-<p>Further reading:</p>
-
-<ul>
-  <li><a href="https://support.google.com/a/answer/173535">Add DKIM domain key to domain DNS records</a></li>
-  <li><a href="https://support.google.com/a/answer/2466563?hl=en">Manage suspicious emails with DMARC</a></li>
-  <li><a href="https://support.google.com/a/answer/33786?hl=en">Help prevent email spoofing with SPF records</a></li>
-</ul>
-
-<h2 id="edit-your-config-file">Edit your Config File</h2>
-
-<p>Under <code class="language-plaintext highlighter-rouge">config/config.sample.inc.php</code> you will find a config file example to help you set your own details.</p>
-
-<p>Now you can drop <code class="language-plaintext highlighter-rouge">.sample</code> in the filename and start editing it:</p>
-
-<ul>
-  <li><strong>domain</strong>: your domain name e.g: google.com</li>
-  <li><strong>selector</strong>: <code class="language-plaintext highlighter-rouge">selector</code> used in your DKIM DNS record, e.g.: selector._domainkey.MAIL_DKIM_DOMAIN</li>
-  <li><strong>passphrase</strong>: your pass phrase used to generate your keys e.g.: myPassPhrase.</li>
-  <li>… other parameters can be omitted.</li>
-</ul>
-
-<h2 id="simple-use">Simple Use</h2>
-
-<p>Sample lines to import into your mail code to start signing with DKIM:</p>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require_once</span> <span class="k">__DIR__</span> <span class="mf">.</span> <span class="s1">'/../vendor/autoload.php'</span> <span class="p">;</span> <span class="c1">// Autoload files using Composer autoload</span>
-<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMsign</span> <span class="p">;</span>
-<span class="kn">use</span> <span class="nc">JVconseil\DkimPhpMailSignature\DKIMconfig</span> <span class="p">;</span>
-
-<span class="c1">// init</span>
-<span class="nv">$config</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMconfig</span><span class="p">(</span><span class="s1">'/www/inc/config/jv-conseil/dkim-php-mail-signature/config.inc.php'</span><span class="p">)</span> <span class="p">;</span>
-
-<span class="c1">// set: this calls __set()</span>
-<span class="nv">$config</span><span class="o">-&gt;</span><span class="n">domain</span> <span class="o">=</span> <span class="s2">"mynewdomain.name"</span> <span class="p">;</span>
-
-<span class="c1">// get: this calls __get()</span>
-<span class="nv">$config</span><span class="o">-&gt;</span><span class="n">domain</span> <span class="p">;</span> <span class="c1">// =&gt; "mynewdomain.name" ;</span>
-</code></pre></div></div>
-
-<h2 id="introducing-dkimmail-class">Introducing DKIMmail class</h2>
-
-<blockquote>
-  <p>📬 Stand-alone class to send DKIM signed emails with a 2048 bit private key hashed with SHA-256 algorithm.</p>
-</blockquote>
-
-<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// init</span>
-<span class="nv">$mail</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">DKIMmail</span><span class="p">(</span><span class="s1">'/www/inc/config/jv-conseil/dkim-php-mail-signature/config.inc.php'</span><span class="p">)</span> <span class="p">;</span>
-
-<span class="c1">// parameters</span>
-<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">from</span>    <span class="o">=</span> <span class="s2">"Sender"</span> <span class="o">&lt;</span><span class="n">sender</span><span class="o">@</span><span class="n">yourdomain</span><span class="mf">.</span><span class="n">com</span><span class="o">&gt;</span> <span class="p">;</span>
-<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">to</span>      <span class="o">=</span> <span class="s2">"Recipient"</span> <span class="o">&lt;</span><span class="n">recipient</span><span class="o">@</span><span class="n">yourdomain</span><span class="mf">.</span><span class="n">com</span><span class="o">&gt;</span> <span class="p">;</span>
-<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">subject</span> <span class="o">=</span> <span class="s2">"Your Mail Subject"</span> <span class="p">;</span>
-<span class="nv">$mail</span><span class="o">-&gt;</span><span class="n">body</span>    <span class="o">=</span> <span class="s2">"Your Mail Message."</span> <span class="p">;</span>
-<span class="nv">$mail</span><span class="o">-&gt;</span><span class="nf">attach</span><span class="p">(</span><span class="s2">"/path/to/your/attachment.jpg"</span><span class="p">,</span> <span class="s2">"NameOfYourAttachment.jpg"</span><span class="p">)</span> <span class="p">;</span>
-
-<span class="c1">// send!</span>
-<span class="nv">$mail</span><span class="o">-&gt;</span><span class="nf">send</span><span class="p">()</span> <span class="p">;</span>
-</code></pre></div></div>
-
-<h2 id="documentation">Documentation</h2>
-
-<p>Documentation is <a href="https://jv-conseil-internet-consulting.github.io/dkim-php-mail-signature/classes/JVconseil.DkimPhpMailSignature.DKIMconfig.html">available online</a>, though it may not be quite up to date or match your version exactly.</p>
-
-<p>You can generate API documentation by running <code class="language-plaintext highlighter-rouge">phpdoc</code> in the top-level folder of this project, and documentation will be generated in this folder:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>php ~/vendor/bin/phpdoc <span class="nt">-d</span> ~/dkim-php-mail-signature/ <span class="nt">-t</span> ~/dkim-php-mail-signature/docs/
-</code></pre></div></div>
-
-<p>You will need to have <a href="https://www.phpdoc.org">phpDocumentor</a> installed.</p>
-
-<h2 id="sponsorship">Sponsorship</h2>
-
-<p>If this project helps you reduce time to develop, you can give me a cup of coffee ☕️ :-)</p>
-
-<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="php" /><summary type="html"><![CDATA[Stand-alone DKIM class to sign your emails with a 2048 bit private key hashed with SHA-256 algorithm 🔏]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2019-11-17-dkim-php-mail-signature.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2019-11-17-dkim-php-mail-signature.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">JV conseil – Internet Consulting 👨‍💻</title><link href="https://www.jv-conseil.net/blog/2009-12-22-init/" rel="alternate" type="text/html" title="JV conseil – Internet Consulting 👨‍💻" /><published>2009-12-22T00:00:00+01:00</published><updated>2023-04-06T20:43:46+02:00</updated><id>https://www.jv-conseil.net/blog/init</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2009-12-22-init/"><![CDATA[<p><a href="https://docs.djangoproject.com/en/4.0/releases/4.1.7/"><img src="https://img.shields.io/badge/Django-4-green" alt="Django 4.1.7" /></a>
-<a href="https://www.postgresql.org/docs/15/"><img src="https://img.shields.io/badge/PostgreSQL-15-green.svg" alt="PostgreSQL 15" /></a>
-<a href="https://www.python.org/downloads/release/python-3112/"><img src="https://img.shields.io/badge/Python-3.11-green" alt="Python 3.11" /></a>
-<a href="https://www.jv-conseil.net"><img src="https://img.shields.io/website?down_color=red&amp;down_message=down&amp;label=www&amp;up_color=green&amp;up_message=up&amp;url=https%3A%2F%2Fwww.jv-conseil.net%2F" alt="Health Status" /></a>
-<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
-<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
-<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
-<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
-<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a></p>
-
-<p>DevOps • Full Stack Developer • Web App Architect</p>
-
-<p>Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)</p>
-
-<p>Greater Paris Metropolitan Region, France 🇫🇷</p>
-
-<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><summary type="html"><![CDATA[DevOps • Full Stack Developer • Web App Architect]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/img/nuage-de-mots-1200x800.jpg" /><media:content medium="image" url="https://www.jv-conseil.net/assets/img/nuage-de-mots-1200x800.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p><em><a href="https://regex101.com/r/QzFpaY/1">France Musique .AAC link scraping on Regex101</a></em></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><summary type="html"><![CDATA[Les nouveaux flux web audio Hifi HD au format .aac des stations de Radio France 📻]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

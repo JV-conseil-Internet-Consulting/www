@@ -5,16 +5,6 @@
  */
 !(function () {
   'use strict';
-
-  /**
-   * Compute end of year for copryright
-   */
-  const copyrightEndYear = document.getElementById('copyrightEndYear') || null;
-  if (copyrightEndYear !== null) {
-    const date = new Date();
-    copyrightEndYear.innerHTML = date.getFullYear();
-  }
-
   /**
    * Add target="'_blank" to all external links
    */

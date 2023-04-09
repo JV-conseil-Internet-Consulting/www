@@ -16,7 +16,7 @@
 # ---------------------------------------------------------------------------------------
 
 url: https://www.jv-conseil.net
-baseurl: ''
+# baseurl: ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
@@ -147,7 +147,7 @@ defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
   # - scope:
-  #     path:            hyde/
+  #     path:            blog/
   #   values:
   #     accent_color:    rgb(38,139,210)
   #     accent_image:
@@ -174,25 +174,11 @@ defaults:
       layout:          plain
       sitemap:         false
 
-  # Don't include site verification file(for google) in the sitemap
-  - scope:
-      path:            google93abcae935f31b7d.html
-    values:
-      sitemap:         false
-
-  # Don't include site verification file(for naver) in the sitemap
-  - scope:
-      path:            navera03014a241218f942080c56d67e79469.html
-    values:
-      sitemap:         false
-
   # You can use the following to enable comments on all posts.
-  - scope:
-      type:            posts
-    values:
-      comments:        false
-      # https://applause-button.com/
-      applause_button:       true
+  # - scope:
+  #     type:            posts
+  #   values:
+  #     comments:        true
 
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
   # but we want them to be `WebPage`s:
@@ -244,7 +230,7 @@ lightbox:              true
 deepdive:
   # Configure the order of complementary content on blog posts
   # post_addons:         [about, newsletter, related, random, comments]
-  post_addons:         [about]
+  post_addons:         [about, related]
 
   # Configure the order of complementary content on project pages
   # project_addons:      [about, newsletter, other, comments]

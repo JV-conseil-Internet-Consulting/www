@@ -19,7 +19,7 @@
       
       "title": "JV conseil – Internet Consulting 👨‍💻",
       
-      "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDevOps • Full Stack Developer • Web App Architect\n\nPython 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)\n\nGreater Paris Metropolitan Region, France 🇫🇷\n\n\n\n",
+      "content": "\n\n\n\n\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\nStack Overflow\n\nDevOps • Full Stack Developer • Web App Architect\n\nPython 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)\n\nGreater Paris Metropolitan Region, France 🇫🇷\n\n\n\n",
       "url": "/about/"
     },{
       
@@ -55,7 +55,7 @@
       
       "title": "JV conseil – Internet Consulting 👨‍💻",
       
-      "content": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDevOps • Full Stack Developer • Web App Architect\n\nPython 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)\n\nGreater Paris Metropolitan Region, France 🇫🇷\n\n\n\n\n\n\n\nSee Blog for more\n\n\n",
+      "content": "\n\n\n\n\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\nStack Overflow\n\nDevOps • Full Stack Developer • Web App Architect\n\nPython 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)\n\nGreater Paris Metropolitan Region, France 🇫🇷\n\n\n\n\n\n\n\nSee Blog for more\n\n\n",
       "url": "/"
     },{
       
@@ -72,7 +72,7 @@
     },{
       
       "title": "Posts",
-      "description": "This is the grid layout for showing blog posts, which shows just the title and groups them by year of publication. Check out the blog layout for comparison.\n",
+      
       "content": "\n",
       "url": "/posts/"
     },{
@@ -99,6 +99,12 @@
       "description": "Hydejack offers a few additional features to markup your content. Don’t worry, these are merely CSS classes added with kramdown’s {:...} syntax, so that your content remains compatible with other Jekyll themes.\n",
       "content": "Hydejack offers a few additional features to markup your content.\nDon’t worry, these are merely CSS classes added with kramdown’s {:...} syntax,\nso that your content remains compatible with other Jekyll themes.\n\n\n  A word on building speeds\n  Adding a table of contents\n  Adding notes\n  Adding large text\n  Adding large images\n  Adding image captions\n  Adding large quotes\n  Adding faded text\n  Adding tables    \n      Scroll table\n      Small tables\n    \n  \n  Adding code blocks\n  Adding math    \n      Inline\n      Block\n    \n  \n\n\nFor an introduction to markdown in general, see Mastering Markdown and kramdown Syntax.\n\nA word on building speeds\n\nIf building speeds are a problem, try using the --incremental flag, e.g.\n\nbundle exec jekyll serve --incremental\n\n\nFrom the Jekyll docs (emphasis mine):\n\n\n  Enable the experimental incremental build feature. Incremental build only re-builds posts and pages that have changed, resulting in significant performance improvements for large sites, but may also break site generation in certain cases.\n\n\nThe breakage occurs when you create new files or change filenames.\nAlso, changing the title, category, tags, etc. of a page or post will not be reflected in pages\nother then the page or post itself.\nThis makes it ideal for writing new posts and previewing changes, but not setting up new content.\n\nAdding a table of contents\n\nYou can add a generated table of contents to any page by adding {:toc} below a list.\n\nMarkdown:\n\n* this unordered seed list will be replaced by the toc\n{:toc}\n\n\nYou can also create your table of contents as an ordered list (note the 1. instead of *):\n\n1. this ordered seed list will be replaced by the toc\n{:toc}\n\n\nThe width of the display has to be larger than 1665px for the ToC to become sticky.\nOtherwise, the ToC will appear where the seed list is placed in the document.\nTo show the table of contents only on large displays (&gt; 1665px) use the following:\n\n* this unordered seed list will be replaced by the toc\n{:toc .large-only}\n\n\nA sticky table of contents will reduce the amount of space freed up by the no_break_layout: false setting.\nThis is necessary to ensure large code blocks or tables don’t overlap with the ToC.\n\nAdding notes\n\nYou can add a note by adding the note class to a paragraph.\n\nExample:\n\nYou can add a note.\n\nMarkdown:\n\nYou can add a note.\n{:.note}\n\n\nEdit the note key in _data/strings.yml to change the wording of the default label.\nTo add a note with a specific label, add a title attribute:\n\nA custom label.\n{:.note title=\"Attention\"}\n\n\nA custom label.\n\nAdding large text\n\nYou can add large text by adding the lead class to the paragraph.\n\nExample:\n\nYou can add large text.\n\nMarkdown:\n\nYou can add large text.\n{:.lead}\n\n\nAdding large images\n\nYou can make an image span the full width by adding the lead class.\n\nExample:\n\n\n\nMarkdown:\n\n![Full-width image](https://via.placeholder.com/800x100){:.lead width=\"800\" height=\"100\" loading=\"lazy\"}\n\n\nIt is recommended to provide the dimension of the image via the width and height attributes,\nso that browsers can calculate the layout before the images are loaded. Combining this with the loading=\"lazy\" attribute\nallows modern browsers to load the images just-in-time as the users scrolls.\n\nPrevious versions of Hydejack shipped with a custom JavaScript-based lazy loading solution,\nbut it has been removed in v9 in favor of this more standards-based approach.\n\nAdding image captions\n\nYou can add captions to large images by adding the figcaption class to the paragraph after the image:\n\n\n\nAn optional caption for an image.\n\nMarkdown:\n\n![Full-width image](https://via.placeholder.com/800x100){:.lead width=\"800\" height=\"100\" loading=\"lazy\"}\n\nA caption for an image.\n{:.figcaption}\n\n\nAdding large quotes\n\nYou can make a quote “pop out” by adding the lead class.\n\nExample:\n\n\n  You can make a quote “pop out”.\n\n\nMarkdown:\n\n&gt; You can make a quote \"pop out\".\n{:.lead}\n\n\nAdding faded text\n\nYou can gray out text by adding the faded class. Use this sparingly and for information that is not essential, as it is more difficult to read.\n\nExample:\n\nI’m faded, faded, faded.\n\nMarkdown:\n\nI'm faded, faded, faded.\n{:.faded}\n\n\nAdding tables\n\nAdding tables is straightforward and works just as described in the kramdown docs, e.g.\n\n\n  \n    \n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n    \n  \n  \n    \n      First body part\n      Second cell\n      Third cell\n      fourth cell\n    \n  \n\n\nMarkdown:\n\n| Default aligned | Left aligned | Center aligned | Right aligned |\n| --------------- | :----------- | :------------: | ------------: |\n| First body part | Second cell  |   Third cell   |   fourth cell |\n\n\nHowever, it gets tricker when adding large tables.\nIn this case, Hydejack will break the layout and grant the table the entire available screen width to the right:\n\n\n  \n    \n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n    \n  \n  \n    \n      First body part\n      Second cell\n      Third cell\n      fourth cell\n      First body part\n      Second cell\n      Third cell\n      fourth cell\n      First body part\n      Second cell\n      Third cell\n      fourth cell\n      First body part\n      Second cell\n      Third cell\n      fourth cell\n    \n    \n      Second line\n      foo\n      strong\n      baz\n      Second line\n      foo\n      strong\n      baz\n      Second line\n      foo\n      strong\n      baz\n      Second line\n      foo\n      strong\n      baz\n    \n    \n      Third line\n      quux\n      baz\n      bar\n      Third line\n      quux\n      baz\n      bar\n      Third line\n      quux\n      baz\n      bar\n      Third line\n      quux\n      baz\n      bar\n    \n    \n      Second body\n       \n       \n       \n      Second body\n       \n       \n       \n      Second body\n       \n       \n       \n      Second body\n       \n       \n       \n    \n    \n      2 line\n       \n       \n       \n      2 line\n       \n       \n       \n      2 line\n       \n       \n       \n      2 line\n       \n       \n       \n    \n  \n  \n    \n      Footer row\n       \n       \n       \n      Footer row\n       \n       \n       \n      Footer row\n       \n       \n       \n      Footer row\n       \n       \n       \n    \n  \n\n\nTables adopts to the font size! You can decrease the size of the table by adding the smaller CSS class. Put {:.smaller} below the Markdown table, or add class=\"smaller\" to a HTML table.\n\nScroll table\n\nIf the extra space still isn’t enough, the table will receive a scrollbar.\nIt is browser default behavior to break the lines inside table cells to fit the content on the screen.\nBy adding the scroll-table class on a table, the behavior is changed to never break lines inside cells, e.g:\n\n\n  \n    \n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n    \n  \n  \n    \n      First body part\n      Second cell\n      Third cell\n      fourth cell\n      First body part\n      Second cell\n      Third cell\n      fourth cell\n      First body part\n      Second cell\n      Third cell\n      fourth cell\n      First body part\n      Second cell\n      Third cell\n      fourth cell\n    \n    \n      Second line\n      foo\n      strong\n      baz\n      Second line\n      foo\n      strong\n      baz\n      Second line\n      foo\n      strong\n      baz\n      Second line\n      foo\n      strong\n      baz\n    \n    \n      Third line\n      quux\n      baz\n      bar\n      Third line\n      quux\n      baz\n      bar\n      Third line\n      quux\n      baz\n      bar\n      Third line\n      quux\n      baz\n      bar\n    \n    \n      Second body\n       \n       \n       \n      Second body\n       \n       \n       \n      Second body\n       \n       \n       \n      Second body\n       \n       \n       \n    \n    \n      2 line\n       \n       \n       \n      2 line\n       \n       \n       \n      2 line\n       \n       \n       \n      2 line\n       \n       \n       \n    \n  \n  \n    \n      Footer row\n       \n       \n       \n      Footer row\n       \n       \n       \n      Footer row\n       \n       \n       \n      Footer row\n       \n       \n       \n    \n  \n\n\nYou can add the scroll-table class to a markdown table by putting {:.scroll-table} in line directly below the table.\nTo add the class to a HTML table, add the it to the class attribute of the table tag, e.g. &lt;table class=\"scroll-table\"&gt;.\n\nSmall tables\n\nIf a table is small enough to fit the screen even on small screens, you can add the stretch-table class\nto force a table to use the entire available content width. Note that stretched tables can no longer be scrolled.\n\n\n  \n    \n      Default aligned\n      Left aligned\n      Center aligned\n      Right aligned\n    \n  \n  \n    \n      First body part\n      Second cell\n      Third cell\n      fourth cell\n    \n  \n\n\nAn optional caption for a table\n\nYou can add the stretch-table class to a markdown table by putting {:.stretch-table} in line directly below the table.\nTo add the class to a HTML table, add the it to the class attribute of the table tag, e.g. &lt;table class=\"stretch-table\"&gt;.\n\nJust like images, you can add captions to tables by adding the figcaption class to the paragraph after the table.\n\nAn optional caption for a table\n{:.figcaption}\n\n\nAdding code blocks\n\nTo add a code block without syntax highlighting, simply indent 4 spaces (regular markdown).\nFor code blocks with code highlighting, use ~~~&lt;language&gt;. This syntax is also supported by GitHub.\nFor more information and a list of supported languages, see Rouge.\n\nYou can give each code block a filename, by making the first line in the block a comment of the form File: \"dir/filename.ext\". Use either single quotes ', double quotes \", or backticks ` to surround the filename.\n\nExample:\n\n// file: \"code-block.js\"\n// Example can be run directly in your JavaScript console\n\n// Create a function that takes two arguments and returns the sum of those\n// arguments\nvar adder = new Function(\"a\", \"b\", \"return a + b\");\n\n// Call the function\nadder(2, 6);\n// &gt; 8\n\n\nAn optional caption for a code block\n\nMarkdown:\n\n~~~js\n// file: \"code-block.js\"\n// Example can be run directly in your JavaScript console\n\n// Create a function that takes two arguments and returns the sum of those\n// arguments\nvar adder = new Function(\"a\", \"b\", \"return a + b\");\n\n// Call the function\nadder(2, 6);\n// &gt; 8\n~~~\n\nAn optional caption for a code block\n{:.figcaption}\n\n\nDO NOT use Jekyll’s { % highlight % } ... { % endhighlight % } syntax, especially together with the linenos option.\nThe generated table to render the line numbers does not have a CSS class or any other way of differentiating it from regular tables,\nso that the styles above apply, resulting in a broken page.\nWhat’s more, the output from highlight tags isn’t even valid HTML, nesting pre tags inside pre tags,\nwhich will in break the site during minification.\nYou can read more about it here and\nhere.\n\nAdding math\n\nBefore adding math blocks, make sure you’ve set up math support.\n\nInline\n\nExample:\n\nLorem ipsum \\(f(x) = x^2\\).\n\nMarkdown:\n\nLorem ipsum $$ f(x) = x^2 $$.\n\n\nBlock\n\nExample:\n\n\\[\\begin{aligned}\n  \\phi(x,y) &amp;= \\phi \\left(\\sum_{i=1}^n x_ie_i, \\sum_{j=1}^n y_je_j \\right) \\\\[2em]\n            &amp;= \\sum_{i=1}^n \\sum_{j=1}^n x_i y_j \\phi(e_i, e_j)            \\\\[2em]\n            &amp;= (x_1, \\ldots, x_n)\n               \\left(\\begin{array}{ccc}\n                 \\phi(e_1, e_1)  &amp; \\cdots &amp; \\phi(e_1, e_n) \\\\\n                 \\vdots          &amp; \\ddots &amp; \\vdots         \\\\\n                 \\phi(e_n, e_1)  &amp; \\cdots &amp; \\phi(e_n, e_n)\n               \\end{array}\\right)\n               \\left(\\begin{array}{c}\n                 y_1    \\\\\n                 \\vdots \\\\\n                 y_n\n               \\end{array}\\right)\n\\end{aligned}\\]\n\nAn optional caption for a math block\n\nMarkdown:\n\n$$\n\\begin{aligned} %!!15\n  \\phi(x,y) &amp;= \\phi \\left(\\sum_{i=1}^n x_ie_i, \\sum_{j=1}^n y_je_j \\right) \\\\[2em]\n            &amp;= \\sum_{i=1}^n \\sum_{j=1}^n x_i y_j \\phi(e_i, e_j)            \\\\[2em]\n            &amp;= (x_1, \\ldots, x_n)\n               \\left(\\begin{array}{ccc}\n                 \\phi(e_1, e_1)  &amp; \\cdots &amp; \\phi(e_1, e_n) \\\\\n                 \\vdots          &amp; \\ddots &amp; \\vdots         \\\\\n                 \\phi(e_n, e_1)  &amp; \\cdots &amp; \\phi(e_n, e_n)\n               \\end{array}\\right)\n               \\left(\\begin{array}{c}\n                 y_1    \\\\\n                 \\vdots \\\\\n                 y_n\n               \\end{array}\\right)\n\\end{aligned}\n$$\n\nAn optional caption for a math block\n{:.figcaption}\n\n\nKaTeX does not support the align and align* environments.\nInstead, aligned should be used, e.g. \\begin{aligned} ... \\end{aligned}.\n\nContinue with Scripts\n\n",
       "url": "/docs/writing/"
+    },{
+      
+      "title": "Blog",
+      
+      "content": "\n",
+      "url": "/blog/2/"
     }
   ],
   "documents": [
@@ -107,7 +113,7 @@
       "title": "JV conseil – Internet Consulting 👨‍💻",
       "date": "2009-12-22 00:00:00 +0100",
       "description": "DevOps • Full Stack Developer • Web App Architect\n",
-      "content": "\n\n\n\n\n\n\n\n\n\n\nDevOps • Full Stack Developer • Web App Architect\n\nPython 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)\n\nGreater Paris Metropolitan Region, France 🇫🇷\n\n\n\n",
+      "content": "\n\n  \n  \n  \n  \n  \n  \n  \n  \n  \n\n\nStack Overflow\n\nDevOps • Full Stack Developer • Web App Architect\n\nPython 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)\n\nGreater Paris Metropolitan Region, France 🇫🇷\n\n\n\n",
       "categories": [],
       "tags": [],
       
@@ -180,6 +186,17 @@
       "collection": "posts",
       "url": "/blog/2022-03-06-git/"
     },{
+      "image": {"path":"/assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.jpg"},
+      "title": "PgBouncer and PostgreSQL Azure Flexible Server a bumpy road 🛣",
+      "date": "2022-03-08 00:00:00 +0100",
+      "description": "Azure PostgreSQL Flexible Server and PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure\n",
+      "content": "\n\n\n\n\n\n\n\n\n\n\nThe introduction of PgBouncer, a lightweight connection pooler for PostgreSQL, on Azure PostgreSQL Flexible Server has been bumpy to say the least 😉\n\nHere is an excerpt of the issue that triggers the opening of a seven-month–long-to-be-solved support ticket 🎫\n\nPgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure\n\nOnce you have set up in your PostgreSQL flexible server parameters pgbouncer.client_tls_sslmode to verify-full, saved your changes and restarted your server, you end up with SSL error: tlsv13 alert certificate required when you attempt to run a pqsl connection command on your server.\n\nThis happens also when setting pgbouncer.client_tls_sslmode to verify-ca.\n\nAccording to documentation\n\n\n  This new certificate has been added to App Service at platform level. If you are using the SSL certificates included on App Service platform in your application, then no action is needed.\n\n\nIs DigiCertGlobalRootG2.crt.pem certificate only set for postgresql server but not for pgbouncer?\n\nAs a workaround, the only way to successfully connect is by setting pgbouncer.client_tls_sslmode to require.\n\nIn the present issue the problem is being able to set the TLS mode to use for connections from clients to the highest level available which is verify-full.\n\n\n\nsslmode=verify-full activation implies providing to the connection string a path to an authentication certificate. For PostgreSQL that can be handle by PGSSLROOTCERT environment variable.\n\nThere is a lack of information in PgBouncer - Azure Database for PostgreSQL - Flexible Server on how verify-full is handle by pgbouncer.\n\nSo far activating verify-full on pgbouncer.client_tls_sslmode on Azure Database for PostgreSQL flexible server parameters triggers an SSL error sslv3 alert handshake failure.\n\nHere is an example of a psql connection attempt failing with SSL error: tlsv13 alert certificate required\n\npsql \"host=myPgServer.postgres.database.azure.com dbname=pgbouncer user=pgbouncer password=myPassword\nport=6432 sslmode=verify-full sslrootcert=~/.postgresql/root.crt\"\n\npsql: error: connection to server at \"myPgServer.postgres.database.azure.com\" (ip), port 6432 failed: SSL\nerror: tlsv13 alert certificate required\n\n\nAccording to PostgreSQL documentation here are the parameters to provide when establishing a sslmode=verify-full connection:\n\n\n  \n    sslmode: verify-full only try an SSL connection, verify that the server certificate is issued by a trusted CA and that the requested server host name matches that in the certificate.\n  \n  \n    sslrootcert: This parameter specifies the name of a file containing SSL certificate authority (CA) certificate(s). If the file exists, the server’s certificate will be verified to be signed by one of these authorities. The default is ~/.postgresql/root.crt.\n  \n\n\nAccording to pgBouncer documentation here are the parameters to provide when establishing a sslmode=verify-full connection:\n\n\n  \n    client_tls_sslmode: verify-full Client must use TLS with valid client certificate.\n  \n  \n    client_tls_ca_file: Root certificate file to validate client certificates.\n  \n\n\nOn Azure PostgreSQL flexible server parameters, there is a panel to set pgbouncer.client_tls_sslmode to verify-full, but there is not a pgbouncer.client_tls_ca_file allowing to specify the path to the file containing SSL certificate authority (CA).\n\nThe question is « When you activate  pgbouncer.client_tls_sslmode to verify-full how do you provide the accompanying file containing SSL certificate authority (CA) » ❓\n\nA subsidiary question could be « Does Azure assures the transmission of the SSL certificate authority (CA) from pgBouncer to PostgreSQL server when hitting first pgBouncer on port 6432 by collecting the value of sslrootcertin the connection string and converting it into client_tls_ca_file » ❓\n",
+      "categories": [],
+      "tags": ["azure","cloud","postgresql"],
+      
+      "collection": "posts",
+      "url": "/blog/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server/"
+    },{
       "image": {"path":"/assets/posts/2022-07-18-django-azure-active-directory-signin.png"},
       "title": "Django Azure Active Directory Sign-In 🔑",
       "date": "2022-07-18 00:00:00 +0200",
@@ -202,6 +219,17 @@
       "collection": "posts",
       "url": "/blog/2023-02-17-githubbing-on-ucloud/"
     },{
+      "image": {"path":"/assets/posts/2023-02-28-jekyll-theme-read-the-docs.png"},
+      "title": "Jekyll Theme Read the Docs 📖",
+      "date": "2023-02-28 00:00:00 +0100",
+      "description": "Read the Docs 📖 like Jekyll Theme for GitHub Pages\n",
+      "content": "\n  What it does?\n  Quick start\n  Usage\n  Features\n  Options\n  Sponsorship\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRead the Docs 📖 like Jekyll Theme for GitHub Pages\n\nWhat it does?\n\nThis theme is inspired by sphinx-rtd-theme and refactored with:\n\n\n  @primer/css\n  github-pages (dependency versions)\n\n\nQuick start\n\nremote_theme: https://github.com/JV-conseil/jekyll-theme-read-the-docs\n\n\nYou can generate with the same files and folders from rundocs/starter\n\nUsage\n\nDocumentation that can guide how to create with Github pages, please refer to rundocs/jekyll-rtd-theme for details\n\nFeatures\n\n\n  Shortcodes (Toasts card, mermaid)\n  Pages Plugins (emoji, gist, avatar, mentions)\n  Auto generate sidebar\n  Attribute List Definitions (Primer/css utilities, Font Awesome 4)\n  Service worker (caches)\n  SEO (404, robots.txt, sitemap.xml)\n  Canonical Link (Open Graph, Twitter Card, Schema data)\n\n\nOptions\n\n\n  \n    \n      name\n      default value\n      description\n    \n  \n  \n    \n      title\n      repo name\n       \n    \n    \n      description\n      repo description\n       \n    \n    \n      url\n      user domain or cname\n       \n    \n    \n      baseurl\n      repo name\n       \n    \n    \n      lang\n      en\n       \n    \n    \n      direction\n      auto\n      ltr or rtl\n    \n    \n      highlighter\n      rouge\n      Cannot be changed\n    \n  \n\n\n# folders sort\nreadme_index:\n  with_frontmatter: true\n\nmeta:\n  key1: value1\n  key2: value2\n  .\n  .\n  .\n\ngoogle:\n  gtag:\n  adsense:\n  site_verification:\n\n# GDPR compliant alternative to Google Analytics\nmouseflow:\n  project_api_key:\n\nposthog:\n  project_api_key:\n\ntelemetry:\n  app_id:\n  user_identifier:\n\numami:\n  website_id:\n\nmathjax: # this will prased to json, default: {}\n\n# NOTE: mermaid custom link are no longer supported\n# instead mermaid is updated to the lastest version\n# available through cdn.jsdelivr.net\n# mermaid:\n#   custom:     # mermaid link\n#   initialize: # this will prased to json, default: {}\n\nscss:   # also _includes/extra/styles.scss\nscript: # also _includes/extra/script.js\n\ntranslate:\n  # shortcodes\n  danger:\n  note:\n  tip:\n  warning:\n  # 404\n  not_found:\n  # copyright\n  revision:\n  # search\n  searching:\n  search:\n  search_docs:\n  search_results:\n  search_results_found: # the \"#\" in this translate will replaced with results size!\n  search_results_not_found:\n\nplugins:\n  - jemoji\n  - jekyll-avatar\n  - jekyll-mentions\n\n\nSponsorship\n\nIf this project helps you, you can offer me a cup of coffee ☕️ :-)\n\n\n\n\n\n",
+      "categories": ["projects"],
+      "tags": ["jekyll"],
+      
+      "collection": "posts",
+      "url": "/blog/2023-02-28-jekyll-theme-read-the-docs/"
+    },{
       "image": {"path":"/assets/posts/2023-03-12-bash.png"},
       "title": "Bash",
       "date": "2023-03-12 00:00:00 +0100",
@@ -215,7 +243,7 @@
     },{
       
       "title": "Azure",
-      "date": "2023-04-09 04:56:25 +0200",
+      "date": "2023-04-09 19:09:05 +0200",
       "description": "Posts about Microsoft Azure Cloud Computing Services.\n",
       "content": "\n",
       "categories": [],
@@ -226,7 +254,7 @@
     },{
       
       "title": "Bash",
-      "date": "2023-04-09 04:56:25 +0200",
+      "date": "2023-04-09 19:09:05 +0200",
       "description": "Posts about Bash programming.\n",
       "content": "\n",
       "categories": [],
@@ -237,7 +265,7 @@
     },{
       
       "title": "Django",
-      "date": "2023-04-09 04:56:25 +0200",
+      "date": "2023-04-09 19:09:05 +0200",
       "description": "Posts about Django a high-level Python web framework.\n",
       "content": "\n",
       "categories": [],
@@ -247,8 +275,19 @@
       "url": "/tag-django/"
     },{
       
+      "title": "Jekyll",
+      "date": "2023-04-09 19:09:05 +0200",
+      "description": "Posts about Jekyll a simple, blog-aware, static site generator written in Ruby perfect for personal, project, or organization sites\n",
+      "content": "\n",
+      "categories": [],
+      "tags": [],
+      
+      "collection": "featured_tags",
+      "url": "/tag-jekyll/"
+    },{
+      
       "title": "PHP",
-      "date": "2023-04-09 04:56:25 +0200",
+      "date": "2023-04-09 19:09:05 +0200",
       "description": "Posts about PHP 🐍 programming.\n",
       "content": "\n",
       "categories": [],
@@ -258,8 +297,19 @@
       "url": "/tag-php/"
     },{
       
+      "title": "PostgreSQL",
+      "date": "2023-04-09 19:09:05 +0200",
+      "description": "Posts about PostgreSQL an open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.\n",
+      "content": "\n",
+      "categories": [],
+      "tags": [],
+      
+      "collection": "featured_tags",
+      "url": "/tag-postgresql/"
+    },{
+      
       "title": "Python 🐍",
-      "date": "2023-04-09 04:56:25 +0200",
+      "date": "2023-04-09 19:09:05 +0200",
       "description": "Posts about Python 🐍 programming.\n",
       "content": "\n",
       "categories": [],
