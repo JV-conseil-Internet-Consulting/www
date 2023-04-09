@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-FR, en-US"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.jv-conseil.net/feed/by_tag/django.xml" rel="self" type="application/atom+xml" /><link href="https://www.jv-conseil.net/" rel="alternate" type="text/html" hreflang="fr-FR, en-US" /><updated>2023-04-09T04:56:25+02:00</updated><id>https://www.jv-conseil.net/feed/by_tag/django.xml</id><title type="html">JV conseil</title><subtitle>DevOps • Full Stack Developer • Web App Architect
+Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
+Greater Paris Metropolitan Region, France 🇫🇷
+</subtitle><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><entry><title type="html">Django Azure Active Directory Sign-In 🔑</title><link href="https://www.jv-conseil.net/blog/2022-07-18-django-azure-active-directory-signin/" rel="alternate" type="text/html" title="Django Azure Active Directory Sign-In 🔑" /><published>2022-07-18T00:00:00+02:00</published><updated>2023-04-08T22:18:27+02:00</updated><id>https://www.jv-conseil.net/blog/django-azure-active-directory-signin</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-07-18-django-azure-active-directory-signin/"><![CDATA[<ul class="large-only" id="markdown-toc">
+  <li><a href="#description" id="markdown-toc-description">Description</a></li>
+  <li><a href="#installation" id="markdown-toc-installation">Installation</a></li>
+  <li><a href="#configuration" id="markdown-toc-configuration">Configuration</a>    <ul>
+      <li><a href="#azure-app-registration" id="markdown-toc-azure-app-registration">Azure App Registration</a></li>
+      <li><a href="#settings" id="markdown-toc-settings">Settings</a></li>
+      <li><a href="#installed-apps" id="markdown-toc-installed-apps">Installed apps</a></li>
+      <li><a href="#authentication-backend" id="markdown-toc-authentication-backend">Authentication backend</a></li>
+      <li><a href="#urls" id="markdown-toc-urls">URLs</a></li>
+    </ul>
+  </li>
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a>    <ul>
+      <li><a href="#abstractuser" id="markdown-toc-abstractuser">AbstractUser</a></li>
+      <li><a href="#backend" id="markdown-toc-backend">Backend</a></li>
+      <li><a href="#decorator" id="markdown-toc-decorator">Decorator</a></li>
+      <li><a href="#middleware" id="markdown-toc-middleware">Middleware</a></li>
+      <li><a href="#vs-code-tasks" id="markdown-toc-vs-code-tasks">VS Code Tasks</a></li>
+    </ul>
+  </li>
+  <li><a href="#credits" id="markdown-toc-credits">Credits</a></li>
+  <li><a href="#readings-" id="markdown-toc-readings-">Readings 📚</a></li>
+  <li><a href="#sponsorship" id="markdown-toc-sponsorship">Sponsorship</a></li>
+</ul>
+
+<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><a href="https://docs.djangoproject.com/en/4.1/releases/4.1.7/"><img src="https://img.shields.io/badge/Django-4.1.7-green" alt="Django 4.1" /></a>
+<a href="https://www.python.org/downloads/release/python-3112/"><img src="https://img.shields.io/badge/Python-3.11.2-green" alt="Python 3.11" /></a>
+<a href="https://analytics.umami.is/share/M19mr5L7jVhHuFnb/jv-conseil.github.io" title="Umami - GDPR compliant alternative to Google Analytics"><img src="https://img.shields.io/badge/analytics-umami-green" alt="Umami - GDPR compliant alternative to Google Analytics" /></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-EUPL--1.2-blue.svg" alt="License EUPL 1.2" /></a>
+<a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black" /></a>
+<a href="https://github.com/JV-conseil-Internet-Consulting/django-azure-active-directory-signin/actions/workflows/codeql-analysis.yml"><img src="https://github.com/JV-conseil-Internet-Consulting/django-azure-active-directory-signin/actions/workflows/codeql-analysis.yml/badge.svg" alt="CodeQL" /></a>
+<a href="https://codecov.io/gh/JV-conseil-Internet-Consulting/django-azure-active-directory-signin"><img src="https://codecov.io/gh/JV-conseil-Internet-Consulting/django-azure-active-directory-signin/branch/main/graph/badge.svg?token=WLCTWKAPF6" alt="codecov" /></a>
+<a href="https://pypi.org/project/django-azure-active-directory-signin/"><img src="https://img.shields.io/pypi/v/django-azure-active-directory-signin?color=green" alt="PyPI" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a></p>
+
+<h2 id="description">Description</h2>
+
+<p><code class="language-plaintext highlighter-rouge">django-azure-active-directory-signin</code> is a Django app which wraps <a href="https://github.com/AzureAD/microsoft-authentication-library-for-python">MSAL</a>
+package to sign in users with Microsoft’s Azure Active Directory (OAuth 2.0 and OpenID Connect) in Django projects.</p>
+
+<p><img src="https://user-images.githubusercontent.com/8126807/179853963-7b7048bd-aab5-4eba-8903-7efb8c4ee2aa.svg" alt="Sign-in users to your Django Web app with Azure Active Directory" /></p>
+
+<p>The app includes <code class="language-plaintext highlighter-rouge">login</code>, <code class="language-plaintext highlighter-rouge">logout</code> and <code class="language-plaintext highlighter-rouge">callback</code> authentication views,
+a customizable backend to validate, create user and extend user with extra attributes,
+a decorator to protect individual views to protect individual views,
+and middleware which allows the entire site to require user authentication by default,
+with the ability to exempt specified views.</p>
+
+<p>The GitHub repository provides a <code class="language-plaintext highlighter-rouge">demo</code> Django app to run local tests on <code class="language-plaintext highlighter-rouge">https</code> protocol thanks to <a href="https://pypi.org/project/django-sslserver/">django-sslserver</a>.</p>
+
+<p><em>This project is in no way affiliated with Microsoft Corporation.</em></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>From PyPi:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>django-azure-active-directory-signin
+</code></pre></div></div>
+
+<h2 id="configuration">Configuration</h2>
+
+<h3 id="azure-app-registration">Azure App Registration</h3>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app">Register an application</a>. You must have permission to manage applications in Azure Active Directory (Azure AD) on your <a href="https://portal.azure.com">Azure account</a>.</p>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-client-secret">Add a client secret</a> in <strong>Certificates &amp; secrets</strong> &gt; <strong>Client secrets</strong> &gt; <strong>New client secret</strong> and note it down.</p>
+
+<p><img src="https://docs.microsoft.com/en-us/azure/active-directory/develop/media/quickstart-register-app/portal-05-app-reg-04-credentials.png" alt="Add a client secret" /></p>
+
+<p>Copy your <strong>client_id</strong>, <strong>tenant_id</strong> and <strong>client_secret</strong> and store them in environment variables (see <code class="language-plaintext highlighter-rouge">.env</code> folder for sample) or better still in an <strong>Azure Key Vault</strong>.</p>
+
+<p><img src="https://docs.microsoft.com/en-us/azure/active-directory/develop/media/quickstart-register-app/portal-03-app-reg-02.png" alt="Obfuscate your credentials by using environment variables" /></p>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#add-a-redirect-uri">Add redirect URI</a> like so:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">https://&lt;your-domain&gt;/azure-signin/callback</code></li>
+  <li><code class="language-plaintext highlighter-rouge">https://127.0.0.1:8000/azure-signin/callback</code></li>
+  <li><code class="language-plaintext highlighter-rouge">https://localhost:8000/azure-signin/callback</code></li>
+</ul>
+
+<h3 id="settings">Settings</h3>
+
+<p>Add the following to your <code class="language-plaintext highlighter-rouge">settings.py</code>, replacing the variables in braces with the values
+from your Azure app:</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">[</span>
+    <span class="s">"azure_signin"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">AZURE_SIGNIN</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"CLIENT_ID"</span><span class="p">:</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"CLIENT_ID"</span><span class="p">),</span>  <span class="c1"># Mandatory
+</span>    <span class="s">"CLIENT_SECRET"</span><span class="p">:</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"CLIENT_SECRET"</span><span class="p">),</span>  <span class="c1"># Mandatory
+</span>    <span class="s">"TENANT_ID"</span><span class="p">:</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"TENANT_ID"</span><span class="p">),</span>  <span class="c1"># Mandatory
+</span>    <span class="s">"SAVE_ID_TOKEN_CLAIMS"</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>  <span class="c1"># Optional, default is False.
+</span>    <span class="s">"RENAME_ATTRIBUTES"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s">"employeeNumber"</span><span class="p">,</span> <span class="s">"employee_id"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s">"affiliationNumber"</span><span class="p">,</span> <span class="s">"omk2"</span><span class="p">),</span>
+    <span class="p">],</span>  <span class="c1"># Optional
+</span>    <span class="s">"REDIRECT_URI"</span><span class="p">:</span> <span class="s">"https://&lt;domain&gt;/azure-signin/callback"</span><span class="p">,</span>  <span class="c1"># Optional
+</span>    <span class="s">"SCOPES"</span><span class="p">:</span> <span class="p">[</span><span class="s">"User.Read.All"</span><span class="p">],</span>  <span class="c1"># Optional
+</span>    <span class="s">"AUTHORITY"</span><span class="p">:</span> <span class="s">"https://login.microsoftonline.com/"</span> <span class="o">+</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"TENANT_ID"</span><span class="p">),</span>  <span class="c1"># Optional Or https://login.microsoftonline.com/common if multi-tenant
+</span>    <span class="s">"LOGOUT_REDIRECT_URI"</span><span class="p">:</span> <span class="s">"https://&lt;domain&gt;/logout"</span><span class="p">,</span>  <span class="c1"># Optional
+</span>    <span class="s">"PUBLIC_URLS"</span><span class="p">:</span> <span class="p">[</span><span class="s">"&lt;public:view_name&gt;"</span><span class="p">,]</span>  <span class="c1"># Optional, public views accessible by non-authenticated users
+</span><span class="p">}</span>
+
+<span class="n">AUTHENTICATION_BACKENDS</span> <span class="o">+=</span> <span class="p">[</span>
+    <span class="s">"azure_signin.backends.AzureSigninBackend"</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">LOGIN_URL</span> <span class="o">=</span> <span class="s">"azure_signin:login"</span>
+<span class="n">LOGIN_REDIRECT_URL</span> <span class="o">=</span> <span class="s">"/"</span> <span class="c1"># Or any other endpoint
+</span><span class="n">LOGOUT_REDIRECT_URL</span> <span class="o">=</span> <span class="n">LOGIN_REDIRECT_URL</span>
+</code></pre></div></div>
+
+<h3 id="installed-apps">Installed apps</h3>
+
+<p>Add the following to your <code class="language-plaintext highlighter-rouge">INSTALLED_APPS</code>:</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">INSTALLED_APPS</span> <span class="o">+=</span> <span class="p">[</span>
+    <span class="s">"azure_signin"</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="authentication-backend">Authentication backend</h3>
+
+<p>Configure the authentication backend:</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AUTHENTICATION_BACKENDS</span> <span class="o">+=</span> <span class="p">[</span>
+    <span class="s">"azure_signin.backends.AzureSigninBackend"</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h3 id="urls">URLs</h3>
+
+<p>Include the app’s URLs in your <code class="language-plaintext highlighter-rouge">urlpatterns</code>:</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">django.urls</span> <span class="kn">import</span> <span class="n">path</span><span class="p">,</span> <span class="n">include</span>
+
+<span class="n">urlpatterns</span> <span class="o">+=</span> <span class="p">[</span>
+    <span class="nf">path</span><span class="p">(</span><span class="s">"azure-signin/"</span><span class="p">,</span> <span class="nf">include</span><span class="p">(</span><span class="s">"azure_signin.urls"</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="s">"azure_signin"</span><span class="p">)),</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="abstractuser">AbstractUser</h3>
+
+<p>Add extra attributes to users with <code class="language-plaintext highlighter-rouge">AZURE_SIGNIN["RENAME_ATTRIBUTES"]</code>
+and Django <code class="language-plaintext highlighter-rouge">django.contrib.auth.models.AbstractUser</code>.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">django.contrib.auth.models</span> <span class="kn">import</span> <span class="n">AbstractUser</span>
+<span class="kn">from</span> <span class="n">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+
+
+<span class="k">class</span> <span class="nc">ExtendedUser</span><span class="p">(</span><span class="n">AbstractUser</span><span class="p">):</span>
+    <span class="s">"""
+    Extend user with extra attributes set in `AZURE_SIGNIN["RENAME_ATTRIBUTES"]`
+    """</span>
+
+    <span class="n">email</span> <span class="o">=</span> <span class="n">models</span><span class="p">.</span><span class="nc">EmailField</span><span class="p">(</span><span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">db_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">employee_id</span> <span class="o">=</span> <span class="n">models</span><span class="p">.</span><span class="nc">IntegerField</span><span class="p">(</span>
+        <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">unique</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">db_index</span><span class="o">=</span><span class="bp">True</span>
+    <span class="p">)</span>
+    <span class="n">omk2</span> <span class="o">=</span> <span class="n">models</span><span class="p">.</span><span class="nc">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">db_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">hcm</span> <span class="o">=</span> <span class="n">models</span><span class="p">.</span><span class="nc">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">db_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="backend">Backend</h3>
+
+<p>Backend can be subclassed to customize validation rules for user.</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">logging</span>
+
+<span class="kn">from</span> <span class="n">azure_signin.backends</span> <span class="kn">import</span> <span class="n">AzureSigninBackend</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="p">.</span><span class="nf">getLogger</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">CustomAzureSigninBackend</span><span class="p">(</span><span class="n">AzureSigninBackend</span><span class="p">):</span>
+    <span class="s">"Subclass AzureSigninBackend to customize validation rules for user."</span>
+
+    <span class="k">def</span> <span class="nf">is_valid_user</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="s">"is_valid_user"</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="nf">super</span><span class="p">().</span><span class="nf">is_valid_user</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="s">"run extra checks here..."</span>
+            <span class="k">pass</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">logger</span><span class="p">.</span><span class="nf">exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="n">logger</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="s">"is_valid_user: %s"</span><span class="p">,</span> <span class="n">output</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">output</span>
+</code></pre></div></div>
+
+<h3 id="decorator">Decorator</h3>
+
+<p>To make user authentication a requirement for accessing an individual view, decorate the
+view like so:</p>
+
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">azure_signin.decorators</span> <span class="kn">import</span> <span class="n">azure_signin_required</span>
+<span class="kn">from</span> <span class="n">django.shortcuts</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+
+<span class="nd">@azure_signin_required</span>
+<span class="k">def</span> <span class="nf">protected_view</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nc">HttpResponse</span><span class="p">(</span><span class="s">"A view protected by the decorator"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="middleware">Middleware</h3>
+
+<p>If you want to protect your entire site by default, you can use the middleware by adding the
+following to your <code class="language-plaintext highlighter-rouge">settings.py</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MIDDLEWARE</span> <span class="o">+=</span> <span class="p">[</span>
+    <span class="s">"azure_signin.middleware.AzureSigninMiddleware"</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div></div>
+
+<p>Make sure you add the middleware after Django’s <code class="language-plaintext highlighter-rouge">session</code> and <code class="language-plaintext highlighter-rouge">authentication</code> middlewares so
+that the request includes the session and user objects. Public URLs which need to be accessed by
+non-authenticated users should be specified in the <code class="language-plaintext highlighter-rouge">settings.AZURE_SIGNIN["PUBLIC_URLS"]</code>, as
+shown above.</p>
+
+<h3 id="vs-code-tasks">VS Code Tasks</h3>
+
+<p>The GitHub repository provides commands <code class="language-plaintext highlighter-rouge">Install</code>, <code class="language-plaintext highlighter-rouge">Launch</code> and <code class="language-plaintext highlighter-rouge">Tests</code> accessible through
+<code class="language-plaintext highlighter-rouge">Command Palette</code> (press <code class="language-plaintext highlighter-rouge">Cmd+Shift+P</code>) then <code class="language-plaintext highlighter-rouge">&gt;Tasks: Run Tasks</code>.</p>
+
+<p><img src="https://user-images.githubusercontent.com/8126807/179760209-b600877d-ac74-4fe1-b042-32ed26fd7430.png" alt="VS Code Tasks" />
+<img src="https://user-images.githubusercontent.com/8126807/179760201-7203836c-fdb9-42d9-84f7-656b57a6721a.png" alt="The app includes `Install`, `Launch` and `Tests` commands accessible through `Command Palette &gt; Tasks: Run Tasks` (press `Cmd+Shift+P`)" /></p>
+
+<p>All bash scripts are stored in <code class="language-plaintext highlighter-rouge">.bash</code> folder.</p>
+
+<p>The virtual environment is propelled by <a href="https://python-poetry.org">poetry</a> which can be installed with Homebrew <code class="language-plaintext highlighter-rouge">brew install poetry</code>.</p>
+
+<h2 id="credits">Credits</h2>
+
+<p>This app is inspired by and builds on functionality in
+<a href="https://github.com/AgileTek/django-azure-auth">https://github.com/AgileTek/django-azure-auth</a>, with both feature
+improvements, code coverage and extended documentation.</p>
+
+<h2 id="readings-">Readings 📚</h2>
+
+<ul>
+  <li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/web-app-quickstart?pivots=devlang-python">Quickstart: Add sign-in with Microsoft to a web app</a> (docs.microsoft.com)</li>
+  <li><a href="https://docs.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&amp;tabs=http#permissions">Microsoft Graph REST API v1.0</a> (docs.microsoft.com)</li>
+  <li><a href="https://github.com/Azure-Samples/ms-identity-python-django-tutorial/tree/main/1-Authentication/sign-in">Enable your Python Django web app to sign in users to your Azure Active Directory</a> tenant with the Microsoft identity platform (github.com)</li>
+</ul>
+
+<h2 id="sponsorship">Sponsorship</h2>
+
+<p>If this project helps you, you can offer me a cup of coffee ☕️ :-)</p>
+
+<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="python" /><category term="django" /><category term="azure" /><category term="cloud" /><summary type="html"><![CDATA[Sign-in users to your Django Web app with Azure Active Directory.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2022-07-18-django-azure-active-directory-signin.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2022-07-18-django-azure-active-directory-signin.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

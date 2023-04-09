@@ -7,7 +7,7 @@ description: >
   Sign-in users to your Django Web app with Azure Active Directory.
 hide_description: true
 category: projects
-tag: [python, azure, cloud]
+tag: [python, django, azure, cloud]
 ---
 
 - &nbsp;
