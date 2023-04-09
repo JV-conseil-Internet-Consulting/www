@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-FR, en-US"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.jv-conseil.net/feed/by_tag/postgresql.xml" rel="self" type="application/atom+xml" /><link href="https://www.jv-conseil.net/" rel="alternate" type="text/html" hreflang="fr-FR, en-US" /><updated>2023-04-09T19:09:05+02:00</updated><id>https://www.jv-conseil.net/feed/by_tag/postgresql.xml</id><title type="html">JV conseil</title><subtitle>DevOps • Full Stack Developer • Web App Architect
+Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
+Greater Paris Metropolitan Region, France 🇫🇷
+</subtitle><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><entry><title type="html">PgBouncer and PostgreSQL Azure Flexible Server a bumpy road 🛣</title><link href="https://www.jv-conseil.net/blog/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server/" rel="alternate" type="text/html" title="PgBouncer and PostgreSQL Azure Flexible Server a bumpy road 🛣" /><published>2022-03-08T00:00:00+01:00</published><updated>2023-04-09T18:42:31+02:00</updated><id>https://www.jv-conseil.net/blog/pgbouncer-and-postgresql-azure-flexible-server</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server/"><![CDATA[<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><a href="https://www.postgresql.org/docs/14.6/"><img src="https://img.shields.io/badge/PostgreSQL-14.6-green.svg" alt="PostgreSQL 14.6" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a>
+<!--
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-green)](https://www.python.org/downloads/release/python-3112/)
+[![PostgreSQL 14.6](https://img.shields.io/badge/PostgreSQL-14.6-green.svg)](https://www.postgresql.org/docs/14.6/)
+<img alt="https://img.shields.io/badge/stack-overflow-orange.svg" src="https://img.shields.io/badge/stack-overflow-orange.svg">
+--></p>
+
+<p>The introduction of <a href="https://github.com/pgbouncer/pgbouncer">PgBouncer</a>, a lightweight connection pooler for PostgreSQL, on <a href="https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-pgbouncer#feedback">Azure PostgreSQL Flexible Server</a> has been bumpy to say the least 😉</p>
+
+<p>Here is an excerpt of the <a href="https://github.com/MicrosoftDocs/azure-docs/issues/89424">issue</a> that triggers the opening of a seven-month–long-to-be-solved support ticket 🎫</p>
+
+<p>PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure</p>
+
+<p>Once you have set up in your PostgreSQL flexible server parameters <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-full</code>, saved your changes and restarted your server, you end up with <code class="language-plaintext highlighter-rouge">SSL error: tlsv13 alert certificate required</code> when you attempt to run a <code class="language-plaintext highlighter-rouge">pqsl</code> connection command on your server.</p>
+
+<p>This happens also when setting <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-ca</code>.</p>
+
+<p>According to <a href="https://docs.microsoft.com/en-us/azure/postgresql/concepts-certificate-rotation#4-what-is-the-impact-if-using-app-service-with-azure-database-for-postgresql">documentation</a></p>
+
+<blockquote>
+  <p>This new certificate has been added to App Service at platform level. If you are using the SSL certificates included on App Service platform in your application, then no action is needed.</p>
+</blockquote>
+
+<p>Is <code class="language-plaintext highlighter-rouge">DigiCertGlobalRootG2.crt.pem</code> certificate only set for <code class="language-plaintext highlighter-rouge">postgresql</code> server but not for <code class="language-plaintext highlighter-rouge">pgbouncer</code>?</p>
+
+<p>As a workaround, the only way to successfully connect is by setting <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">require</code>.</p>
+
+<p>In the present issue the problem is being able to set the TLS mode to use for connections from clients to the highest level available which is <code class="language-plaintext highlighter-rouge">verify-full</code>.</p>
+
+<p><img src="https://user-images.githubusercontent.com/8126807/157479980-956367de-9da0-47fb-8924-8b00bab264c3.png" alt="set the TLS mode to use for connections from clients to the highest level available which is `verify-full`" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">sslmode=verify-full</code> activation implies providing to the connection string a path to an authentication certificate. For PostgreSQL that can be handle by <a href="https://www.postgresql.org/docs/current/libpq-envars.html#id-1.7.3.21.3.4.17.1.1">PGSSLROOTCERT</a> environment variable.</p>
+
+<p>There is a lack of information in <a href="https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-pgbouncer#feedback">PgBouncer - Azure Database for PostgreSQL - Flexible Server</a> on how <code class="language-plaintext highlighter-rouge">verify-full</code> is handle by <code class="language-plaintext highlighter-rouge">pgbouncer</code>.</p>
+
+<p>So far activating <code class="language-plaintext highlighter-rouge">verify-full</code> on <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> on Azure Database for PostgreSQL flexible server parameters triggers an <code class="language-plaintext highlighter-rouge">SSL error sslv3 alert handshake failure</code>.</p>
+
+<p>Here is an example of a <code class="language-plaintext highlighter-rouge">psql</code> connection attempt failing with <code class="language-plaintext highlighter-rouge">SSL error: tlsv13 alert certificate required</code></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql <span class="s2">"host=myPgServer.postgres.database.azure.com dbname=pgbouncer user=pgbouncer password=myPassword
+port=6432 sslmode=verify-full sslrootcert=~/.postgresql/root.crt"</span>
+
+psql: error: connection to server at <span class="s2">"myPgServer.postgres.database.azure.com"</span> <span class="o">(</span>ip<span class="o">)</span>, port 6432 failed: SSL
+error: tlsv13 alert certificate required
+</code></pre></div></div>
+
+<p>According to PostgreSQL <a href="https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS">documentation</a> here are the parameters to provide when establishing a <code class="language-plaintext highlighter-rouge">sslmode=verify-full</code> connection:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sslmode</code>: <code class="language-plaintext highlighter-rouge">verify-full</code> only try an SSL connection, verify that the server certificate is issued by a trusted CA and that the requested server host name matches that in the certificate.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">sslrootcert</code>: This parameter specifies the name of a file containing SSL certificate authority (CA) certificate(s). If the file exists, the server’s certificate will be verified to be signed by one of these authorities. The default is ~/.postgresql/root.crt.</p>
+  </li>
+</ul>
+
+<p>According to pgBouncer <a href="http://www.pgbouncer.org/config.html#tls-settings">documentation</a> here are the parameters to provide when establishing a <code class="language-plaintext highlighter-rouge">sslmode=verify-full</code> connection:</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">client_tls_sslmode</code>: <code class="language-plaintext highlighter-rouge">verify-full</code> Client must use TLS with valid client certificate.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">client_tls_ca_file</code>: Root certificate file to validate client certificates.</p>
+  </li>
+</ul>
+
+<p>On Azure PostgreSQL flexible server parameters, there is a panel to set <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-full</code>, but there is not a <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_ca_file</code> allowing to specify the path to the file containing SSL certificate authority (CA).</p>
+
+<p>The question is « When you activate  <code class="language-plaintext highlighter-rouge">pgbouncer.client_tls_sslmode</code> to <code class="language-plaintext highlighter-rouge">verify-full</code> how do you provide the accompanying file containing SSL certificate authority (CA) » ❓</p>
+
+<p>A subsidiary question could be « Does Azure assures the transmission of the SSL certificate authority (CA) from <code class="language-plaintext highlighter-rouge">pgBouncer</code> to <code class="language-plaintext highlighter-rouge">PostgreSQL</code> server when hitting first <code class="language-plaintext highlighter-rouge">pgBouncer</code> on port <code class="language-plaintext highlighter-rouge">6432</code> by collecting the value of <code class="language-plaintext highlighter-rouge">sslrootcert</code>in the connection string and converting it into <code class="language-plaintext highlighter-rouge">client_tls_ca_file</code> » ❓</p>]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="azure" /><category term="cloud" /><category term="postgresql" /><summary type="html"><![CDATA[Azure PostgreSQL Flexible Server and PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.jpg" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

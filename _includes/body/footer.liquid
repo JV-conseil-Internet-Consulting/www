@@ -5,7 +5,7 @@
       {% if site.copyright.size > 0 %}
         {{ site.copyright | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
       {% else %}
-        &copy; 2009-<span id="copyrightEndYear">2022</span>&nbsp;JV conseil, All rights reserved
+        &copy; 2009-{{ site.time | date: '%Y' | default: "2022" }}&nbsp;JV conseil, All rights reserved
       {% endif %}
     </small>
   </p>

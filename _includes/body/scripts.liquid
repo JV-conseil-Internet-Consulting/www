@@ -3,15 +3,18 @@
 <script nomodule>{% include scripts/nomodule.min.js %}</script>
 <script src="{{ '/assets/js/deepdive-9.1.7.min.js' | relative_url }}" type="module"></script>
 <script src="{{ '/assets/js/legacy/deepdive-9.1.7.min.js' | relative_url }}" nomodule defer></script>
+<!--
 <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script>{% include scripts/custom.min.js %}</script>
+-->
 {% include my-scripts.liquid %}
 {% include body/analytics.liquid %}
 {% include body/analytics_gdpr_compliant.liquid %}
 <script type="module">
   if ('serviceWorker' in navigator) {
     /*{% if site.deepdive.offline.enabled %}*/
-    navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}')
+    navigator.serviceWorker
+      .register('{{ "/sw.js" | relative_url }}')
       .then(r => r.update())
       .catch(() => {});
     /*{% else %}*/

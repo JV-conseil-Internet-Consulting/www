@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr-FR, en-US"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://www.jv-conseil.net/feed/by_tag/jekyll.xml" rel="self" type="application/atom+xml" /><link href="https://www.jv-conseil.net/" rel="alternate" type="text/html" hreflang="fr-FR, en-US" /><updated>2023-04-09T19:09:05+02:00</updated><id>https://www.jv-conseil.net/feed/by_tag/jekyll.xml</id><title type="html">JV conseil</title><subtitle>DevOps • Full Stack Developer • Web App Architect
+Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
+Greater Paris Metropolitan Region, France 🇫🇷
+</subtitle><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><entry><title type="html">Jekyll Theme Read the Docs 📖</title><link href="https://www.jv-conseil.net/blog/2023-02-28-jekyll-theme-read-the-docs/" rel="alternate" type="text/html" title="Jekyll Theme Read the Docs 📖" /><published>2023-02-28T00:00:00+01:00</published><updated>2023-04-09T18:48:04+02:00</updated><id>https://www.jv-conseil.net/blog/jekyll-theme-read-the-docs</id><content type="html" xml:base="https://www.jv-conseil.net/blog/2023-02-28-jekyll-theme-read-the-docs/"><![CDATA[<ul class="large-only" id="markdown-toc">
+  <li><a href="#what-it-does" id="markdown-toc-what-it-does">What it does?</a></li>
+  <li><a href="#quick-start" id="markdown-toc-quick-start">Quick start</a></li>
+  <li><a href="#usage" id="markdown-toc-usage">Usage</a></li>
+  <li><a href="#features" id="markdown-toc-features">Features</a></li>
+  <li><a href="#options" id="markdown-toc-options">Options</a></li>
+  <li><a href="#sponsorship" id="markdown-toc-sponsorship">Sponsorship</a></li>
+</ul>
+
+<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+<p><img src="https://data.jsdelivr.com/v1/package/gh/JV-conseil/jekyll-theme-read-the-docs/badge" alt="jsDelivr" />
+<a href="https://github.com/JV-conseil/jekyll-theme-read-the-docs/actions/workflows/github-code-scanning/codeql"><img src="https://github.com/JV-conseil/jekyll-theme-read-the-docs/actions/workflows/github-code-scanning/codeql/badge.svg" alt="CodeQL" /></a>
+<a href="https://analytics.umami.is/share/M19mr5L7jVhHuFnb/jv-conseil.github.io" title="Umami - GDPR compliant alternative to Google Analytics"><img src="https://img.shields.io/badge/analytics-umami-green" alt="Umami - GDPR compliant alternative to Google Analytics" /></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-EUPL--1.2-blue.svg" alt="License EUPL 1.2" /></a>
+<a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a>
+<a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" /></a>
+<a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" /></a>
+<a href="https://fosstodon.org/@JVconseil" title="Follow JVconseil@fosstodon.org on Mastodon"><img src="https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org" alt="Follow JVconseil on Mastodon" /></a>
+<a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV conseil on GitHub" /></a></p>
+
+<!--
+![CI](https://github.com/JV-conseil/jekyll-theme-read-the-docs/workflows/CI/badge.svg?branch=develop)
+[![License BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
+-->
+
+<p>Read the Docs 📖 like Jekyll Theme for GitHub Pages</p>
+
+<h2 id="what-it-does">What it does?</h2>
+
+<p>This theme is inspired by <a href="https://github.com/jekyll-theme-read-the-docs/sphinx_rtd_theme">sphinx-rtd-theme</a> and refactored with:</p>
+
+<ul>
+  <li><a href="https://github.com/primer/css">@primer/css</a></li>
+  <li><a href="https://github.com/github/pages-gem">github-pages</a> (<a href="https://pages.github.com/versions/">dependency versions</a>)</li>
+</ul>
+
+<h2 id="quick-start">Quick start</h2>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s">https://github.com/JV-conseil/jekyll-theme-read-the-docs</span>
+</code></pre></div></div>
+
+<p>You can <a href="https://github.com/rundocs/starter">generate</a> with the same files and folders from <a href="https://github.com/rundocs/starter">rundocs/starter</a></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>Documentation that can guide how to create with Github pages, please refer to <a href="https://github.com/rundocs/jekyll-rtd-theme">rundocs/jekyll-rtd-theme</a> for details</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Shortcodes (Toasts card, mermaid)</li>
+  <li>Pages Plugins (emoji, gist, avatar, mentions)</li>
+  <li>Auto generate sidebar</li>
+  <li><a href="https://kramdown.gettalong.org/syntax.html#attribute-list-definitions">Attribute List Definitions</a> (Primer/css utilities, Font Awesome 4)</li>
+  <li>Service worker (caches)</li>
+  <li>SEO (404, robots.txt, sitemap.xml)</li>
+  <li>Canonical Link (Open Graph, Twitter Card, Schema data)</li>
+</ul>
+
+<h2 id="options">Options</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>default value</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">title</code></td>
+      <td>repo name</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">description</code></td>
+      <td>repo description</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">url</code></td>
+      <td>user domain or cname</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">baseurl</code></td>
+      <td>repo name</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lang</code></td>
+      <td><code class="language-plaintext highlighter-rouge">en</code></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">direction</code></td>
+      <td><code class="language-plaintext highlighter-rouge">auto</code></td>
+      <td><code class="language-plaintext highlighter-rouge">ltr</code> or <code class="language-plaintext highlighter-rouge">rtl</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">highlighter</code></td>
+      <td><code class="language-plaintext highlighter-rouge">rouge</code></td>
+      <td>Cannot be changed</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># folders sort</span>
+<span class="na">readme_index</span><span class="pi">:</span>
+  <span class="na">with_frontmatter</span><span class="pi">:</span> <span class="kc">true</span>
+
+<span class="na">meta</span><span class="pi">:</span>
+  <span class="na">key1</span><span class="pi">:</span> <span class="s">value1</span>
+  <span class="na">key2</span><span class="pi">:</span> <span class="s">value2</span>
+  <span class="s">.</span>
+  <span class="s">.</span>
+  <span class="s">.</span>
+
+<span class="na">google</span><span class="pi">:</span>
+  <span class="na">gtag</span><span class="pi">:</span>
+  <span class="na">adsense</span><span class="pi">:</span>
+  <span class="na">site_verification</span><span class="pi">:</span>
+
+<span class="c1"># GDPR compliant alternative to Google Analytics</span>
+<span class="na">mouseflow</span><span class="pi">:</span>
+  <span class="na">project_api_key</span><span class="pi">:</span>
+
+<span class="na">posthog</span><span class="pi">:</span>
+  <span class="na">project_api_key</span><span class="pi">:</span>
+
+<span class="na">telemetry</span><span class="pi">:</span>
+  <span class="na">app_id</span><span class="pi">:</span>
+  <span class="na">user_identifier</span><span class="pi">:</span>
+
+<span class="na">umami</span><span class="pi">:</span>
+  <span class="na">website_id</span><span class="pi">:</span>
+
+<span class="na">mathjax</span><span class="pi">:</span> <span class="c1"># this will prased to json, default: {}</span>
+
+<span class="c1"># NOTE: mermaid custom link are no longer supported</span>
+<span class="c1"># instead mermaid is updated to the lastest version</span>
+<span class="c1"># available through cdn.jsdelivr.net</span>
+<span class="c1"># mermaid:</span>
+<span class="c1">#   custom:     # mermaid link</span>
+<span class="c1">#   initialize: # this will prased to json, default: {}</span>
+
+<span class="na">scss</span><span class="pi">:</span>   <span class="c1"># also _includes/extra/styles.scss</span>
+<span class="na">script</span><span class="pi">:</span> <span class="c1"># also _includes/extra/script.js</span>
+
+<span class="na">translate</span><span class="pi">:</span>
+  <span class="c1"># shortcodes</span>
+  <span class="na">danger</span><span class="pi">:</span>
+  <span class="na">note</span><span class="pi">:</span>
+  <span class="na">tip</span><span class="pi">:</span>
+  <span class="na">warning</span><span class="pi">:</span>
+  <span class="c1"># 404</span>
+  <span class="na">not_found</span><span class="pi">:</span>
+  <span class="c1"># copyright</span>
+  <span class="na">revision</span><span class="pi">:</span>
+  <span class="c1"># search</span>
+  <span class="na">searching</span><span class="pi">:</span>
+  <span class="na">search</span><span class="pi">:</span>
+  <span class="na">search_docs</span><span class="pi">:</span>
+  <span class="na">search_results</span><span class="pi">:</span>
+  <span class="na">search_results_found</span><span class="pi">:</span> <span class="c1"># the "#" in this translate will replaced with results size!</span>
+  <span class="na">search_results_not_found</span><span class="pi">:</span>
+
+<span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jemoji</span>
+  <span class="pi">-</span> <span class="s">jekyll-avatar</span>
+  <span class="pi">-</span> <span class="s">jekyll-mentions</span>
+</code></pre></div></div>
+
+<h2 id="sponsorship">Sponsorship</h2>
+
+<p>If this project helps you, you can offer me a cup of coffee ☕️ :-)</p>
+
+<p><a href="https://github.com/sponsors/JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" /></a></p>
+
+<!-- links -->]]></content><author><name>JV conseil</name><email>contact@jv-conseil.net</email></author><category term="projects" /><category term="jekyll" /><summary type="html"><![CDATA[Read the Docs 📖 like Jekyll Theme for GitHub Pages]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.jv-conseil.net/assets/posts/2023-02-28-jekyll-theme-read-the-docs.png" /><media:content medium="image" url="https://www.jv-conseil.net/assets/posts/2023-02-28-jekyll-theme-read-the-docs.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
