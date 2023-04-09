@@ -217,7 +217,6 @@ kramdown:
 # disqus:                <username>
 
 # Setting a tinyletter username will enable the newsletter subscription box.
-# PRO version only!
 # tinyletter:            <username>
 
 lightbox:              true
@@ -300,7 +299,6 @@ deepdive:
   # Note that this setting has no effect when using the free version.
   advertise:           false
 
-  # Buyers of the PRO version can opt to hide all dates from the theme.
   # Frequent consumers of online content will know that nothing devalues a post like
   # seeing an old date.
   hide_dates:          false

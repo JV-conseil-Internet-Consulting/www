@@ -177,7 +177,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 
     To enable this feature, the post needs to have a `last_modified_at` property with a valid date. You can either set it manually in the frontmatter (not recommended), or use the [`jekyll-last-modified-at` plugin](https://github.com/gjtorikian/jekyll-last-modified-at) to set it for you (Not available on GitHub Pages!).
 
-    You can remove this element by setting `hide_last_modified` in the front matter. You can disable it for all posts by setting `deepdive.hide_last_modified` in the config file. Setting `deepdive.hide_dates` (PRO version only) will also remove it, together with all other time-related UI elements.
+    You can remove this element by setting `hide_last_modified` in the front matter. You can disable it for all posts by setting `deepdive.hide_last_modified` in the config file. Setting `deepdive.hide_dates` will also remove it, together with all other time-related UI elements.
 
     You can customize the hover text, icon, and date format in `_data/strings.yml` using the following keys: `last_modified_at` (hover text), `last_modified_at_icon` (icon name, default: `icon-history`) and `date_formats.last_modified_at` (date format, default: `%Y-%m-%d`).
 
@@ -210,7 +210,7 @@ Version 9.1 provides minor design changes, new features, and closes multiple iss
 Sept 8 2020
 {:.heading.post-date}
 
-* Added GitHub Pages Starter Kit to PRO version
+* Added GitHub Pages Starter Kit
 * Added chapter on how to deploy PRO on GitHub Pages
 * JavaScript source files now included in PRO zip again
 * Updated default config file
@@ -267,7 +267,7 @@ July 6 2020
 Sept 8 2020
 {:.heading.post-date}
 
-* Added GitHub Pages Starter Kit to PRO version
+* Added GitHub Pages Starter Kit
 * Added chapter on how to deploy PRO on GitHub Pages
 * JavaScript source files now included in PRO zip again
 * Updated default config file
@@ -365,7 +365,7 @@ July 3 2020
 * Drastically improved build times through the use of `jekyll-include-cache`.
     Most of the previous tips on [improving page build speed](hydejack/_posts/2019-02-18-improving-site-build-speed.md) should now be obsolete.
 
-* Added `grid` layout in PRO version that mirrors the `projects` layout, but for posts.
+* Added `grid` layout that mirrors the `projects` layout, but for posts.
     If you've set `image`s for your posts, it will give your blog a more modern look.
 
 ### Minor
@@ -381,7 +381,7 @@ July 3 2020
 * Removed smooth scroll polyfill for Safari/Webkit as it has caused problems with sticky content.
 * Figure captions can now be added to code blocks, math blocks, and tables in addition to just images using the `.figcaption` CSS class.
 * The order of the comment section relative to the about and related posts sections can now be customized via the `deepdive.post_addons` and `deepdive.project_addons` keys. See the example `_config.yml` for more.
-* Clicking the image in the `blog` layout will now navigate to the blog post. In the PRO version it will do so with the classic "move image in place" animation.
+* Clicking the image in the `blog` layout will now navigate to the blog post. It will do so with the classic "move image in place" animation.
 * Grouping projects by year can now be disabled. Use `no_groups: true` in the front matter. This also applies to the new `grid` layout and the old `list` layout.
 * hy-img has been removed and replaced with browser's native `loading=lazy` attribute
 * Now serving separate JavaScript files for old and new browsers, allowing it to take advantage of many new language features.
@@ -901,7 +901,6 @@ are now GPL licensed in turn.
 
 How will this affect you?
 
-* If you bought the _PRO version_ you are not affected at all.
 * You can continue to use previous versions of DeepDive according to their license (MIT).
 * If you upgrade, keep the source code in a public repository and make sure you include the new `LICENSE.md` file.
   DO NOT publish the _new code_ with an _old license_.
@@ -1038,19 +1037,6 @@ That being said, you should be aware of these (small) breaking changes:
 
   Content below
   ~~~
-
-* [PRO] The PRO version now has built-in support for [Tinyletter](https://www.tinyletter.com).
-  To show a newsletter subscription box below each post, set `tinyletter: <username>` in your config file.
-  If you want to use a different mailing provider, you can add your own form in `_includes/my-newsletter.html`.
-
-* [PRO] The PRO version now includes styles for input elements, using the same CSS class names as Bootstrap.
-  Check out the [Bootstrap docs](https://getbootstrap.com/docs/4.0/components/forms/) to learn more.
-
-* [PRO] Added links to random posts at the bottom of each post. This can be beneficial for search engine rankings and content discovery.
-  You can remove them with the new `post_addons` option (see below).
-
-* [PRO] If a `endDate` is missing in your `resume.json`, it will render as "\<startDate\> -- _present_".
-  You can change the wording in the new `strings.yml` file.
 
 * Added support for [`jekyll-avatar`](https://github.com/benbalter/jekyll-avatar).
   If this plugin is enabled in your config file, it will show the avatar of your github account

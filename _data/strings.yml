@@ -96,9 +96,8 @@ date_formats:
   resume:              '%b %Y'
 
 
-# PRO Version
+# Advanced
 # ---------------------------------------------------------------------------------------
-# If you don't own the PRO version of Hydejack, modifying these will have no effect.
 
 tinyletter:
   title:               Commercial break
