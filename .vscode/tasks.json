@@ -1,0 +1,53 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "gem",
+      "type": "shell",
+      "isBackground": false,
+      "osx": {
+        "command": ".bash/osx/gem.sh"
+      },
+      "linux": {
+        "command": ".bash/osx/gem.sh"
+      },
+      "detail": "Build a gem from this theme",
+      "problemMatcher": []
+    },
+    {
+      "label": "Jekyll",
+      "type": "shell",
+      "isBackground": false,
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "osx": {
+        "command": ".bash/osx/jekyll.sh"
+      },
+      "linux": {
+        "command": ".bash/osx/jekyll.sh"
+      },
+      "detail": "Run server jekyll serve --config '_config-dev.yml' --livereload",
+      "problemMatcher": []
+    },
+    {
+      "label": "npm",
+      "type": "shell",
+      "isBackground": false,
+      "osx": {
+        "command": ".bash/osx/npm.sh"
+      },
+      "linux": {
+        "command": ".bash/osx/npm.sh"
+      },
+      "detail": "Update your Node.js packages for this repository",
+      "problemMatcher": []
+    }
+  ]
+}
