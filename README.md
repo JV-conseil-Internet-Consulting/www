@@ -7,7 +7,7 @@
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 [![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.net%2F)](https://www.jv-conseil.net "jv-conseil.net Health Status")
-[![CodeQL](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml/badge.svg)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml/badge.svg?branch=dev)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml)
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil "Become a sponsor to JV-conseil")
 [![Follow JV conseil on StackOverflow](https://img.shields.io/stackexchange/stackoverflow/r/2477854)](https://stackoverflow.com/users/2477854/jv-conseil "Follow JV conseil on StackOverflow")
 [![Follow JVconseil on Twitter](https://img.shields.io/twitter/follow/JVconseil.svg?style=social&logo=twitter)](https://twitter.com/JVconseil "Follow JVconseil on Twitter")
