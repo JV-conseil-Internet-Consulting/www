@@ -52,7 +52,7 @@
     "kv-storage-polyfill": "^2.0.0",
     "lit": "^2.7.2",
     "minisearch": "^6.0.1",
-    "npm": "^9.6.4",
+    "npm": "^9.6.5",
     "rxjs": "^7.8.0",
     "scroll-into-view-if-needed": "^3.0.10",
     "tippy.js": "^6.3.7",
