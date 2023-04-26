@@ -10,12 +10,15 @@
 # shellcheck source=/dev/null
 . ".bash/incl/all.sh"
 
-_jvcl_::update_npm() {
+_jvcl_::npm_update() {
   _jvcl_::h1 "Update Node.js packages..."
   npm install npm@latest --verbose
   npm update --save --verbose
   npm list --omit=dev
   npm list
+}
+
+_jvcl_::npm_audit() {
   _jvcl_::h1 "Npm audit..."
   npm audit || :
   npx depcheck --detailed || :
@@ -35,10 +38,6 @@ _jvcl_::npm_package_version() {
   npm info "${1%%/*}" version
 }
 
-_jvcl_::npm_package_version() {
-  npm info "${1}" version
-}
-
 _jvcl_::_sass_bootstrap() {
   cp -pvrf "node_modules/bootstrap/scss/"{_functions,_variables,_maps,_mixins,_utilities,_grid,_forms,_buttons,forms,mixins,vendor}* "_sass/bootstrap"
 }
@@ -53,7 +52,8 @@ _jvcl_::_sass_tippyjs() {
 }
 
 if _jvcl_::brew_install_formula "node"; then
-  _jvcl_::update_npm
+  _jvcl_::npm_update
+  _jvcl_::npm_audit
   _jvcl_::_sass_bootstrap
   # _jvcl_::_sass_tippyjs
   _jvcl_::webpack
