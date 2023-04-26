@@ -2,7 +2,7 @@
 layout: post
 title: The AgeGuess database
 image:
-  path: /assets/posts/2019-06-05-nature-scientific-data-ageguess-database.jpg
+  path: /assets/posts/2019-10-31-nature-scientific-data-ageguess-database.jpg
 description: >
   An open online resource on chronological and perceived ages of people aged 5–100
 # hide_description: true
