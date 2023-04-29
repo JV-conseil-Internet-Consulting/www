@@ -58,7 +58,7 @@ jobs:
         # Configuration file
         # See <https://github.com/github/codeql-action#configuration-file>
         # Copyright (c) 2019-2023 JV-conseil, All rights reserved
-        # config-file: ./.github/codeql/codeql-config.yml
+        config-file: ./.github/codeql/codeql-config.yml
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, Go, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
