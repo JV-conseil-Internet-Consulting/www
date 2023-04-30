@@ -8,7 +8,9 @@
   {% else %}
     {% include head/seo-fallback.liquid %}
   {% endif %}
+  <!--
   <meta property="og:image" content="{{ "/assets/images/open-graph-image.png" | absolute_url }}">
+  -->
 
   {% if site.keywords.size > 0 or page.keywords.size > 0 %}
     <meta name="keywords" content="{{ page.keywords | default:site.keywords | join:',' }}">
