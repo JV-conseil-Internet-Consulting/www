@@ -28,12 +28,11 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-       - name: Bundler Cache
+      - name: Bundler Cache
         uses: actions/cache@v1
         with:
           path: vendor/bundle
