@@ -53,7 +53,7 @@ jobs:
 
       - name: Build with Jekyll v4.3.2 container
         run: |
-          EXPORT base_image=ruby:3.1.1-alpine3.18 \
+          EXPORT base_image="ruby:3.1.1-alpine3.18"
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll \
           -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
