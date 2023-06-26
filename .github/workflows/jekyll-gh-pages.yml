@@ -1,6 +1,6 @@
 # Jekyll Builder for GitHub Pages (Action)
 # See <https://jekyllrb.com/docs/continuous-integration/github-actions/>
-# Copyright (c) 2019-2023 JV-conseil, All rights reserved
+# Copyright (c) 2019-2023 JV-conseil, All rights reserved.
 
 name: Build and deploy Jekyll site to GitHub Pages
 
