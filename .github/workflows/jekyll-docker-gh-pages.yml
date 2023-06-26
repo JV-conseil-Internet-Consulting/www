@@ -57,8 +57,7 @@ jobs:
           -v ${{ github.workspace }}:/srv/jekyll \
           -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jekyll/builder:latest \
-          sh -c "apk update && apk upgrade" \
-          /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --trace --future"
+          /bin/bash -c "apk update && apk upgrade && chmod -R 777 /srv/jekyll && jekyll build --trace --future"
 
       # - name: Build with Jekyll
       #   # Outputs to the './_site' directory by default
