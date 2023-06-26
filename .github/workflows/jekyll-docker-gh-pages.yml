@@ -54,8 +54,11 @@ jobs:
       - name: Build with Jekyll v4.3.2 container
         run: |
           docker run \
-          -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --trace --future"
+          -v ${{ github.workspace }}:/srv/jekyll \
+          -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest \
+          sh -c "apk update && apk upgrade" \
+          /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --trace --future"
 
       # - name: Build with Jekyll
       #   # Outputs to the './_site' directory by default
