@@ -83,6 +83,8 @@ legal:
   #   url: /blog/
   - title: GISTS
     url: https://gist.github.com/JV-conseil
+  - title: SPONSOR
+    url: /SPONSOR
   - title: LICENSE
     url: /LICENSE
   - title: NOTICE
