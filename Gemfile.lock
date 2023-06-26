@@ -150,6 +150,7 @@ DEPENDENCIES
   jekyll-titles-from-headings
   jemoji (~> 0.12.0)
   kramdown-math-katex
+  nokogiri (~> 1.15, >= 1.15.4)
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1.0)
