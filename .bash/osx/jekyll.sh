@@ -44,7 +44,12 @@ EOF
 }
 
 _jvcl_::jekyll_serve() {
-  _jvcl_::h1 "Launching Jekyll..."
+  # local _cmd _exe _jekyll=("bundle" "exec" "jekyll" "--config" "_config-dev.yml")
+  # _jvcl_::h1 "Launching Jekyll..."
+  # for _cmd in "clean" "doctor" "serve"; do
+  #   _exe=("${_jekyll[@]:0:3}" "${_cmd}" "${_jekyll[@]:3}")
+  #   echo "${_exe[@]}" && "${_exe[@]}"
+  # done
   bundle exec jekyll clean --config "_config-dev.yml"
   bundle exec jekyll doctor --config "_config-dev.yml"
   bundle exec jekyll serve --config "_config-dev.yml" --livereload --trace
