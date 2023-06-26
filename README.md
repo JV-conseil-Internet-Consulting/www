@@ -22,6 +22,10 @@ Greater Paris Metropolitan Region, France 🇫🇷
 
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=JV-conseil-Internet-Consulting.www)
 
+## NOTE
+
+In [Gemfile.lock](./Gemfile.lock) do not upgrade `sass-embedded (1.62.1-arm64-darwin)` as long as [envygeeks/jekyll-docker](https://github.com/envygeeks/jekyll-docker) has not updated `base_image` to `ruby:3.1.1-alpine3.18`.
+
 <!--
 
 [![Django 4.1.7](https://img.shields.io/badge/Django-4-green)][Django]
