@@ -50,7 +50,7 @@ jobs:
       #     source: ./
       #     destination: ./_site
 
-      - name: Build with Jekyll v4.3.2 container
+      - name: Build with Jekyll Docker
         run: |
           docker run \
           -v ${{ github.workspace }}:/srv/jekyll \

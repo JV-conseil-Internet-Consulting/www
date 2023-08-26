@@ -85,3 +85,10 @@ group :development do
   # gem "sass", "~> 3.7"
   # gem "webrick", "~> 1.8"
 end
+
+
+# Dependabot
+group :dependabot do
+  # Nokogiri gem, via libxml, is affected by DoS vulnerabilities
+  gem 'nokogiri', '~> 1.15', '>= 1.15.4'
+end
