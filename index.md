@@ -3,6 +3,7 @@ layout: welcome
 title: JV conseil – Internet Consulting 👨‍💻
 cover: true
 selected_posts:
+  - _posts/2023-08-28-jekyll-docker.md
   - _posts/2023-02-17-githubbing-on-ucloud.md
   - _posts/2022-07-18-django-azure-active-directory-signin.md
   - _posts/2023-02-28-jekyll-theme-read-the-docs.md
