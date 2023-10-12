@@ -38,7 +38,7 @@ gem "duktape"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-avatar", "~> 0.7.0"
+  gem "jekyll-avatar", "~> 0.8.0"
   gem "jekyll-default-layout"
   gem "jekyll-feed"
   gem "jekyll-include-cache"
