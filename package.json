@@ -74,7 +74,7 @@
     "uglify-js": "^3.17.4",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "webpack-merge": "^5.9.0",
+    "webpack-merge": "^5.10.0",
     "yargs": "^17.7.2"
   },
   "repository": {
