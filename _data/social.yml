@@ -213,3 +213,6 @@ download:
 mastodon:
   name: Mastodon
   icon: icon-mastodon
+dev:
+  name: DEV Community
+  icon: icon-dev-dot-to
