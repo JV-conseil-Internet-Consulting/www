@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src: url('fonts/icomoon.eot?acnosj');
-  src: url('fonts/icomoon.eot?acnosj#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?acnosj') format('truetype'),
-    url('fonts/icomoon.woff?acnosj') format('woff'),
-    url('fonts/icomoon.svg?acnosj#icomoon') format('svg');
+  src: url('fonts/icomoon.eot?7vgre8');
+  src: url('fonts/icomoon.eot?7vgre8#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7vgre8') format('truetype'),
+    url('fonts/icomoon.woff?7vgre8') format('woff'),
+    url('fonts/icomoon.svg?7vgre8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,29 +26,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-dev-dot-to:before {
+  content: "\e909";
+}
+
 .icon-gitpod:before {
   content: "\e905";
-  /* color: #1aa6e4; */
+  color: #1aa6e4;
 }
 
 .icon-gitlab:before {
   content: "\e906";
-  /* color: #fca121; */
+  color: #fca121;
 }
 
 .icon-git:before {
   content: "\e908";
-  /* color: #f05032; */
+  color: #f05032;
 }
 
 .icon-postgresql:before {
   content: "\e900";
-  /* color: #336791; */
+  color: #336791;
 }
 
 .icon-python:before {
   content: "\e901";
-  /* color: #3776ab; */
+  color: #3776ab;
 }
 
 .icon-django:before {
