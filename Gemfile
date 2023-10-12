@@ -57,7 +57,7 @@ group :jekyll_plugins do
   gem "jekyll-compose"
 
   # Non-Jekyll plugins:
-  gem "jemoji", "~> 0.12.0"
+  gem "jemoji", "~> 0.13.0"
   # gem "github-pages", "~> 228"
 end
 
