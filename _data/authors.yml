@@ -30,9 +30,10 @@ JV-conseil:
     linkedin:          vieillefont
     github:            JV-conseil-Internet-Consulting
     # gist:              JV-conseil
+    dev:               https://dev.to/jvconseil
     mastodon:          https://mastodon.social/@JVconseil
     stackoverflow:     2477854
-    twitter:           JVconseil
+    # twitter:           JVconseil
     email:             contact@jv-conseil.net
     # twitter:         <username>
     # email:           <mail@domain.tld>
