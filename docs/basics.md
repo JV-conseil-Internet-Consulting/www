@@ -74,8 +74,8 @@ To add links to external sites, simply provide a fully qualified URL, e.g.
 
 ```yml
 menu:
-  - title: "@qwtel"
-    url:   https://qwtel.com/
+  - title: "@jv-conseil"
+    url:   https://www.jv-conseil.net
 ```
 
 ## Adding a category or tag
