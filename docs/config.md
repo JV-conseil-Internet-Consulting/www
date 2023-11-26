@@ -24,7 +24,7 @@ The `url` is the domain of your site, including the protocol (`http` or `https`)
 
 ~~~yml
 # file: `_config.yml`
-url: https://qwtel.com
+url: https://www.jv-conseil.net
 ~~~
 
 You don't need to provide this property when hosting on GitHub Pages or Netlify.
@@ -225,8 +225,8 @@ At a bare minimum, you should add an `author` key with a `name` and `email` sub-
 ~~~yml
 # file: `_config.yml`
 author:
-  name:  Florian Klampfer
-  email: mail@qwtel.com
+  name:  JV conseil
+  email: contact@jv-conseil.net
 ~~~
 
 If you would like the author to be displayed in the about section below a post or project\*, add an `about` key and provide markdown content. I recommend using the YAML pipe `|` syntax, so you can include multiple paragraphs:
@@ -234,10 +234,10 @@ If you would like the author to be displayed in the about section below a post o
 ~~~yml
 # file: `_config.yml`
 author:
-  name:  Florian Klampfer
-  email: mail@qwtel.com
+  name:  JV conseil
+  email: contact@jv-conseil.net
   about: |
-    Hi, I'm Florian or @qwtel...
+    Hi, I'm Florian or @jv-conseil...
 
     This is another paragraph.
 ~~~
@@ -305,8 +305,8 @@ It consists of the name of the social network as key and your username within th
 # file: `_config.yml`
 author:
   social:
-    twitter: qwtel
-    github:  qwtel
+    twitter: JVconseil
+    github:  JV-conseil
 ~~~
 
 Check out [`authors.yml`][authors] to see which networks are available.
@@ -318,8 +318,8 @@ You can change the order in which the icons appear by moving lines up or down, e
 # file: `_config.yml`
 author:
   social:
-    github:  qwtel # now github appears first
-    twitter: qwtel
+    github:  JV-conseil # now github appears first
+    twitter: JVconseil
 ~~~
 
 To get an overview of which networks are available and how a typical username in that network looks like,
@@ -331,7 +331,7 @@ Should providing a username not produce a correct link for some reason, you can 
 # file: `_config.yml`
 author:
   social:
-    youtube: https://www.youtube.com/channel/UCu0PYX_kVANdmgIZ4bw6_kA
+    youtube: https://www.youtube.com/channel/UCKfLWpaqvvH69YCgCj22kTA
 ~~~
 
 You can add any platform, even if it's not defined in [`social.yml`][social], by providing a complete URL. However, a fallback icon <span class="icon-link"></span> will be used when no icon is available. Supplying your own icons is an [advanced topic](advanced.md).
@@ -345,7 +345,7 @@ If you'd like to add an email <span class="icon-mail"></span>, RSS <span class="
 # file: `_config.yml`
 author:
   social:
-    email:    mail@qwtel.com
+    email:    contact@jv-conseil.net
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
     download: https://github.com/hydecorp/deepdive/archive/v9.1.6.zip
 ~~~
