@@ -44,8 +44,8 @@ import {
     ...('customElements' in window
       ? []
       : [
-          import(/* webpackChunkName: "webcomponents" */ './polyfills/webcomponents').then(() =>
-            import(/* webpackChunkName: "shadydom" */ './polyfills/shadydom'),
+          import(/* webpackChunkName: "webcomponents" */ './polyfills/webcomponents').then(
+            () => import(/* webpackChunkName: "shadydom" */ './polyfills/shadydom'),
           ),
         ]),
     ...('ResizeObserver' in window
@@ -98,8 +98,8 @@ import {
     window.matchMedia(BREAK_POINT_DYNAMIC).matches
       ? LARGE_DESKTOP
       : window.matchMedia(BREAK_POINT_3).matches
-      ? DESKTOP
-      : MOBILE;
+        ? DESKTOP
+        : MOBILE;
 
   // First we get hold of some DOM elements.
   const drawerEl = document.getElementById('_drawer');

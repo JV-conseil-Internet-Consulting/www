@@ -21,8 +21,8 @@ import { webComponentsReady, stylesheetReady } from './common';
     ...('customElements' in window
       ? []
       : [
-          import(/* webpackChunkName: "webcomponents" */ './polyfills/webcomponents').then(() =>
-            import(/* webpackChunkName: "shadydom" */ './polyfills/shadydom'),
+          import(/* webpackChunkName: "webcomponents" */ './polyfills/webcomponents').then(
+            () => import(/* webpackChunkName: "shadydom" */ './polyfills/shadydom'),
           ),
         ]),
   ]);
