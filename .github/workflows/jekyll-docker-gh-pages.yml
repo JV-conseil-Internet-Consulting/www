@@ -1,7 +1,7 @@
 # Jekyll Builder for GitHub Pages (Action)
 # See <https://github.com/marketplace/actions/jekyll-builder-for-github-pages>
 # Copyright (c) 2019-2023 JV-conseil, All rights reserved
-name: Deploy Jekyll v4.3.2 to GitHub Pages (Docker)
+name: Deploy Jekyll v4.3.3 to GitHub Pages (Docker)
 
 on:
   # Runs on pushes targeting the default branch
