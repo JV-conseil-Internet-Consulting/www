@@ -1,3 +1,31 @@
+/**
+ * TerserWebpackPlugin
+ *
+ * To remove Comments, use this config:
+ *
+ * webpack.config.js
+ *
+ * ```js
+ * module.exports = {
+ *   optimization: {
+ *     minimize: true,
+ *     minimizer: [
+ *       new TerserPlugin({
+ *         terserOptions: {
+ *           format: {
+ *             comments: false,
+ *           },
+ *         },
+ *         extractComments: false,
+ *       }),
+ *     ],
+ *   },
+ * };
+ * ````
+ *
+ * see: https://webpack.js.org/plugins/terser-webpack-plugin/#remove-comments
+ */
+
 const { readFileSync } = require('fs');
 const { resolve } = require('path');
 
@@ -102,6 +130,11 @@ const sharedConfig = {
     minimizer: [
       new TerserPlugin({
         extractComments: false,
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
       }),
     ],
     providedExports: true,

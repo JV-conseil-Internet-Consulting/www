@@ -143,7 +143,7 @@ PLATFORMS
 
 DEPENDENCIES
   duktape
-  faraday-retry (~> 2.0)
+  faraday-retry (~> 2.2.0)
   jekyll (~> 4.3.2)
   jekyll-avatar (~> 0.8.0)
   jekyll-compose

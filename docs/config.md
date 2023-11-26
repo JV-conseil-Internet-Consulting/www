@@ -237,7 +237,7 @@ author:
   name:  JV conseil
   email: contact@jv-conseil.net
   about: |
-    Hi, I'm Florian or @jv-conseil...
+    Hi, I'm JV conseil or @jv-conseil...
 
     This is another paragraph.
 ~~~
