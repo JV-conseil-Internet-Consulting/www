@@ -25,16 +25,20 @@ Example:
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet" data-lang="en">
   <p lang="en" dir="ltr">
-    The next version of DeepDive (v6.3.0) will allow embedding 3rd party scripts,
-    like the one that comes with this tweet for example.
+    📨 I’ve been using @ProtonMail and thought you might like it.
+    It’s a secure email service that protects your privacy.
+    Sign up with my referral link to get 1 month of premium features for free.
+    <a href="https://account.proton.me/refer-a-friend?referrer=XG0V6375XEEG">
+      https://account.proton.me/refer-a-friend?referrer=XG0V6375XEEG
+    </a>
   </p>
-  &mdash; Florian Klampfer (@qwtel)
-  <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a>
+  &mdash; JV conseil (@JVconseil)
+  <a href="https://twitter.com/JVconseil/status/1654523745321598976">June 3, 2017</a>
 </blockquote>
 ~~~
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The next version of DeepDive (v6.3.0) will allow embedding 3rd party scripts, like the one that comes with this tweet for example.</p>&mdash; Florian Klampfer (@qwtel) <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a></blockquote>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">📨 I’ve been using @ProtonMail and thought you might like it. It’s a secure email service that protects your privacy. Sign up with my referral link to get 1 month of premium features for free. https://account.proton.me/refer-a-friend?referrer=XG0V6375XEEG</p>&mdash; JV conseil (@JVconseil) <a href="https://twitter.com/JVconseil/status/1654523745321598976">May 5, 2023</a></blockquote>
 
 ## Global scripts
 
