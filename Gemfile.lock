@@ -11,10 +11,10 @@ GEM
       minitest (>= 5.1)
       mutex_m
       tzinfo (~> 2.0)
-    addressable (2.8.5)
+    addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     base64 (0.2.0)
-    bigdecimal (3.1.4)
+    bigdecimal (3.1.5)
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
     connection_pool (2.4.1)
@@ -26,7 +26,7 @@ GEM
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     execjs (2.9.1)
-    faraday (2.7.12)
+    faraday (2.8.1)
       base64
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
@@ -36,14 +36,19 @@ GEM
     ffi (1.16.3)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
+    google-protobuf (3.25.1)
+    google-protobuf (3.25.1-aarch64-linux)
     google-protobuf (3.25.1-arm64-darwin)
+    google-protobuf (3.25.1-x86-linux)
+    google-protobuf (3.25.1-x86_64-darwin)
+    google-protobuf (3.25.1-x86_64-linux)
     html-pipeline (2.14.3)
       activesupport (>= 2)
       nokogiri (>= 1.4)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    jekyll (4.3.2)
+    jekyll (4.3.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
       em-websocket (~> 0.5)
@@ -114,7 +119,17 @@ GEM
     mercenary (0.4.0)
     minitest (5.20.0)
     mutex_m (0.2.0)
-    nokogiri (1.15.5-arm64-darwin)
+    nokogiri (1.16.0-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.0-arm-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.0-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86-linux)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -128,8 +143,26 @@ GEM
     rouge (4.2.0)
     ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
-    sass-embedded (1.69.5-arm64-darwin)
-      google-protobuf (~> 3.23)
+    sass-embedded (1.69.7-aarch64-linux-gnu)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-aarch64-linux-musl)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-arm-linux-gnueabihf)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-arm-linux-musleabihf)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-arm64-darwin)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-x86-linux-gnu)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-x86-linux-musl)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-x86_64-darwin)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-x86_64-linux-gnu)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.69.7-x86_64-linux-musl)
+      google-protobuf (~> 3.25)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     tzinfo (2.0.6)
@@ -139,12 +172,25 @@ GEM
     webrick (1.8.1)
 
 PLATFORMS
-  arm64-darwin-21
+  aarch64-linux
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux
+  arm-linux-gnueabihf
+  arm-linux-musleabihf
+  arm64-darwin
+  x86-linux
+  x86-linux-gnu
+  x86-linux-musl
+  x86_64-darwin
+  x86_64-linux
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
 DEPENDENCIES
   duktape
   faraday-retry (~> 2.2.0)
-  jekyll (~> 4.3.2)
+  jekyll (~> 4.3.3)
   jekyll-avatar (~> 0.8.0)
   jekyll-compose
   jekyll-default-layout
@@ -167,4 +213,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   2.4.22
+   2.5.4
