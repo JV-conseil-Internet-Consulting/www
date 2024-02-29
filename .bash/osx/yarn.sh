@@ -10,26 +10,19 @@
 # shellcheck source=/dev/null
 . ".bash/incl/all.sh"
 
-_jvcl_::npm_update() {
-  _jvcl_::h1 "Update Node.js packages..."
-  npm install npm@latest --verbose
-  npm update --save --verbose
-  npm list --omit=dev
-  npm list
-}
-
 _jvcl_::npm_audit() {
-  _jvcl_::h1 "Npm audit..."
-  npm audit || :
+  _jvcl_::h1 "npm audit..."
+  yarn npm audit || :
   npx depcheck --detailed || :
 }
 
 _jvcl_::webpack() {
-  npm run format
+  _jvcl_::h1 "yarn run format..."
+  yarn run format
   if [ "${WEBPACK_MODE}" == "production" ]; then
-    npm run build
+    yarn run build
   else
-    npm run dev
+    yarn run dev
   fi
 }
 
@@ -39,7 +32,8 @@ _jvcl_::npm_package_version() {
 }
 
 _jvcl_::_sass_bootstrap() {
-  cp -pvrf "node_modules/bootstrap/scss/"{_functions,_variables,_maps,_mixins,_utilities,_grid,_forms,_buttons,forms,mixins,vendor}* "_sass/bootstrap"
+  _jvcl_::h1 "copy node_modules..."
+  cp -pvrf "./node_modules/bootstrap/scss/"{_functions,_variables,_maps,_mixins,_utilities,_grid,_forms,_buttons,forms,mixins,vendor}* "./_sass/bootstrap"
 }
 
 _jvcl_::_sass_tippyjs() {
@@ -51,10 +45,24 @@ _jvcl_::_sass_tippyjs() {
   rm -rf "${_tmp}"
 }
 
-if _jvcl_::brew_install_formula "node"; then
-  _jvcl_::npm_update
+_jvcl_::yarn_update() {
+  if ! type "yarn" &>/dev/null; then
+    printf "\nERROR: yarn is not installed\n"
+    return
+  fi
+  _jvcl_::h1 "yarn update..."
+  yarn set version stable &&
+    yarn install &&
+    yarn up &&
+    yarn upgrade-interactive
+}
+
+_jvcl_::main() {
+  _jvcl_::yarn_update || :
   _jvcl_::npm_audit
   _jvcl_::_sass_bootstrap
   # _jvcl_::_sass_tippyjs
   _jvcl_::webpack
-fi
+}
+
+_jvcl_::main
