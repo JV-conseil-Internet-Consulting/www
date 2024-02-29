@@ -92,7 +92,8 @@ const babelPresetLegacy = {
       },
     ],
   ],
-  plugins: ['@babel/plugin-proposal-class-properties'],
+  // plugins: ['@babel/plugin-proposal-class-properties'],
+  plugins: ['@babel/plugin-transform-class-properties'],
 };
 
 const babelPresetModern = {
@@ -108,7 +109,8 @@ const babelPresetModern = {
       },
     ],
   ],
-  plugins: ['@babel/plugin-proposal-class-properties'],
+  // plugins: ['@babel/plugin-proposal-class-properties'],
+  plugins: ['@babel/plugin-transform-class-properties'],
 };
 
 const sharedConfig = {
