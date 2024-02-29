@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-include-cache", "~> 0.2.1"
   # spec.add_runtime_dependency "github-pages", "~> 228"
 
-  spec.add_development_dependency "bundler", "~> 2.4.20"
+  spec.add_development_dependency "bundler", "~> 2.5.6"
   # spec.add_development_dependency "rake", "~> 13.0.6"
   spec.add_development_dependency "rake", "~> 13.1.0"
 end

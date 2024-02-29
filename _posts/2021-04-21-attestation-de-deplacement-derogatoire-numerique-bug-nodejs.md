@@ -39,7 +39,7 @@ Simple test en langage Python pour connaître le nombre de villes dont l'intitul
 #
 # author        : JV-conseil
 # credits       : JV-conseil
-# copyright     : Copyright (c) 2019-2023 JV-conseil
+# copyright     : Copyright (c) 2019-2024 JV-conseil
 #                 All rights reserved
 #====================================================
 
