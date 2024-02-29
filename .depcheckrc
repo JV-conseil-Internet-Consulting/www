@@ -6,5 +6,5 @@ ignores: [
   "bootstrap",
   "depcheck",
   "@fontsource/*",
-  "webpack-cli"
+  "webpack-cli",
 ]
