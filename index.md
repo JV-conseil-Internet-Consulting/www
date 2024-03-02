@@ -33,7 +33,6 @@ Computer programming activities ([NACE J6201](https://inspire.ec.europa.eu/codel
 Computer Programming Services ([SIC 7371](https://www.osha.gov/sic-manual/7371)),
 Custom Computer Programming Services ([NAICS 541511](https://www.census.gov/naics/?input=541511&year=2022&details=541511)).
 
-
 <!--
 
 **Here are some ideas to get you started:**
