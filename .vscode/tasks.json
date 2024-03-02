@@ -29,11 +29,6 @@
       "detail": "Run server jekyll serve --config '_config-dev.yml' --livereload",
     },
     {
-      "label": "npm",
-      "command": ".bash/osx/npm.sh",
-      "detail": "Update your Node.js packages for this repository",
-    },
-    {
       "label": "yarn",
       "command": ".bash/osx/yarn.sh",
       "detail": "Upgrade package.json"

@@ -28,11 +28,11 @@ See [Blog](/posts/) for more
 [JV conseil – Internet Consulting](https://www.jv-conseil.net) primarily focus on delivering software coding expertise for the developments of web apps propelled by popular languages such as Python 🐍 Django, Node.js on cloud platforms such as Microsoft Azure ☁️ involving database architecture delivered by tools such as PostgreSQL 🐘
 
 Our operations fall under the purview of
-*Programmation informatique* ([NAF 62.01Z](https://www.insee.fr/fr/metadonnees/nafr2/sousClasse/62.01Z)),
-Computer programming activities ([NACE J6201](https://inspire.ec.europa.eu/codelist/EconomicActivityNACEValue/J.62.01)),
-Computer Programming Services ([SIC 7371](https://www.osha.gov/sic-manual/7371)),
-Custom Computer Programming Services ([NAICS 541511](https://www.census.gov/naics/?input=541511&year=2022&details=541511)).
 
+- *Programmation informatique* ([NAF 62.01Z](https://www.insee.fr/fr/metadonnees/nafr2/sousClasse/62.01Z))
+- Computer programming activities ([NACE J6201](https://inspire.ec.europa.eu/codelist/EconomicActivityNACEValue/J.62.01))
+- Computer Programming Services ([SIC 7371](https://www.osha.gov/sic-manual/7371))
+- Custom Computer Programming Services ([NAICS 541511](https://www.census.gov/naics/?input=541511&year=2022&details=541511))
 
 <!--
 
