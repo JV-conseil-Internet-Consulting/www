@@ -1389,17 +1389,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/noto-sans@npm:^5.0.18":
-  version: 5.0.18
-  resolution: "@fontsource/noto-sans@npm:5.0.18"
-  checksum: 10c0/9ab441a3e766f2b1810826af65a968fd4ee752908d766cd9de90e3bc663fedbcf6c85ffdf2d18b944df9bb53b4a3e4fd52fdce4f0fe17e96e8b29781d13d6f6e
+"@fontsource/noto-sans@npm:^5.0.19":
+  version: 5.0.19
+  resolution: "@fontsource/noto-sans@npm:5.0.19"
+  checksum: 10c0/67f018df1749b46a64a6687be6f2634225a2d688ae2214a7d8689c03bfd3b7ff81bb8d2992be356fe95e8798b96f2c8e34b08de186ea00cfbbc1c773d812cccb
   languageName: node
   linkType: hard
 
-"@fontsource/roboto-slab@npm:^5.0.18":
-  version: 5.0.18
-  resolution: "@fontsource/roboto-slab@npm:5.0.18"
-  checksum: 10c0/a6e6b029396f438296313ba3ad60e563276f3050964d3b3624974848f6d08f9241e8ed992654116aed29a68af75f292f40e6827b2f8b87f493779e4bd148965d
+"@fontsource/roboto-slab@npm:^5.0.19":
+  version: 5.0.19
+  resolution: "@fontsource/roboto-slab@npm:5.0.19"
+  checksum: 10c0/c58f6e87bd8de6836841273e9738c513c04ddf3e32f64a80b61ee29c11a3d4fcb0a05886cec6f60ce7a130cf8d4667bd663f62b96ef9970f81b26c72c324c0f9
   languageName: node
   linkType: hard
 
@@ -2665,8 +2665,8 @@ __metadata:
     "@babel/core": "npm:^7.24.0"
     "@babel/plugin-transform-class-properties": "npm:^7.23.3"
     "@babel/preset-env": "npm:^7.24.0"
-    "@fontsource/noto-sans": "npm:^5.0.18"
-    "@fontsource/roboto-slab": "npm:^5.0.18"
+    "@fontsource/noto-sans": "npm:^5.0.19"
+    "@fontsource/roboto-slab": "npm:^5.0.19"
     "@hydecorp/component": "npm:^1.0.0"
     "@hydecorp/drawer": "npm:^1.0.0"
     "@hydecorp/push-state": "npm:^1.0.0"
