@@ -31,7 +31,7 @@
   "license": "EUPL-1.2",
   "private": true,
   "dependencies": {
-    "@fontsource/noto-sans": "^5.0.19",
+    "@fontsource/noto-sans": "^5.0.20",
     "@fontsource/roboto-slab": "^5.0.19",
     "@hydecorp/component": "^1.0.0",
     "@hydecorp/drawer": "^1.0.0",
