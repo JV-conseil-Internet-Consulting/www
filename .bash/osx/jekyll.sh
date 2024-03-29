@@ -61,9 +61,15 @@ _jvcl_::github_pages() {
 }
 
 # shellcheck disable=SC2317
-if _jvcl_::brew_install_formula "ruby"; then
+_jvcl_::main() {
+  if ! _jvcl_::brew_install_formula "ruby"; then
+    return 1
+  fi
   _jvcl_::gem_update
   _jvcl_::bundle_update
   _jvcl_::github_pages
+  open -na /Applications/Firefox.app --args '--private-window' 'http://127.0.0.1:4000' &
   _jvcl_::jekyll_serve
-fi
+}
+
+_jvcl_::main
