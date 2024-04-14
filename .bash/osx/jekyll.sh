@@ -52,12 +52,15 @@ _jvcl_::jekyll_serve() {
   _jvcl_::h1 "Launching Jekyll..."
   bundle exec jekyll clean --config "_config-dev.yml"
   bundle exec jekyll doctor --config "_config-dev.yml"
+  open -na /Applications/Firefox.app --args '--private-window' 'http://localhost:4000/'
   bundle exec jekyll serve --config "_config-dev.yml" --livereload --trace
 }
 
 _jvcl_::github_pages() {
-  # bundle exec github-pages health-check || :
-  /opt/homebrew/lib/ruby/gems/3.2.0/gems/github-pages-health-check-1.18.1/script/check www.jv-conseil.net || :
+  (
+    . "${HOME}/.env/jekyll/.env"
+    bundle exec github-pages health-check
+  ) || printf "\nERROR: bundle exec github-pages health-check failed\n"
 }
 
 # shellcheck disable=SC2317
@@ -68,7 +71,6 @@ _jvcl_::main() {
   _jvcl_::gem_update
   _jvcl_::bundle_update
   _jvcl_::github_pages
-  open -na /Applications/Firefox.app --args '--private-window' 'http://127.0.0.1:4000' &
   _jvcl_::jekyll_serve
 }
 
