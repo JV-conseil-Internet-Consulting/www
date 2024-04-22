@@ -1525,10 +1525,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/roboto-slab@npm:^5.0.19":
-  version: 5.0.19
-  resolution: "@fontsource/roboto-slab@npm:5.0.19"
-  checksum: 10c0/c58f6e87bd8de6836841273e9738c513c04ddf3e32f64a80b61ee29c11a3d4fcb0a05886cec6f60ce7a130cf8d4667bd663f62b96ef9970f81b26c72c324c0f9
+"@fontsource/roboto-slab@npm:^5.0.20":
+  version: 5.0.20
+  resolution: "@fontsource/roboto-slab@npm:5.0.20"
+  checksum: 10c0/1c9514d55c7c43a73cfb84caafb66d3c864a4b2eccb6bece3f374a868962eef5f53efddec57f6db5b047452cc6086e99358950f2a40d82515886c869e2653b07
   languageName: node
   linkType: hard
 
@@ -2818,7 +2818,7 @@ __metadata:
     "@babel/plugin-transform-class-properties": "npm:^7.24.1"
     "@babel/preset-env": "npm:^7.24.4"
     "@fontsource/noto-sans": "npm:^5.0.21"
-    "@fontsource/roboto-slab": "npm:^5.0.19"
+    "@fontsource/roboto-slab": "npm:^5.0.20"
     "@hydecorp/component": "npm:^1.0.0"
     "@hydecorp/drawer": "npm:^1.0.0"
     "@hydecorp/push-state": "npm:^1.0.0"
