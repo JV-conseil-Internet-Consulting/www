@@ -12,6 +12,16 @@
   "isBackground": false,
   "tasks": [
     {
+      "label": "fix bundler install",
+      "command": "gem uninstall bundler && gem install bundler",
+      "detail": "bundler fix install"
+    },
+    {
+      "label": "kill ruby",
+      "command": "killall -9 ruby || :",
+      "detail": "fix port is in use or requires root privileges"
+    },
+    {
       "label": "gem",
       "command": ".bash/osx/gem.sh",
       "detail": "Build a gem from this theme",
@@ -27,6 +37,11 @@
       },
       "command": ".bash/osx/jekyll.sh",
       "detail": "Run server jekyll serve --config '_config-dev.yml' --livereload",
+    },
+    {
+      "label": "node fix",
+      "command": "brew link --overwrite node",
+      "detail": "Fix error “env: node: No such file or directory”"
     },
     {
       "label": "yarn",
