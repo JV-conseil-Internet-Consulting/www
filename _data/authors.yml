@@ -9,7 +9,7 @@ JV-conseil:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    DevOps • Full Stack Developer • Web App Architect
+    **DevOps • Full Stack Developer • Web App Architect**
 
     Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load)
 
