@@ -14,6 +14,22 @@ selected_posts:
 
 {% include_cached my-description.liquid %}
 
+<img src="https://github-readme-stats.vercel.app/api?username=JV-conseil&show_icons=true&theme=slateorange" alt="GitHub Stats" style="float:right; margin:0 0 0 1rem" />
+
+With over two decades of experience in the tech industry, I am a seasoned Full Stack Developer, Web App Architect, and DevOps Specialist. Based in the Greater Paris Metropolitan Region, I've become well-versed in a wide array of technologies, with a special focus on Python (Django), JavaScript/TypeScript (Node.js), PostgreSQL, and Azure Cloud platforms. I've also developed a strong aptitude for Natural Language Processing (NLP), API development and ETL processes, allowing me to unlock insights from data and drive performance improvements. I have also a strong background in version control systems like Git, GitHub, and GitLab.
+
+My job involves designing, developing, and deploying scalable, high-performance web applications and robust cloud infrastructure. I collaborate closely with cross-functional teams to deliver innovative solutions that meet business objectives. My approach is rooted in a commitment to excellence, innovation, and client satisfaction. I work closely with customers to understand their unique needs and goals, striving to deliver solutions that exceed their expectations.
+
+Prior to my current role, I worked as a Webmaster, specialized in Apache, MySQL, PHP, and various CMS platforms like Drupal, Joomla!, and WordPress. My skills include front-end development using JavaScript, jQuery, Sass, and CSS, as well as domain and DNS management. I also have extensive experience in digital marketing, including SEO and social media strategies.
+
+My educational background includes a Master of Science in Management HEC School of Management and a Major in Management and New Technologies from Télécom ParisTech, both ranking among France's top selective higher education schools. I also hold a Master of Science in Political Science and a Bachelor of Arts in History from Université Paris Ouest Nanterre la Défense (Paris X Nanterre). My interdisciplinary education in digital engineering, business management, political sciences, and history has equipped me with a diverse perspective that informs my approach to technology and collaboration.
+
+For the past years, I assume the position of Chief Technology Officer (CTO) and lead a talented team consisting of data scientists, web developers, and software engineers. By leveraging our diverse expertise, we create cutting-edge solutions and innovative digital tools to provide robust support to researchers and researcher managers to secure funding and foster academical collaboration.
+
+When I'm not busy crafting digital solutions, you can find me lacing up my hiking boots to explore scenic trails or enjoying the great outdoors through sightseeing adventures. I also love to grab my bike and spend all day long exploring the vibrant streets of European capitals. To unwind, I indulge in my passion for live acoustic music concerts, with a particular fondness for jazz and baroque music.
+
+I am dedicated to staying at the forefront of technological advancements and continuously expanding my skill set to provide top-tier solutions for my clients. Let's build something extraordinary together!
+
 <!--
 ## Latest Posts
 -->

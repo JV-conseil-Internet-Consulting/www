@@ -8,8 +8,10 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
+# https://jekyllrb.com/
+
 # gem "jekyll", "~> 3.9.3"
-gem "jekyll", "~> 4.3.3"
+gem "jekyll", "~> 4.3.4"
 
 # IMPORTANT: The followign gem is used to compile math formulas to
 # KaTeX during site building.
