@@ -12,9 +12,14 @@
   "isBackground": false,
   "tasks": [
     {
-      "label": "bundler fix install",
+      "label": "fix bundler install",
       "command": "gem uninstall bundler && gem install bundler",
       "detail": "bundler fix install"
+    },
+    {
+      "label": "kill ruby",
+      "command": "killall -9 ruby || :",
+      "detail": "fix port is in use or requires root privileges"
     },
     {
       "label": "gem",
