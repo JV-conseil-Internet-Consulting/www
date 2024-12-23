@@ -22,11 +22,12 @@ Prior to my current role, I worked as a Webmaster, specialized in Apache, MySQL,
 
 I hold a Master of Science in Management from HEC Paris School of Management, a Major in Management and New Technologies from Télécom ParisTech, and additional degrees in Political Science and History from University Paris Nanterre. This interdisciplinary education blends digital engineering, business management, and humanities, enriching my technical and collaborative approach.
 
-My professional journey includes significant international experiences. In 2002-2003, I lived in the San Francisco Bay Area, Californiao, near Berkeley, immersing myself in American culture and gaining insights into North American business dynamics. From 2009 to 2011, I worked as a Freelance Web Developer in Istanbul, Turkey, experiencing its unique blend of Eastern and Western cultures. These periods abroad deepened my adaptability and global perspective, enhancing my ability to excel in multicultural settings.
+My professional journey includes significant international experiences. In 2002-2003, I lived in the San Francisco Bay Area, California, near Berkeley, immersing myself in American culture and gaining insights into North American business dynamics. From 2011 to 2013, I worked as a Freelance Web Developer in Istanbul, Turkey, experiencing its unique blend of Eastern and Western cultures. These periods abroad deepened my adaptability and global perspective, enhancing my ability to excel in multicultural settings.
 
 Currently, as Chief Technology Officer (CTO), I lead a skilled team of data scientists, web developers, and software engineers to create cutting-edge solutions and digital tools that support researchers, advisors, and research managers in securing funding and fostering academic collaboration.
 
 When I'm not busy crafting digital solutions, you can find me lacing up my hiking boots to explore scenic trails or enjoying the great outdoors through sightseeing adventures. I also love to grab my bike and spend all day long exploring the vibrant streets of European capitals. To unwind, I indulge in my passion for live acoustic music concerts, with a particular fondness for jazz and classical music.
+
 
 I am dedicated to staying at the forefront of technological advancements and continuously expanding my skill set to provide top-tier solutions for my clients. Let's build something extraordinary together!
 
