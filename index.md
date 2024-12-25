@@ -14,9 +14,11 @@ selected_posts:
 
 {% include_cached my-description.liquid %}
 
-<img src="https://github-readme-stats.vercel.app/api?username=JV-conseil&show_icons=true&theme=slateorange" alt="GitHub Stats" style="float:right; margin:0 0 0 1rem" />
+<img src="https://github-readme-stats.vercel.app/api?username=JV-conseil&show_icons=true&theme=slateorange" alt="GitHub Stats" style="float:right; margin:0 0 1rem 1rem" />
 
-With over two decades of experience in the tech industry, I am an seasoned Full Stack Developer, Web App Architect, and DevOps Specialist based in the Greater Paris Metropolitan Region. My expertise spans Python (Django), JavaScript/TypeScript (Node.js), PostgreSQL, and Azure Cloud platforms, alongside strengths in Natural Language Processing (NLP), API development, and ETL processes. I have a solid background in version control systems like Git, GitHub, and GitLab, and specialize in designing, developing, and deploying scalable web applications and robust cloud infrastructure. Collaborating with cross-functional teams, I deliver innovative solutions tailored to strategic and operational objectives with a focus on excellence, innovation, and client satisfaction.
+With over two decades of experience in the tech industry, I am a seasoned Full Stack Developer, Web App Architect, and DevOps Specialist based in the Greater Paris Metropolitan Region.
+
+My expertise spans Python (Django), JavaScript (Node.js), PostgreSQL, and Azure Cloud platforms, alongside strengths in Natural Language Processing (NLP), API development, and ETL processes. I have a solid background in version control systems like Git (GitHub) and specialize in designing, developing, and deploying scalable web applications and robust cloud infrastructure. Collaborating with cross-functional teams on user-centric approach, I deliver innovative solutions tailored to strategic and operational objectives with a focus on excellence, performance, and client satisfaction.
 
 Prior to my current role, I worked as a Webmaster, specialized in Apache, MySQL, PHP, and various CMS platforms like Drupal, Joomla!, and WordPress. My skills include front-end development using JavaScript, jQuery, Sass, and CSS, as well as domain and DNS management. I also have extensive experience in digital marketing, including SEO and social media strategies.
 
@@ -27,7 +29,6 @@ My professional journey includes significant international experiences. In 2002-
 Currently, as Chief Technology Officer (CTO), I lead a skilled team of data scientists, web developers, and software engineers to create cutting-edge solutions and digital tools that support researchers, advisors, and research managers in securing funding and fostering academic collaboration.
 
 When I'm not busy crafting digital solutions, you can find me lacing up my hiking boots to explore scenic trails or enjoying the great outdoors through sightseeing adventures. I also love to grab my bike and spend all day long exploring the vibrant streets of European capitals. To unwind, I indulge in my passion for live acoustic music concerts, with a particular fondness for jazz and classical music.
-
 
 I am dedicated to staying at the forefront of technological advancements and continuously expanding my skill set to provide top-tier solutions for my clients. Let's build something extraordinary together!
 
