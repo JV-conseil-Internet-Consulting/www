@@ -6,7 +6,7 @@
 
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
-[![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.net%2F)](https://www.jv-conseil.net "jv-conseil.net Health Status")
+[![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.dev%2F)](https://www.jv-conseil.dev "jv-conseil.net Health Status")
 [![CodeQL](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml/badge.svg?branch=dev)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml)
 [![Dependabot Updates](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=dev)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates)
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil "Become a sponsor to JV-conseil")
@@ -42,13 +42,13 @@ In [Gemfile.lock](./Gemfile.lock) do not upgrade `sass-embedded (1.62.1-arm64-da
 🍿 Fun facts - what does your team eat for breakfast?
 🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
-<p><a href="http://www.jv-conseil.net" target="_blank"><img src="https://user-images.githubusercontent.com/8126807/183259498-fc8aa360-60ed-4579-ad2b-168c5a1adc37.svg" width="500px" alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net"></a></p>
+<p><a href="http://www.jv-conseil.dev" target="_blank"><img src="https://user-images.githubusercontent.com/8126807/183259498-fc8aa360-60ed-4579-ad2b-168c5a1adc37.svg" width="500px" alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net"></a></p>
 
-<p><a href="http://www.jv-conseil.net" target="_blank"><img alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net" src="https://sites.google.com/a/jv-conseil.net/fr/logos/JV-conseil-Internet-Consulting-www.jv-conseil.net-signature-907f14-2480x205-72dpi.svg?width=500" width="500"></a></p>
+<p><a href="http://www.jv-conseil.dev" target="_blank"><img alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net" src="https://sites.google.com/a/jv-conseil.net/fr/logos/JV-conseil-Internet-Consulting-www.jv-conseil.dev-signature-907f14-2480x205-72dpi.svg?width=500" width="500"></a></p>
 
-<p><a href="http://www.jv-conseil.net" target="_blank"><img alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net" src="https://cdn.jv-conseil.net/_/JV-conseil-Internet-Consulting-www.jv-conseil.net-signature-907f14-2480x205-72dpi.svg" width="500"></a></p>
+<p><a href="http://www.jv-conseil.dev" target="_blank"><img alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net" src="https://cdn.jv-conseil.net/_/JV-conseil-Internet-Consulting-www.jv-conseil.dev-signature-907f14-2480x205-72dpi.svg" width="500"></a></p>
 
-<p><a href="http://www.jv-conseil.net" target="_blank"><img alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net" src="https://user-images.githubusercontent.com/8126807/184917005-42e9ba53-67fd-4fbc-a3ec-2c4212645907.png" width="500"></a></p>
+<p><a href="http://www.jv-conseil.dev" target="_blank"><img alt="JV CONSEIL – INTERNET CONSULTING • 2 rue de la Grande Pièce, 78860 Saint Nom-la-Bretèche, France • +33.134621723 • contact@jv-conseil.net" src="https://user-images.githubusercontent.com/8126807/184917005-42e9ba53-67fd-4fbc-a3ec-2c4212645907.png" width="500"></a></p>
 -->
 
 <!-- links -->

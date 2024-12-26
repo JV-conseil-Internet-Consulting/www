@@ -42,8 +42,6 @@ GEM
     ffi (1.17.0-arm-linux-gnu)
     ffi (1.17.0-arm-linux-musl)
     ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86-linux-gnu)
-    ffi (1.17.0-x86-linux-musl)
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     ffi (1.17.0-x86_64-linux-musl)
@@ -56,9 +54,6 @@ GEM
       bigdecimal
       rake (>= 13)
     google-protobuf (4.29.2-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.29.2-x86-linux)
       bigdecimal
       rake (>= 13)
     google-protobuf (4.29.2-x86_64-darwin)
@@ -146,17 +141,21 @@ GEM
     minitest (5.25.4)
     net-http (0.6.0)
       uri
-    nokogiri (1.17.2-aarch64-linux)
+    nokogiri (1.18.0-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.17.2-arm-linux)
+    nokogiri (1.18.0-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.17.2-arm64-darwin)
+    nokogiri (1.18.0-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.17.2-x86-linux)
+    nokogiri (1.18.0-arm-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.17.2-x86_64-darwin)
+    nokogiri (1.18.0-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.17.2-x86_64-linux)
+    nokogiri (1.18.0-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.0-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.0-x86_64-linux-musl)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -179,10 +178,6 @@ GEM
       google-protobuf (~> 4.28)
     sass-embedded (1.83.0-arm64-darwin)
       google-protobuf (~> 4.28)
-    sass-embedded (1.83.0-x86-linux-gnu)
-      google-protobuf (~> 4.28)
-    sass-embedded (1.83.0-x86-linux-musl)
-      google-protobuf (~> 4.28)
     sass-embedded (1.83.0-x86_64-darwin)
       google-protobuf (~> 4.28)
     sass-embedded (1.83.0-x86_64-linux-gnu)
@@ -203,15 +198,11 @@ PLATFORMS
   aarch64-linux
   aarch64-linux-gnu
   aarch64-linux-musl
-  arm-linux
   arm-linux-gnu
   arm-linux-gnueabihf
   arm-linux-musl
   arm-linux-musleabihf
   arm64-darwin
-  x86-linux
-  x86-linux-gnu
-  x86-linux-musl
   x86_64-darwin
   x86_64-linux
   x86_64-linux-gnu

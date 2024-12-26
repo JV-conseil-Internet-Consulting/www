@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["contact@jv-conseil.net"]
 
   spec.summary       = %q{"Why DeepDive 🌊 Because the format is liquid 💦 😉"}
-  spec.homepage      = "https://www.jv-conseil.net/"
+  spec.homepage      = "https://www.jv-conseil.dev/"
   spec.license       = "EUPL-1.2"
   spec.metadata = {
     "bug_tracker_uri"   => "https://github.com/JV-conseil/jekyll-theme-deepdive/issues",

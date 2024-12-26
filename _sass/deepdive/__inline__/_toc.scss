@@ -7,7 +7,7 @@
 // During development you can run `npm run watch:css`
 // to continuosly rebuild this file.
 
-// Copyright (c) 2023 JV conseil <https://www.jv-conseil.net/>
+// Copyright (c) 2023 JV conseil <https://www.jv-conseil.dev/>
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -23,27 +23,27 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #markdown-toc {
-  
+
   @extend .note-sm;
   margin: 2rem -1rem 2rem calc(-1rem + 1px);
   padding-left: 2.5rem;
   padding-bottom: .5rem;
-  
-//   transition: opacity 300ms ease, transform 300ms ease, border-color 1s ease; 
+
+//   transition: opacity 300ms ease, transform 300ms ease, border-color 1s ease;
   &:before { left: 1rem; }
 }
 
 body:not(.no-toc) #markdown-toc {
   @media screen and (min-width: $break-point-dynamic) {
-    
+
     position: absolute;
     z-index: 4;
     width: 20.5rem;
     right: 0;
     margin: auto;
     overflow: auto;
-    
-    
+
+
   }
 }
 
