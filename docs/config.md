@@ -24,7 +24,7 @@ The `url` is the domain of your site, including the protocol (`http` or `https`)
 
 ~~~yml
 # file: `_config.yml`
-url: https://www.jv-conseil.net
+url: https://www.jv-conseil.dev
 ~~~
 
 You don't need to provide this property when hosting on GitHub Pages or Netlify.

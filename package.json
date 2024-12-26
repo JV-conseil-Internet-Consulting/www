@@ -27,7 +27,7 @@
   "config": {
     "port": 4000
   },
-  "author": "JV conseil <contact@jv-conseil.net> (https://www.jv-conseil.net)",
+  "author": "JV conseil <contact@jv-conseil.net> (https://www.jv-conseil.dev)",
   "license": "EUPL-1.2",
   "private": true,
   "dependencies": {
@@ -89,7 +89,7 @@
   "bugs": {
     "url": "https://github.com/JV-conseil/jekyll-theme-deepdive/issues"
   },
-  "homepage": "https://www.jv-conseil.net/",
+  "homepage": "https://www.jv-conseil.dev/",
   "engines": {
     "node": ">=11"
   },

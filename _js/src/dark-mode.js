@@ -1,4 +1,4 @@
-// Copyright (c) 2023 JV conseil <https://www.jv-conseil.net/>
+// Copyright (c) 2023 JV conseil <https://www.jv-conseil.dev/>
 
 import { importTemplate, stylesheetReady, once } from './common';
 

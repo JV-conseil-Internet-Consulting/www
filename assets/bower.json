@@ -1,7 +1,7 @@
 {
   "name": "deepdive-assets",
-  "homepage": "https://www.jv-conseil.net/",
-  "author": "JV conseil <contact@jv-conseil.net> (https://www.jv-conseil.net)",
+  "homepage": "https://www.jv-conseil.dev/",
+  "author": "JV conseil <contact@jv-conseil.net> (https://www.jv-conseil.dev)",
   "license": "MIT",
   "private": true,
   "dependencies": {
