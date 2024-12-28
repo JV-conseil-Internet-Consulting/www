@@ -2,7 +2,7 @@ Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-deepdive"
   spec.version       = "9.1.7"
   spec.authors       = ["JV conseil"]
-  spec.email         = ["contact@jv-conseil.net"]
+  spec.email         = ["contact@jv-conseil.dev"]
 
   spec.summary       = %q{"Why DeepDive 🌊 Because the format is liquid 💦 😉"}
   spec.homepage      = "https://www.jv-conseil.dev/"
@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", ">= 3.9.3", "< 5.0"
   spec.add_runtime_dependency "jekyll-include-cache", "~> 0.2.1"
-  # spec.add_runtime_dependency "github-pages", "~> 228"
+  # spec.add_runtime_dependency "github-pages", "~> 232"
 
   spec.add_development_dependency "bundler", "~> 2.5.6"
   # spec.add_development_dependency "rake", "~> 13.0.6"
