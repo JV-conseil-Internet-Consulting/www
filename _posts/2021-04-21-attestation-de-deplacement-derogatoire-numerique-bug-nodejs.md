@@ -60,7 +60,7 @@ __credits__ = ["JV-conseil"]
 __license__ = "BSD 3-Clause License"
 __version__ = "1.0.0"
 __maintainer__ = "JV-conseil"
-__email__ = "contact@jv-conseil.net"
+__email__ = "contact@jv-conseil.dev"
 __status__ = "Development"
 
 try:

@@ -54,7 +54,7 @@ logo:                  /assets/img/logo.png
 author:
   # Used by `jekyll-feed`:
   name:                JV conseil
-  email:               contact@jv-conseil.net
+  email:               contact@jv-conseil.dev
   picture:             /assets/img/logo.png
   social:
     linkedin:          vieillefont
@@ -64,7 +64,7 @@ author:
     mastodon:          https://mastodon.social/@JVconseil
     stackoverflow:     2477854
     # twitter:           JVconseil
-    email:             contact@jv-conseil.net
+    email:             contact@jv-conseil.dev
 
 # Add links to the sidebar.
 # menu:

@@ -27,7 +27,7 @@
   "config": {
     "port": 4000
   },
-  "author": "JV conseil <contact@jv-conseil.net> (https://www.jv-conseil.dev)",
+  "author": "JV conseil <contact@jv-conseil.dev> (https://www.jv-conseil.dev)",
   "license": "EUPL-1.2",
   "private": true,
   "dependencies": {

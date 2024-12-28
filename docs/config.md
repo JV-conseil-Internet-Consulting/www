@@ -226,7 +226,7 @@ At a bare minimum, you should add an `author` key with a `name` and `email` sub-
 # file: `_config.yml`
 author:
   name:  JV conseil
-  email: contact@jv-conseil.net
+  email: contact@jv-conseil.dev
 ~~~
 
 If you would like the author to be displayed in the about section below a post or project\*, add an `about` key and provide markdown content. I recommend using the YAML pipe `|` syntax, so you can include multiple paragraphs:
@@ -235,7 +235,7 @@ If you would like the author to be displayed in the about section below a post o
 # file: `_config.yml`
 author:
   name:  JV conseil
-  email: contact@jv-conseil.net
+  email: contact@jv-conseil.dev
   about: |
     Hi, I'm JV conseil or @jv-conseil...
 
@@ -345,7 +345,7 @@ If you'd like to add an email <span class="icon-mail"></span>, RSS <span class="
 # file: `_config.yml`
 author:
   social:
-    email:    contact@jv-conseil.net
+    email:    contact@jv-conseil.dev
     rss:      {{ site.url }}{{ site.baseurl }}/feed.xml # make sure you provide an absolute URL
     download: https://github.com/hydecorp/deepdive/archive/v9.1.6.zip
 ~~~

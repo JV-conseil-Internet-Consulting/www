@@ -2,7 +2,7 @@ Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-deepdive"
   spec.version       = "9.1.7"
   spec.authors       = ["JV conseil"]
-  spec.email         = ["contact@jv-conseil.net"]
+  spec.email         = ["contact@jv-conseil.dev"]
 
   spec.summary       = %q{"Why DeepDive 🌊 Because the format is liquid 💦 😉"}
   spec.homepage      = "https://www.jv-conseil.dev/"

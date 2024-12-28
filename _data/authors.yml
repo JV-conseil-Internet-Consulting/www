@@ -4,7 +4,7 @@
 JV-conseil:
   # name:              <firstname> <lastname>
   name:                JV conseil
-  # email:             contact@jv-conseil.net
+  # email:             contact@jv-conseil.dev
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -34,7 +34,7 @@ JV-conseil:
     mastodon:          https://mastodon.social/@JVconseil
     stackoverflow:     2477854
     # twitter:           JVconseil
-    email:             contact@jv-conseil.net
+    email:             contact@jv-conseil.dev
     # twitter:         <username>
     # email:           <mail@domain.tld>
     # rss:             https://<url>/feed.xml
