@@ -60,7 +60,7 @@ group :jekyll_plugins do
 
   # Non-Jekyll plugins:
   gem "jemoji", "~> 0.13.0"
-  # gem "github-pages", "~> 228"
+  # gem "github-pages", "~> 232"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -72,6 +72,10 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.2.0", :install_if => Gem.win_platform?
+
+# The CSV library provides a complete interface to CSV files and data.
+# It offers tools to enable you to read and write to and from Strings or IO objects, as needed.
+gem "csv", "~> 3.3"
 
 # kramdown v2 ships without the gfm parser by default. If you're using
 # kramdown v1, comment out this line.
@@ -85,5 +89,5 @@ gem "wdm", "~> 0.2.0", :install_if => Gem.win_platform?
 group :development do
   gem "faraday-retry", "~> 2.2.0"
   # gem "sass", "~> 3.7"
-  # gem "webrick", "~> 1.8.1"
+  gem "webrick", "~> 1.9"
 end

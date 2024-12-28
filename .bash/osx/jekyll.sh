@@ -20,6 +20,7 @@
 {
   . ".bash/incl/all.sh"
   . ".bash/osx/gem.sh"
+  . "${HOME}/.env/jekyll/.env"
 }
 
 _jvcl_::html_to_liquid() {
@@ -58,7 +59,6 @@ _jvcl_::jekyll_serve() {
 
 _jvcl_::github_pages() {
   (
-    . "${HOME}/.env/jekyll/.env"
     bundle exec github-pages health-check
   ) || printf "\nERROR: bundle exec github-pages health-check failed\n"
 }
@@ -70,7 +70,7 @@ _jvcl_::main() {
   fi
   _jvcl_::gem_update
   _jvcl_::bundle_update
-  _jvcl_::github_pages
+  # _jvcl_::github_pages
   _jvcl_::jekyll_serve
 }
 
