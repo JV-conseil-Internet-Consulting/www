@@ -58,10 +58,10 @@ jobs:
 
       - name: Build with Jekyll Docker
         run: |
-          docker run --plaform linux/amd64 \
+          docker run \
           -v ${{ github.workspace }}:/srv/jekyll \
           -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-          jvconseil/jekyll-docker \
+          jvconseil/jekyll-docker:4 \
           /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --trace --future"
 
       # - name: Build with Jekyll
