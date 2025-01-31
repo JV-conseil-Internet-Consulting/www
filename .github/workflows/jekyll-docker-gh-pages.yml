@@ -58,7 +58,7 @@ jobs:
 
       - name: Build with Jekyll Docker
         run: |
-          docker run --help \
+          docker run --plaform linux/amd64 \
           -v ${{ github.workspace }}:/srv/jekyll \
           -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
           jvconseil/jekyll-docker \
