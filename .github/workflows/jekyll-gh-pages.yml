@@ -68,7 +68,7 @@ jobs:
       - name: Attest
         uses: actions/attest-build-provenance@v2
         with:
-          # subject-name: artifact.zip
+          subject-name: upload-pages-artifact@v3
           subject-digest: sha256:${{ steps.upload.outputs.artifact_id }}
 
   # Deployment job
