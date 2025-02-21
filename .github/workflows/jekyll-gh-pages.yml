@@ -64,12 +64,6 @@ jobs:
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
-      
-      - name: Attest
-        uses: actions/attest-build-provenance@v2
-        with:
-          subject-name: upload-pages-artifact@v3
-          subject-digest: sha256:${{ steps.upload.outputs.artifact_id }}
 
   # Deployment job
   deploy:
