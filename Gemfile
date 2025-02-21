@@ -10,7 +10,6 @@ source "https://rubygems.org"
 # Happy Jekylling!
 # https://jekyllrb.com/
 
-# gem "jekyll", "~> 3.9.3"
 gem "jekyll", "~> 4.4.1"
 
 # IMPORTANT: The followign gem is used to compile math formulas to

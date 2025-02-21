@@ -45,22 +45,23 @@ EOF
 }
 
 _jvcl_::jekyll_serve() {
-  # local _cmd _exe _jekyll=("bundle" "exec" "jekyll" "--config" "_config-dev.yml")
-  # for _cmd in "clean" "doctor" "serve"; do
-  #   _exe=("${_jekyll[@]:0:3}" "${_cmd}" "${_jekyll[@]:3}")
-  #   echo "${_exe[@]}" && "${_exe[@]}"
-  # done
+  local -a _cmd=() _args
+
   _jvcl_::h1 "Launching Jekyll..."
-  bundle exec jekyll clean --config "_config-dev.yml"
-  bundle exec jekyll doctor --config "_config-dev.yml"
-  open -na /Applications/Firefox.app --args '--private-window' 'http://localhost:4000/'
-  bundle exec jekyll serve --config "_config-dev.yml" --livereload --trace
+
+  for _arg in "clean" "doctor" "serve"; do
+    _cmd=("bundle" "exec" "jekyll" "${_arg}" "--config" "_config-dev.yml")
+    if [ "${_arg}" == "serve" ]; then
+      _cmd+=("--livereload" "--trace")
+      open -na /Applications/Firefox.app --args '--private-window' 'http://localhost:4000/'
+    fi
+    "${_cmd[@]}"
+  done
 }
 
 _jvcl_::github_pages() {
-  (
-    bundle exec github-pages health-check
-  ) || printf "\nERROR: bundle exec github-pages health-check failed\n"
+  bundle exec github-pages health-check ||
+    printf "\nERROR: bundle exec github-pages health-check failed\n"
 }
 
 # shellcheck disable=SC2317
