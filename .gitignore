@@ -1,6 +1,7 @@
 # jekyll
 # See <https://github.com/github/gitignore/blob/main/Jekyll.gitignore>
-_site/
+_site/*
+!_site/.ini
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
