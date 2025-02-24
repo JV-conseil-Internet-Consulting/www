@@ -74,7 +74,7 @@
     "eslint-config-prettier": "^10.0.1",
     "null-loader": "^4.0.1",
     "onchange": "^7.1.0",
-    "prettier": "^3.5.1",
+    "prettier": "^3.5.2",
     "tar": "^7.4.3",
     "uglify-js": "^3.19.3",
     "webpack": "^5.98.0",
