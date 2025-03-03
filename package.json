@@ -47,7 +47,7 @@
     "abortcontroller-polyfill": "^1.7.8",
     "bootstrap": "^5.3.3",
     "broadcastchannel-polyfill": "^1.0.1",
-    "core-js": "^3.40.0",
+    "core-js": "^3.41.0",
     "create-element-x": "^1.2.0",
     "dompurify": "^3.2.4",
     "intersection-observer": "^0.12.2",
