@@ -32,7 +32,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/noto-sans": "^5.1.1",
-    "@fontsource/roboto-slab": "^5.1.1",
+    "@fontsource/roboto-slab": "^5.2.5",
     "@hydecorp/component": "^1.0.0",
     "@hydecorp/drawer": "^1.0.0",
     "@hydecorp/push-state": "^1.0.0",
