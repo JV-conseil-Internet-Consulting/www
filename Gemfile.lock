@@ -126,7 +126,7 @@ GEM
       gemoji (>= 3, < 5)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (2.10.1)
+    json (2.10.2)
     katex (0.10.0)
       execjs (~> 2.8)
     kramdown (2.5.1)
