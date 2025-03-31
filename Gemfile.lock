@@ -36,7 +36,7 @@ GEM
       logger
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
-    faraday-retry (2.2.1)
+    faraday-retry (2.3.0)
       faraday (~> 2.0)
     ffi (1.17.1-aarch64-linux-gnu)
     ffi (1.17.1-aarch64-linux-musl)
@@ -140,7 +140,7 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    logger (1.6.6)
+    logger (1.7.0)
     mercenary (0.4.0)
     minitest (5.25.5)
     net-http (0.6.0)
@@ -215,7 +215,7 @@ PLATFORMS
 DEPENDENCIES
   csv (~> 3.3)
   duktape
-  faraday-retry (~> 2.2.0)
+  faraday-retry (~> 2.3.0)
   jekyll (~> 4.4.1)
   jekyll-avatar (~> 0.8.0)
   jekyll-compose
