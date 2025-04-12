@@ -45,15 +45,15 @@
     "@webcomponents/url": "^0.7.9",
     "@webcomponents/webcomponents-platform": "^1.0.1",
     "abortcontroller-polyfill": "^1.7.8",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.5",
     "broadcastchannel-polyfill": "^1.0.1",
     "core-js": "^3.41.0",
     "create-element-x": "^1.2.0",
-    "dompurify": "^3.2.4",
+    "dompurify": "^3.2.5",
     "intersection-observer": "^0.12.2",
     "jquery": "^3.7.1",
     "kv-storage-polyfill": "^2.0.0",
-    "lit": "^3.2.1",
+    "lit": "^3.3.0",
     "minisearch": "^7.1.2",
     "rxjs": "^7.8.2",
     "scroll-into-view-if-needed": "^3.1.0",
@@ -70,14 +70,14 @@
     "braces": "^3.0.3",
     "dedent": "^1.5.3",
     "depcheck": "^1.4.7",
-    "eslint": "^9.23.0",
-    "eslint-config-prettier": "^10.1.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
     "null-loader": "^4.0.1",
     "onchange": "^7.1.0",
     "prettier": "^3.5.3",
     "tar": "^7.4.3",
     "uglify-js": "^3.19.3",
-    "webpack": "^5.98.0",
+    "webpack": "^5.99.5",
     "webpack-cli": "^6.0.1",
     "webpack-merge": "^6.0.1",
     "yargs": "^17.7.2"
@@ -93,5 +93,5 @@
   "engines": {
     "node": ">=11"
   },
-  "packageManager": "yarn@4.7.0"
+  "packageManager": "yarn@4.9.1"
 }
