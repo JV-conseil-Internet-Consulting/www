@@ -2911,7 +2911,6 @@ __metadata:
     babel-loader: "npm:^10.0.0"
     bootstrap: "npm:^5.3.5"
     bower: "npm:^1.8.14"
-    braces: "npm:^3.0.3"
     broadcastchannel-polyfill: "npm:^1.0.1"
     core-js: "npm:^3.41.0"
     create-element-x: "npm:^1.2.0"
