@@ -69,7 +69,7 @@
     "bower": "^1.8.14",
     "dedent": "^1.5.3",
     "depcheck": "^1.4.7",
-    "eslint": "^9.25.0",
+    "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
     "null-loader": "^4.0.1",
     "onchange": "^7.1.0",
