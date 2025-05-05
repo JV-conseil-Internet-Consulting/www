@@ -1566,10 +1566,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/noto-sans@npm:^5.2.6":
-  version: 5.2.6
-  resolution: "@fontsource/noto-sans@npm:5.2.6"
-  checksum: 10c0/efcab12726e7e41a5ec96d135103b73ee19c6b994ba39fdccd401cfda425d7963a4127a0db5fda94a3531dc3897a46482478a9f46e6a5e95d39138cc3de2bd7d
+"@fontsource/noto-sans@npm:^5.2.7":
+  version: 5.2.7
+  resolution: "@fontsource/noto-sans@npm:5.2.7"
+  checksum: 10c0/d16fac886608d17f0a0bb000f0b3a83aecda3663cbab8195b0432ae776090e9a443527c515729cc94ec631ed140fa2aeb8f9efb30c058f31ead755809bb05107
   languageName: node
   linkType: hard
 
@@ -2894,7 +2894,7 @@ __metadata:
     "@babel/core": "npm:^7.26.10"
     "@babel/plugin-transform-class-properties": "npm:^7.25.9"
     "@babel/preset-env": "npm:^7.26.9"
-    "@fontsource/noto-sans": "npm:^5.2.6"
+    "@fontsource/noto-sans": "npm:^5.2.7"
     "@fontsource/roboto-slab": "npm:^5.2.5"
     "@hydecorp/component": "npm:^1.0.0"
     "@hydecorp/drawer": "npm:^1.0.0"
