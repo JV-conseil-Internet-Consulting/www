@@ -45,7 +45,7 @@
     "@webcomponents/url": "^0.7.9",
     "@webcomponents/webcomponents-platform": "^1.0.1",
     "abortcontroller-polyfill": "^1.7.8",
-    "bootstrap": "^5.3.5",
+    "bootstrap": "^5.3.6",
     "broadcastchannel-polyfill": "^1.0.1",
     "core-js": "^3.42.0",
     "create-element-x": "^1.2.0",
@@ -64,7 +64,7 @@
   "devDependencies": {
     "@babel/core": "^7.27.1",
     "@babel/plugin-transform-class-properties": "^7.27.1",
-    "@babel/preset-env": "^7.27.1",
+    "@babel/preset-env": "^7.27.2",
     "babel-loader": "^10.0.0",
     "bower": "^1.8.14",
     "dedent": "^1.6.0",
@@ -76,7 +76,7 @@
     "prettier": "^3.5.3",
     "tar": "^7.4.3",
     "uglify-js": "^3.19.3",
-    "webpack": "^5.99.7",
+    "webpack": "^5.99.8",
     "webpack-cli": "^6.0.1",
     "webpack-merge": "^6.0.1",
     "yargs": "^17.7.2"
