@@ -28,4 +28,4 @@ The overall goal of this talk is to provide a succulent roadmap for colleagues w
 
 ---
 
-:point_right: [AI And Open Data For Advancing Research Management](https://earma.org/abstracts/submission/1460/view/ "AI And Open Data For Advancing Research Management").
+:point_right: [AI And Open Data For Advancing Research Management](https://earma.org/abstracts/submission/1460/view/ "AI And Open Data For Advancing Research Management") on [INORMS Congress Madrid 2025](https://earma.org/abstracts/submissions/97/?topic=35 "Topic: Responsible Use of AI in Research Management") official website.
