@@ -34,9 +34,9 @@ GEM
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
-    faraday-net_http (3.4.0)
+    faraday-net_http (3.4.1)
       net-http (>= 0.5.0)
-    faraday-retry (2.3.1)
+    faraday-retry (2.3.2)
       faraday (~> 2.0)
     ffi (1.17.2-aarch64-linux-gnu)
     ffi (1.17.2-aarch64-linux-musl)
@@ -215,7 +215,7 @@ PLATFORMS
 DEPENDENCIES
   csv (~> 3.3)
   duktape
-  faraday-retry (~> 2.3.1)
+  faraday-retry (~> 2.3.2)
   jekyll (~> 4.4.1)
   jekyll-avatar (~> 0.8.0)
   jekyll-compose

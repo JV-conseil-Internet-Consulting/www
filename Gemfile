@@ -86,7 +86,7 @@ gem "csv", "~> 3.3"
 
 # Development
 group :development do
-  gem "faraday-retry", "~> 2.3.1"
+  gem "faraday-retry", "~> 2.3.2"
   # gem "sass", "~> 3.7"
   gem "webrick", "~> 1.9"
 end
