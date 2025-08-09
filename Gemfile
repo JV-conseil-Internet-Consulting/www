@@ -74,7 +74,8 @@ gem "wdm", "~> 0.2.0", :install_if => Gem.win_platform?
 
 # The CSV library provides a complete interface to CSV files and data.
 # It offers tools to enable you to read and write to and from Strings or IO objects, as needed.
-gem "csv", "~> 3.3"
+# gem "csv", "~> 3.3"
+gem "csv", "~> 3.3.5"
 
 # kramdown v2 ships without the gfm parser by default. If you're using
 # kramdown v1, comment out this line.
@@ -86,12 +87,14 @@ gem "csv", "~> 3.3"
 
 # Development
 group :development do
-  gem "faraday-retry", "~> 2.3.1"
+  # gem "faraday-retry", "~> 2.3.1"
+  gem "faraday-retry", "~> 2.3.2"
   # gem "sass", "~> 3.7"
   gem "webrick", "~> 1.9"
 end
 
 # Dependabot
 group :dependabot do
-  gem "json", "~> 2.11.3"
+  # gem "json", "~> 2.11.3"
+  gem "json", "~> 2.13.2"
 end
