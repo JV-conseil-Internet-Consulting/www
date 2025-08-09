@@ -1,97 +1,248 @@
-source "https://rubygems.org"
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (8.0.2)
+      base64
+      benchmark (>= 0.3)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.3.1)
+      connection_pool (>= 2.2.5)
+      drb
+      i18n (>= 1.6, < 2)
+      logger (>= 1.4.2)
+      minitest (>= 5.1)
+      securerandom (>= 0.3)
+      tzinfo (~> 2.0, >= 2.0.5)
+      uri (>= 0.13.1)
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.3.0)
+    benchmark (0.4.1)
+    bigdecimal (3.2.2)
+    colorator (1.1.0)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.3)
+    csv (3.3.5)
+    drb (2.2.3)
+    duktape (2.7.0.0)
+    em-websocket (0.5.3)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0)
+    eventmachine (1.2.7)
+    execjs (2.10.0)
+    faraday (2.13.4)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.1)
+      net-http (>= 0.5.0)
+    faraday-retry (2.3.2)
+      faraday (~> 2.0)
+    ffi (1.17.2-aarch64-linux-gnu)
+    ffi (1.17.2-aarch64-linux-musl)
+    ffi (1.17.2-arm-linux-gnu)
+    ffi (1.17.2-arm-linux-musl)
+    ffi (1.17.2-arm64-darwin)
+    ffi (1.17.2-x86_64-darwin)
+    ffi (1.17.2-x86_64-linux-gnu)
+    ffi (1.17.2-x86_64-linux-musl)
+    forwardable-extended (2.6.0)
+    gemoji (4.1.0)
+    google-protobuf (4.31.1)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.31.1-aarch64-linux-gnu)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.31.1-aarch64-linux-musl)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.31.1-arm64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.31.1-x86_64-darwin)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.31.1-x86_64-linux-gnu)
+      bigdecimal
+      rake (>= 13)
+    google-protobuf (4.31.1-x86_64-linux-musl)
+      bigdecimal
+      rake (>= 13)
+    html-pipeline (2.14.3)
+      activesupport (>= 2)
+      nokogiri (>= 1.4)
+    http_parser.rb (0.8.0)
+    i18n (1.14.7)
+      concurrent-ruby (~> 1.0)
+    jekyll (4.4.1)
+      addressable (~> 2.4)
+      base64 (~> 0.2)
+      colorator (~> 1.0)
+      csv (~> 3.0)
+      em-websocket (~> 0.5)
+      i18n (~> 1.0)
+      jekyll-sass-converter (>= 2.0, < 4.0)
+      jekyll-watch (~> 2.0)
+      json (~> 2.6)
+      kramdown (~> 2.3, >= 2.3.1)
+      kramdown-parser-gfm (~> 1.0)
+      liquid (~> 4.0)
+      mercenary (~> 0.3, >= 0.3.6)
+      pathutil (~> 0.9)
+      rouge (>= 3.0, < 5.0)
+      safe_yaml (~> 1.0)
+      terminal-table (>= 1.8, < 4.0)
+      webrick (~> 1.7)
+    jekyll-avatar (0.8.0)
+      jekyll (>= 3.0, < 5.0)
+    jekyll-compose (0.12.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-default-layout (0.1.5)
+      jekyll (>= 3.0, < 5.0)
+    jekyll-feed (0.17.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-last-modified-at (1.3.2)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-mentions (1.6.0)
+      html-pipeline (~> 2.3)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-optional-front-matter (0.3.2)
+      jekyll (>= 3.0, < 5.0)
+    jekyll-paginate (1.1.0)
+    jekyll-readme-index (0.3.0)
+      jekyll (>= 3.0, < 5.0)
+    jekyll-redirect-from (0.16.0)
+      jekyll (>= 3.3, < 5.0)
+    jekyll-relative-links (0.7.0)
+      jekyll (>= 3.3, < 5.0)
+    jekyll-sass-converter (3.1.0)
+      sass-embedded (~> 1.75)
+    jekyll-seo-tag (2.8.0)
+      jekyll (>= 3.8, < 5.0)
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
+    jekyll-titles-from-headings (0.5.3)
+      jekyll (>= 3.3, < 5.0)
+    jekyll-watch (2.2.1)
+      listen (~> 3.0)
+    jemoji (0.13.0)
+      gemoji (>= 3, < 5)
+      html-pipeline (~> 2.2)
+      jekyll (>= 3.0, < 5.0)
+    json (2.13.2)
+    katex (0.10.0)
+      execjs (~> 2.8)
+    kramdown (2.5.1)
+      rexml (>= 3.3.9)
+    kramdown-math-katex (1.0.1)
+      katex (~> 0.4)
+      kramdown (~> 2.0)
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
+    liquid (4.0.4)
+    listen (3.9.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.7.0)
+    mercenary (0.4.0)
+    minitest (5.25.5)
+    net-http (0.6.0)
+      uri
+    nokogiri (1.18.9-aarch64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.9-aarch64-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.9-arm-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.9-arm-linux-musl)
+      racc (~> 1.4)
+    nokogiri (1.18.9-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.9-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.18.9-x86_64-linux-gnu)
+      racc (~> 1.4)
+    nokogiri (1.18.9-x86_64-linux-musl)
+      racc (~> 1.4)
+    pathutil (0.16.2)
+      forwardable-extended (~> 2.6)
+    public_suffix (6.0.2)
+    racc (1.8.1)
+    rake (13.3.0)
+    rb-fsevent (0.11.2)
+    rb-inotify (0.11.1)
+      ffi (~> 1.0)
+    rexml (3.4.1)
+    rouge (4.6.0)
+    safe_yaml (1.0.5)
+    sass-embedded (1.90.0-aarch64-linux-gnu)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.90.0-aarch64-linux-musl)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.90.0-arm-linux-gnueabihf)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.90.0-arm-linux-musleabihf)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.90.0-arm64-darwin)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.90.0-x86_64-darwin)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.90.0-x86_64-linux-gnu)
+      google-protobuf (~> 4.31)
+    sass-embedded (1.90.0-x86_64-linux-musl)
+      google-protobuf (~> 4.31)
+    securerandom (0.4.1)
+    terminal-table (3.0.2)
+      unicode-display_width (>= 1.1.1, < 3)
+    tzinfo (2.0.6)
+      concurrent-ruby (~> 1.0)
+    unicode-display_width (2.6.0)
+    uri (1.0.3)
+    wdm (0.2.0)
+    webrick (1.9.1)
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-# https://jekyllrb.com/
+PLATFORMS
+  aarch64-linux-gnu
+  aarch64-linux-musl
+  arm-linux-gnu
+  arm-linux-gnueabihf
+  arm-linux-musl
+  arm-linux-musleabihf
+  arm64-darwin
+  x86_64-darwin
+  x86_64-linux-gnu
+  x86_64-linux-musl
 
-gem "jekyll", "~> 4.4.1"
+DEPENDENCIES
+  csv (~> 3.3.5)
+  duktape
+  faraday-retry (~> 2.3.2)
+  jekyll (~> 4.4.1)
+  jekyll-avatar (~> 0.8.0)
+  jekyll-compose
+  jekyll-default-layout
+  jekyll-feed
+  jekyll-include-cache
+  jekyll-last-modified-at
+  jekyll-mentions
+  jekyll-optional-front-matter
+  jekyll-paginate
+  jekyll-readme-index
+  jekyll-redirect-from
+  jekyll-relative-links
+  jekyll-seo-tag
+  jekyll-sitemap
+  jekyll-titles-from-headings
+  jemoji (~> 0.13.0)
+  json (~> 2.13.2)
+  kramdown-math-katex
+  tzinfo (>= 1, < 3)
+  tzinfo-data
+  wdm (~> 0.2.0)
+  webrick (~> 1.9)
 
-# IMPORTANT: The followign gem is used to compile math formulas to
-# KaTeX during site building.
-#
-# There are a couple of things to know about this gem:
-# *  It is not supported on GitHub Pages.
-#    You have to build the site on your machine before uploading to GitHub,
-#    or use a more permissive cloud building tool such as Netlify.
-# *  You need some kind of JavaScript runtime on your machine.
-#    Usually installing NodeJS will suffice.
-#    For details, see <https://github.com/kramdown/math-katex#documentation>
-#
-# If you're using the MathJax math engine instead, free to remove the line below:
-gem "kramdown-math-katex"
-
-# A JavaScript runtime for ruby that helps with running the katex gem above.
-gem "duktape"
-# gem "execjs"
-
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-# gem "minima", "~> 2.0"
-
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-  gem "jekyll-avatar", "~> 0.8.0"
-  gem "jekyll-default-layout"
-  gem "jekyll-feed"
-  gem "jekyll-include-cache"
-  gem "jekyll-mentions"
-  gem "jekyll-optional-front-matter"
-  gem "jekyll-paginate"
-  gem "jekyll-readme-index"
-  gem "jekyll-redirect-from"
-  gem "jekyll-relative-links"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
-  gem "jekyll-titles-from-headings"
-
-  # Non-Github Pages plugins:
-  gem "jekyll-last-modified-at"
-  gem "jekyll-compose"
-
-  # Non-Jekyll plugins:
-  gem "jemoji", "~> 0.13.0"
-  # gem "github-pages", "~> 232"
-end
-
-# Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
-# and associated library.
-platforms :mingw, :x64_mingw, :mswin, :jruby do
-  gem "tzinfo", ">= 1", "< 3"
-  gem "tzinfo-data"
-end
-
-# Performance-booster for watching directories on Windows
-gem "wdm", "~> 0.2.0", :install_if => Gem.win_platform?
-
-# The CSV library provides a complete interface to CSV files and data.
-# It offers tools to enable you to read and write to and from Strings or IO objects, as needed.
-gem "csv", "~> 3.3"
-
-# kramdown v2 ships without the gfm parser by default. If you're using
-# kramdown v1, comment out this line.
-# gem "kramdown-parser-gfm"
-
-# Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
-# do not have a Java counterpart.
-# gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-
-# Development
-group :development do
-  gem "faraday-retry", "~> 2.3.1"
-  # gem "sass", "~> 3.7"
-  gem "webrick", "~> 1.9"
-end
-
-# Dependabot
-group :dependabot do
-  gem "json", "~> 2.11.3"
-end
+BUNDLED WITH
+   2.7.1
