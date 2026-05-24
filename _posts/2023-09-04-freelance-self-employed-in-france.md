@@ -2,7 +2,7 @@
 layout: post
 title: Freelance Self-Employed in France
 image:
-  path: /assets/posts/2023-09-04-freelance-self-employed-in-france.png
+  path: /assets/posts/2023-09-04-freelance-self-employed-in-france.webp
 description: >
   Quick Start Guide
 # hide_description: true

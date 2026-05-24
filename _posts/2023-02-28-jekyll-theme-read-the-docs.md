@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll Theme Read the Docs 📖
 image:
-  path: /assets/posts/2023-02-28-jekyll-theme-read-the-docs.png
+  path: /assets/posts/2023-02-28-jekyll-theme-read-the-docs.webp
 description: >
   Read the Docs 📖 like Jekyll Theme for GitHub Pages
 hide_description: true

@@ -2,7 +2,7 @@
 layout: post
 title: PgBouncer and PostgreSQL Azure Flexible Server a bumpy road 🛣
 image:
-  path: /assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.jpg
+  path: /assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.webp
 description: >
   Azure PostgreSQL Flexible Server and PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure
 # hide_description: true

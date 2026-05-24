@@ -3,6 +3,7 @@
 # brew install git-lfs
 # git lfs install
 # git lfs track {"*.eot","*.ico","*.gif","*.jpg","*.pdf","*.png","*.ttf","*.svg","*.woff","*.woff2"}
+# git lfs track *.webp
 #
 # Documentation
 # ------------
@@ -20,3 +21,4 @@
 *.ttf filter=lfs diff=lfs merge=lfs -text
 *.woff filter=lfs diff=lfs merge=lfs -text
 *.woff2 filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
