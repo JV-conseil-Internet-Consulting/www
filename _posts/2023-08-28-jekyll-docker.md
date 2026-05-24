@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll Docker
 image:
-  path: /assets/posts/2023-08-28-jekyll-docker.png
+  path: /assets/posts/2023-08-28-jekyll-docker.webp
 description: >
   Docker image to deploy Jekyll v4.3.3 on GitHub Pages
 # hide_description: true

@@ -2,7 +2,7 @@
 layout: post
 title: GitHubbing on UCloud
 image:
-  path: /assets/posts/2023-03-11-githubbing-on-ucloud.png
+  path: /assets/posts/2023-03-11-githubbing-on-ucloud.webp
 description: >
   The missing repo to start GitHubbing on UCloud
 hide_description: true
