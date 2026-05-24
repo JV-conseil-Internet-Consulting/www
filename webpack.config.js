@@ -21,7 +21,7 @@
  *     ],
  *   },
  * };
- * ````
+ * ```
  *
  * see: https://webpack.js.org/plugins/terser-webpack-plugin/#remove-comments
  */
@@ -30,52 +30,16 @@ const { readFileSync } = require('fs');
 const { resolve } = require('path');
 
 const { EnvironmentPlugin } = require('webpack');
-// const WorkerPlugin = require('worker-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-
 const { merge } = require('webpack-merge');
-const {
-  argv: { mode },
-} = require('yargs');
 
 const { name: filename, version } = require('./package.json');
 
 const ASSET_PATH = '/assets/js/';
 
-const envConfig = (() => {
-  switch (mode) {
-    case 'production':
-      return {
-        devtool: false,
-        plugins: [
-          // new WorkerPlugin({ globalObject: 'self' }),
-          new EnvironmentPlugin({
-            DEBUG: false,
-            ASSET_PATH,
-            // GET_CLAPS_API: 'https://worker.getclaps.app',
-          }),
-        ],
-      };
-
-    default:
-      return {
-        devtool: 'source-map',
-        plugins: [
-          // new WorkerPlugin({ globalObject: 'self' }),
-          new EnvironmentPlugin({
-            DEBUG: true,
-            ASSET_PATH,
-            // GET_CLAPS_API: 'https://worker.getclaps.dev',
-          }),
-        ],
-      };
-  }
-})();
-
 const sharedPreset = {
   modules: false,
   useBuiltIns: 'entry',
-  // useBuiltIns: 'usage',
   corejs: 3,
 };
 
@@ -92,7 +56,6 @@ const babelPresetLegacy = {
       },
     ],
   ],
-  // plugins: ['@babel/plugin-proposal-class-properties'],
   plugins: ['@babel/plugin-transform-class-properties'],
 };
 
@@ -109,7 +72,6 @@ const babelPresetModern = {
       },
     ],
   ],
-  // plugins: ['@babel/plugin-proposal-class-properties'],
   plugins: ['@babel/plugin-transform-class-properties'],
 };
 
@@ -168,54 +130,87 @@ const sharedConfig = {
   },
 };
 
-module.exports = [
-  merge(envConfig, sharedConfig, {
-    output: {
-      filename: `${filename}-${version}.min.js`,
-      chunkFilename: `[name]-${filename}-${version}.min.js`,
-      // chunkFilename: `[contenthash]-${filename}-${version}.min.js`,
-    },
-    module: {
-      rules: [
-        {
-          test: /(\.jsx|\.js)$/,
-          use: {
-            loader: 'babel-loader',
-            options: babelPresetModern,
+// --- FIX: Wrapped in a function export so Webpack passes env and argv explicitly ---
+module.exports = (env, argv = {}) => {
+  // Safe extraction of mode with fallback
+  const mode = argv.mode || 'development';
+
+  const envConfig = (() => {
+    switch (mode) {
+      case 'production':
+        return {
+          mode: 'production',
+          devtool: false,
+          plugins: [
+            new EnvironmentPlugin({
+              DEBUG: false,
+              ASSET_PATH,
+            }),
+          ],
+        };
+
+      default:
+        return {
+          mode: 'development',
+          devtool: 'source-map',
+          plugins: [
+            new EnvironmentPlugin({
+              DEBUG: true,
+              ASSET_PATH,
+            }),
+          ],
+        };
+    }
+  })();
+
+  return [
+    merge(envConfig, sharedConfig, {
+      output: {
+        filename: `${filename}-${version}.min.js`,
+        chunkFilename: `[name]-${filename}-${version}.min.js`,
+      },
+      module: {
+        rules: [
+          {
+            test: /(\.jsx|\.js)$/,
+            use: {
+              loader: 'babel-loader',
+              options: babelPresetModern,
+            },
+            resolve: {
+              fullySpecified: false,
+            },
           },
-          resolve: {
-            fullySpecified: false,
+          {
+            test: /modernizr-custom/,
+            use: 'null-loader',
           },
-        },
-        {
-          test: /modernizr-custom/,
-          use: 'null-loader',
-        },
-        {
-          test: /@webcomponents\/(template|url|webcomponents-platform)/,
-          use: 'null-loader',
-        },
-      ],
-    },
-  }),
-  merge(envConfig, sharedConfig, {
-    output: {
-      filename: `legacy/${filename}-${version}.min.js`,
-      chunkFilename: `legacy/[name]-${filename}-${version}.min.js`,
-    },
-    module: {
-      rules: [
-        {
-          test: /(\.jsx|\.js)$/,
-          use: {
-            loader: 'babel-loader',
-            options: babelPresetLegacy,
+          {
+            test: /@webcomponents\/(template|url|webcomponents-platform)/,
+            use: 'null-loader',
           },
-          resolve: {
-            fullySpecified: false,
+        ],
+      },
+    }),
+    merge(envConfig, sharedConfig, {
+      output: {
+        filename: `legacy/${filename}-${version}.min.js`,
+        chunkFilename: `legacy/[name]-${filename}-${version}.min.js`,
+      },
+      module: {
+        rules: [
+          {
+            test: /(\.jsx|\.js)$/,
+            use: {
+              loader: 'babel-loader',
+              options: babelPresetLegacy,
+            },
+            resolve: {
+              fullySpecified: false,
+            },
           },
-        },
-      ],
-    },
-  }),
-];
+        ],
+      },
+    }),
+  ];
+};

@@ -2,7 +2,7 @@
 layout: post
 title: Dkim Php Mail Signature
 image:
-  path: /assets/posts/2019-11-17-dkim-php-mail-signature.png
+  path: /assets/posts/2019-11-17-dkim-php-mail-signature.webp
 description: >
   Stand-alone DKIM class to sign your emails with a 2048 bit private key hashed with SHA-256 algorithm 🔏
 hide_description: true

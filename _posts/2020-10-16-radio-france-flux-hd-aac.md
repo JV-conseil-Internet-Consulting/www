@@ -2,7 +2,7 @@
 layout: post
 title: Les nouveaux flux Hifi HD de Radio France 📻
 image:
-  path: /assets/posts/2020-10-16-radio-france-flux-hd-aac.jpg
+  path: /assets/posts/2020-10-16-radio-france-flux-hd-aac.webp
 description: >
   Les nouveaux flux web audio Hifi HD au format .aac des stations de Radio France 📻
 # sitemap: false

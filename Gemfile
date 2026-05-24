@@ -87,14 +87,12 @@ gem "csv", "~> 3.3.5"
 
 # Development
 group :development do
-  # gem "faraday-retry", "~> 2.3.1"
-  gem "faraday-retry", "~> 2.3.2"
+  gem "faraday-retry", "~> 2.4"
   # gem "sass", "~> 3.7"
-  gem "webrick", "~> 1.9"
+  gem "webrick", "~> 1.9.2"
 end
 
 # Dependabot
 group :dependabot do
-  # gem "json", "~> 2.11.3"
-  gem "json", "~> 2.13.2"
+  gem "json", "~> 2.19.5"
 end

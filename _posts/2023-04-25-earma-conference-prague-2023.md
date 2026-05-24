@@ -2,7 +2,7 @@
 layout: post
 title: Custom-Made Tools For Data-Driven Research Support
 image:
-  path: /assets/posts/2023-04-25-earma-conference-prague-2023.png
+  path: /assets/posts/2023-04-25-earma-conference-prague-2023.webp
 description: >
   Data tools for EU funding applications made by research supporters for research support and researchers
 # hide_description: true

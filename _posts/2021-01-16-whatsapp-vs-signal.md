@@ -2,7 +2,7 @@
 layout: post
 title: Migrate Or Not Migrate from WhatsApp to Signal?
 image:
-  path: /assets/posts/2021-01-16-whatsapp-vs-signal.jpg
+  path: /assets/posts/2021-01-16-whatsapp-vs-signal.webp
 description: >
   WhatsApp contre l’Union européenne.
   La messagerie va obliger ses utilisateurs à partager certaines de leurs données avec Facebook.

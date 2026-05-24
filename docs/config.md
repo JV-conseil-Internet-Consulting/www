@@ -63,7 +63,7 @@ DeepDive allows you to choose the background image of the sidebar, as well as th
 
 ~~~yml
 # file: `_config.yml`
-accent_image: /assets/img/sidebar/bg.jpg
+accent_image: /assets/img/sidebar/background.webp
 accent_color: rgb(79,177,186)
 ~~~
 
@@ -86,7 +86,7 @@ defaults:
   - scope:
       path:         deepdive/
     values:
-      accent_image: /assets/img/hydejack-bg.jpg
+      accent_image: /assets/img/background.webp
       accent_color: rgb(38,139,210)
 ```
 
@@ -491,7 +491,7 @@ You can either override these files, or override the path in the config file via
 ```yml
 # file: "_config.yml"
 favicon: /favicon.ico
-apple_touch_icon: /assets/img/logo.png
+apple_touch_icon: /assets/img/logo.webp
 ```
 
 ### Changing the App Icons
@@ -509,7 +509,7 @@ By default, DeepDive includes its own favicon, as well as app icons in 8 differe
 | `icon-96x96.png`   |    `96x96` |
 | `icon-72x72.png`   |    `72x72` |
 
-To change the default icons you have to replce all of them. To make this manageable, I recommend using the following tools:
+To change the default icons you have to replace all of them. To make this manageable, I recommend using the following tools:
 
 First, use the [Maskable.app Editor](https://maskable.app/editor) to confine your logo/picture to the "minimum safe area". More on maskable app icons, see [this article on web.dev](https://web.dev/maskable-icon).
 Make sure the base image is at least 512x512 pixels in size.

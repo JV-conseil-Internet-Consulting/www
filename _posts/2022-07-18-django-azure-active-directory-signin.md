@@ -2,7 +2,7 @@
 layout: post
 title: Django Azure Active Directory Sign-In 🔑
 image:
-  path: /assets/posts/2022-07-18-django-azure-active-directory-signin.png
+  path: /assets/posts/2022-07-18-django-azure-active-directory-signin.webp
 description: >
   Sign-in users to your Django Web app with Azure Active Directory.
 hide_description: true

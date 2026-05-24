@@ -53,7 +53,8 @@ _jvcl_::jekyll_serve() {
     _cmd=("bundle" "exec" "jekyll" "${_arg}" "--config" "_config-dev.yml")
     if [ "${_arg}" == "serve" ]; then
       _cmd+=("--livereload" "--trace")
-      open -na /Applications/Firefox.app --args '--private-window' 'http://localhost:4000/'
+      # open -na /Applications/Firefox.app --args '--private-window' 'http://localhost:4000/'
+      open -na "/Applications/Brave Browser.app" --args '--incognito' 'http://localhost:4000/'
     fi
     "${_cmd[@]}"
   done
