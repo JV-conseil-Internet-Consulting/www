@@ -1,6 +1,5 @@
-# JV conseil – Internet Consulting 👨‍💻
-
 <!-- markdownlint-disable MD033 MD036 -->
+# JV conseil – Internet Consulting 👨‍💻
 
 <img src="https://user-images.githubusercontent.com/8126807/179803740-189004f1-938a-4834-a144-52a9d7a7988c.png" width="100%" alt="Full Stack Developer • Web App Architect • Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) • Paris, France 🇫🇷">
 
