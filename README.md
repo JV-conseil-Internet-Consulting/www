@@ -7,7 +7,7 @@
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 [![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.dev%2F)](https://www.jv-conseil.dev "jv-conseil.net Health Status")
 [![CodeQL](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml/badge.svg?branch=dev)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml)
-[![Dependabot Updates](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=dev)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates)
+[![Dependabot Updates](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates)
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil "Become a sponsor to JV-conseil")
 [![Follow JV conseil on StackOverflow](https://img.shields.io/stackexchange/stackoverflow/r/2477854)](https://stackoverflow.com/users/2477854/jv-conseil "Follow JV conseil on StackOverflow")
 [![Follow JV conseil on LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/julien-vieillefont/ "Follow JV conseil on LinkedIn")
