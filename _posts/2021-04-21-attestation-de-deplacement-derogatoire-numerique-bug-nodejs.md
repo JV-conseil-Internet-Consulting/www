@@ -2,7 +2,7 @@
 layout: post
 title: Attestation de déplacement dérogatoire numérique 🚫
 image:
-  path: /assets/posts/2021-04-21-attestation-de-deplacement-derogatoire-numerique-bug-nodejs.jpg
+  path: /assets/posts/2021-04-21-attestation-de-deplacement-derogatoire-numerique-bug-nodejs.webp
 description: >
   Si l'intitulé de votre lieu de résidence et/ou de naissance compte plus de dix-neuf caractères l'Attestation de déplacement dérogatoire numérique ne fonctionnera pas 🚫
 tag: [javascript, python]
