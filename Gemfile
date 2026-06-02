@@ -94,5 +94,5 @@ end
 
 # Dependabot
 group :dependabot do
-  gem "json", "~> 2.19.5"
+  gem "json", "~> 2.19.7"
 end
