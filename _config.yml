@@ -445,8 +445,14 @@ sass:
   # load_paths:
   #   - _sass
   #   - node_modules
-  style:               compressed
-  verbose:             true
+  quiet_deps: true
+  verbose: true
+  silent_configuration: true
+  silence_deprecations:
+    - global-builtin
+    - import
+    - color-functions
+  style: compressed
 
 
 # Jekyll Compose Defaults
