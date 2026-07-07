@@ -45,17 +45,19 @@ EOF
 }
 
 _jvcl_::jekyll_serve() {
-  local -a _cmd=() _args
+  local _args
+  local -a _cmd=()
 
   _jvcl_::h1 "Launching Jekyll..."
 
   for _arg in "clean" "doctor" "serve"; do
-    _cmd=("bundle" "exec" "jekyll" "${_arg}" "--config" "_config-dev.yml")
+    _cmd=(bundle exec jekyll "${_arg}" --config _config-dev.yml)
     if [ "${_arg}" == "serve" ]; then
-      _cmd+=("--livereload" "--trace")
+      _cmd+=(--livereload --trace)
       # open -na /Applications/Firefox.app --args '--private-window' 'http://localhost:4000/'
       open -na "/Applications/Brave Browser.app" --args '--incognito' 'http://localhost:4000/'
     fi
+    # printf "DEBUG - _jvcl_::jekyll_serve - %s\n" "${_cmd[*]}"
     "${_cmd[@]}"
   done
 }
