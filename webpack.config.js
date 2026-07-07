@@ -30,7 +30,6 @@ const { readFileSync } = require('fs');
 const { resolve } = require('path');
 
 const { EnvironmentPlugin } = require('webpack');
-const TerserPlugin = require('terser-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 const { name: filename, version } = require('./package.json');
@@ -91,15 +90,9 @@ const sharedConfig = {
     symlinks: true,
   },
   optimization: {
+    minimize: true,
     minimizer: [
-      new TerserPlugin({
-        extractComments: false,
-        terserOptions: {
-          format: {
-            comments: false,
-          },
-        },
-      }),
+      '...', // This syntax tells Webpack 5 to use its default built-in Terser config
     ],
     providedExports: true,
     splitChunks: {
