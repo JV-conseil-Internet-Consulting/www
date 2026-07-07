@@ -117,13 +117,15 @@ const calcSrcSet = (srcset) =>
                     (item) => html`
                       <li class="search-item" @click=${() => pushStateEl?.assign?.(item.url)}>
                         <div class="search-img aspect-ratio sixteen-ten">
-                          ${!item.image
-                            ? null
-                            : html`<img
-                                src="${smartUrl(item.image.src || item.image.path || item.image)}"
-                                srcset="${ifDefined(calcSrcSet(item.image.srcset))}"
-                                sizes="4.67rem"
-                              />`}
+                          ${
+                            !item.image
+                              ? null
+                              : html`<img
+                                  src="${smartUrl(item.image.src || item.image.path || item.image)}"
+                                  srcset="${ifDefined(calcSrcSet(item.image.srcset))}"
+                                  sizes="4.67rem"
+                                />`
+                          }
                         </div>
                         <div class="search-text">
                           <p>
