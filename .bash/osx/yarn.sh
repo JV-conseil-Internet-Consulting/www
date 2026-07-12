@@ -29,6 +29,7 @@ _jvcl_::cp_vendor() {
   local _dest="assets/vendor" _html="" _pack
   local -a _packages=(
     "jquery/dist/jquery.min.js"
+    "jquery-migrate/dist/jquery-migrate.min.js"
     # "bootstrap/dist/js/bootstrap.bundle.min.js"
     "dompurify/dist/purify.min.js"
   )

@@ -39,7 +39,7 @@ gem "duktape"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-avatar", "~> 0.8.0"
+  gem "jekyll-avatar"
   gem "jekyll-default-layout"
   gem "jekyll-feed"
   gem "jekyll-include-cache"
@@ -58,7 +58,7 @@ group :jekyll_plugins do
   gem "jekyll-compose"
 
   # Non-Jekyll plugins:
-  gem "jemoji", "~> 0.13.0"
+  gem "jemoji"
   # gem "github-pages", "~> 232"
 end
 
@@ -75,7 +75,8 @@ gem "wdm", "~> 0.2.0", :install_if => Gem.win_platform?
 # The CSV library provides a complete interface to CSV files and data.
 # It offers tools to enable you to read and write to and from Strings or IO objects, as needed.
 # gem "csv", "~> 3.3"
-gem "csv", "~> 3.3.5"
+# gem "csv", "~> 3.3.5"
+gem "csv"
 
 # kramdown v2 ships without the gfm parser by default. If you're using
 # kramdown v1, comment out this line.
@@ -87,12 +88,15 @@ gem "csv", "~> 3.3.5"
 
 # Development
 group :development do
-  gem "faraday-retry", "~> 2.4"
+  # gem "faraday-retry", "~> 2.4"
+  gem "faraday-retry"
   # gem "sass", "~> 3.7"
-  gem "webrick", "~> 1.9.2"
+  # gem "webrick", "~> 1.9.2"
+  gem "webrick"
 end
 
 # Dependabot
 group :dependabot do
-  gem "json", "~> 2.20.0"
+  # gem "json", "~> 2.20.0"
+  gem "json"
 end
