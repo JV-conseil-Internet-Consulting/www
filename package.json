@@ -52,7 +52,7 @@
     "null-loader": "^4.0.1",
     "onchange": "^7.1.0",
     "prettier": "^3.9.5",
-    "tar": "^7.5.19",
+    "tar": "^7.5.20",
     "uglify-js": "^3.19.3",
     "webpack": "^5.108.4",
     "webpack-cli": "^7.2.1",
