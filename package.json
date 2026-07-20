@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@fontsource/noto-sans": "^5.2.10",
-    "@fontsource/roboto-slab": "^5.2.8",
+    "@fontsource/roboto-slab": "^5.3.0",
     "@hydecorp/component": "^1.0.0",
     "@hydecorp/drawer": "^1.0.0",
     "@hydecorp/push-state": "^1.0.0",
