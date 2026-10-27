@@ -34,7 +34,7 @@ The [Funding Apps](https://funding-apps.sdu.dk/) were first deployed at the Univ
 
 ## The Genesis: Scaling from One University to a National Standard
 
-It all started in 2019 at the University of Southern Denmark (SDU) in [Odense](https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark"). [Maéva Vignes](https://www.linkedin.com/in/maevavignes/) from SDU Research and Innovation (RIO), conceptualized the first version of the Funding Apps — a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal.
+It all started in 2019 at the [University of Southern Denmark](https://www.sdu.dk/en/om-sdu "University of Southern Denmark") (SDU) in [Odense](https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark"). [Maéva Vignes](https://www.linkedin.com/in/maevavignes/ "LinkedIn") from SDU Research and Innovation (RIO), conceptualized the first version of the Funding Apps — a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal.
 
 Maéva is a French PhD researcher who was working as a funding advisor at SDU. Maéva had stood on both sides of the table: as a researcher writing competitive proposals, and as an advisor guiding colleagues through them. Her creative mindset — grounded in rigorous science but focused on practical researcher needs — defined the philosophy of the Funding Apps from day one: solve the real pain, not the administrative surface.
 
