@@ -39,7 +39,9 @@ Maéva is a French PhD researcher who was working as a funding advisor at SDU. M
 
 The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as Horizon Europe) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
 
-By combining a highly resilient infrastructure with Natural Language Processing (NLP) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion:
+By combining a highly resilient infrastructure with Natural Language Processing (NLP) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion.
+
+ <!-- space -->
 
 | Since | Institution                           | Platform                                           |
 | :---: | ------------------------------------- | -------------------------------------------------- |
@@ -134,6 +136,18 @@ As a French developer embedded in Danish institutions, I also had to become some
 
 Copenhagen Business School (CBS) is the last Danish university that recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
 {:.figcaption}
+
+## From Solo Developer to Tech Lead: A Team Grows Around the Vision
+
+Over the span of these seven years, something happened that nobody had planned at the outset: a team began to form around the project. Data scientists, web developers, and software engineers gradually joined, drawn to the initial vision — digitalising the métiers that facilitate academic collaboration — and eager to build new projects in its orbit.
+
+With the team came new responsibilities. On top of my development assignments, I have increasingly assumed an informal role that sits somewhere between tech lead, CTO, and team manager:
+
+- **Recruitment:** Designing recruitment tests and conducting hiring interviews to select developers and data scientists who combine technical rigor with an understanding of the academic world.
+- **Knowledge sharing:** Hosting weekly thematic seminars in Odense to spread good coding practices, review architectural decisions, and keep the quality bar consistently high.
+- **Team leadership:** Chairing weekly meetings that hold an international team together across three Western European countries — balancing working cultures, and communication styles into one coherent rhythm of delivery.
+
+In hindsight, this is the natural extension of everything described above. The same continuity and depth that shaped the codebase now apply to people: building a team is not so different from building software — it requires a clear vision, honest feedback, and years of patient iteration.
 
 ## The Freelance Advantage: Agility Meets Long-Term Vision
 
