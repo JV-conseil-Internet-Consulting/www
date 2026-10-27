@@ -16,15 +16,16 @@ tags: [azure, bash, cloud, django, postgresql, python]
 
 <!-- markdownlint-disable MD026 MD033 MD041 -->
 
-# How 7 Years of Collaboration with Danish Universities Built the Funding Apps Ecosystem
+**How 7 Years of Collaboration with Danish Universities Built the Funding Apps Ecosystem**
+{:.lead}
 
-As an independent French senior full-stack developer, I am often asked what makes this long-running collaboration with Danish universities work so well. My honest answer, after seven years, comes down to a rather uncommon combination: **continuity**, **deep domain expertise**, and **trust**, backed by a set of skills and experience that few single profiles bring together.
+As an independent French senior [full-stack developer](https://en.wikipedia.org/wiki/Solution_stack#Full-stack_developer "A full-stack developer is expected to be able to work in all the layers of the application (front-end and back-end)"), I am often asked what makes this long-running collaboration with Danish universities work so well. My honest answer, after seven years, comes down to a rather uncommon combination: **continuity**, **deep domain expertise**, and **trust**, backed by a **set of skills** and experience that few single profiles bring together.
 
 For the past seven years, I have worked hand-in-hand with the research support departments of Denmark's leading universities. Together, we have transformed academic grant acquisition — a process historically bogged down by administrative complexity — into a streamlined, automated ecosystem of interconnected research funding applications.
 
 This is the story of the **Funding Apps** suite: a piece of software craftsmanship, built specifically for Danish academic excellence.
 
- <!-- space -->
+<!-- space --> 
 
 ![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.jpg){:.lead loading="lazy"}
 
@@ -33,25 +34,26 @@ The [Funding Apps](https://funding-apps.sdu.dk/) were first deployed at the Univ
 
 ## The Genesis: Scaling from One University to a National Standard
 
-It all started in 2019 at the University of Southern Denmark (SDU) in Odense. [Maéva Vignes](https://www.linkedin.com/in/maevavignes/) from SDU Research and Innovation (RIO), conceptualized the first version of the Funding Apps — a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal.
+It all started in 2019 at the University of Southern Denmark (SDU) in [Odense](https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark"). [Maéva Vignes](https://www.linkedin.com/in/maevavignes/) from SDU Research and Innovation (RIO), conceptualized the first version of the Funding Apps — a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal.
 
 Maéva is a French PhD researcher who was working as a funding advisor at SDU. Maéva had stood on both sides of the table: as a researcher writing competitive proposals, and as an advisor guiding colleagues through them. Her creative mindset — grounded in rigorous science but focused on practical researcher needs — defined the philosophy of the Funding Apps from day one: solve the real pain, not the administrative surface.
 
-The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as Horizon Europe) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
+The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027")) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
 
-By combining a highly resilient infrastructure with Natural Language Processing (NLP) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion.
+By combining a highly resilient infrastructure with Natural Language Processing ([NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing")) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion.
 
- <!-- space -->
+<!-- space --> 
 
-| Since | Institution                           | Platform                                           |
-| :---: | ------------------------------------- | -------------------------------------------------- |
-| 2019  | University of Southern Denmark (SDU)  | [SDU Funding Apps](https://funding-apps.sdu.dk/)   |
-| 2022  | Aalborg University (AAU)              | [AAU EU Funding Apps](https://eu-funding.aau.dk/)  |
-| 2025  | Aarhus University (AU)                | [AU Funding Tools](https://funding-tools.au.dk/)   |
-| 2026  | Technical University of Denmark (DTU) | [DTU Funding Tools](https://funding-tools.dtu.dk/) |
-| 2026  | Copenhagen Business School (CBS)      | [CBS Funding Tools](https://funding-tools.cbs.dk/) |
+| Since | Platform                                           | Institution                           |
+| :---- | :------------------------------------------------- | ------------------------------------- |
+| 2019  | [SDU Funding Apps](https://funding-apps.sdu.dk/)   | University of Southern Denmark (SDU)  |
+| 2022  | [AAU EU Funding Apps](https://eu-funding.aau.dk/)  | Aalborg University (AAU)              |
+| 2025  | [AU Funding Tools](https://funding-tools.au.dk/)   | Aarhus University (AU)                |
+| 2026  | [DTU Funding Tools](https://funding-tools.dtu.dk/) | Technical University of Denmark (DTU) |
+| 2026  | [CBS Funding Tools](https://funding-tools.cbs.dk/) | Copenhagen Business School (CBS)      |
+{:.stretch-table}
 
- <!-- space -->
+<!-- space --> 
 
 ![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.jpg){:.lead loading="lazy"}
 
@@ -62,12 +64,43 @@ Aalborg University (AAU) was the second Danish university to adopt the [AAU EU F
 
 Building software for the academic sector demands strict precision. To maximize pre-award success rates, Maeva and I architected the ecosystem around four specialized modules that execute data updates overnight:
 
-- **EU Call Finder:** A text-mining algorithm that parses a researcher's publication history to automatically suggest the most relevant Horizon Europe calls.
+- **EU Call Finder:** A text-mining algorithm that parses a researcher's publication history to automatically suggest the most relevant [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") calls.
 - **EU Projects:** A semantic mapping tool that scans existing EU-funded projects, ensuring a researcher's proposal is fully novel before they invest months into writing it.
 - **EU Partners:** A network-graph recommendation engine that maps pan-European corporate and university connections to find missing stakeholders for a strong grant consortium.
 - **EU Evaluators:** A profile-matching module that aligns the thematic focus of a draft proposal with past EU reviewers, identifying internal faculty contacts for mock peer reviews.
 
- <!-- space -->
+## A Fine-Grained Understanding of the EU Funding Ecosystem
+
+None of this would work without a deep, practitioner-level understanding of the object the software navigates: the European research funding landscape itself. Parsing it is far from a trivial text-processing exercise.
+
+It requires modelling a genuinely complex institutional taxonomy — the Pillars of [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"), its thematic Clusters, the EU Missions, and the Destinations and topics that descend from each Work Programme — and understanding how a Draft Work Programme gradually evolves into published calls and deadlines.
+
+This knowledge had to be internalized down to the finest grain: a module that recommends mock reviewers, for instance, must reason within the exact same taxonomy that EU evaluators themselves use.
+
+![Horizon Europe Pillars & Clusters](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.jpg){:.lead loading="lazy"}
+
+[Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") Pillars & Clusters.
+{:.figcaption}
+
+## Interconnecting Datasets
+
+Rather than relying on static mailing lists or manual searches, the apps were built to pull and interconnect siloed datasets, joining the scientific world and the European funding world into a single, coherent data model. Two families of sources feed the platform.
+
+**Scientific datasets** describe who the researchers are and what they publish:
+
+- [OpenAlex](https://openalex.org), the open catalog to the global research system. It supplies indexed publications, affiliations, citation graphs, and research concepts, and its fully open [API](https://en.wikipedia.org/wiki/API "Application Programming Interface") makes it the backbone for reconstructing each researcher's publication history.
+- [ORCID](https://orcid.org), the persistent digital identifier for researchers. It is the glue for identity resolution: the key that reliably links a PURE profile to the right author records in publication databases, despite homonymous names and career mobility across institutions and countries.
+- [PURE](https://www.elsevier.com/products/pure), the research information management system that each university operates internally. It is the authoritative institutional source for research profiles, activities, and outputs, and the starting point from which every grant match is computed.
+
+**European datasets** describe what can be funded and by whom:
+
+- [CORDIS](https://cordis.europa.eu), the European Commission's reference portal on EU-funded research projects. Past and present projects, participants, results, and budgets are mined to verify the novelty of a proposed topic and to map potential consortium partners.
+- [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the EU Funding &amp; Tenders Portal. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
+- The [EU Experts](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/experts) database, where the Commission registers its independent evaluators. Thematic profiles of past reviewers are matched against draft proposals to identify experienced contacts for mock evaluations.
+
+The engineering challenge was never fetching these sources individually — it was reconciling them: resolving identities across systems, normalizing taxonomies that were never designed to meet, and maintaining one coherent graph that the [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing") layer could reason over, night after night.
+
+<!-- space --> 
 
 ![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.jpg){:.lead loading="lazy"}
 
@@ -80,27 +113,27 @@ People often assume "full-stack" is a marketing label. The Funding Apps suite is
 
 ### Back End Engineering
 
-The server side is anchored on a mature Django application, with scheduled batch jobs orchestrated nightly, enterprise-grade authentication wired into the universities' Microsoft identity stack, and secrets and storage delegated to Azure Key Vault and Azure blob services. Reliability engineering — caching, memoization, error resilience — is woven through every layer, because grant deadlines do not tolerate downtime.
+The server side is anchored on a mature [Django](https://www.djangoproject.com/start/overview/) application, with scheduled batch jobs orchestrated nightly, enterprise-grade authentication wired into the universities' Microsoft identity stack, and secrets and storage delegated to [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview) and Azure blob services. Reliability engineering — caching, memoization, error resilience — is woven through every layer, because grant deadlines do not tolerate downtime.
 
 ### Database Engineering
 
-Underneath sits a PostgreSQL core with connection pooling, bulk import and export pipelines, and carefully tuned query patterns. The data model must reconcile heterogeneous sources — publication records, grant calls, funded-project portfolios — into a coherent schema that can answer a researcher's question in milliseconds.
+Underneath sits a [PostgreSQL](https://www.postgresql.org/) core with connection pooling, bulk import and export pipelines, and carefully tuned query patterns. The data model must reconcile heterogeneous sources — publication records, grant calls, funded-project portfolios — into a coherent schema that can answer a researcher's question in milliseconds.
 
 ### Front End Engineering
 
 The user-facing layer follows a rigorous build chain — webpack, Sass, and minification pipelines — serving Bootstrap 5 interfaces styled to each institution's identity. Interactive data tables, full-scale calendar views of upcoming calls, search panes, and rich charting libraries must all feel instant and effortless, in keeping with Scandinavian design minimalism.
 
-### ETL and Data Cleaning
+### [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load "Extract, transform, load") and Data Cleaning
 
 Raw funding data arrives in every conceivable condition: HTML pages, PDF documents, Excel spreadsheets, compressed archives. An entire extraction-transformation layer — scrapers, PDF and spreadsheet parsers, browser automation, language detection, and Unicode normalization — runs nightly to turn that chaos into clean, structured, matchable records.
 
 ### Natural Language Processing
 
-Finally, the intelligent layer that ties it all together: NLP and machine-learning libraries that tokenize, lemmatize, and vectorize publication abstracts and call texts, then use semantic similarity and fuzzy matching to connect the right researcher with the right opportunity. This is the engine behind EU Call Finder, EU Projects, EU Partners, and EU Evaluators.
+Finally, the intelligent layer that ties it all together: [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing") and machine-learning libraries that tokenize, lemmatize, and vectorize publication abstracts and call texts, then use semantic similarity and fuzzy matching to connect the right researcher with the right opportunity. This is the engine behind EU Call Finder, EU Projects, EU Partners, and EU Evaluators.
 
 Five disciplines. One developer. That is the bar this project has set — and maintained — for seven years of continuous releases.
 
- <!-- space -->
+<!-- space --> 
 
 ![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.jpg){:.lead loading="lazy"}
 
@@ -117,20 +150,20 @@ No two campuses run their infrastructure the same way, and none of these platfor
 
 - **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
-- **APIs and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and CORDIS.
+- **[API](https://en.wikipedia.org/wiki/API "Application Programming Interface")s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS](https://cordis.europa.eu/fr).
 - **Operations and Reliability:** Setting up CI/CD pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
 
 This meant speaking the language of network engineers, security officers, and system administrators alike — often within the same week, often across five different organizations at once.
 
 ### A Product Shaped by Research Support Staff
 
-The true product owners were never the IT departments. They were the research support officers of each university: the grant advisers, EU consultants, and project managers who live and breathe the funding landscape. Every module in the suite reflects their expertise. Through workshops, feedback sessions, and years of iterative dialogue, they translated the realities of Horizon Europe into requirements, and my role was to translate their requirements into software that fits the way they actually work — including the specific terminology and internal processes of each institution.
+The true product owners were never the IT departments. They were the research support officers of each university: the grant advisers, EU consultants, and project managers who live and breathe the funding landscape. Every module in the suite reflects their expertise. Through workshops, feedback sessions, and years of iterative dialogue, they translated the realities of [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") into requirements, and my role was to translate their requirements into software that fits the way they actually work — including the specific terminology and internal processes of each institution.
 
 ### Building Bridges Across Working Cultures
 
 As a French developer embedded in Danish institutions, I also had to become something of a bridge builder. Danish professional culture — its flat hierarchies, direct communication, and consensus-driven decision-making — differs in many ways from the traditions in which I was trained, and learning to work fluently within it took deliberate effort. Add to this the daily reality of international collaboration: consortium partners, reviewers, and stakeholders spread across Europe, with English as the working language and remote coordination as the norm. Seven years of this have made cross-cultural communication a core skill of the craft, as fundamental as any technology in the stack.
 
- <!-- space -->
+<!-- space --> 
 
 ![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.jpg){:.lead loading="lazy"}
 
@@ -141,10 +174,10 @@ Copenhagen Business School (CBS) is the last Danish university that recently ado
 
 Over the span of these seven years, something happened that nobody had planned at the outset: a team began to form around the project. Data scientists, web developers, and software engineers gradually joined, drawn to the initial vision — digitalising the métiers that facilitate academic collaboration — and eager to build new projects in its orbit.
 
-With the team came new responsibilities. On top of my development assignments, I have increasingly assumed an informal role that sits somewhere between tech lead, CTO, and team manager:
+With the team came new responsibilities. On top of my development assignments, I have increasingly assumed an informal role that sits somewhere between tech lead, [CTO](https://en.wikipedia.org/wiki/CTO "Chief Technology Officer"), and team manager:
 
 - **Recruitment:** Designing recruitment tests and conducting hiring interviews to select developers and data scientists who combine technical rigor with an understanding of the academic world.
-- **Knowledge sharing:** Hosting weekly thematic seminars in Odense to spread good coding practices, review architectural decisions, and keep the quality bar consistently high.
+- **Knowledge sharing:** Hosting weekly thematic seminars in [Odense](https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark") to spread good coding practices, review architectural decisions, and keep the quality bar consistently high.
 - **Team leadership:** Chairing weekly meetings that hold an international team together across three Western European countries — balancing working cultures, and communication styles into one coherent rhythm of delivery.
 
 In hindsight, this is the natural extension of everything described above. The same continuity and depth that shaped the codebase now apply to people: building a team is not so different from building software — it requires a clear vision, honest feedback, and years of patient iteration.
@@ -153,13 +186,13 @@ In hindsight, this is the natural extension of everything described above. The s
 
 This seven-year journey highlights the distinct advantages of collaborating with a senior independent developer over an ever-shifting agency team:
 
-1. **Full-Stack Ownership:** From fine-tuning background NLP algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
+1. **Full-Stack Ownership:** From fine-tuning background [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing") algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
 2. **Zero Context Loss:** Over seven years, there has been no staff turnover and no changing project managers. The deep understanding of academic workflows and architecture has remained entirely intact.
 3. **True R&D Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms.
 
 ## The Road Ahead
 
-Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from Odense to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
+Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from [Odense](https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark") to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
 
 Seven years. Five institutions. Countless métiers and working cultures. One developer. The proof that long-term, trust-based collaboration between an independent craftsman and world-class academic institutions is not only viable — it is the model that built this ecosystem.
 
@@ -173,8 +206,8 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 - **Meta description (140 characters):** How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities.
 - **Suggested URL slug:** `funding-apps-danish-universities-7-years-collaboration`
 - **Primary keyword:** funding apps Danish universities
-- **Secondary keywords:** research funding tools, Horizon Europe grant matching, university research support software, AI grant discovery, freelance full-stack developer, SDU, DTU, Aarhus University, Aalborg University, Copenhagen Business School
-- **Suggested tags:** Freelance Development, Higher Education, Research Funding, Horizon Europe, Denmark, NLP, Full-Stack Development
+- **Secondary keywords:** research funding tools, [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") grant matching, university research support software, AI grant discovery, freelance full-stack developer, SDU, DTU, Aarhus University, Aalborg University, Copenhagen Business School
+- **Suggested tags:** Freelance Development, Higher Education, Research Funding, [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"), Denmark, [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"), Full-Stack Development
 - **Excerpt:** Over seven years, one independent French developer and Denmark's leading universities turned a single campus tool into a national ecosystem of AI-powered grant matching — one that has helped researchers secure millions of euros in European funding.
 - **Image alt text (for the Denmark map illustration, when added):** Map of Denmark locating the Funding Apps platforms of SDU, DTU, Aarhus University, Aalborg University, and Copenhagen Business School.
 
@@ -190,9 +223,9 @@ This is the story of the **Funding Apps** suite: a piece of software craftsmansh
 
 ## The Genesis: Scaling from One University to a National Standard
 
-It all started at the University of Southern Denmark (SDU). The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as Horizon Europe) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
+It all started at the University of Southern Denmark (SDU). The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027")) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
 
-By combining a highly resilient infrastructure with Natural Language Processing (NLP) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion:
+By combining a highly resilient infrastructure with Natural Language Processing ([NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing")) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion:
 
 | Institution                           | Platform                                           | Technical Integration & Role                                                                                                                                       |
 | ------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -206,7 +239,7 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 
 Building software for the academic sector demands strict precision. To maximize pre-award success rates, I architected the ecosystem around four specialized modules that execute data updates overnight:
 
-- **EU Call Finder:** A text-mining algorithm that parses a researcher's publication history to automatically suggest the most relevant Horizon Europe calls.
+- **EU Call Finder:** A text-mining algorithm that parses a researcher's publication history to automatically suggest the most relevant [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") calls.
 - **EU Projects:** A semantic mapping tool that scans existing EU-funded projects, ensuring a researcher's proposal is fully novel before they invest months into writing it.
 - **EU Partners:** A network-graph recommendation engine that maps pan-European corporate and university connections to find missing stakeholders for a strong grant consortium.
 - **EU Evaluators:** A profile-matching module that aligns the thematic focus of a draft proposal with past EU reviewers, identifying internal faculty contacts for mock peer reviews.
@@ -221,14 +254,14 @@ No two campuses run their infrastructure the same way, and none of these platfor
 
 - **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
-- **APIs and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and CORDIS.
+- **[API](https://en.wikipedia.org/wiki/API "application programming Interface")s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS](https://cordis.europa.eu/fr).
 - **Operations and Reliability:** Setting up CI/CD pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
 
 This meant speaking the language of network engineers, security officers, and system administrators alike — often within the same week, often across five different organizations at once.
 
 ### A Product Shaped by Research Support Staff
 
-The true product owners were never the IT departments. They were the research support officers of each university: the grant advisers, EU consultants, and project managers who live and breathe the funding landscape. Every module in the suite reflects their expertise. Through workshops, feedback sessions, and years of iterative dialogue, they translated the realities of Horizon Europe into requirements, and my role was to translate their requirements into software that fits the way they actually work — including the specific terminology and internal processes of each institution.
+The true product owners were never the IT departments. They were the research support officers of each university: the grant advisers, EU consultants, and project managers who live and breathe the funding landscape. Every module in the suite reflects their expertise. Through workshops, feedback sessions, and years of iterative dialogue, they translated the realities of [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") into requirements, and my role was to translate their requirements into software that fits the way they actually work — including the specific terminology and internal processes of each institution.
 
 ### Building Bridges Across Working Cultures
 
@@ -238,13 +271,13 @@ As a French developer embedded in Danish institutions, I also had to become some
 
 This seven-year journey highlights the distinct advantages of collaborating with a senior independent developer over an ever-shifting agency team:
 
-1. **Full-Stack Ownership:** From fine-tuning background NLP algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
+1. **Full-Stack Ownership:** From fine-tuning background [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing") algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
 2. **Zero Context Loss:** Over seven years, there has been no staff turnover and no changing project managers. The deep understanding of academic workflows and architecture has remained entirely intact.
 3. **True R&D Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms.
 
 ## The Road Ahead
 
-Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from Odense to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
+Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from [Odense](https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark") to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
 
 Seven years. Five institutions. Countless métiers and working cultures. One developer. The proof that long-term, trust-based collaboration between an independent craftsman and world-class academic institutions is not only viable — it is the model that built this ecosystem.
 
@@ -256,8 +289,8 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 - **Meta description (140 characters):** How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities.
 - **Suggested URL slug:** `funding-apps-danish-universities-7-years-collaboration`
 - **Primary keyword:** funding apps Danish universities
-- **Secondary keywords:** research funding tools, Horizon Europe grant matching, university research support software, AI grant discovery, freelance full-stack developer, SDU, DTU, Aarhus University, Aalborg University, Copenhagen Business School
-- **Suggested tags:** Freelance Development, Higher Education, Research Funding, Horizon Europe, Denmark, NLP, Full-Stack Development
+- **Secondary keywords:** research funding tools, [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") grant matching, university research support software, AI grant discovery, freelance full-stack developer, SDU, DTU, Aarhus University, Aalborg University, Copenhagen Business School
+- **Suggested tags:** Freelance Development, Higher Education, Research Funding, [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"), Denmark, [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"), Full-Stack Development
 - **Excerpt:** Over seven years, one independent French developer and Denmark's leading universities turned a single campus tool into a national ecosystem of AI-powered grant matching — one that has helped researchers secure millions of euros in European funding.
 - **Image alt text (for the Denmark map illustration, when added):** Map of Denmark locating the Funding Apps platforms of SDU, DTU, Aarhus University, Aalborg University, and Copenhagen Business School.
 
@@ -273,9 +306,9 @@ This is the story of the **Funding Apps** suite: a piece of software craftsmansh
 
 ## The Genesis: Scaling from One University to a National Standard
 
-It all started at the University of Southern Denmark (SDU). The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as Horizon Europe) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
+It all started at the University of Southern Denmark (SDU). The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027")) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
 
-By combining a highly resilient infrastructure with Natural Language Processing (NLP) pipelines, we built a suite of tailored micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion:
+By combining a highly resilient infrastructure with Natural Language Processing ([NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing")) pipelines, we built a suite of tailored micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion:
 
 | Institution                           | Platform                                           | Technical Integration & Role                                                                                                                                       |
 | ------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -289,7 +322,7 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 
 Building software for the academic sector demands strict precision. To maximize pre-award success rates, I architected the ecosystem around four specialized modules that execute data updates overnight:
 
-- **EU Call Finder:** A text-mining algorithm that parses a researcher's publication history to automatically suggest the most relevant Horizon Europe calls.
+- **EU Call Finder:** A text-mining algorithm that parses a researcher's publication history to automatically suggest the most relevant [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") calls.
 - **EU Projects:** A semantic mapping tool that scans existing EU-funded projects, ensuring a researcher's proposal is fully novel before they invest months into writing it.
 - **EU Partners:** A network-graph recommendation engine that maps pan-European corporate and university connections to find missing stakeholders for a strong grant consortium.
 - **EU Evaluators:** A profile-matching module that aligns the thematic focus of a draft proposal with past EU reviewers, identifying internal faculty contacts for mock peer reviews.
@@ -298,13 +331,13 @@ Building software for the academic sector demands strict precision. To maximize 
 
 This seven-year journey highlights the distinct advantages of collaborating with a senior independent developer over an ever-shifting agency team:
 
-1. **Full-Stack Ownership:** From fine-tuning background NLP algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
+1. **Full-Stack Ownership:** From fine-tuning background [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing") algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
 2. **Zero Context Loss:** Over seven years, there has been no staff turnover and no changing project managers. The deep understanding of academic workflows and architecture has remained entirely intact.
 3. **True R&D Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms.
 
 ## The Road Ahead
 
-Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from Odense to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
+Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from [Odense](https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark") to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
 
 Seven years. Five institutions. One developer. The proof that long-term, trust-based collaboration between an independent craftsman and world-class academic institutions is not only viable — it is the model that built this ecosystem.
 
@@ -317,29 +350,29 @@ The term "funding apps dk" can refer to a few different types of tools and platf
 1. Academic & EU Research Funding Apps
 
 If you are a researcher at a Danish university, specialized web applications help match your profile with relevant grants and calls:
-• SDU Funding Apps: Developed by the University of Southern Denmark (SDU), this tool provides tailored suggestions, EU call matching (Horizon Europe), partner searching, and evaluator tracking. [1] (<https://funding-apps.sdu.dk/>), [2] (<https://sdunet.dk/en/research/funding-apps>)
+• SDU Funding Apps: Developed by the University of Southern Denmark (SDU), this tool provides tailored suggestions, EU call matching ([Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027")), partner searching, and evaluator tracking. [1] (<https://funding-apps.sdu.dk/>), [2] (<https://sdunet.dk/en/research/funding-apps>)
 • AAU EU Funding Apps: Aalborg University’s data-driven suite for researchers and managers to streamline pre-award processes and grant applications. [1] (<https://eu-funding.aau.dk/>)
 • DTU Funding Tools: Technical University of Denmark’s platform using natural language processing to match publications with open research calls. [1] (<https://funding-tools.dtu.dk/>)
 • Fonde.dk: A widely used online database and platform for searching Danish foundations, scholarships, and grants. [1] (<https://www.cbs.dk/en/library/search-library/online-resources/fondedk>)
 
 ---
 
-The Danish Academic Funding Tools ecosystem consists of interconnected digital suites developed by the Research Support unit at the University of Southern Denmark (SDU). Adopted by several major Danish universities, these data-driven platforms use natural language processing (NLP) to night-update and match researchers' publications and profiles directly with European and domestic grant opportunities. [1] (<https://funding-tools.dtu.dk/>), [2] (<https://funding-apps.sdu.dk/>)
+The Danish Academic Funding Tools ecosystem consists of interconnected digital suites developed by the Research Support unit at the University of Southern Denmark (SDU). Adopted by several major Danish universities, these data-driven platforms use natural language processing ([NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing")) to night-update and match researchers' publications and profiles directly with European and domestic grant opportunities. [1] (<https://funding-tools.dtu.dk/>), [2] (<https://funding-apps.sdu.dk/>)
 
 Platform Target Audience Core Capabilities & Functionality
 SDU Funding Apps SDU Faculty & Research Support Uses Single Sign-On (SSO) to offer personalized grant matching, a Call Calendar for common funds, and integration with the Pivot-RP global grant database.
 DTU Funding Tools Technical University of Denmark Interconnects publication history, grant announcements, and previously funded projects to evaluate proposal competitiveness and streamline interfaculty consortiums.
-AU Funding Tools Aarhus University Links directly with internal PURE research profile data to identify matching Horizon Europe calls and verify project novelty against existing CORDIS portfolios.
+AU Funding Tools Aarhus University Links directly with internal PURE research profile data to identify matching [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") calls and verify project novelty against existing [CORDIS](https://cordis.europa.eu/fr) portfolios.
 AAU EU Funding Apps Aalborg University Provides custom analytics, proposal styling templates, and AI-driven networking modules for cross-border research collaborations.
 
 Core Modules within the Ecosystem
 
 Researchers accessing these tools typically utilize four micro-applications designed to optimize pre-award success rates:
-• EU Call Finder: Leverages text-mining AI to automatically discover open Horizon Europe calls that match a specific researcher's historical publication profile. [1] (<https://funding-tools.dtu.dk/videos/introduction-demo>), [2] (<https://sdunet.dk/da/research>)
+• EU Call Finder: Leverages text-mining AI to automatically discover open [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") calls that match a specific researcher's historical publication profile. [1] (<https://funding-tools.dtu.dk/videos/introduction-demo>), [2] (<https://sdunet.dk/da/research>)
 • EU Projects: Maps existing EU-funded project portfolios to ensure a newly proposed research topic is entirely novel before application submission. [1] (<https://sdunet.dk/en/research/funding-apps>), [2] (<https://sdunet.dk/da/research>)
 • EU Partners: Analyzes pan-European corporate and university networks to instantly find complementary stakeholders needed to build a strong grant consortium. [1] (<https://funding-tools.dtu.dk/>), [2] (<https://sdunet.dk/da/research>)
 • EU Evaluators: Matches the thematic profile of a proposal against past EU reviewers to locate experienced internal or external contacts for mock proposal reviews. [1] (<https://sdunet.dk/en/research/funding-apps>)
-Are you looking to access these platforms as an active researcher affiliated with a Danish university, or are you a research administrator looking to learn more about how the backend NLP algorithms map publication data?
+Are you looking to access these platforms as an active researcher affiliated with a Danish university, or are you a research administrator looking to learn more about how the backend [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing") algorithms map publication data?
 
 ---
 
@@ -350,8 +383,8 @@ This is the story of the Funding Apps suite: a piece of software craftsmanship p
 
 The Genesis: Scaling from One University to a National Standard
 
-It all started at the University of Southern Denmark (SDU). The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (like Horizon Europe) tailored to their exact research track, without forcing them to manually comb through thousands of pages of text?
-By combining a highly resilient infrastructure with Natural Language Processing (NLP) pipelines, we built a suite of tailored micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion:
+It all started at the University of Southern Denmark (SDU). The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (like [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027")) tailored to their exact research track, without forcing them to manually comb through thousands of pages of text?
+By combining a highly resilient infrastructure with Natural Language Processing ([NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing")) pipelines, we built a suite of tailored micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion:
 
 Institution Platform Technical Integration & Role
 SDU (University of Southern Denmark) SDU Funding Apps The foundational hub. Implements secure institutional Single Sign-On (SSO), dynamic call calendars, and live data syncing with the global Pivot-RP grant database.
@@ -362,7 +395,7 @@ AAU (Aalborg University) AAU EU Funding Apps Focused heavily on predictive analy
 Under the Hood: 4 Micro-Apps Empowering Researchers
 
 Building software for the academic sector demands strict precision. To maximize pre-award success rates, I architected the ecosystem around four specialized modules that execute data updates overnight:
-• EU Call Finder: A text-mining algorithm that parses a researcher’s publication history to automatically suggest the most relevant Horizon Europe calls.
+• EU Call Finder: A text-mining algorithm that parses a researcher’s publication history to automatically suggest the most relevant [Horizon Europe](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027") calls.
 • EU Projects: A semantic mapping tool that scans existing EU-funded projects, ensuring a researcher's proposal is fully novel before they invest months into writing it.
 • EU Partners: A network-graph recommendation engine that maps pan-European corporate and university connections to find missing stakeholders for a strong grant consortium.
 • EU Evaluators: A profile-matching module that aligns the thematic focus of a draft proposal with past EU reviewers, identifying internal faculty contacts for mock peer reviews.
@@ -371,7 +404,7 @@ The Freelance Advantage: Agility Meets Long-Term Vision
 
 This seven-year journey highlights the distinct advantages of collaborating with a senior independent developer over an ever-shifting agency team:
 
-1. Full-Stack Ownership: From fine-tuning background NLP algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
+1. Full-Stack Ownership: From fine-tuning background [NLP](https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing") algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
 2. Zero Context Loss: Over seven years, there has been no staff turnover or changing project managers. The deep understanding of academic workflows and architecture has remained entirely intact.
 3. True R&D Partnership: This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms.
 Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow. It stands as a proud technical bridge built between France and Denmark.
