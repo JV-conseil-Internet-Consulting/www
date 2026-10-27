@@ -23,3 +23,5 @@ node_modules
 _ovh
 *.map
 .yarn
+assets/**/*.LICENSE.txt
+*.log
