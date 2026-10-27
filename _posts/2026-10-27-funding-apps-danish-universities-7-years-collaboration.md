@@ -23,7 +23,7 @@ As an independent French senior [full-stack developer](https://en.wikipedia.org/
 
 For the past seven years, I have worked hand-in-hand with the research support departments of Denmark's leading universities. Together, we have transformed academic grant acquisition — a process historically bogged down by administrative complexity — into a streamlined, automated ecosystem of interconnected research funding applications.
 
-This is the story of the **Funding Apps** suite: a piece of software craftsmanship, built specifically for Danish academic excellence.
+This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of software craftsmanship, built specifically for Danish academic excellence.
 
 <!-- space --> 
 
@@ -36,9 +36,9 @@ The [Funding Apps][SDU Funding Apps] were first deployed at the [University of S
 
 It all started in 2019 at the [University of Southern Denmark][SDU] (SDU) in [Odense][Odense]. [Maéva Vignes][Maéva] from SDU Research and Innovation (RIO), conceptualized the first version of the Funding Apps — a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal.
 
-[Maéva][Maéva] is a French PhD researcher who was working as a funding advisor at SDU. [Maéva][Maéva] had stood on both sides of the table: as a researcher writing competitive proposals, and as an advisor guiding colleagues through them. Her creative mindset — grounded in rigorous science but focused on practical researcher needs — defined the philosophy of the Funding Apps from day one: solve the real pain, not the administrative surface.
+[Maéva][Maéva] is a French PhD researcher who was working as a funding advisor at SDU. [Maéva][Maéva] had stood on both sides of the table: as a researcher writing competitive proposals, and as an advisor guiding colleagues through them. Her creative mindset — grounded in rigorous science but focused on practical researcher needs — defined the philosophy of the [Funding Apps][SDU Funding Apps] from day one: solve the real pain, not the administrative surface.
 
-The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as [Horizon Europe][Horizon Europe][Horizon Europe]) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
+The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as [Horizon Europe][Horizon Europe]) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
 
 By combining a highly resilient infrastructure with Natural Language Processing ([NLP][NLP]) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion.
 
@@ -109,7 +109,7 @@ Aarhus University (AU) was the third Danish university to adopt the [AU Funding 
 
 ## The Full-Stack Reality: Five Disciplines in One Codebase
 
-People often assume "full-stack" is a marketing label. The Funding Apps suite is a concrete demonstration of what the term truly demands. A single glance at the project's dependencies reveals five distinct engineering disciplines that one person must command simultaneously:
+People often assume "full-stack" is a marketing label. The [Funding Apps][SDU Funding Apps] suite is a concrete demonstration of what the term truly demands. A single glance at the project's dependencies reveals five distinct engineering disciplines that one person must command simultaneously:
 
 ### Back End Engineering
 
