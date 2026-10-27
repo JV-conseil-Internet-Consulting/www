@@ -94,7 +94,7 @@ _jvcl_::main() {
   _jvcl_::yarn_audit || :
   _jvcl_::sass_bootstrap
   # _jvcl_::sass_tippyjs
-  _jvcl_::webpack
+  _jvcl_::webpack | tee "./webpack.config.log"
   _jvcl_::cp_vendor
 }
 

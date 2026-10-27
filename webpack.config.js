@@ -38,8 +38,6 @@ const ASSET_PATH = '/assets/js/';
 
 const sharedPreset = {
   modules: false,
-  useBuiltIns: 'entry',
-  corejs: 3,
 };
 
 const babelPresetLegacy = {
@@ -55,7 +53,15 @@ const babelPresetLegacy = {
       },
     ],
   ],
-  plugins: ['@babel/plugin-transform-class-properties'],
+  plugins: [
+    '@babel/plugin-transform-class-properties',
+    [
+      'babel-plugin-polyfill-corejs3',
+      {
+        method: 'entry-global',
+      },
+    ],
+  ],
 };
 
 const babelPresetModern = {
@@ -71,7 +77,15 @@ const babelPresetModern = {
       },
     ],
   ],
-  plugins: ['@babel/plugin-transform-class-properties'],
+  plugins: [
+    '@babel/plugin-transform-class-properties',
+    [
+      'babel-plugin-polyfill-corejs3',
+      {
+        method: 'entry-global',
+      },
+    ],
+  ],
 };
 
 const sharedConfig = {
@@ -86,7 +100,7 @@ const sharedConfig = {
       resolve('./node_modules'),
       ...(process.env.NODE_PATH ? [resolve(process.env.NODE_PATH)] : []),
     ],
-    extensions: ['.json', '.js'],
+    extensions: ['.json', '.js', '.mjs'],
     symlinks: true,
   },
   optimization: {
@@ -123,7 +137,7 @@ const sharedConfig = {
   },
 };
 
-// --- FIX: Wrapped in a function export so Webpack passes env and argv explicitly ---
+// --- Wrapped in a function export so Webpack passes env and argv explicitly ---
 module.exports = (env, argv = {}) => {
   // Safe extraction of mode with fallback
   const mode = argv.mode || 'development';
@@ -165,13 +179,17 @@ module.exports = (env, argv = {}) => {
       module: {
         rules: [
           {
+            test: /\.m?js$/,
+            resolve: {
+              fullySpecified: false,
+            },
+          },
+          {
             test: /(\.jsx|\.js)$/,
+            exclude: /node_modules/,
             use: {
               loader: 'babel-loader',
               options: babelPresetModern,
-            },
-            resolve: {
-              fullySpecified: false,
             },
           },
           {
@@ -193,13 +211,17 @@ module.exports = (env, argv = {}) => {
       module: {
         rules: [
           {
+            test: /\.m?js$/,
+            resolve: {
+              fullySpecified: false,
+            },
+          },
+          {
             test: /(\.jsx|\.js)$/,
+            exclude: /node_modules/,
             use: {
               loader: 'babel-loader',
               options: babelPresetLegacy,
-            },
-            resolve: {
-              fullySpecified: false,
             },
           },
         ],
