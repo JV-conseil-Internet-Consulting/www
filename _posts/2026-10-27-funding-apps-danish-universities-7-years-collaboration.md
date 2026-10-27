@@ -132,7 +132,7 @@ As a French developer embedded in Danish institutions, I also had to become some
 
 ![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.jpg){:.lead loading="lazy"}
 
-Copenhagen Business School (CBS) is the last Danish university who recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
+Copenhagen Business School (CBS) is the last Danish university that recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
 {:.figcaption}
 
 ## The Freelance Advantage: Agility Meets Long-Term Vision
