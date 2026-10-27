@@ -174,7 +174,7 @@ Copenhagen Business School (CBS) is the last Danish university that recently ado
 
 Over the span of these seven years, something happened that nobody had planned at the outset: a team began to form around the project. Data scientists, web developers, and software engineers gradually joined, drawn to the initial vision — digitalising the métiers that facilitate academic collaboration — and eager to build new projects in its orbit.
 
-With the team came new responsibilities. On top of my development assignments, I have increasingly assumed an informal role that sits somewhere between tech lead, [CTO](https://en.wikipedia.org/wiki/CTO "Chief Technology Officer"), and team manager:
+With the team came new responsibilities. On top of my development assignments, I have increasingly assumed an informal role that sits somewhere between [tech lead](https://en.wikipedia.org/?redirect=no&title=Technical_lead "A tech lead (short for technical lead) is a software engineer responsible for leading a team and aligning the technical direction of a project"), [CTO](https://en.wikipedia.org/wiki/CTO "Chief Technology Officer"), and team manager:
 
 - **Recruitment:** Designing recruitment tests and conducting hiring interviews to select developers and data scientists who combine technical rigor with an understanding of the academic world.
 - **Knowledge sharing:** Hosting weekly thematic seminars in [Odense][Odense] to spread good coding practices, review architectural decisions, and keep the quality bar consistently high.
