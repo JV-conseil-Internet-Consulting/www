@@ -6,7 +6,7 @@ image:
 description: >
   How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities
 # hide_description: true
-category: projects
+category: [projects, europe]
 keywords: [Freelance Development, Higher Education, Research Funding, Horizon Europe, Denmark, NLP, Full-Stack Development]
 tags: [azure, bash, cloud, django, postgresql, python]
 ---
@@ -62,7 +62,7 @@ Aalborg University (AAU) was the second Danish university to adopt the [AAU EU F
 
 ## Under the Hood: 4 Micro-Apps for Smarter Grant Matching
 
-Building software for the academic sector demands strict precision. To maximize pre-award success rates, Maeva and I architected the ecosystem around four specialized modules that execute data updates overnight:
+Building software for the academic sector demands strict precision. To maximize pre-award success rates, [Maéva][Maéva] and I architected the ecosystem around four specialized modules that execute data updates overnight:
 
 - **EU Call Finder:** A text-mining algorithm that parses a researcher's publication history to automatically suggest the most relevant [Horizon Europe][Horizon Europe]) calls.
 - **EU Projects:** A semantic mapping tool that scans existing EU-funded projects, ensuring a researcher's proposal is fully novel before they invest months into writing it.
@@ -94,7 +94,7 @@ Rather than relying on static mailing lists or manual searches, the apps were bu
 
 **European datasets** describe what can be funded and by whom:
 
-- [CORDIS](https://cordis.europa.eu), the European Commission's reference portal on EU-funded research projects. Past and present projects, participants, results, and budgets are mined to verify the novelty of a proposed topic and to map potential consortium partners.
+- [CORDIS][CORDIS], the European Commission's reference portal on EU-funded research projects. Past and present projects, participants, results, and budgets are mined to verify the novelty of a proposed topic and to map potential consortium partners.
 - [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the EU Funding &amp; Tenders Portal. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
 - The [EU Experts](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/experts) database, where the Commission registers its independent evaluators. Thematic profiles of past reviewers are matched against draft proposals to identify experienced contacts for mock evaluations.
 
@@ -150,7 +150,7 @@ No two campuses run their infrastructure the same way, and none of these platfor
 
 - **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
-- **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS](https://cordis.europa.eu/fr).
+- **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS][CORDIS].
 - **Operations and Reliability:** Setting up CI/CD pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
 
 This meant speaking the language of network engineers, security officers, and system administrators alike — often within the same week, often across five different organizations at once.
@@ -254,7 +254,7 @@ No two campuses run their infrastructure the same way, and none of these platfor
 
 - **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
-- **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS](https://cordis.europa.eu/fr).
+- **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS][CORDIS].
 - **Operations and Reliability:** Setting up CI/CD pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
 
 This meant speaking the language of network engineers, security officers, and system administrators alike — often within the same week, often across five different organizations at once.
@@ -362,7 +362,7 @@ The Danish Academic Funding Tools ecosystem consists of interconnected digital s
 Platform Target Audience Core Capabilities & Functionality
 SDU Funding Apps SDU Faculty & Research Support Uses Single Sign-On (SSO) to offer personalized grant matching, a Call Calendar for common funds, and integration with the Pivot-RP global grant database.
 DTU Funding Tools Technical University of Denmark Interconnects publication history, grant announcements, and previously funded projects to evaluate proposal competitiveness and streamline interfaculty consortiums.
-AU Funding Tools Aarhus University Links directly with internal PURE research profile data to identify matching [Horizon Europe][Horizon Europe] calls and verify project novelty against existing [CORDIS](https://cordis.europa.eu/fr) portfolios.
+AU Funding Tools Aarhus University Links directly with internal PURE research profile data to identify matching [Horizon Europe][Horizon Europe] calls and verify project novelty against existing [CORDIS][CORDIS] portfolios.
 AAU EU Funding Apps Aalborg University Provides custom analytics, proposal styling templates, and AI-driven networking modules for cross-border research collaborations.
 
 Core Modules within the Ecosystem
@@ -416,6 +416,7 @@ Would you like me to make any adjustments for publication? I can:
 -->
 
 [API]: https://en.wikipedia.org/wiki/API "Application Programming Interface"
+[CORDIS]: https://cordis.europa.eu "Community Research and Development Information Service"
 [Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
 [Maéva]: https://www.linkedin.com/in/maevavignes/ "LinkedIn Profile"
 [NLP]: https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"
