@@ -4,6 +4,7 @@ title: JV conseil – Internet Consulting 👨‍💻
 cover: true
 selected_posts:
   - _posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.md
+  - _posts/2025-05-08-inorms-congress-madrid-2025.md
   - _posts/2023-08-28-jekyll-docker.md
   - _posts/2023-02-17-githubbing-on-ucloud.md
   - _posts/2022-07-18-django-azure-active-directory-signin.md

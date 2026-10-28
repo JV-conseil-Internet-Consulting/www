@@ -6,7 +6,7 @@ image:
 description: >
   Leveraging AI techniques and Open Data for designing and advancing research agendas
 # hide_description: true
-category: science
+category: [science, europe]
 ---
 
 - &nbsp;

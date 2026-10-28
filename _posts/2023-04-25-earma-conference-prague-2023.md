@@ -6,7 +6,7 @@ image:
 description: >
   Data tools for EU funding applications made by research supporters for research support and researchers
 # hide_description: true
-category: science
+category: [science, europe]
 ---
 
 - &nbsp;
