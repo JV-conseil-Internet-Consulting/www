@@ -7,7 +7,7 @@ description: >
   The missing repo to start GitHubbing on UCloud
 hide_description: true
 category: projects
-tag: [bash, cloud]
+tag: [bash, cloud, denmark]
 ---
 
 - &nbsp;

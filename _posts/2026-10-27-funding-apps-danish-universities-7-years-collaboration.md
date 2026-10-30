@@ -6,9 +6,20 @@ image:
 description: >
   How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities
 # hide_description: true
-category: [projects, europe]
+category: [projects, europe, denmark]
 keywords: [Freelance Development, Higher Education, Research Funding, Horizon Europe, Denmark, NLP, Full-Stack Development]
 tags: [azure, bash, cloud, django, postgresql, python]
+author: "Julien Vieillefont"
+
+# Adaptation transparente pour jekyll-seo-tag
+seo:
+  type: TechArticle
+  links:
+    - https://jv-conseil.dev/blog/2026-10-27-funding-apps-danish-universities-7-years-collaboration/
+  json_ld:
+    dependencies: "Python, Django, PostgreSQL, OpenAlex API, Bootstrap 5, Azure Cloud, NLP"
+    proficiencyLevel: "Expert"
+    keywords: "Grant Management Software, Django Architecture, OpenAlex, NLP, ETL Pipelines, Academic Tech"
 ---
 
 - &nbsp;
