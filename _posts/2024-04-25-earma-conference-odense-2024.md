@@ -6,7 +6,7 @@ image:
 description: >
   Adapting the Role of Research Managers in the Era of Artificial Intelligence: Insights from a University customizing and developing in-house AI tools for Research Management since 2018
 # hide_description: true
-category: [science, europe]
+category: [science, europe, denmark]
 ---
 
 - &nbsp;
