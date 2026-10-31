@@ -3,15 +3,17 @@ layout: post
 title: "7 Years Building Funding Apps for Danish Universities"
 image:
   path: /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.jpg
+  alt: "Map of Denmark locating the Funding Apps platforms of SDU, DTU, Aarhus University, Aalborg University, and Copenhagen Business School."
 description: >
   How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities
+excerpt: > 
+  Over seven years, one independent French developer and Denmark's leading universities turned a single campus tool into a national ecosystem of AI-powered grant matching — one that has helped researchers secure millions of euros in European funding.
 # hide_description: true
 category: [projects, europe, denmark]
 keywords: [Freelance Development, Higher Education, Research Funding, Horizon Europe, Denmark, NLP, Full-Stack Development]
-tags: [azure, bash, cloud, django, postgresql, python]
+tags: [python, django, postgresql, azure]
 author: "Julien Vieillefont"
 
-# Adaptation transparente pour jekyll-seo-tag
 seo:
   type: TechArticle
   links:
@@ -19,7 +21,7 @@ seo:
   json_ld:
     dependencies: "Python, Django, PostgreSQL, OpenAlex API, Bootstrap 5, Azure Cloud, NLP"
     proficiencyLevel: "Expert"
-    keywords: "Grant Management Software, Django Architecture, OpenAlex, NLP, ETL Pipelines, Academic Tech"
+    keywords: "Grant Management Software, Django Architecture, OpenAlex, NLP, ETL Pipelines, Academic Tech, Funding Apps Danish universities, research funding tools, Horizon Europe grant matching, university research support software, AI grant discovery, freelance full-stack developer, SDU, DTU, Aarhus University, Aalborg University, Copenhagen Business School"
 ---
 
 - &nbsp;
@@ -45,7 +47,7 @@ The [Funding Apps][SDU Funding Apps] were first deployed at the [University of S
 
 ## The Genesis: Scaling from One University to a National Standard
 
-It all started in 2019 at the [University of Southern Denmark][SDU] (SDU) in [Odense][Odense]. [Maéva Vignes][Maéva] from SDU Research and Innovation (RIO), conceptualized the first version of the Funding Apps — a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal.
+It all started at the [University of Southern Denmark][SDU] (SDU) in [Odense][Odense]. [Maéva Vignes][Maéva] from SDU Research and Innovation (RIO) began investigating the project in 2018: she saw the potential of a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal. I joined her in 2019 to bring the project to its next stage — migrating her local [Proof of Concept][PoC] (PoC) developments into a [Minimum Viable Product][MVP] (MVP), deployed as [Microsoft Azure][Azure] Cloud web applications with [CI/CD][CICD] pipelines from day one.
 
 [Maéva][Maéva] is a French PhD researcher who was working as a funding advisor at SDU. [Maéva][Maéva] had stood on both sides of the table: as a researcher writing competitive proposals, and as an advisor guiding colleagues through them. Her creative mindset — grounded in rigorous science but focused on practical researcher needs — defined the philosophy of the [Funding Apps][SDU Funding Apps] from day one: solve the real pain, not the administrative surface.
 
@@ -55,20 +57,20 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 
 <!-- space --> 
 
-| Since | Platform                                           | Institution                                 |
-| :---- | :------------------------------------------------- | ------------------------------------------- |
-| 2019  | [SDU Funding Apps][SDU Funding Apps]               | [University of Southern Denmark][SDU] (SDU) |
-| 2022  | [AAU EU Funding Apps](https://eu-funding.aau.dk/)  | Aalborg University (AAU)                    |
-| 2025  | [AU Funding Tools](https://funding-tools.au.dk/)   | Aarhus University (AU)                      |
-| 2026  | [DTU Funding Tools](https://funding-tools.dtu.dk/) | Technical University of Denmark (DTU)       |
-| 2026  | [CBS Funding Tools](https://funding-tools.cbs.dk/) | Copenhagen Business School (CBS)            |
+| Since | Platform                                           | Institution                                  |
+| :---- | :------------------------------------------------- | -------------------------------------------- |
+| 2019  | [SDU Funding Apps][SDU Funding Apps]               | [University of Southern Denmark][SDU] (SDU)  |
+| 2022  | [AAU EU Funding Apps](https://eu-funding.aau.dk/)  | [Aalborg University][AAU] (AAU)              |
+| 2025  | [AU Funding Tools](https://funding-tools.au.dk/)   | [Aarhus University][AU] (AU)                 |
+| 2026  | [DTU Funding Tools](https://funding-tools.dtu.dk/) | [Technical University of Denmark][DTU] (DTU) |
+| 2026  | [CBS Funding Tools](https://funding-tools.cbs.dk/) | [Copenhagen Business School][CBS] (CBS)      |
 {:.stretch-table}
 
 <!-- space --> 
 
 ![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.jpg){:.lead loading="lazy"}
 
-Aalborg University (AAU) was the second Danish university to adopt the [AAU EU Funding Apps](https://eu-funding.aau.dk/) in 2022.
+[Aalborg University][AAU] (AAU) was the second Danish university to adopt the [AAU EU Funding Apps](https://eu-funding.aau.dk/) in 2022.
 {:.figcaption}
 
 ## Under the Hood: 4 Micro-Apps for Smarter Grant Matching
@@ -108,6 +110,7 @@ Rather than relying on static mailing lists or manual searches, the apps were bu
 - [CORDIS][CORDIS], the European Commission's reference portal on EU-funded research projects. Past and present projects, participants, results, and budgets are mined to verify the novelty of a proposed topic and to map potential consortium partners.
 - [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the EU Funding &amp; Tenders Portal. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
 - The [EU Experts](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/experts) database, where the Commission registers its independent evaluators. Thematic profiles of past reviewers are matched against draft proposals to identify experienced contacts for mock evaluations.
+- [Pivot-RP][Pivot-RP], Clarivate's expert-curated database of global funding opportunities. It widens the horizon well beyond EU programmes: editorially maintained calls from foundations, national agencies, and private funders worldwide are synchronized with the platforms, giving researchers a single point of entry to the global funding landscape.
 
 The engineering challenge was never fetching these sources individually — it was reconciling them: resolving identities across systems, normalizing taxonomies that were never designed to meet, and maintaining one coherent graph that the [NLP][NLP] layer could reason over, night after night.
 
@@ -115,7 +118,7 @@ The engineering challenge was never fetching these sources individually — it w
 
 ![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.jpg){:.lead loading="lazy"}
 
-Aarhus University (AU) was the third Danish university to adopt the [AU Funding Tools](https://funding-tools.au.dk) in 2025.
+[Aarhus University][AU] (AU) was the third Danish university to adopt the [AU Funding Tools](https://funding-tools.au.dk) in 2025.
 {:.figcaption}
 
 ## The Full-Stack Reality: Five Disciplines in One Codebase
@@ -142,13 +145,16 @@ Raw funding data arrives in every conceivable condition: HTML pages, PDF documen
 
 Finally, the intelligent layer that ties it all together: [NLP][NLP] and machine-learning libraries that tokenize, lemmatize, and vectorize publication abstracts and call texts, then use semantic similarity and fuzzy matching to connect the right researcher with the right opportunity. This is the engine behind EU Call Finder, EU Projects, EU Partners, and EU Evaluators.
 
+<!-- space --> 
+
 Five disciplines. One developer. That is the bar this project has set — and maintained — for seven years of continuous releases.
+{:.lead}
 
 <!-- space --> 
 
 ![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.jpg){:.lead loading="lazy"}
 
-Technical University of Denmark (DTU) was the fourth Danish university to adopt the [DTU Funding Tools](https://funding-tools.dtu.dk/) in 2026.
+[Technical University of Denmark][DTU] (DTU) was the fourth Danish university to adopt the [DTU Funding Tools](https://funding-tools.dtu.dk/) in 2026.
 {:.figcaption}
 
 ## Beyond the Code: A Genuinely Multidisciplinary Experience
@@ -172,13 +178,22 @@ The true product owners were never the IT departments. They were the research su
 
 ### Building Bridges Across Working Cultures
 
-As a French developer embedded in Danish institutions, I also had to become something of a bridge builder. Danish professional culture — its flat hierarchies, direct communication, and consensus-driven decision-making — differs in many ways from the traditions in which I was trained, and learning to work fluently within it took deliberate effort. Add to this the daily reality of international collaboration: consortium partners, reviewers, and stakeholders spread across Europe, with English as the working language and remote coordination as the norm. Seven years of this have made cross-cultural communication a core skill of the craft, as fundamental as any technology in the stack.
+As a French developer embedded in Danish institutions, I also had to become something of a bridge builder. Danish professional culture — its flat hierarchies, direct communication, and consensus-driven decision-making — differs in many ways from the traditions in which I was trained, and learning to work fluently within it took deliberate effort. Add to this the daily reality of international collaboration: partners spread across Europe, with English as the working language and remote coordination as the norm. Seven years of this have made cross-cultural communication a core skill of the craft, as fundamental as any technology in the stack.
 
-<!-- space --> 
+### Improvised Community Manager
+
+Software alone does not make an ecosystem; its users do. Users from all five universities — researchers, research support advisors, and research managers — are gathered in a private, dedicated [LinkedIn group](https://www.linkedin.com/groups/12721532/ "Dedicated private LinkedIn group for the Funding Apps user community"). This community channel serves two main purposes:
+
+1. **Product communication:** announcing new features, sharing tips, and publishing how-to guides, so that every user gets the most out of the tools.
+2. **Service health status:** in case of service disruption, the group doubles as a health status channel, informing the community of incidents and fixes as they are being handled.
+
+Caring for this community became yet another informal métier on the project — one part community management, one part product communication, and one part incident response — and a direct, human link between the people who build the tools and the thousands of researchers who use them every day.
+
+<!-- space --> 
 
 ![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.jpg){:.lead loading="lazy"}
 
-Copenhagen Business School (CBS) is the last Danish university that recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
+[Copenhagen Business School][CBS] (CBS) is the last Danish university that recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
 {:.figcaption}
 
 ## From Solo Developer to Tech Lead: A Team Grows Around the Vision
@@ -193,13 +208,14 @@ With the team came new responsibilities. On top of my development assignments, I
 
 In hindsight, this is the natural extension of everything described above. The same continuity and depth that shaped the codebase now apply to people: building a team is not so different from building software — it requires a clear vision, honest feedback, and years of patient iteration.
 
-## The Freelance Advantage: Agility Meets Long-Term Vision
+## The Freelance Advantage: Stability, Continuity, and a Long-Term Vision
 
-This seven-year journey highlights the distinct advantages of collaborating with a senior independent developer over an ever-shifting agency team:
+If this collaboration has lasted seven years, it is because it rests on stability and permanence. This journey highlights what a senior independent developer brings to an institution over the long run:
 
-1. **Full-Stack Ownership:** From fine-tuning background [NLP][NLP] algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance.
-2. **Zero Context Loss:** Over seven years, there has been no staff turnover and no changing project managers. The deep understanding of academic workflows and architecture has remained entirely intact.
-3. **True R&D Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms.
+1. **Full-Stack Ownership:** From fine-tuning background [NLP][NLP] algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance — carried by the same hands, year after year.
+2. **Continuity of Project History:** Over seven years, there has been no staff turnover and no changing project managers. The complete history of the project lives on in one place: every architectural decision, every resolved incident, every institutional constraint. Nothing is ever lost, re-learned at the client's expense, or re-discovered by a new team.
+3. **Permanence of the Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms, sustained by the trust accumulated through seven years of delivery.
+4. **Vision for the Future:** Because the roadmap is never reset with each contract renewal, the project has a direction. The next features are designed today with the full memory of everything built before — a rare form of permanence in the software industry, and the foundation on which the next seven years are being planned.
 
 ## The Road Ahead
 
@@ -426,11 +442,20 @@ Would you like me to make any adjustments for publication? I can:
 
 -->
 
+[AAU]: https://www.en.aau.dk/about-aau "About Aalborg University (AAU)"
 [API]: https://en.wikipedia.org/wiki/API "Application Programming Interface"
+[AU]: https://international.au.dk/about "About Aarhus University (AU)"
+[Azure]: https://azure.microsoft.com/ "Microsoft Azure"
+[CBS]: https://www.cbs.dk/en/about-cbs "About Copenhagen Business School (CBS)"
+[CICD]: https://en.wikipedia.org/wiki/CI/CD "Continuous Integration / Continuous Delivery"
 [CORDIS]: https://cordis.europa.eu "Community Research and Development Information Service"
+[DTU]: https://www.dtu.dk/english/about "About DTU – Technical University of Denmark"
 [Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
 [Maéva]: https://www.linkedin.com/in/maevavignes/ "LinkedIn Profile"
+[MVP]: https://en.wikipedia.org/wiki/Minimum_viable_product "Minimum Viable Product"
 [NLP]: https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"
 [Odense]: https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark"
-[SDU]: https://www.sdu.dk/en/om-sdu "University of Southern Denmark (SDU)"
+[Pivot-RP]: https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/pivot-rp-funding/ "Pivot-RP, Clarivate's expert-curated global funding opportunities database"
+[PoC]: https://en.wikipedia.org/wiki/Proof_of_concept "Proof of Concept"
 [SDU Funding Apps]: https://funding-apps.sdu.dk/ "SDU Funding Apps"
+[SDU]: https://www.sdu.dk/en/om-sdu "University of Southern Denmark (SDU)"
