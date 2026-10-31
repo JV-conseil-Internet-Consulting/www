@@ -21,6 +21,7 @@ seo:
   json_ld:
     dependencies: "Python, Django, PostgreSQL, OpenAlex API, Bootstrap 5, Azure Cloud, NLP"
     proficiencyLevel: "Expert"
+    timeRequired: "PT13M"
     keywords: "Grant Management Software, Django Architecture, OpenAlex, NLP, ETL Pipelines, Academic Tech, Funding Apps Danish universities, research funding tools, Horizon Europe grant matching, university research support software, AI grant discovery, freelance full-stack developer, SDU, DTU, Aarhus University, Aalborg University, Copenhagen Business School"
 ---
 
@@ -28,6 +29,8 @@ seo:
 {:toc .large-only}
 
 <!-- markdownlint-disable MD026 MD033 MD041 -->
+
+_Reading time: 13 min._
 
 **How 7 Years of Collaboration with Danish Universities Built the Funding Apps Ecosystem**
 {:.lead}
@@ -210,7 +213,7 @@ In hindsight, this is the natural extension of everything described above. The s
 
 ## The Freelance Advantage: Stability, Continuity, and a Long-Term Vision
 
-If this collaboration has lasted seven years, it is because it rests on stability and permanence. This journey highlights what a senior independent developer brings to an institution over the long run:
+If this collaboration has lasted seven years, it is because it rests on stability and permanence. A **senior full-stack developer is, in effect, a Swiss army knife**: the entire spectrum of IT competences — architecture, back end, database, front end, data engineering, and operations — concentrated in one person, which is exactly what empowers a project to grow organically from a local proof of concept into a production-grade platform. This journey highlights what a senior independent developer brings to an institution over the long run:
 
 1. **Full-Stack Ownership:** From fine-tuning background [NLP][NLP] algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance — carried by the same hands, year after year.
 2. **Continuity of Project History:** Over seven years, there has been no staff turnover and no changing project managers. The complete history of the project lives on in one place: every architectural decision, every resolved incident, every institutional constraint. Nothing is ever lost, re-learned at the client's expense, or re-discovered by a new team.
