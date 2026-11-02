@@ -48,7 +48,7 @@
     "bower": "^1.8.14",
     "dedent": "^1.7.2",
     "depcheck": "^1.4.7",
-    "eslint": "^10.13.0",
+    "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
     "null-loader": "^4.0.1",
     "onchange": "^7.1.0",
@@ -56,7 +56,7 @@
     "tar": "^7.5.22",
     "uglify-js": "^3.19.3",
     "webpack": "^5.112.2",
-    "webpack-cli": "^7.2.3",
+    "webpack-cli": "^7.3.1",
     "webpack-merge": "^6.0.1",
     "yargs": "^18.2.0"
   },
