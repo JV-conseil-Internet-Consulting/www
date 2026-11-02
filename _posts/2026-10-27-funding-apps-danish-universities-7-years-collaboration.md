@@ -9,6 +9,7 @@ description: >
 excerpt: > 
   Over seven years, one independent French developer and Denmark's leading universities turned a single campus tool into a national ecosystem of AI-powered grant matching — one that has helped researchers secure millions of euros in European funding.
 # hide_description: true
+hide_last_modified: true
 category: [projects, europe, denmark]
 keywords: [Freelance Development, Higher Education, Research Funding, Horizon Europe, Denmark, NLP, Full-Stack Development]
 tags: [python, django, postgresql, azure]
@@ -35,7 +36,11 @@ _Reading time: 13 min._
 **How 7 Years of Collaboration with Danish Universities Built the Funding Apps Ecosystem**
 {:.lead}
 
-As an independent French senior [full-stack developer](https://en.wikipedia.org/wiki/Solution_stack#Full-stack_developer "A full-stack developer is expected to be able to work in all the layers of the application (front-end and back-end)"), I am often asked what makes this long-running collaboration with Danish universities work so well. My honest answer, after seven years, comes down to a rather uncommon combination: **continuity**, **deep domain expertise**, and **trust**, backed by a **set of skills** and experience that few single profiles bring together.
+Across Denmark, thousands of researchers and research managers nowadays rely on the [Funding Apps][SDU Funding Apps] ecosystem as an integral part of their daily professional lives, using it to prepare their grant applications. Yet how many of them know where this ecosystem actually comes from — how the project was born, how it was conceived and imagined, and how it grew step by step into the national standard it represents in Denmark today?
+
+This article is an attempt to sketch an answer to those questions, by retracing the seven-year journey through which this ecosystem came to be — to the point where it now radiates well beyond Danish borders, sparking growing interest among European neighbors such as the Netherlands, Belgium, and Ireland.
+
+As an independent French senior [full-stack developer](https://en.wikipedia.org/wiki/Solution_stack#Full-stack_developer "A full-stack developer is expected to be able to work in all the layers of the application (front-end and back-end)"), I am often asked what makes this long-running collaboration with Danish universities work so well. My honest answer, after seven years, comes down to a rather uncommon combination: **agility**, **continuity**, and **trust**, backed by a **set of skills and experience that few single profiles bring together**.
 
 For the past seven years, I have worked hand-in-hand with the research support departments of Denmark's leading universities. Together, we have transformed academic grant acquisition — a process historically bogged down by administrative complexity — into a streamlined, automated ecosystem of interconnected research funding applications.
 
@@ -213,16 +218,19 @@ In hindsight, this is the natural extension of everything described above. The s
 
 ## The Freelance Advantage: Stability, Continuity, and a Long-Term Vision
 
-If this collaboration has lasted seven years, it is because it rests on stability and permanence. A **senior full-stack developer is, in effect, a Swiss army knife**: the entire spectrum of IT competences — architecture, back end, database, front end, data engineering, and operations — concentrated in one person, which is exactly what empowers a project to grow organically from a local proof of concept into a production-grade platform. This journey highlights what a senior independent developer brings to an institution over the long run:
+If this collaboration has lasted seven years, it is because it rests on stability and permanence. A **senior full-stack developer is, in effect, a Swiss army knife:** the entire spectrum of IT competences — architecture, back end, database, front end, data engineering, and operations — concentrated in one person, which is exactly what empowers a project to grow organically from a local [Proof of Concept][PoC] into a production-grade platform. This journey highlights what a senior independent developer brings to an institution over the long run:
 
 1. **Full-Stack Ownership:** From fine-tuning background [NLP][NLP] algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance — carried by the same hands, year after year.
 2. **Continuity of Project History:** Over seven years, there has been no staff turnover and no changing project managers. The complete history of the project lives on in one place: every architectural decision, every resolved incident, every institutional constraint. Nothing is ever lost, re-learned at the client's expense, or re-discovered by a new team.
-3. **Permanence of the Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms, sustained by the trust accumulated through seven years of delivery.
-4. **Vision for the Future:** Because the roadmap is never reset with each contract renewal, the project has a direction. The next features are designed today with the full memory of everything built before — a rare form of permanence in the software industry, and the foundation on which the next seven years are being planned.
+3. **Knowledge as a Compounding Asset:** Seven years of trial and error are never wasted. Every lesson learned is conserved, every competence acquired is tracked and refined, and their accumulation becomes a valuable asset in its own right — the intangible capital that enables a professional project to keep growing.
+4. **Permanence of the Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms, sustained by the trust accumulated through seven years of delivery.
+5. **Vision for the Future:** Because the roadmap is never reset with each contract renewal, the project has a direction. The next features are designed today with the full memory of everything built before — a rare form of permanence in the software industry, and the foundation on which the next seven years are being planned.
 
-## The Road Ahead
+## The Road Ahead: Rise to the Challenges of [FP10][FP10]
 
 Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from [Odense][Odense] to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
+
+The relevance of this model extends well beyond Denmark's borders: as [Horizon Europe][Horizon Europe] draws to a close in December 2027, the ecosystem stands ready to help universities rise to the challenges of [FP10][FP10] — the next European Union’s funding programme for research and innovation, due to begin in January 2028 and, as is now widely known, heavily **inspired by the [Draghi report][Draghi] on the future of European competitiveness**.
 
 Seven years. Five institutions. Countless métiers and working cultures. One developer. The proof that long-term, trust-based collaboration between an independent craftsman and world-class academic institutions is not only viable — it is the model that built this ecosystem.
 
@@ -452,9 +460,11 @@ Would you like me to make any adjustments for publication? I can:
 [CBS]: https://www.cbs.dk/en/about-cbs "About Copenhagen Business School (CBS)"
 [CICD]: https://en.wikipedia.org/wiki/CI/CD "Continuous Integration / Continuous Delivery"
 [CORDIS]: https://cordis.europa.eu "Community Research and Development Information Service"
+[Draghi]: https://commission.europa.eu/topics/competitiveness/draghi-report_en "The future of European competitiveness — Report by Mario Draghi (September 2024)"
 [DTU]: https://www.dtu.dk/english/about "About DTU – Technical University of Denmark"
+[FP10]: https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI%282025%29779234 "Horizon Europe 2028–2034: 10th EU research and innovation framework programme"
 [Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
-[Maéva]: https://www.linkedin.com/in/maevavignes/ "LinkedIn Profile"
+[Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' LinkedIn Profile"
 [MVP]: https://en.wikipedia.org/wiki/Minimum_viable_product "Minimum Viable Product"
 [NLP]: https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"
 [Odense]: https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark"
