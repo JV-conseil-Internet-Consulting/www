@@ -176,7 +176,7 @@ No two campuses run their infrastructure the same way, and none of these platfor
 - **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
 - **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS][CORDIS].
-- **Operations and Reliability:** Setting up CI/CD pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
+- **Operations and Reliability:** Setting up [CI/CD][CICD] pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
 
 This meant speaking the language of network engineers, security officers, and system administrators alike — often within the same week, often across five different organizations at once.
 
@@ -197,7 +197,7 @@ Software alone does not make an ecosystem; its users do. Users from all five uni
 
 Caring for this community became yet another informal métier on the project — one part community management, one part product communication, and one part incident response — and a direct, human link between the people who build the tools and the thousands of researchers who use them every day.
 
-<!-- space --> 
+<!-- space --> 
 
 ![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.jpg){:.lead loading="lazy"}
 
