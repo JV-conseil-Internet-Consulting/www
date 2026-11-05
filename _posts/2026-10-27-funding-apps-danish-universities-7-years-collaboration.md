@@ -44,7 +44,7 @@ As an independent French senior [full-stack developer](https://en.wikipedia.org/
 
 For the past seven years, I have worked hand-in-hand with the research support departments of Denmark's leading universities. Together, we have transformed academic grant acquisition — a process historically bogged down by administrative complexity — into a streamlined, automated ecosystem of interconnected research funding applications.
 
-This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of software craftsmanship, built specifically for Danish academic excellence.
+This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of software craftsmanship, built specifically for Scandinavian academic excellence.
 
 <!-- space --> 
 
@@ -57,11 +57,11 @@ The [Funding Apps][SDU Funding Apps] were first deployed at the [University of S
 
 It all started at the [University of Southern Denmark][SDU] (SDU) in [Odense][Odense]. [Maéva Vignes][Maéva] from SDU Research and Innovation (RIO) began investigating the project in 2018: she saw the potential of a suite of digital tools designed to streamline research funding, from finding a pertinent financing opportunity to writing an impactful proposal. I joined her in 2019 to bring the project to its next stage — migrating her local [Proof of Concept][PoC] (PoC) developments into a [Minimum Viable Product][MVP] (MVP), deployed as [Microsoft Azure][Azure] Cloud web applications with [CI/CD][CICD] pipelines from day one.
 
-[Maéva][Maéva] is a French PhD researcher who was working as a funding advisor at SDU. [Maéva][Maéva] had stood on both sides of the table: as a researcher writing competitive proposals, and as an advisor guiding colleagues through them. Her creative mindset — grounded in rigorous science but focused on practical researcher needs — defined the philosophy of the [Funding Apps][SDU Funding Apps] from day one: solve the real pain, not the administrative surface.
+[Maéva][Maéva] is a French PhD researcher who was working as a funding advisor at [SDU][SDU]. [Maéva][Maéva] had stood on both sides of the table: as a researcher writing competitive proposals, and as an advisor guiding colleagues through them. Her creative mindset — grounded in rigorous science but focused on practical researcher needs — defined the philosophy of the [Funding Apps][SDU Funding Apps] from day one: solve the real pain, not the administrative surface.
 
 The initial challenge was ambitious: how could we help busy researchers instantly discover European grant opportunities (such as [Horizon Europe][Horizon Europe]) tailored to their exact research track, without forcing them to manually comb through thousands of pages of administrative text?
 
-By combining a highly resilient infrastructure with Natural Language Processing ([NLP][NLP]) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at SDU quickly caught the attention of other major institutions across the country, leading to a nationwide expansion.
+By combining a highly resilient infrastructure with Natural Language Processing ([NLP][NLP]) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at [SDU][SDU] quickly caught the attention of other major institutions across the country, leading to a nationwide expansion.
 
 <!-- space --> 
 
@@ -175,7 +175,7 @@ No two campuses run their infrastructure the same way, and none of these platfor
 
 - **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
-- **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as Pivot-RP and [CORDIS][CORDIS].
+- **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as [Pivot-RP][Pivot-RP] and [CORDIS][CORDIS].
 - **Operations and Reliability:** Setting up [CI/CD][CICD] pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
 
 This meant speaking the language of network engineers, security officers, and system administrators alike — often within the same week, often across five different organizations at once.
