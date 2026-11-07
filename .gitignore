@@ -26,4 +26,4 @@ _ovh
 assets/**/*.LICENSE.txt
 *.log
 _prompts
-webpack.*.config.js
+webpack.config.*.js
