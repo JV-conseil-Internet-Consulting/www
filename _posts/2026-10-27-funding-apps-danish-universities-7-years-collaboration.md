@@ -124,7 +124,7 @@ The engineering challenge was never fetching these sources individually — it w
 
 <!-- space --> 
 
-![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.jpg){:.lead loading="lazy"}
+![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.jpg){:.lead loading="lazy"}
 
 [Aarhus University][AU] (AU) was the third Danish university to adopt the [AU Funding Tools](https://funding-tools.au.dk) in 2025.
 {:.figcaption}
