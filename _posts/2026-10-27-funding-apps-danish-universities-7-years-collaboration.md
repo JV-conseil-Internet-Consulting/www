@@ -31,7 +31,7 @@ seo:
 
 <!-- markdownlint-disable MD026 MD033 MD041 -->
 
-_Reading time: 13 min._
+_Reading time: 14 min._
 
 **How 7 Years of Collaboration with Danish Universities Built the Funding Apps Ecosystem**
 {:.lead}
