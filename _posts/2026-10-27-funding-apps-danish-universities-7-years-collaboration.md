@@ -232,7 +232,7 @@ Today, these tools actively support thousands of Danish researchers in securing 
 
 The relevance of this model extends well beyond Denmark's borders: as [Horizon Europe][Horizon Europe] draws to a close in December 2027, the ecosystem stands ready to help universities rise to the challenges of [FP10][FP10] — the next European Union’s funding programme for research and innovation, due to begin in January 2028 and, as is now widely known, heavily **inspired by the [Draghi report][Draghi] on the future of European competitiveness**.
 
-Seven years. Five institutions. Countless métiers and working cultures. One developer. The proof that long-term, trust-based collaboration between an independent craftsman and world-class academic institutions is not only viable — it is the model that built this ecosystem.
+Seven years. Five institutions. Countless métiers and working cultures. One developer. The proof that long-term, trust-based collaboration between an independent developer and world-class academic institutions is not only viable — it is the model that built this ecosystem.
 
 <!-- links -->
 
