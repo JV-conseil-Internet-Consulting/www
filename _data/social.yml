@@ -216,3 +216,6 @@ mastodon:
 dev:
   name: DEV Community
   icon: icon-dev-dot-to
+bluesky:
+  name: Bluesky
+  icon: icon-bluesky
