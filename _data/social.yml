@@ -213,6 +213,10 @@ download:
 mastodon:
   name: Mastodon
   icon: icon-mastodon
+bluesky:
+  name: Bluesky
+  icon: icon-bluesky
+  prepend: "https://bsky.app/profile/"
 dev:
   name: DEV Community
   icon: icon-dev-dot-to

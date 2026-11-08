@@ -55,6 +55,10 @@
   content: "\e904";
   /* color: #3088d4; */
 }
+.icon-bluesky:before {
+  content: "\e90a";
+  /* color: #1185fe; */
+}
 .icon-book:before {
   content: "\e91f";
 }
