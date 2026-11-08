@@ -60,9 +60,9 @@ author:
     linkedin:          julien-vieillefont
     github:            JV-conseil-Internet-Consulting
     # gist:              JV-conseil
-    dev:               https://dev.to/jvconseil
-    bluesky:           https://bsky.app/profile/jv-conseil.bsky.social
-    mastodon:          https://mastodon.social/@JVconseil
+    dev:               jvconseil
+    bluesky:           jv-conseil.bsky.social
+    mastodon:          "@JVconseil"
     stackoverflow:     2477854
     # twitter:           JVconseil
     email:             contact@jv-conseil.dev
