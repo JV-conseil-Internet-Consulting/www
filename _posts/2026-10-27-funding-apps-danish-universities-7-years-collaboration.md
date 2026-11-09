@@ -10,7 +10,7 @@ excerpt: >
   Over seven years, one independent French developer and Denmark's leading universities turned a single campus tool into a national ecosystem of AI-powered grant matching — one that has helped researchers secure millions of euros in European funding.
 # hide_description: true
 hide_last_modified: true
-category: [projects, europe, denmark]
+category: [projects, europe, science, denmark]
 keywords: [Freelance Development, Higher Education, Research Funding, Horizon Europe, Denmark, NLP, Full-Stack Development]
 tags: [python, django, postgresql, azure]
 author: "Julien Vieillefont"
