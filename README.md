@@ -19,8 +19,7 @@
 [![Follow JVconseil on Twitter](https://img.shields.io/twitter/follow/JVconseil.svg?style=social&logo=twitter)](https://twitter.com/JVconseil "Follow JVconseil on Twitter")
 [![Follow JVconseil on Mastodon](https://img.shields.io/mastodon/follow/110950122046692405)](https://mastodon.social/@JVconseil "Follow JVconseil@mastodon.social on Mastodon")
 [![Follow JV-conseil on GitHub](https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&style=social)](https://github.com/JV-conseil "Follow JV-conseil on GitHub")
-[![Follow JV-conseil on Bluesky](https://img.shields.io/bluesky/posts/jv-conseil.bsky.social?label=JV-conseil)
-](https://bsky.app/profile/jv-conseil.bsky.social "Follow JV-conseil on Bluesky")
+[![Follow JV-conseil on Bluesky](https://img.shields.io/bluesky/posts/jv-conseil.bsky.social?label=JV-conseil)](https://bsky.app/profile/jv-conseil.bsky.social "Follow JV-conseil on Bluesky")
 
 DevOps • Full Stack Developer • Web App Architect
 
@@ -59,6 +58,3 @@ In [Gemfile.lock](./Gemfile.lock) do not upgrade `sass-embedded (1.62.1-arm64-da
 
 <!-- links -->
 
-[Django]: https://docs.djangoproject.com/en/4.0/releases/4.1.7/
-[PostgreSQL]: https://www.postgresql.org/docs/15/
-[Python]: https://www.python.org/downloads/release/python-3112/
