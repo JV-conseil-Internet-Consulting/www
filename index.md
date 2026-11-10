@@ -8,7 +8,7 @@ selected_posts:
   - _posts/2023-02-17-githubbing-on-ucloud.md
   - _posts/2022-07-18-django-azure-active-directory-signin.md
   - _posts/2019-10-31-nature-scientific-data-ageguess-database.md
-  - _posts/2019-06-27-building-ageguess-drupal-citizen-science.md
+  - _posts/2024-06-18-building-ageguess-drupal-citizen-science.md
   - _posts/2023-08-28-jekyll-docker.md
   - _posts/2023-02-28-jekyll-theme-read-the-docs.md
   - _posts/2019-11-17-dkim-php-mail-signature.png.md
