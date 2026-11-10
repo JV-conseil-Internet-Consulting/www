@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "12 Years Building AgeGuess: Drupal Development for Citizen Science"
+title: "10 Years Building AgeGuess: Drupal Development for Citizen Science"
 image:
-  path: /assets/posts/2019-06-27-building-ageguess-drupal-citizen-science.png
+  path: /assets/posts/2024-06-18-building-ageguess-drupal-citizen-science.png
   alt: "AgeGuess.org, the citizen science game where players guess the ages of the people in photographs to support research on human ageing."
 description: >
-  How an independent French senior full-stack developer has spent twelve years building and maintaining the AgeGuess.org citizen science platform on Drupal, helping researchers assemble one of the world's largest open databases on perceived age.
+  How an independent French senior full-stack developer has spent ten years building and maintaining the AgeGuess.org citizen science platform on Drupal, helping researchers assemble one of the world's largest open databases on perceived age.
 excerpt: >
-  Behind a simple online game — look at a face, guess an age — lies a Drupal platform that has quietly collected hundreds of thousands of perceived age guesses for ageing research. This is the story of the twelve years of freelance development behind AgeGuess.org.
+  Behind a simple online game — look at a face, guess an age — lies a Drupal platform that has quietly collected hundreds of thousands of perceived age guesses for ageing research. This is the story of the ten years of freelance development behind AgeGuess.org.
 # hide_description: true
 hide_last_modified: true
 category: [projects, science, drupal]
@@ -18,7 +18,7 @@ author: "Julien Vieillefont"
 seo:
   type: TechArticle
   links:
-    - https://jv-conseil.dev/blog/2019-06-27-building-ageguess-drupal-citizen-science/
+    - https://jv-conseil.dev/blog/2024-06-18-building-ageguess-drupal-citizen-science/
   json_ld:
     dependencies: "Drupal 7, PHP, MySQL, Bootstrap 3.2.0, jQuery 1.11.1, JpGraph, Font Awesome 4.7.0"
     proficiencyLevel: "Expert"
@@ -33,14 +33,14 @@ seo:
 
 _Reading time: 10 min._
 
-**How Twelve Years of Drupal Development Quietly Built a Scientific Resource on Human Ageing**
+**How Ten Years of Drupal Development Quietly Built a Scientific Resource on Human Ageing**
 {:.lead}
 
 At first sight, [AgeGuess.org][AgeGuess] looks like a harmless little game. Create an account, look at a photograph, and try to guess how old the person in it is. Guess again. And again. Accumulate points, climb the ranking, and come back tomorrow.
 
 Yet behind this simple game lies a genuine scientific instrument. Every guess contributes to an open database on perceived age — how old someone looks to others — a biomarker that researchers use to study the human ageing process. Since 2012, citizen scientists from more than 120 countries have uploaded thousands of facial photographs and produced more than 220,000 perceived age guesses, in the process building [a database published in Nature's *Scientific Data*][AgeGuess database paper].
 
-What the players rarely considered was who kept the platform running. The answer: an independent French senior full-stack developer. Twelve years ago, I took over the web development of [AgeGuess][AgeGuess]; I then carried the platform for the next twelve years, as a freelance [Drupal][Drupal] developer. This article retraces that journey — how the current platform came to be, how its architecture supports both an online game and a scientific database, and what twelve years of continuous maintenance of a citizen science project truly demand.
+What the players rarely considered was who kept the platform running. The answer: an independent French senior full-stack developer. Ten years ago, on 18 June 2014, I took over the web development of [AgeGuess][AgeGuess]; I then carried the platform until 18 June 2024, as a freelance [Drupal][Drupal] developer. This article retraces that journey — how the current platform came to be, how its architecture supports both an online game and a scientific database, and what ten years of continuous maintenance of a citizen science project truly demand.
 
 This is the story of a quiet piece of software engineering in the service of open science.
 
@@ -56,7 +56,7 @@ The game, in other words, is the sampling method.
 
 ## The Genesis: From a Research Idea to a Drupal Platform
 
-[AgeGuess][AgeGuess] was started in 2012 by the evolutionary biologist [Ulrich K. Steiner][Uli] and the population geneticist D. Misevic, who still form the core committee of the project: they define the data collection protocols, secure funding, and steer the scientific directions with a team of academic and industrial advisors. The first fully functional version of the website was coded by Charlotte Le Pesquer.
+[AgeGuess][AgeGuess] was started in 2012 by the evolutionary biologist [Ulrich K. Steiner][Uli] and the population geneticist D. Misevic, who headed the project throughout its lifetime: they defined the data collection protocols, secured funding, and steered the scientific directions with a team of academic and industrial advisors. The first fully functional version of the website was coded by Charlotte Le Pesquer.
 
 I joined the project in 2014 with a clear assignment: rebuild the platform so that it could carry the project over the long haul. That decision framed everything that followed. A citizen science project lives or dies by its capacity to run reliably for decades — data collection of this kind is a marathon, not a sprint — and the software had to be designed accordingly.
 
@@ -89,7 +89,7 @@ The guiding principle was restraint: the science must never intrude on the fun, 
 
 ### The Custom Module: The Unseen Machinery
 
-The custom AgeGuess module is where the platform takes care of itself. It ships the maintenance scripts and monitoring tools that twelve years of operation have proven necessary: watchdog monitoring with alerting on anomalies, analytics, a photo-resize engine that normalizes every uploaded image, recurring photo-folder audits that reconcile the file system with the database, security reviews, and structured SQL maintenance routines.
+The custom AgeGuess module is where the platform takes care of itself. It ships the maintenance scripts and monitoring tools that ten years of operation have proven necessary: watchdog monitoring with alerting on anomalies, analytics, a photo-resize engine that normalizes every uploaded image, recurring photo-folder audits that reconcile the file system with the database, security reviews, and structured SQL maintenance routines.
 
 This is the unglamorous ninety percent of the work — invisible to the players, indispensable to the scientists.
 
@@ -151,12 +151,12 @@ Citizen science data is often met with scepticism, and the paper settled the que
 
 ## The Freelance Advantage: A Decade of Continuity
 
-If this collaboration has lasted twelve years, it is because it rests on the same foundations I described in my previous article about [seven years of collaboration with Danish universities][Funding Apps post]: stability, continuity, and trust. A senior independent developer is, in effect, a Swiss army knife — and a citizen science project is precisely the kind of venture that needs one, because it cannot afford a full IT department, yet cannot afford downtime either.
+If this collaboration has lasted ten years, it is because it rests on the same foundations — stability, continuity, and trust — that I would later describe in my article about [seven years of collaboration with Danish universities][Funding Apps post]. A senior independent developer is, in effect, a Swiss army knife — and a citizen science project is precisely the kind of venture that needs one, because it cannot afford a full IT department, yet cannot afford downtime either.
 
 1. **Full-stack ownership.** From the photo-resize engine to the ranking page, from the queue algorithm to the CSV exports, every layer of the platform has been carried by the same hands, year after year.
 2. **Continuity of project history.** No turnover, no changing maintainers. Every resolved incident, every moderation decision, every architectural trade-off still lives in one place. Nothing is re-learned at the project's expense.
 3. **Maintenance as a discipline.** The watchdog alerts, the folder audits, the security reviews — this unglamorous routine is what turns a website into a scientific instrument. Instruments are not merely built; they are maintained into existence.
-4. **Knowledge as a compounding asset.** Twelve years of observing how players behave, abuse, and cooperate have shaped every countermeasure and every algorithmic refinement. That accumulated knowledge is the platform's true foundation.
+4. **Knowledge as a compounding asset.** Ten years of observing how players behave, abuse, and cooperate have shaped every countermeasure and every algorithmic refinement. That accumulated knowledge is the platform's true foundation.
 
 ## The Legacy: A Closed Project, an Open Resource
 
@@ -166,7 +166,7 @@ What remains is precisely what the project set out to produce. The database — 
 
 So the invitation is no longer to play, but to build: download the data if research is your trade, cite the paper, and turn to advantage the resource that thousands of citizen scientists assembled together, one guess at a time.
 
-Twelve years. One platform. One developer. The proof that long-term, trust-based collaboration between an independent developer and a research community is not only viable — it leaves behind scientific resources of lasting value.
+Ten years. One platform. One developer. The proof that long-term, trust-based collaboration between an independent developer and a research community is not only viable — it leaves behind scientific resources of lasting value.
 
 <!-- links -->
 
