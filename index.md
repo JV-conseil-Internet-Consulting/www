@@ -5,15 +5,15 @@ cover: true
 selected_posts:
   - _posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.md
   - _posts/2025-05-08-inorms-congress-madrid-2025.md
-  - _posts/2023-02-17-githubbing-on-ucloud.md
-  - _posts/2022-07-18-django-azure-active-directory-signin.md
-  - _posts/2019-10-31-nature-scientific-data-ageguess-database.md
   - _posts/2024-06-18-building-ageguess-drupal-citizen-science.md
   - _posts/2023-08-28-jekyll-docker.md
-  - _posts/2023-02-28-jekyll-theme-read-the-docs.md
-  - _posts/2019-11-17-dkim-php-mail-signature.png.md
   - _posts/2023-03-12-bash.md
+  - _posts/2023-02-28-jekyll-theme-read-the-docs.md
+  - _posts/2023-02-17-githubbing-on-ucloud.md
+  - _posts/2022-07-18-django-azure-active-directory-signin.md
   - _posts/2022-03-06-git.md
+  - _posts/2019-11-17-dkim-php-mail-signature.png.md
+  - _posts/2019-10-31-nature-scientific-data-ageguess-database.md
 ---
 
 {% include_cached my-description.liquid %}
