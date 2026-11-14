@@ -108,11 +108,25 @@ To keep players contributing, the platform is set up as a simple online game. Gu
 
 On their personal account page, players see their cumulative points, their number of guesses, and their proportion of fully accurate guesses; a public ranking lets them compare themselves by point score and by mean deviation from real ages. After each guess, the real age of the person, summary statistics of previous guesses, and a histogram appear — immediate feedback that turns a chore into a game.
 
+<!-- space --> 
+
+![AgeGuess Picture Upload Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-upload-picture.png){:.lead loading="lazy"}
+
+How the picture upload page looked on [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
+{:.figcaption}
+
 ### The Queue Algorithm: Turning Players into a Sampling Engine
 
 The heart of the scientific machinery is the algorithm that decides which photograph to display to which player. To be eligible, a picture must (1) not have been uploaded by the player themselves, (2) not have been guessed or already seen by them, and (3) not have been reported more than four times. The algorithm then sorts eligible pictures by ascending number of previous guesses, choosing randomly among ties; a skip button allows bypassing acquaintances, limited to four skips per session; the queue is renewed at each login.
 
 The effect is deliberate. Perceived age is a noisy measure — a single guess tells you almost nothing, but the average of dozens of independent guesses is a robust observation. By steering every photograph towards a homogeneous number of guesses (a minimum of ten per image, and a median of forty-two at the time of the 2019 publication), the queue algorithm transforms scattered player behaviour into a statistically usable sampling design.
+
+<!-- space --> 
+
+![AgeGuess Guessing Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-guessing.png){:.lead loading="lazy"}
+
+How the guessing page looked on [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
+{:.figcaption}
 
 ## Trust, Privacy, and Moderation: Engineering Consent
 
@@ -121,6 +135,13 @@ A platform that collects photographs of identifiable people — some of them min
 The framework is strict. Users retain the copyright of their pictures; the photographs themselves are never published open-access, in line with EU privacy protection law, and can only be shared with researchers through formal bilateral data-sharing agreements. Registration requires email validation; a CAPTCHA keeps bots at bay; and a cookie-disclaimer component manages consent on the front end.
 
 Moderation is crowdsourced. While guessing, players can report photographs across explicit categories — rotation needed, cropping needed, edited image, missing person, more than one person, copyright infringement, or offensive content. The team reviews reports and edits or deletes photographs accordingly, and the queue algorithm automatically removes any picture reported more than four times. A suite of countermeasures against malicious users completes the system; their full details are deliberately not documented, to keep would-be abusers at a disadvantage.
+
+<!-- space --> 
+
+![AgeGuess Moderation Page (Admin Side)](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-moderation-admin-side.png){:.lead loading="lazy"}
+
+How the moderation page looked on the admin side of [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
+{:.figcaption}
 
 ## From Clicks to Open Data: The Data Pipeline
 
