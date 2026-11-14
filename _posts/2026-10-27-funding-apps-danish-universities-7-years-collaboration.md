@@ -2,7 +2,7 @@
 layout: post
 title: "7 Years Building Funding Apps for Danish Universities"
 image:
-  path: /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.jpg
+  path: /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.webp
   alt: "Map of Denmark locating the Funding Apps platforms of SDU, DTU, Aarhus University, Aalborg University, and Copenhagen Business School."
 description: >
   How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities
@@ -48,7 +48,7 @@ This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of 
 
 <!-- space --> 
 
-![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.jpg){:.lead loading="lazy"}
+![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy"}
 
 The [Funding Apps][SDU Funding Apps] were first deployed at the [University of Southern Denmark][SDU] (SDU) in 2019.
 {:.figcaption}
@@ -76,7 +76,7 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 
 <!-- space --> 
 
-![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.jpg){:.lead loading="lazy"}
+![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp){:.lead loading="lazy"}
 
 [Aalborg University][AAU] (AAU) was the second Danish university to adopt the [AAU EU Funding Apps](https://eu-funding.aau.dk/) in 2022.
 {:.figcaption}
@@ -98,7 +98,7 @@ It requires modelling a genuinely complex institutional taxonomy — the Pillars
 
 This knowledge had to be internalized down to the finest grain: a module that recommends mock reviewers, for instance, must reason within the exact same taxonomy that EU evaluators themselves use.
 
-![Horizon Europe Pillars & Clusters](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.jpg){:.lead loading="lazy"}
+![Horizon Europe Pillars & Clusters](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.webp){:.lead loading="lazy"}
 
 [Horizon Europe][Horizon Europe] Pillars & Clusters.
 {:.figcaption}
@@ -124,7 +124,7 @@ The engineering challenge was never fetching these sources individually — it w
 
 <!-- space --> 
 
-![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.jpg){:.lead loading="lazy"}
+![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp){:.lead loading="lazy"}
 
 [Aarhus University][AU] (AU) was the third Danish university to adopt the [AU Funding Tools](https://funding-tools.au.dk) in 2025.
 {:.figcaption}
@@ -160,7 +160,7 @@ Five disciplines. One developer. That is the bar this project has set — and ma
 
 <!-- space --> 
 
-![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.jpg){:.lead loading="lazy"}
+![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp){:.lead loading="lazy"}
 
 [Technical University of Denmark][DTU] (DTU) was the fourth Danish university to adopt the [DTU Funding Tools](https://funding-tools.dtu.dk/) in 2026.
 {:.figcaption}
@@ -199,7 +199,7 @@ Caring for this community became yet another informal métier on the project —
 
 <!-- space --> 
 
-![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.jpg){:.lead loading="lazy"}
+![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp){:.lead loading="lazy"}
 
 [Copenhagen Business School][CBS] (CBS) is the last Danish university that recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
 {:.figcaption}
