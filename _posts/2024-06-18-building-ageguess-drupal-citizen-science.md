@@ -2,7 +2,7 @@
 layout: post
 title: "10 Years Building AgeGuess: Drupal Development for Citizen Science"
 image:
-  path: /assets/posts/2024-06-18-building-ageguess-drupal-citizen-science.png
+  path: /assets/posts/2024-06-18-building-ageguess-drupal-citizen-science.webp
   alt: "AgeGuess.org, the citizen science game where players guess the ages of the people in photographs to support research on human ageing."
 description: >
   How an independent French senior full-stack developer has spent ten years building and maintaining the AgeGuess.org citizen science platform on Drupal, helping researchers assemble one of the world's largest open databases on perceived age.
@@ -110,7 +110,7 @@ On their personal account page, players see their cumulative points, their numbe
 
 <!-- space --> 
 
-![AgeGuess Picture Upload Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-upload-picture.png){:.lead loading="lazy"}
+![AgeGuess Picture Upload Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-upload-picture.webp){:.lead loading="lazy"}
 
 How the picture upload page looked on [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
 {:.figcaption}
@@ -123,7 +123,7 @@ The effect is deliberate. Perceived age is a noisy measure — a single guess te
 
 <!-- space --> 
 
-![AgeGuess Guessing Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-guessing.png){:.lead loading="lazy"}
+![AgeGuess Guessing Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-guessing.webp){:.lead loading="lazy"}
 
 How the guessing page looked on [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
 {:.figcaption}
@@ -138,7 +138,7 @@ Moderation is crowdsourced. While guessing, players can report photographs acros
 
 <!-- space --> 
 
-![AgeGuess Moderation Page (Admin Side)](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-moderation-admin-side.png){:.lead loading="lazy"}
+![AgeGuess Moderation Page (Admin Side)](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-moderation-admin-side.webp){:.lead loading="lazy"}
 
 How the moderation page looked on the admin side of [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
 {:.figcaption}

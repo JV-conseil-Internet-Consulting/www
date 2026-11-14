@@ -27,3 +27,4 @@ assets/**/*.LICENSE.txt
 *.log
 _prompts
 webpack.config.*.js
+*.zip
