@@ -36,7 +36,8 @@ _Reading time: 14 min._
 **How 7 Years of Collaboration with Danish Universities Built the Funding Apps Ecosystem**
 {:.lead}
 
-Across Denmark, thousands of researchers and research managers nowadays rely on the [Funding Apps][SDU Funding Apps] ecosystem as an integral part of their daily professional lives, using it to prepare their grant applications. Yet how many of them know where this ecosystem actually comes from — how the project was born, how it was conceived and imagined, and how it grew step by step into the national standard it represents in Denmark today?
+Across Denmark, thousands of researchers and research managers nowadays rely on the [Funding App
+s][SDU Funding Apps] ecosystem as an integral part of their daily professional lives, using it to prepare their grant applications. Yet how many of them know where this ecosystem actually comes from — how the project was born, how it was conceived and imagined, and how it grew step by step into the national standard it represents in Denmark today?
 
 This article is an attempt to sketch an answer to those questions, by retracing the seven-year journey through which this ecosystem came to be — to the point where it now radiates well beyond Danish borders, sparking growing interest among European neighbors such as the Netherlands, Belgium, and Ireland.
 
@@ -50,7 +51,8 @@ This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of 
 
 ![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy" width="1200" height="1200"}
 
-The [Funding Apps][SDU Funding Apps] were first deployed at the [University of Southern Denmark][SDU] (SDU) in 2019.
+The [Funding Apps][SDU Funding Apps] were first deployed at the [University of Southern Denmark][SDU] (SDU
+) in 2019.
 {:.figcaption}
 
 ## The Genesis: Scaling from One University to a National Standard
@@ -66,7 +68,8 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 <!-- space --> 
 
 | Since | Platform                                           | Institution                                  |
-| :---- | :------------------------------------------------- | -------------------------------------------- |
+| :---- | :------------------------------------
+------------- | -------------------------------------------- |
 | 2019  | [SDU Funding Apps][SDU Funding Apps]               | [University of Southern Denmark][SDU] (SDU)  |
 | 2022  | [AAU EU Funding Apps](https://eu-funding.aau.dk/)  | [Aalborg University][AAU] (AAU)              |
 | 2025  | [AU Funding Tools](https://funding-tools.au.dk/)   | [Aarhus University][AU] (AU)                 |
@@ -90,7 +93,8 @@ Building software for the academic sector demands strict precision. To maximize 
 - **EU Partners:** A network-graph recommendation engine that maps pan-European corporate and university connections to find missing stakeholders for a strong grant consortium.
 - **EU Evaluators:** A profile-matching module that aligns the thematic focus of a draft proposal with past EU reviewers, identifying internal faculty contacts for mock peer reviews.
 
-## A Fine-Grained Understanding of the EU Funding Ecosystem
+## A Fine-Grained Understanding of
+ the EU Funding Ecosystem
 
 None of this would work without a deep, practitioner-level understanding of the object the software navigates: the European research funding landscape itself. Parsing it is far from a trivial text-processing exercise.
 
@@ -111,7 +115,8 @@ Rather than relying on static mailing lists or manual searches, the apps were bu
 
 - [OpenAlex](https://openalex.org), the open catalog to the global research system. It supplies indexed publications, affiliations, citation graphs, and research concepts, and its fully open [API][API] makes it the backbone for reconstructing each researcher's publication history.
 - [ORCID](https://orcid.org), the persistent digital identifier for researchers. It is the glue for identity resolution: the key that reliably links a PURE profile to the right author records in publication databases, despite homonymous names and career mobility across institutions and countries.
-- [PURE](https://www.elsevier.com/products/pure), the research information management system that each university operates internally. It is the authoritative institutional source for research profiles, activities, and outputs, and the starting point from which every grant match is computed.
+- [PURE](https://w
+ww.elsevier.com/products/pure), the research information management system that each university operates internally. It is the authoritative institutional source for research profiles, activities, and outputs, and the starting point from which every grant match is computed.
 
 **European datasets** describe what can be funded and by whom:
 
@@ -124,7 +129,8 @@ The engineering challenge was never fetching these sources individually — it w
 
 <!-- space --> 
 
-![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp){:.lead loading="lazy"}
+![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-
+aarhus.webp){:.lead loading="lazy"}
 
 [Aarhus University][AU] (AU) was the third Danish university to adopt the [AU Funding Tools](https://funding-tools.au.dk) in 2025.
 {:.figcaption}
@@ -145,7 +151,8 @@ Underneath sits a [PostgreSQL](https://www.postgresql.org/) core with connection
 
 The user-facing layer follows a rigorous build chain — webpack, Sass, and minification pipelines — serving Bootstrap 5 interfaces styled to each institution's identity. Interactive data tables, full-scale calendar views of upcoming calls, search panes, and rich charting libraries must all feel instant and effortless, in keeping with Scandinavian design minimalism.
 
-### [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load "Extract, transform, load") and Data Cleaning
+### [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load "Extract, transform, load") and Data
+ Cleaning
 
 Raw funding data arrives in every conceivable condition: HTML pages, PDF documents, Excel spreadsheets, compressed archives. An entire extraction-transformation layer — scrapers, PDF and spreadsheet parsers, browser automation, language detection, and Unicode normalization — runs nightly to turn that chaos into clean, structured, matchable records.
 
@@ -173,7 +180,8 @@ Delivering the same ecosystem to five institutions taught me an essential lesson
 
 No two campuses run their infrastructure the same way, and none of these platforms would have gone live without the daily cooperation of each university's IT organization. Over the years, I collaborated across their full spectrum of métiers:
 
-- **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
+- **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the 
+university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
 - **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as [Pivot-RP][Pivot-RP] and [CORDIS][CORDIS].
 - **Operations and Reliability:** Setting up [CI/CD][CICD] pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
@@ -186,7 +194,8 @@ The true product owners were never the IT departments. They were the research su
 
 ### Building Bridges Across Working Cultures
 
-As a French developer embedded in Danish institutions, I also had to become something of a bridge builder. Danish professional culture — its flat hierarchies, direct communication, and consensus-driven decision-making — differs in many ways from the traditions in which I was trained, and learning to work fluently within it took deliberate effort. Add to this the daily reality of international collaboration: partners spread across Europe, with English as the working language and remote coordination as the norm. Seven years of this have made cross-cultural communication a core skill of the craft, as fundamental as any technology in the stack.
+As a French developer embedded in Danish institutions, I also had to become something of a bridge builder. Danish professional culture — its flat hierarchies, direct communication, and consensus-driven decision-making — differs in many ways from the traditions in which I was trained, and learning to work fluently within it took deliberate effort. Add to this the daily reality of international collaboration: partners spre
+ad across Europe, with English as the working language and remote coordination as the norm. Seven years of this have made cross-cultural communication a core skill of the craft, as fundamental as any technology in the stack.
 
 ### Improvised Community Manager
 
@@ -206,7 +215,8 @@ Caring for this community became yet another informal métier on the project —
 
 ## From Solo Developer to Tech Lead: A Team Grows Around the Vision
 
-Over the span of these seven years, something happened that nobody had planned at the outset: a team began to form around the project. Data scientists, web developers, and software engineers gradually joined, drawn to the initial vision — digitalising the métiers that facilitate academic collaboration — and eager to build new projects in its orbit.
+Over the span of these seven years, something happened that nobody had planned at the outset: a team began to form around the project. Data scientists, web developers, and software engineers gradually joined, drawn to the initial vision — digitalising the métiers that facilitate academic collaboration — and eager to build new projects in it
+s orbit.
 
 With the team came new responsibilities. On top of my development assignments, I have increasingly assumed an informal role that sits somewhere between [Tech Lead](https://en.wikipedia.org/?redirect=no&title=Technical_lead "A Tech Lead (short for technical lead) is a software engineer responsible for leading a team and aligning the technical direction of a project"), [CTO](https://en.wikipedia.org/wiki/CTO "Chief Technology Officer"), and Team Manager:
 
@@ -220,7 +230,8 @@ In hindsight, this is the natural extension of everything described above. The s
 
 If this collaboration has lasted seven years, it is because it rests on stability and permanence. A **senior full-stack developer is, in effect, a Swiss army knife:** the entire spectrum of IT competences — architecture, back end, database, front end, data engineering, and operations — concentrated in one person, which is exactly what empowers a project to grow organically from a local [Proof of Concept][PoC] into a production-grade platform. This journey highlights what a senior independent developer brings to an institution over the long run:
 
-1. **Full-Stack Ownership:** From fine-tuning background [NLP][NLP] algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance — carried by the same hands, year after year.
+1. **Full-S
+tack Ownership:** From fine-tuning background [NLP][NLP] algorithms to designing clean, minimalist user interfaces inspired by Scandinavian aesthetics, every line of code is optimized for performance — carried by the same hands, year after year.
 2. **Continuity of Project History:** Over seven years, there has been no staff turnover and no changing project managers. The complete history of the project lives on in one place: every architectural decision, every resolved incident, every institutional constraint. Nothing is ever lost, re-learned at the client's expense, or re-discovered by a new team.
 3. **Knowledge as a Compounding Asset:** Seven years of trial and error are never wasted. Every lesson learned is conserved, every competence acquired is tracked and refined, and their accumulation becomes a valuable asset in its own right — the intangible capital that enables a professional project to keep growing.
 4. **Permanence of the Partnership:** This collaboration goes beyond standard client-vendor delivery. It is a continuous co-innovation process where we actively iterate to bring the latest technological advancements to the platforms, sustained by the trust accumulated through seven years of delivery.
@@ -230,7 +241,8 @@ If this collaboration has lasted seven years, it is because it rests on stabilit
 
 Today, these tools actively support thousands of Danish researchers in securing millions of euros in funding to build the science of tomorrow — from [Odense][Odense] to Lyngby, from Aarhus to Aalborg, and now in Copenhagen. What began as a single university's internal need has grown into a de facto national standard, and the journey is far from over.
 
-The relevance of this model extends well beyond Denmark's borders: as [Horizon Europe][Horizon Europe] draws to a close in December 2027, the ecosystem stands ready to help universities rise to the challenges of [FP10][FP10] — the next European Union’s funding programme for research and innovation, due to begin in January 2028 and, as is now widely known, heavily **inspired by the [Draghi report][Draghi] on the future of European competitiveness**.
+The relevance of this model exte
+nds well beyond Denmark's borders: as [Horizon Europe][Horizon Europe] draws to a close in December 2027, the ecosystem stands ready to help universities rise to the challenges of [FP10][FP10] — the next European Union’s funding programme for research and innovation, due to begin in January 2028 and, as is now widely known, heavily **inspired by the [Draghi report][Draghi] on the future of European competitiveness**.
 
 Seven years. Five institutions. Countless métiers and working cultures. One developer. The proof that long-term, trust-based collaboration between an independent developer and world-class academic institutions is not only viable — it is the model that built this ecosystem.
 
@@ -246,8 +258,9 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 [Draghi]: https://commission.europa.eu/topics/competitiveness/draghi-report_en "The future of European competitiveness — Report by Mario Draghi (September 2024)"
 [DTU]: https://www.dtu.dk/english/about "About DTU – Technical University of Denmark"
 [FP10]: https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI%282025%29779234 "Horizon Europe 2028–2034: 10th EU research and innovation framework programme"
-[Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union's primary funding programme for research and innovation for the period 2021–2027"
-[Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' LinkedIn Profile"
+[Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
+[Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' Link
+edIn Profile"
 [MVP]: https://en.wikipedia.org/wiki/Minimum_viable_product "Minimum Viable Product"
 [NLP]: https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"
 [Odense]: https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark"
