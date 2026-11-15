@@ -1,2 +1,26 @@
 // Uncomment to disable dingbat icons below posts
 // hr.dingbat { display: none }
+
+
+// Cumulative Layout Shift guard (PageSpeed Insights 2026-11-15, mobile CLS 1.002).
+// Before the `hy-drawer` web component initializes, the theme's critical CSS
+// keeps the sidebar in flow above `#_main` (pre-hydration fallback). When the
+// drawer upgrades it moves the sidebar out of flow, so on viewports below
+// `$break-point-3` the main content jumped up by one viewport height right
+// after first paint. `_includes/head/scripts.liquid` marks `<html>` with the
+// `js` class during head parsing; while the drawer is not upgraded yet, this
+// rule pins the sidebar as a full-width fixed overlay, matching the geometry
+// of the upgraded drawer, so `#_main` is at its final position from first
+// paint. Without JavaScript the `html.js` guard keeps the original in-flow
+// fallback, and desktop viewports are unaffected (the drawer is fixed there
+// in the critical CSS already). The zero pre-upgrade drawer height also makes
+// the `_js/src/drawer.js` scroll compensation measure 0, so it stays inert.
+@media screen and (max-width: ($break-point-3 - .01em)) {
+  html.js hy-drawer:not(.loaded) .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+}
