@@ -6,7 +6,8 @@
         mf.type = "text/javascript"; mf.defer = true;
         mf.src = "//cdn.mouseflow.com/projects/{{ site.mouseflow.project_api_key }}.js";
     document.getElementsByTagName("head")[0].appendChild(mf);
-      })();</script>
+      })();
+  </script>
 {%- endif -%}
 
 
@@ -75,6 +76,6 @@
   <script
     async
     defer
-    src="https://analytics.umami.is/script.js"
+    src="https://cloud.umami.is/script.js"
     data-website-id="{{ site.umami.website_id }}"></script>
 {%- endif -%}

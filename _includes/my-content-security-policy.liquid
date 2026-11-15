@@ -19,8 +19,9 @@
   instead of 'unsafe-inline'.
 
   Third-party origins allow-listed:
-  - analytics.umami.is : umami analytics script (script.js)
-  - gateway.umami.is : umami analytics beacons (POST /api/send)
+  - cloud.umami.is : umami analytics script (script.js) and beacons
+  (POST /api/send); both are served from the same host, so a single
+  entry covers script-src and connect-src.
   - https: (img, media)  : historical posts embed badges, screenshots and
   media from third-party CDNs (img.shields.io, user-images.githubusercontent.com,
   *.gallerycdn.vsassets.io, docs.cloud.sdu.dk, fbcdn.net, media.springernature.com).
@@ -28,4 +29,4 @@
   accept any HTTPS origin; tighten by enumerating hosts if preferred.
   -->
 {% endcomment %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://analytics.umami.is; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; media-src 'self' https:; connect-src 'self' https://gateway.umami.is; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cloud.umami.is; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; media-src 'self' https:; connect-src 'self' https://cloud.umami.is; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
