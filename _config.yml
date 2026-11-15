@@ -361,6 +361,7 @@ exclude:
   - AGENTS.md
   - Gemfile
   - Gemfile.lock
+  - GEMINI.md
   - node_modules
   - vendor
 include:
