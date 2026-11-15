@@ -42,12 +42,25 @@
   {% assign hy_preload_src = page.image.path | default: page.image %}
   {% if hy_preload_src and page.image.srcset %}
     {% capture hy_preload_srcset %}{% for hash in page.image.srcset %}{% assign tmp = hash[1] %}{% include_cached smart-url url=tmp %} {{ hash[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    {% comment %}
+      Mirror the `sizes` attribute rendered by components/hy-img.liquid for the post
+      hero (see components/post.liquid) so the preload and the <img> resolve to the
+      same srcset candidate and the image is fetched only once.
+    {% endcomment %}
+    {% assign hy_vars = site.data.variables %}
+    {% capture hy_preload_sizes %}
+      (min-width: {{ hy_vars.break_point_5 | default: 86 }}em) {{ hy_vars.content_width_5 | default: 54 | plus: 2 }}rem,
+      (min-width: {{ hy_vars.break_point_2 | default: 54 }}em) {{ hy_vars.content_width_2 | default: 48 | plus: 2 }}rem,
+      (min-width: {{ hy_vars.break_point_1 | default: 42 }}em) {{ hy_vars.content_width | default: 42 | plus: 2 }}rem,
+      100vw
+    {% endcapture %}
+    {% assign hy_preload_sizes = hy_preload_sizes | strip_newlines | replace: ' ', '' %}
     <link
       rel="preload"
       as="image"
       href="{{ hy_preload_src | relative_url }}"
       imagesrcset="{{ hy_preload_srcset | strip }}"
-      imagesizes="100vw"
+      imagesizes="{{ hy_preload_sizes }}"
       fetchpriority="high">
   {% elsif hy_preload_src %}
     <link

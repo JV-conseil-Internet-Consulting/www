@@ -46,16 +46,21 @@
 . ".bash/incl/all.sh"
 
 _jvcl_::git_sign_local() {
-  _jvcl_::h1 "Sign every commit on local dev branch..."
+  local _current_branch
+
+  # Retrieve the active Git branch from the current workspace
+  _current_branch="$(git branch --show-current 2>/dev/null || git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+
+  _jvcl_::h1 "Sign every commit on ${_current_branch} branch..."
+
   git fetch origin
-  git switch dev
-  git rebase --rebase-merges --exec 'git commit --amend --no-edit -S' origin/main
+  git checkout "${_current_branch}"
+  git rebase --force-rebase --exec 'git commit --amend --no-edit -S' origin/dev
+  git push --force-with-lease origin "${_current_branch}"
 }
 
 _jvcl_::main() {
-  if _jvcl_::git_sign_local; then
-    git push --force-with-lease origin dev
-  fi
+  _jvcl_::git_sign_local
 }
 
 _jvcl_::main
