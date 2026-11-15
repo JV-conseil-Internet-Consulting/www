@@ -4,19 +4,27 @@
 
   {% comment %}
     <!--
-    PageSpeed Insights (report of 2026-11-15) flags the word cloud for missing
-    explicit dimensions (layout shift risk) and for being oversized on small
-    viewports (1600x400 served for a ~375x94 mobile display). The explicit
-    width/height attributes reserve the 4:1 aspect-ratio box before the image
-    loads. Serving smaller variants requires new Git LFS binaries; generate a
-    450w candidate from the original source with:
-    cwebp -resize 450 0 -q 80 nuage-de-mots.png -o nuage-de-mots-450x113.webp
+    PageSpeed Insights (report of 2026-11-15) flags the word cloud in
+    "Improve image delivery": the 1600x400 file (112 KiB) is served for a
+    ~375x94 mobile display. The explicit width/height attributes reserve
+    the 4:1 aspect-ratio box before the image loads, and the srcset serves
+    the existing 450w Git LFS variant (23 KiB) to standard-density
+    viewports; the sizes attribute mirrors the theme content column widths
+    from _data/variables.yml (42/48/54rem at the 42/54/86em breakpoints).
+    Hi-DPI phones (DPR 1.75+) still resolve to the 1600w candidate
+    because 450x1.75 < 656px; clearing them requires a ~900w candidate
+    generated from the source PNG with:
+    cwebp -resize 900 225 -q 80 nuage-de-mots-1600x400.png -o nuage-de-mots-900x225.webp
+    (a Git LFS binary) and declared in the srcset below.
     -->
   {% endcomment %}
   <img
     src="/assets/img/nuage-de-mots-1600x400.webp"
+    srcset="/assets/img/nuage-de-mots-450x113.webp 450w, /assets/img/nuage-de-mots-1600x400.webp 1600w"
+    sizes="(min-width: 86em) 54rem, (min-width: 54em) 48rem, (min-width: 42em) 42rem, 100vw"
     width="1600"
     height="400"
+    decoding="async"
     style="max-width:100%;height:auto"
     alt="DevOps • Full Stack Developer • Web App Architect • Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) • Paris, France 🇫🇷">
 
@@ -33,22 +41,26 @@
   {% endcomment %}
   {%- comment -%}
     <!--
-    The badge images declare explicit width/height attributes (measured from
-    the served SVGs) so the browser reserves their aspect-ratio box before
-    they load; PageSpeed Insights (report of 2026-11-15) flags the badges in
-    "Image elements do not have explicit width and height". Shield dimensions
-    drift as counters change, which only affects the reservation marginally.
-    Markdown image syntax cannot carry attributes, hence raw HTML.
+    The badge images declare explicit width/height attributes (measured
+    from the served SVGs on 2026-11-15) so the browser reserves their
+    aspect-ratio boxes before they load; PageSpeed Insights (report of
+    2026-11-15) flags them in "Image elements do not have explicit width
+    and height". Shield dimensions drift as counters change, which only
+    affects the reservation marginally. Markdown image syntax cannot
+    carry attributes, hence raw HTML. The badges render below the fold,
+    so loading="lazy" and decoding="async" defer the nine third-party
+    requests (img.shields.io, wakatime.com, ~19 KiB) until they approach
+    the viewport without affecting the Largest Contentful Paint.
     -->
   {%- endcomment -%}
-  [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil "Become a sponsor to JV-conseil")
-  [![Follow JV conseil on StackOverflow](https://img.shields.io/stackexchange/stackoverflow/r/2477854)](https://stackoverflow.com/users/2477854/jv-conseil "Follow JV conseil on StackOverflow")
-  [![Follow JV conseil on WakaTime](https://wakatime.com/badge/user/18a46db9-013a-4b70-9a0f-662bca13aa53.svg)](https://wakatime.com/@18a46db9-013a-4b70-9a0f-662bca13aa53 "Follow JV conseil on WakaTime")
-  [![Follow JV conseil on LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/julien-vieillefont/ "Follow JV conseil on LinkedIn")
-  [![Follow JVconseil on Twitter](https://img.shields.io/twitter/follow/JVconseil.svg?style=social&logo=twitter)](https://twitter.com/JVconseil "Follow JVconseil on Twitter")
-  [![Follow JVconseil on Mastodon](https://img.shields.io/mastodon/follow/110950122046692405)](https://mastodon.social/@JVconseil "Follow JVconseil@mastodon.social on Mastodon")
-  [![Follow JV-conseil on GitHub](https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&style=social)](https://github.com/JV-conseil "Follow JV-conseil on GitHub")
-  [![Follow JV-conseil on Bluesky](https://img.shields.io/bluesky/posts/jv-conseil.dev?label=JV-conseil)](https://bsky.app/profile/jv-conseil.dev "Follow JV-conseil on Bluesky")
+  <a href="https://github.com/sponsors/JV-conseil" title="Become a sponsor to JV-conseil"><img src="https://img.shields.io/static/v1?label=Sponsor&amp;message=%E2%9D%A4&amp;logo=GitHub&amp;color=%23fe8e86" alt="Become a sponsor to JV-conseil" width="93" height="20" loading="lazy" decoding="async"></a>
+  <a href="https://stackoverflow.com/users/2477854/jv-conseil" title="Follow JV conseil on StackOverflow"><img src="https://img.shields.io/stackexchange/stackoverflow/r/2477854" alt="Follow JV conseil on StackOverflow" width="178" height="20" loading="lazy" decoding="async"></a>
+  <a href="https://wakatime.com/@18a46db9-013a-4b70-9a0f-662bca13aa53" title="Follow JV conseil on WakaTime"><img src="https://wakatime.com/badge/user/18a46db9-013a-4b70-9a0f-662bca13aa53.svg" alt="Follow JV conseil on WakaTime" width="190" height="20" loading="lazy" decoding="async"></a>
+  <a href="https://www.linkedin.com/in/julien-vieillefont/" title="Follow JV conseil on LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-blue?logo=linkedin" alt="Follow JV conseil on LinkedIn" width="57" height="20" loading="lazy" decoding="async"></a>
+  <a href="https://twitter.com/JVconseil" title="Follow JVconseil on Twitter"><img src="https://img.shields.io/twitter/follow/JVconseil.svg?style=social&amp;logo=twitter" alt="Follow JVconseil on Twitter" width="108" height="20" loading="lazy" decoding="async"></a>
+  <a href="https://mastodon.social/@JVconseil" title="Follow JVconseil@mastodon.social on Mastodon"><img src="https://img.shields.io/mastodon/follow/110950122046692405" alt="Follow JVconseil on Mastodon" width="146" height="20" loading="lazy" decoding="async"></a>
+  <a href="https://github.com/JV-conseil" title="Follow JV-conseil on GitHub"><img src="https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&amp;style=social" alt="Follow JV-conseil on GitHub" width="110" height="20" loading="lazy" decoding="async"></a>
+  <a href="https://bsky.app/profile/jv-conseil.dev" title="Follow JV conseil on Bluesky"><img src="https://img.shields.io/bluesky/posts/jv-conseil.dev?label=JV-conseil" alt="Follow JV conseil on Bluesky" width="104" height="20" loading="lazy" decoding="async"></a>
 </div>
 
 {% if author.about %}
