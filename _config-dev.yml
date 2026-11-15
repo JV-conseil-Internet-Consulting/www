@@ -53,7 +53,7 @@ logo:                  /assets/img/logo.webp
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                JV conseil
+  name:                Julien Vieillefont
   email:               contact@jv-conseil.dev
   picture:             /assets/img/logo.webp
   social:
