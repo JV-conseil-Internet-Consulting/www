@@ -1,18 +1,41 @@
-{% assign image       = include.image       %}
-{% assign color       = include.color       %}
+{% assign image = include.image %}
+{% assign color = include.color %}
 {% assign theme_color = include.theme_color %}
-{% assign cover       = include.cover       %}
+{% assign cover = include.cover %}
 
 {% if image.background %}
   {% capture bg_style %}background:{{ image.background }}{% endcapture %}
   {% capture bg_class %}sidebar-bg {% if image.overlay %}sidebar-overlay{% endif %}{% endcapture %}
   {% assign bg_img = nil %}
-{% else %}
-  {% assign bg_color = theme_color | default:site.theme_color | default:color %}
+  {% else %}
+  {% assign bg_color = theme_color | default: site.theme_color | default: color %}
   {% capture bg_style %}background-color:{{ bg_color }};{% endcapture %}
   {% capture bg_class %}sidebar-bg {% if image != 'none' %}sidebar-overlay{% endif %}{% endcapture %}
   {% if image != 'none' %}
     {%- capture bg_img -%}{% include_cached smart-url url=image %}{%- endcapture -%}
+  {% endif %}
+  {%
+        comment
+      %}
+    {%
+    comment
+    %}
+    Responsive variant of the site-wide sidebar background: the image renders
+    full-bleed (100vw, see `.sidebar-bg` in the critical CSS), so `sizes` is
+    `100vw`. A 1464w landscape candidate covers phones and laptops while the
+    3280w original serves only large desktop viewports. Page-specific accent
+    images keep the plain `src`: their variant files do not exist, so a
+    srcset entry would break them with a 404.
+    {%
+    endcomment
+    %}
+    {%
+        endcomment
+    %}
+  {% if image == site.accent_image %}
+    {%- assign bg_img_1464 = site.accent_image | replace_first: '.webp', '-1464x823.webp' -%}
+    {%- capture bg_img_1464_url -%}{% include_cached smart-url url=bg_img_1464 %}{%- endcapture -%}
+    {%- capture bg_srcset -%}{{ bg_img_1464_url | strip }} 1464w, {{ bg_img | strip }} 3280w{%- endcapture -%}
   {% endif %}
 {% endif %}
 {% comment %}
@@ -26,4 +49,18 @@
   below the fold and closed, so lazy-loading remains correct there.
   -->
 {% endcomment %}
-<div class="{{ bg_class }}" style="{{ bg_style }}">{% if bg_img %}<img class="sidebar-bg-img" src="{{ bg_img }}" alt="" loading="{% if cover %}eager{% else %}lazy{% endif %}" decoding="async"{% if cover %} fetchpriority="high"{% endif %}>{% endif %}</div>
+<div class="{{ bg_class }}" style="{{ bg_style }}">
+  {% if bg_img %}<img
+      class="sidebar-bg-img"
+      src="{{ bg_img }}"
+      {% if bg_srcset %}
+      srcset="{{ bg_srcset | strip }}"
+      sizes="100vw"
+      {% endif %}
+      alt=""
+      loading="{% if cover %}eager{% else %}lazy{% endif %}"
+      decoding="async"
+      {% if cover %}
+      fetchpriority="high"
+      {% endif %}>{% endif %}
+</div>
