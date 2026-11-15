@@ -73,6 +73,34 @@
 
 {% comment %}
   <!--
+  Preload the sidebar background image on cover pages (e.g. the homepage).
+  On cover pages the drawer starts `opened` and its background image is the
+  Largest Contentful Paint element; PageSpeed Insights (report of 2026-11-15)
+  measured a 1,320 ms resource load delay because the image was lazy-loaded
+  and only discovered late. The preload makes the request discoverable from
+  the initial HTML at high priority. _includes/body/sidebar-bg.liquid renders
+  the matching <img> eager with `fetchpriority="high"`, so the preload and
+  the image deduplicate into a single download.
+
+  Only plain-string accent images are preloaded: when `accent_image` is set
+  to the object form (with a `.background` property) the sidebar uses a CSS
+  background instead of an <img>, so there is no LCP image to preload.
+  -->
+{% endcomment %}
+{% if page.cover %}
+  {% assign hy_cover_img = page.accent_image | default: site.accent_image %}
+  {% if hy_cover_img and hy_cover_img.background == nil %}
+    {%- capture hy_cover_img_url -%}{% include_cached smart-url url=hy_cover_img %}{%- endcapture -%}
+    <link
+      rel="preload"
+      as="image"
+      href="{{ hy_cover_img_url | strip }}"
+      fetchpriority="high">
+  {% endif %}
+{% endif %}
+
+{% comment %}
+  <!--
   Using preload so that page rendering doesn't get blocked.
   Fill in href. You may have to adjust as and onload/rel, depending on content.
 
