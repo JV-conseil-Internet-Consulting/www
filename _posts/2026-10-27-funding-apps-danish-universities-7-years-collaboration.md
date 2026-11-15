@@ -3,6 +3,9 @@ layout: post
 title: "7 Years Building Funding Apps for Danish Universities"
 image:
   path: /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.webp
+  srcset:
+    - [900w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-900.webp]
+    - [1408w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.webp]
   alt: "Map of Denmark locating the Funding Apps platforms of SDU, DTU, Aarhus University, Aalborg University, and Copenhagen Business School."
 description: >
   How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities
@@ -48,7 +51,7 @@ This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of 
 
 <!-- space --> 
 
-![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
+![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu-850.webp 850w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
 
 The [Funding Apps][SDU Funding Apps] were first deployed at the [University of Southern Denmark][SDU] (SDU) in 2019.
 {:.figcaption}
@@ -76,7 +79,7 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 
 <!-- space --> 
 
-![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
+![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg-850.webp 850w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
 
 [Aalborg University][AAU] (AAU) was the second Danish university to adopt the [AAU EU Funding Apps](https://eu-funding.aau.dk/) in 2022.
 {:.figcaption}
@@ -98,7 +101,7 @@ It requires modelling a genuinely complex institutional taxonomy — the Pillars
 
 This knowledge had to be internalized down to the finest grain: a module that recommends mock reviewers, for instance, must reason within the exact same taxonomy that EU evaluators themselves use.
 
-![Horizon Europe Pillars & Clusters](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.webp){:.lead loading="lazy" width="955" height="455" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.webp 955w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
+![Horizon Europe Pillars & Clusters](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.webp){:.lead loading="lazy" width="955" height="455" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters-850.webp 850w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.webp 955w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
 
 [Horizon Europe][Horizon Europe] Pillars & Clusters.
 {:.figcaption}
@@ -124,7 +127,7 @@ The engineering challenge was never fetching these sources individually — it w
 
 <!-- space --> 
 
-![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
+![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus-850.webp 850w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
 
 [Aarhus University][AU] (AU) was the third Danish university to adopt the [AU Funding Tools](https://funding-tools.au.dk) in 2025.
 {:.figcaption}
@@ -160,7 +163,7 @@ Five disciplines. One developer. That is the bar this project has set — and ma
 
 <!-- space --> 
 
-![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
+![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu-850.webp 850w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
 
 [Technical University of Denmark][DTU] (DTU) was the fourth Danish university to adopt the [DTU Funding Tools](https://funding-tools.dtu.dk/) in 2026.
 {:.figcaption}
@@ -200,7 +203,7 @@ Caring for this community became yet another informal métier on the project —
 
 <!-- space --> 
 
-![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
+![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp){:.lead loading="lazy" width="1200" height="1200" srcset="/assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs-708.webp 708w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs-850.webp 850w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp 1200w" sizes="(max-width: 42em) 100vw, (max-width: 54em) 704px, 950px"}
 
 [Copenhagen Business School][CBS] (CBS) is the last Danish university that recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
 {:.figcaption}
