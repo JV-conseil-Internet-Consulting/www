@@ -44,6 +44,11 @@
       "detail": "Fix error “env: node: No such file or directory”"
     },
     {
+      "label": "sign local commits",
+      "command": ".bash/osx/git.sh",
+      "detail": "Sign local commits",
+    },
+    {
       "label": "yarn",
       "command": ".bash/osx/yarn.sh",
       "detail": "Upgrade package.json"
