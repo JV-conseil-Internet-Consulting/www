@@ -151,14 +151,6 @@ project, which is [W3C-20150513] licensed with the following copyright:
 
 No substantial changes to the software were made.
 
-### jQuery
-
-This software also uses portions of the
-`jquery/jquery`
-project, which is [MIT] licensed with the following copyright:
-
-> Copyright OpenJS Foundation and other contributors.
-
 ### lit
 
 This software also uses portions of the
