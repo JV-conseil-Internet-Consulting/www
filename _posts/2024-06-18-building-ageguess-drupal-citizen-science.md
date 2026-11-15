@@ -110,7 +110,7 @@ On their personal account page, players see their cumulative points, their numbe
 
 <!-- space --> 
 
-![AgeGuess Picture Upload Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-upload-picture.webp){:.lead loading="lazy"}
+![AgeGuess Picture Upload Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-upload-picture.webp){:.lead loading="lazy" width="1001" height="1446"}
 
 How the picture upload page looked on [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
 {:.figcaption}
@@ -123,7 +123,7 @@ The effect is deliberate. Perceived age is a noisy measure — a single guess te
 
 <!-- space --> 
 
-![AgeGuess Guessing Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-guessing.webp){:.lead loading="lazy"}
+![AgeGuess Guessing Page](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-guessing.webp){:.lead loading="lazy" width="999" height="1242"}
 
 How the guessing page looked on [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
 {:.figcaption}
@@ -138,7 +138,7 @@ Moderation is crowdsourced. While guessing, players can report photographs acros
 
 <!-- space --> 
 
-![AgeGuess Moderation Page (Admin Side)](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-moderation-admin-side.webp){:.lead loading="lazy"}
+![AgeGuess Moderation Page (Admin Side)](../assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-moderation-admin-side.webp){:.lead loading="lazy" width="930" height="1328"}
 
 How the moderation page looked on the admin side of [AgeGuess][AgeGuess] (photographs are deliberately blurred to protect personal privacy).
 {:.figcaption}
