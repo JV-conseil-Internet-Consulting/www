@@ -2,9 +2,22 @@
 
 {% if include.banner != false %}
 
+  {% comment %}
+    <!--
+    PageSpeed Insights (report of 2026-11-15) flags the word cloud for missing
+    explicit dimensions (layout shift risk) and for being oversized on small
+    viewports (1600x400 served for a ~375x94 mobile display). The explicit
+    width/height attributes reserve the 4:1 aspect-ratio box before the image
+    loads. Serving smaller variants requires new Git LFS binaries; generate a
+    450w candidate from the original source with:
+    cwebp -resize 450 0 -q 80 nuage-de-mots.png -o nuage-de-mots-450x113.webp
+    -->
+  {% endcomment %}
   <img
     src="/assets/img/nuage-de-mots-1600x400.webp"
-    width="100%"
+    width="1600"
+    height="400"
+    style="max-width:100%;height:auto"
     alt="DevOps • Full Stack Developer • Web App Architect • Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) • Paris, France 🇫🇷">
 
   ---
@@ -18,6 +31,16 @@
   [![Python 3.12.10](https://img.shields.io/badge/Python-3.12.10-4381b3)][Python]
   [![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.dev%2F)](https://www.jv-conseil.dev) 
   {% endcomment %}
+  {%- comment -%}
+    <!--
+    The badge images declare explicit width/height attributes (measured from
+    the served SVGs) so the browser reserves their aspect-ratio box before
+    they load; PageSpeed Insights (report of 2026-11-15) flags the badges in
+    "Image elements do not have explicit width and height". Shield dimensions
+    drift as counters change, which only affects the reservation marginally.
+    Markdown image syntax cannot carry attributes, hence raw HTML.
+    -->
+  {%- endcomment -%}
   [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil "Become a sponsor to JV-conseil")
   [![Follow JV conseil on StackOverflow](https://img.shields.io/stackexchange/stackoverflow/r/2477854)](https://stackoverflow.com/users/2477854/jv-conseil "Follow JV conseil on StackOverflow")
   [![Follow JV conseil on WakaTime](https://wakatime.com/badge/user/18a46db9-013a-4b70-9a0f-662bca13aa53.svg)](https://wakatime.com/@18a46db9-013a-4b70-9a0f-662bca13aa53 "Follow JV conseil on WakaTime")

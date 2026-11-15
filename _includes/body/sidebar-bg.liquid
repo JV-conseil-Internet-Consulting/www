@@ -1,6 +1,7 @@
 {% assign image       = include.image       %}
 {% assign color       = include.color       %}
 {% assign theme_color = include.theme_color %}
+{% assign cover       = include.cover       %}
 
 {% if image.background %}
   {% capture bg_style %}background:{{ image.background }}{% endcapture %}
@@ -14,4 +15,15 @@
     {%- capture bg_img -%}{% include_cached smart-url url=image %}{%- endcapture -%}
   {% endif %}
 {% endif %}
-<div class="{{ bg_class }}" style="{{ bg_style }}">{% if bg_img %}<img class="sidebar-bg-img" src="{{ bg_img }}" alt="" loading="lazy" decoding="async">{% endif %}</div>
+{% comment %}
+  <!--
+  On cover pages (e.g. the homepage) the drawer starts `opened` and the sidebar
+  background image is the Largest Contentful Paint element. PageSpeed Insights
+  (report of 2026-11-15) measured a 1,320 ms resource load delay because the
+  image was lazy-loaded and fetched at low priority. On cover pages the image
+  is therefore eager with `fetchpriority="high"` (and preloaded in
+  _includes/my-head.liquid); on regular pages it stays lazy: the drawer is
+  below the fold and closed, so lazy-loading remains correct there.
+  -->
+{% endcomment %}
+<div class="{{ bg_class }}" style="{{ bg_style }}">{% if bg_img %}<img class="sidebar-bg-img" src="{{ bg_img }}" alt="" loading="{% if cover %}eager{% else %}lazy{% endif %}" decoding="async"{% if cover %} fetchpriority="high"{% endif %}>{% endif %}</div>
