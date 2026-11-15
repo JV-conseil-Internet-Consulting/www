@@ -3,6 +3,9 @@ layout: post
 title: "10 Years Building AgeGuess: Drupal Development for Citizen Science"
 image:
   path: /assets/posts/2024-06-18-building-ageguess-drupal-citizen-science.webp
+  srcset:
+    - [900w, /assets/posts/2024-06-18-building-ageguess-drupal-citizen-science-900.webp]
+    - [1708w, /assets/posts/2024-06-18-building-ageguess-drupal-citizen-science.webp]
   alt: "AgeGuess.org, the citizen science game where players guess the ages of the people in photographs to support research on human ageing."
 description: >
   How an independent French senior full-stack developer has spent ten years building and maintaining the AgeGuess.org citizen science platform on Drupal, helping researchers assemble one of the world's largest open databases on perceived age.
