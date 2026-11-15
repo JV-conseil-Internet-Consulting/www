@@ -36,7 +36,7 @@
         {%- assign tag_separator = site.data.strings.tag_separator | default: ", " -%}
         {%- include components/tag-list.liquid tags=post.tags meta=site.featured_tags start_with=tag_start separator=tag_separator -%}
       {% endcapture %}
-      <span class="ellipsis mr1">
+      <span class="ellipsis mr1" role="button" tabindex="0">
         {{ foobar }}
       </span>
       {% unless site.deepdive.hide_dates or site.deepdive.hide_last_modified or post.hide_last_modified %}
@@ -46,7 +46,7 @@
           {% if d1 != d2 %}
             {% assign label = site.data.strings.last_modified_at | default: "Last modified at" %}
             {% assign last_modified_at_format = site.data.strings.date_formats.last_modified_at | default: "%Y-%m-%d" %}
-            <span class="ellipsis" data-tippy-content="{{ label }}{{ site.data.strings.colon }} {{ post.last_modified_at | date:post_format }}">
+            <span class="ellipsis" role="button" tabindex="0" data-tippy-content="{{ label }}{{ site.data.strings.colon }} {{ post.last_modified_at | date:post_format }}">
               <span class="sr-only">{{ label }}{{ site.data.strings.colon }}</span>
               <span class="{{ site.data.strings.last_modified_icon | default:'icon-history' }}"></span>
               <time datetime="{{ post.last_modified_at | date_to_xmlschema }}">{{ post.last_modified_at | date: last_modified_at_format }}</time>
@@ -66,7 +66,7 @@
             tabindex="-1">
           {% endunless %}
           <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
-            {% include_cached components/hy-img.liquid img=post.image alt=post.title width=864 height=486 %}
+            {% include_cached components/hy-img.liquid img=post.image alt=post.title width=864 height=486 eager=include.eager %}
           </div>
           {% unless no_link_title %}
           </a>

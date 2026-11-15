@@ -1,0 +1,11 @@
+// Custom style overrides — JV conseil <https://www.jv-conseil.dev/>
+//
+// PageSpeed Insights — Accessibility: "Background and foreground colors do not
+// have a sufficient contrast ratio". In dark mode the breadcrumb
+// (#breadcrumbs > ul) inherits --menu-text: rgba(255, 255, 255, .25) (~2.2:1 on
+// the dark background). Raise it above the 4.5:1 minimum (WCAG AA).
+@media screen {
+  body.dark-mode #breadcrumbs > ul {
+    color: rgba(255, 255, 255, 0.72);
+  }
+}

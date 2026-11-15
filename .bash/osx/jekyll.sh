@@ -47,8 +47,15 @@ EOF
 _jvcl_::jekyll_serve() {
   local _args
   local -a _cmd=()
+  local _current_branch
 
-  _jvcl_::h1 "Launching Jekyll..."
+  # Retrieve the active Git branch from the current workspace
+  _current_branch="$(git branch --show-current 2>/dev/null || git rev-parse --abbrev-ref HEAD 2>/dev/null)"
+  if [ -z "${_current_branch}" ]; then
+    _current_branch="unknown-branch"
+  fi
+
+  _jvcl_::h1 "Launching Jekyll (Active Branch: ${_current_branch})..."
 
   for _arg in "clean" "doctor" "serve"; do
     _cmd=(bundle exec jekyll "${_arg}" --config _config-dev.yml)
