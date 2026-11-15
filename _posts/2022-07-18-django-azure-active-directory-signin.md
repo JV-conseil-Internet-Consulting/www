@@ -1,13 +1,32 @@
 ---
 layout: post
-title: Django Azure Active Directory Sign-In 🔑
+title: "Django Azure Active Directory Sign-In 🔑"
 image:
   path: /assets/posts/2022-07-18-django-azure-active-directory-signin.webp
+  srcset:
+    640w: /assets/posts/2022-07-18-django-azure-active-directory-signin-640.webp
+    960w: /assets/posts/2022-07-18-django-azure-active-directory-signin-960.webp
+    1280w: /assets/posts/2022-07-18-django-azure-active-directory-signin.webp
+  alt: "Diagram of a Django web application signing in users through Azure Active Directory with OAuth 2.0 and OpenID Connect."
 description: >
-  Sign-in users to your Django Web app with Azure Active Directory.
-hide_description: true
-category: projects
-tag: [python, django, azure, cloud]
+  Sign-in users to your Django Web app with Azure Active Directory using MSAL Python, OAuth 2.0 and OpenID Connect.
+excerpt: >
+  django-azure-active-directory-signin wraps the MSAL Python package to sign in users with Azure Active Directory (OAuth 2.0 and OpenID Connect) in Django projects — complete with login, logout and callback views, a customizable authentication backend, a view decorator and site-wide middleware.
+hide_last_modified: true
+category: [projects, cloud, security, azure]
+keywords: [Django, Azure Active Directory, Microsoft Entra ID, OAuth 2.0, OpenID Connect, MSAL Python, Single Sign-On, SSO, Azure AD, Django Authentication, Python Web Security, Cloud Identity]
+tags: [python, django, azure, cloud]
+author: "Julien Vieillefont"
+
+seo:
+  type: TechArticle
+  links:
+    - https://jv-conseil.dev/blog/2022-07-18-django-azure-active-directory-signin/
+  json_ld:
+    dependencies: "Python, Django, MSAL Python, Azure Active Directory, django-sslserver"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT10M"
+    keywords: "Django Azure AD sign-in, Azure Active Directory authentication, Microsoft Entra ID Django, MSAL Python, OAuth 2.0 OpenID Connect, Django SSO middleware, Azure Signin backend, Django authentication backend, Azure app registration client secret, Azure AD redirect URI, Django login required decorator, enterprise single sign-on Python, django-azure-active-directory-signin PyPI, cloud identity management, secure web app authentication"
 ---
 
 - &nbsp;
@@ -27,7 +46,9 @@ tag: [python, django, azure, cloud]
 [![Follow JV conseil on StackOverflow](https://img.shields.io/stackexchange/stackoverflow/r/2477854)](https://stackoverflow.com/users/2477854/jv-conseil "Follow JV conseil on StackOverflow")
 [![Follow JVconseil on Twitter](https://img.shields.io/twitter/follow/JVconseil.svg?style=social&logo=twitter)](https://twitter.com/JVconseil "Follow JVconseil on Twitter")
 [![Follow JVconseil on Mastodon](https://img.shields.io/mastodon/follow/110950122046692405)](https://mastodon.social/@JVconseil "Follow JVconseil@mastodon.social on Mastodon")
-[![Follow JV conseil on GitHub](https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&style=social)](https://github.com/JV-conseil "Follow JV-conseil on GitHub")
+[![Follow JV conseil on GitHub](https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&style=social)](https://github.com/JV-conseil "Follow JV conseil on GitHub")
+
+_Reading time: 10 min._
 
 ## Description
 
