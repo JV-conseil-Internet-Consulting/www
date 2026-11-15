@@ -17,8 +17,7 @@ selected_posts:
 ---
 
 {% include_cached my-description.liquid %}
-
-<img src="https://github-readme-stats.vercel.app/api?username=JV-conseil&show_icons=true&theme=slateorange" alt="GitHub Stats" style="float:right; margin:0 0 1rem 1rem" />
+{% include_cached my-github-stats-card.liquid %}
 
 📈 **With over two decades of experience** in the tech industry, I am a seasoned Full Stack Developer, Web App Architect, and DevOps Specialist based in the Greater Paris Metropolitan Region.
 
@@ -36,9 +35,13 @@ selected_posts:
 
 💎 I am dedicated to staying at the forefront of technological advancements and **continuously expanding my skill set** to provide top-tier solutions for my clients. Let's build something extraordinary together!
 
-<!--
+<!-- Visible section heading (screen-reader only) that restores the
+     sequential h1 -> h2 -> h3 order before the posts grid, which renders
+     h3 post cards. PageSpeed Insights (report of 2026-11-15) flagged
+     the previous h1 -> h3 skip as a heading-order accessibility failure.
+     The .sr-only utility class is defined in the deepdive theme CSS. -->
 ## Latest Posts
--->
+{: .sr-only}
 
 <!--posts-->
 
