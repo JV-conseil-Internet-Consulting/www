@@ -55,7 +55,7 @@ Checks:
 
 ## Workflow Rules
 
-1. Branches: `main` is the default and production branch, protected by a GitHub ruleset: direct pushes to `main` are rejected, merging requires a pull request, and pull requests touching files with a designated code owner require review from a Code Owner. Always create working branches from `dev`, following the existing naming (for example `perf/pagespeed-insights`), and merge into `main` through a pull request. Never commit directly to `main`. No status checks currently gate merges, so verify the build locally before requesting review.
+1. Branches: `main` is the default and production branch, protected by a GitHub ruleset: direct pushes to `main` are rejected, merging requires a pull request, and pull requests touching files with a designated code owner require review from a Code Owner. Always create working branches from `dev`, following the existing naming (for example `perf/pagespeed-insights`), and always open pull requests targeting `dev`; only `dev` is merged into `main` through its own pull request. Never commit directly to `main`. No status checks currently gate merges, so verify the build locally before requesting review.
 2. Commits: follow Conventional Commits, with a scope when useful (`perf: ...`, `fix(assets): ...`, `fix(post): ...`). Attribute commits produced by agents to `bot@jv-conseil.dev`.
 3. Deployment: pushing to `main` triggers the "Deploy Jekyll v4 to GitHub Pages" workflow, which runs `bundle exec jekyll build` with `JEKYLL_ENV=production` and publishes to GitHub Pages at `www.jv-conseil.dev` (`CNAME`). Always verify the build locally before pushing.
 4. Dependabot opens dependency PRs on `dependabot/npm_and_yarn/...` branches; follow that naming for dependency work.
