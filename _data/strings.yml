@@ -83,6 +83,8 @@ tag_page:              'tag'
 from_to_separator:     '–'
 breadcrumbs_home:      'home'
 breadcrumbs_separator: '/'
+category_aria:         'See all posts in category'
+tag_aria:              'See all posts tagged'
 
 # Date formats
 # ---------------------------------------------------------------------------------------
