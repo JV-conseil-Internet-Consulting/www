@@ -48,7 +48,7 @@ This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of 
 
 <!-- space --> 
 
-![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy"}
+![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 The [Funding Apps][SDU Funding Apps] were first deployed at the [University of Southern Denmark][SDU] (SDU) in 2019.
 {:.figcaption}
@@ -66,7 +66,7 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 <!-- space --> 
 
 | Since | Platform                                           | Institution                                  |
-| :---- | :------------------------------------------------- | -------------------------------------------- |
+| :---- | :------------------------------------------------- | :------------------------------------------- |
 | 2019  | [SDU Funding Apps][SDU Funding Apps]               | [University of Southern Denmark][SDU] (SDU)  |
 | 2022  | [AAU EU Funding Apps](https://eu-funding.aau.dk/)  | [Aalborg University][AAU] (AAU)              |
 | 2025  | [AU Funding Tools](https://funding-tools.au.dk/)   | [Aarhus University][AU] (AU)                 |
@@ -76,7 +76,7 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 
 <!-- space --> 
 
-![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp){:.lead loading="lazy"}
+![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 [Aalborg University][AAU] (AAU) was the second Danish university to adopt the [AAU EU Funding Apps](https://eu-funding.aau.dk/) in 2022.
 {:.figcaption}
@@ -98,7 +98,7 @@ It requires modelling a genuinely complex institutional taxonomy — the Pillars
 
 This knowledge had to be internalized down to the finest grain: a module that recommends mock reviewers, for instance, must reason within the exact same taxonomy that EU evaluators themselves use.
 
-![Horizon Europe Pillars & Clusters](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.webp){:.lead loading="lazy"}
+![Horizon Europe Pillars & Clusters](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-horizon-europe-pillars-and-clusters.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 [Horizon Europe][Horizon Europe] Pillars & Clusters.
 {:.figcaption}
@@ -124,7 +124,7 @@ The engineering challenge was never fetching these sources individually — it w
 
 <!-- space --> 
 
-![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp){:.lead loading="lazy"}
+![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 [Aarhus University][AU] (AU) was the third Danish university to adopt the [AU Funding Tools](https://funding-tools.au.dk) in 2025.
 {:.figcaption}
@@ -135,7 +135,7 @@ People often assume "full-stack" is a marketing label. The [Funding Apps][SDU Fu
 
 ### Back End Engineering
 
-The server side is anchored on a mature [Django](https://www.djangoproject.com/start/overview/) application, with scheduled batch jobs orchestrated nightly, enterprise-grade authentication wired into the universities' Microsoft identity stack, and secrets and storage delegated to [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview) and Azure blob services. Reliability engineering — caching, memoization, error resilience — is woven through every layer, because grant deadlines do not tolerate downtime.
+The server side is anchored on a mature [Django](https://www.djangoproject.com/start/overview/) web framework application, with scheduled batch jobs orchestrated nightly, enterprise-grade authentication wired into the universities' Microsoft identity stack, and secrets and storage delegated to [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview) and Azure blob services. Reliability engineering — caching, memoization, error resilience — is woven through every layer, because grant deadlines do not tolerate downtime.
 
 ### Database Engineering
 
@@ -160,7 +160,7 @@ Five disciplines. One developer. That is the bar this project has set — and ma
 
 <!-- space --> 
 
-![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp){:.lead loading="lazy"}
+![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 [Technical University of Denmark][DTU] (DTU) was the fourth Danish university to adopt the [DTU Funding Tools](https://funding-tools.dtu.dk/) in 2026.
 {:.figcaption}
@@ -173,7 +173,8 @@ Delivering the same ecosystem to five institutions taught me an essential lesson
 
 No two campuses run their infrastructure the same way, and none of these platforms would have gone live without the daily cooperation of each university's IT organization. Over the years, I collaborated across their full spectrum of métiers:
 
-- **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the university's own web estate.
+- **Network and DNS:** Configuring hostnames, subdomains, and routing rules so each platform integrates cleanly into the 
+university's own web estate.
 - **Security and Identity:** Implementing federated Single Sign-On through national identity federations (SAML/OpenID Connect), passing institutional security reviews and penetration tests, and meeting Danish and European data protection requirements, GDPR included.
 - **[API][API]s and Data Integration:** Designing, exposing, and consuming REST interfaces to synchronize with internal PURE research repositories as well as external sources such as [Pivot-RP][Pivot-RP] and [CORDIS][CORDIS].
 - **Operations and Reliability:** Setting up [CI/CD][CICD] pipelines, monitoring, and the overnight batch jobs that keep every researcher's grant matches up to date.
@@ -199,7 +200,7 @@ Caring for this community became yet another informal métier on the project —
 
 <!-- space --> 
 
-![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp){:.lead loading="lazy"}
+![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 [Copenhagen Business School][CBS] (CBS) is the last Danish university that recently adopted the [CBS Funding Tools](https://funding-tools.cbs.dk/) in 2026.
 {:.figcaption}
