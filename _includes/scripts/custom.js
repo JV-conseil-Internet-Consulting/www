@@ -1,4 +1,4 @@
-/* global $, DOMPurify */
+/* global DOMPurify */
 /*!
  * Custom Scripts
  * Copyright (c) 2023 JV conseil <https://www.jv-conseil
@@ -7,35 +7,36 @@
 !(function () {
   'use strict';
   /**
-   * Add target="'_blank" to all external links
+   * Add target="_blank" to all external links
    */
-  $("a[href^='http']").each(function () {
-    /* console.debug('_link', this.href) */
-    $(this).attr('target', '_blank')
+  document.querySelectorAll("a[href^='http']").forEach(function (link) {
+    /* console.debug('_link', link.href) */
+    link.setAttribute('target', '_blank');
   });
 
 
   /**
    * mailto click
    */
-  $('a[href^="mailto:"]').on('click', function () {
-    /* window.location = 'mailto:' + encodeURIComponent($(this).data('mail')) + '?subject=' + encodeURIComponent($(this).data('subject')) + '&body=' + encodeURIComponent("Hello " + SITE.title + ",\n\n...\n\nKind Regards,\n") */
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      /* window.location = 'mailto:' + encodeURIComponent(link.dataset.mail) + '?subject=' + encodeURIComponent(link.dataset.subject) + '&body=' + encodeURIComponent("Hello " + SITE.title + ",\n\n...\n\nKind Regards,\n") */
 
-    let email = $(this).attr('href').trim()
-    email = DOMPurify.sanitize(email)
-    email = email.replace(/mailto:/g, '')
+      event.preventDefault();
 
-    // console.debug("email ", email)
+      let email = link.getAttribute('href').trim();
+      if (window.DOMPurify) email = window.DOMPurify.sanitize(email);
+      email = email.replace(/mailto:/g, '');
 
-    let link = 'mailto:' + encodeURIComponent(email)
-    link += '?subject=' + encodeURIComponent("Sent From JV conseil Website")
-    link += '&body=' + encodeURIComponent("Hello JV conseil,\n\n...\n\nKind Regards,\n")
+      // console.debug("email ", email)
 
-    // console.debug("link ", link)
+      let href = 'mailto:' + encodeURIComponent(email);
+      href += '?subject=' + encodeURIComponent("Sent From JV conseil Website");
+      href += '&body=' + encodeURIComponent("Hello JV conseil,\n\n...\n\nKind Regards,\n");
 
-    window.location = link
+      // console.debug("link ", href)
 
-    // event.preventDefault()
-    return false
-  })
+      window.location = href;
+    });
+  });
 })()

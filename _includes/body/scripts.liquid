@@ -45,9 +45,11 @@
 <script nomodule>{% include scripts/nomodule.min.js %}</script>
 <script src="{{ '/assets/js/deepdive-9.1.7.min.js' | relative_url }}" type="module"></script>
 <script src="{{ '/assets/js/legacy/deepdive-9.1.7.min.js' | relative_url }}" nomodule defer></script>
-<script src="/assets/vendor/jquery.min.js"></script>
-<script src="/assets/vendor/jquery-migrate.min.js"></script>
-<script src="/assets/vendor/purify.min.js"></script>
+<!-- jQuery & jquery-migrate removed: custom.js no longer depends on jQuery
+     (PageSpeed Insights: "Reduce unused JavaScript", ~20 KiB of unused jQuery).
+     purify.min.js is deferred; custom.min.js only touches window.DOMPurify at
+     click time, after deferred scripts have executed. -->
+<script src="/assets/vendor/purify.min.js" defer></script>
 <script>{% include scripts/custom.min.js %}</script>
 {% include my-scripts.liquid %}
 {% include body/analytics.liquid %}
