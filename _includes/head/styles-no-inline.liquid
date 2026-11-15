@@ -3,7 +3,9 @@
   {{ 'assets/css/deepdive-9.1.7.min.css' | relative_url }}{% endcapture %}
 {% capture icons_url %}
   {{ 'assets/icomoon/style.css' | relative_url }}{% endcapture %}
-{% if google_fonts %}
+{% if site.fonts_css %}
+  {% capture fonts_url %}{{ site.fonts_css | relative_url }}{% endcapture %}
+{% elsif google_fonts %}
   {% capture fonts_url %}
     {{ site.google_fonts_url | default: 'https://fonts.googleapis.com' }}/css?family={{ google_fonts | uri_escape }}&display=swap{% endcapture %}
 {% endif %}
@@ -16,7 +18,7 @@
   rel="stylesheet"
   href="{{ icons_url }}"
   id="_iconsPreload">
-{% if google_fonts %}
+{% if fonts_url %}
   <link
     rel="stylesheet"
     href="{{ fonts_url }}"

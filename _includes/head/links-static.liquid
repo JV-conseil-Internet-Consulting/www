@@ -6,7 +6,7 @@
 
 <link rel="manifest" href="{{ '/assets/site.webmanifest' | relative_url }}">
 
-{% if site.google_fonts %}
+{% if site.google_fonts and site.fonts_css == nil %}
   {%- capture google_fonts_url %}
     {{ site.google_fonts_url | default: 'https://fonts.googleapis.com' }}{%- endcapture -%}
   <link rel="dns-prefetch" href="{{ google_fonts_url }}">
