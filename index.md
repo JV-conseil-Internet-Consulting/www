@@ -17,12 +17,7 @@ selected_posts:
 ---
 
 {% include_cached my-description.liquid %}
-
-<!-- The GitHub Stats card declares its canonical 495x195 dimensions so the
-     browser reserves its aspect-ratio box before the card loads.
-     PageSpeed Insights (report of 2026-11-15) flags it under
-     "Image elements do not have explicit width and height". -->
-<img src="https://github-readme-stats.vercel.app/api?username=JV-conseil&amp;show_icons=true&amp;theme=slateorange" alt="GitHub Stats" width="495" height="195" style="float:right; margin:0 0 1rem 1rem; max-width:100%; height:auto" />
+{% include_cached my-github-stats-card.liquid %}
 
 📈 **With over two decades of experience** in the tech industry, I am a seasoned Full Stack Developer, Web App Architect, and DevOps Specialist based in the Greater Paris Metropolitan Region.
 
