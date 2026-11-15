@@ -15,12 +15,13 @@
     because 450x1.75 < 656px; clearing them requires a ~900w candidate
     generated from the source PNG with:
     cwebp -resize 900 225 -q 60 nuage-de-mots.png -o nuage-de-mots-900x225.webp
+    cwebp -resize 375 94 -q 60 nuage-de-mots.png -o nuage-de-mots-375x94.webp
     (a Git LFS binary) and declared in the srcset below.
     -->
   {% endcomment %}
   <img
     src="/assets/img/nuage-de-mots-1600x400.webp"
-    srcset="/assets/img/nuage-de-mots-450x113.webp 450w, /assets/img/nuage-de-mots-900x225.webp 900w, /assets/img/nuage-de-mots-1600x400.webp 1600w"
+    srcset="/assets/img/nuage-de-mots-375x94.webp 375w, /assets/img/nuage-de-mots-450x113.webp 450w, /assets/img/nuage-de-mots-900x225.webp 900w, /assets/img/nuage-de-mots-1600x400.webp 1600w"
     sizes="(min-width: 86em) 54rem, (min-width: 54em) 48rem, (min-width: 42em) 42rem, 100vw"
     width="1600"
     height="400"
