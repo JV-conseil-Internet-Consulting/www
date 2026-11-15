@@ -358,10 +358,11 @@ exclude:
   - .jekyll-cache
   - .sass-cache
   - '*.toml'
-  - vendor
+  - AGENTS.md
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - vendor
 include:
   - .well-known
   - LICENSE.md
