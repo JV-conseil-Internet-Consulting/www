@@ -1,5 +1,40 @@
 {% comment %}
 <!--
+Content Security Policy (CSP).
+
+GitHub Pages cannot set HTTP response headers, so the policy is delivered
+through a <meta> element. Limitations of the meta-tag form:
+
+1. frame-ancestors is ignored in meta form; clickjacking protection would
+   require a header-based CSP served by a CDN in front of GitHub Pages.
+2. The policy takes effect where the meta element is parsed. Elements emitted
+   earlier in <head> (the theme inline bootstrap script, stylesheet links)
+   are not blocked by it; all of them are same-origin or explicitly allowed
+   by the directives below, so there is no practical coverage gap.
+3. A static Jekyll build cannot mint per-request nonces, so script-src and
+   style-src require 'unsafe-inline' for the theme's inline scripts
+   (JSON-LD, MathJax loader, custom.js) and for inline style attributes
+   (sidebar background). Upgrade path: a build-time Jekyll plugin could
+   hash every inline script at generation time and emit 'sha256-...' sources
+   instead of 'unsafe-inline'.
+
+Third-party origins allow-listed:
+- analytics.umami.is   : umami analytics script (script.js)
+- gateway.umami.is     : umami analytics beacons (POST /api/send)
+- fonts.googleapis.com : Google Fonts CSS
+- fonts.gstatic.com    : Google Fonts binary files
+- https: (img, media)  : historical posts embed badges, screenshots and
+  media from third-party CDNs (img.shields.io, user-images.githubusercontent.com,
+  *.gallerycdn.vsassets.io, docs.cloud.sdu.dk, fbcdn.net, media.springernature.com).
+  Enumerating them would break whenever a CDN changes, so images and media
+  accept any HTTPS origin; tighten by enumerating hosts if preferred.
+-->
+{% endcomment %}
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://analytics.umami.is; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' https:; connect-src 'self' https
+://gateway.umami.is; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+{% comment %}
+<!--
 Preload the post's lead image to improve the Largest Contentful Paint (LCP).
 The image is rendered above the fold by _includes/components/post.liquid.
 Only pages without hide_image and without a srcset are preloaded,
