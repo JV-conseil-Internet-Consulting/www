@@ -30,11 +30,13 @@
         {{ ' ' }}
         {%- assign category_start = site.data.strings.category_start | default: "in " -%}
         {%- assign category_separator = site.data.strings.category_separator | default: " / " -%}
-        {%- include components/tag-list.liquid tags=post.categories meta=site.featured_categories start_with=category_start separator=category_separator -%}
+        {%- assign category_aria = site.data.strings.category_aria | default: "See all posts in category" -%}
+        {%- include components/tag-list.liquid tags=post.categories meta=site.featured_categories start_with=category_start separator=category_separator aria=category_aria -%}
         {{ ' ' }}
         {%- assign tag_start = site.data.strings.tag_start | default: "on " -%}
         {%- assign tag_separator = site.data.strings.tag_separator | default: ", " -%}
-        {%- include components/tag-list.liquid tags=post.tags meta=site.featured_tags start_with=tag_start separator=tag_separator -%}
+        {%- assign tag_aria = site.data.strings.tag_aria | default: "See all posts tagged" -%}
+        {%- include components/tag-list.liquid tags=post.tags meta=site.featured_tags start_with=tag_start separator=tag_separator aria=tag_aria -%}
       {% endcapture %}
       <span class="ellipsis mr1" role="button" tabindex="0">
         {{ foobar }}
@@ -47,7 +49,7 @@
             {% assign label = site.data.strings.last_modified_at | default: "Last modified at" %}
             {% assign last_modified_at_format = site.data.strings.date_formats.last_modified_at | default: "%Y-%m-%d" %}
             <span class="ellipsis" role="button" tabindex="0" data-tippy-content="{{ label }}{{ site.data.strings.colon }} {{ post.last_modified_at | date:post_format }}">
-              <span class="sr-only">{{ label }}{{ site.data.strings.colon }}</span>
+              <span class="sr-only">{{ label }}{{ site.data.strings.colon }}:</span>
               <span class="{{ site.data.strings.last_modified_icon | default:'icon-history' }}"></span>
               <time datetime="{{ post.last_modified_at | date_to_xmlschema }}">{{ post.last_modified_at | date: last_modified_at_format }}</time>
             </span>

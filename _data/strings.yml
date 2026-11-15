@@ -82,6 +82,8 @@ tag_separator:         ', '
 from_to_separator:     '–'
 breadcrumbs_home:      'home'
 breadcrumbs_separator: '/'
+category_aria:         'See all posts in category'
+tag_aria:              'See all posts tagged'
 
 # Date formats
 # ---------------------------------------------------------------------------------------
@@ -141,11 +143,11 @@ resume:
   publications_title:  <!--name--> by <!--publisher-->
   references:          References
   languages:           Languages
-  fluency:             Fluency
+  fluency:              Fluency
   skills:              Skills
   level:               Level
   interests:           Interests
-  summary:             Summary
+  summary:            Summary
   keywords:            Keywords
   print:               Print
   download_pdf:        PDF
@@ -154,19 +156,19 @@ resume:
   icons:
     fallback:          icon-link
     location:          icon-location
-    born:              icon-quill
-    citizenship:       icon-flag
+    born:               icon-quill
+    citizenship:        icon-flag
     maritalStatus:     icon-man-woman
-    email:             icon-envelop
-    phone:             icon-phone
-    website:           icon-home3
-    work:              icon-briefcase
-    volunteer:         icon-earth
-    education:         icon-library
-    projects:          icon-cog
-    awards:            icon-trophy
-    publications:      icon-book
-    references:        icon-quotes-right
-    languages:         icon-bubbles
-    skills:            icon-wrench
-    interests:         icon-heart
+    email:              icon-envelop
+    phone:              icon-phone
+    website:            icon-home3
+    work:               icon-briefcase
+    volunteer:          icon-earth
+    education:          icon-library
+    projects:           icon-cog
+    awards:             icon-trophy
+    publications:       icon-book
+    references:         icon-quotes-right
+    languages:          icon-bubbles
+    skills:             icon-wrench
+    interests:          icon-heart

@@ -9,9 +9,18 @@
 {% if site.google_fonts %}
   {%- capture google_fonts_url %}
     {{ site.google_fonts_url | default: 'https://fonts.googleapis.com' }}{%- endcapture -%}
-  <link rel="dns-prefetch" href="{{ google_fonts_url }}">
+  {#-
+    PageSpeed Insights (mobile report, 2026-11-15) lists no preconnected
+    origins and names the Google Fonts WOFF2 files among the layout-shift
+    culprits. Upgrading the hints from dns-prefetch to preconnect removes
+    the DNS + TCP + TLS setup from the font request chain. The CSS request
+    to googleapis.com is a plain no-CORS request, so it must not carry
+    `crossorigin`; the WOFF2 requests to gstatic.com are anonymous CORS
+    requests and require `crossorigin` for the pre-opened connection to match.
+  -#}
+  <link rel="preconnect" href="{{ google_fonts_url }}">
   {%- if google_fonts_url == 'https://fonts.googleapis.com' -%}
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   {%- endif -%}
 {% endif %}
 
