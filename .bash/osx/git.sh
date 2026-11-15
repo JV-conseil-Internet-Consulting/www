@@ -53,8 +53,9 @@ _jvcl_::git_sign_local() {
 }
 
 _jvcl_::main() {
-  _jvcl_::git_sign_local || printf "ERROR: Oops something went wrong\n"
-  # git push --force-with-lease origin dev
+  if _jvcl_::git_sign_local; then
+    git push --force-with-lease origin dev
+  fi
 }
 
 _jvcl_::main
