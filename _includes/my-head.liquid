@@ -1,34 +1,4 @@
-{% comment %}
-  <!--
-  Content Security Policy (CSP).
-
-  GitHub Pages cannot set HTTP response headers, so the policy is delivered
-  through a <meta> element. Limitations of the meta-tag form:
-
-  1. frame-ancestors is ignored in meta form; clickjacking protection would
-  require a header-based CSP served by a CDN in front of GitHub Pages.
-  2. The policy takes effect where the meta element is parsed. Elements emitted
-  earlier in <head> (the theme inline bootstrap script, stylesheet links)
-  are not blocked by it; all of them are same-origin or explicitly allowed
-  by the directives below, so there is no practical coverage gap.
-  3. A static Jekyll build cannot mint per-request nonces, so script-src and
-  style-src require 'unsafe-inline' for the theme's inline scripts
-  (JSON-LD, MathJax loader, custom.js) and for inline style attributes
-  (sidebar background). Upgrade path: a build-time Jekyll plugin could
-  hash every inline script at generation time and emit 'sha256-...' sources
-  instead of 'unsafe-inline'.
-
-  Third-party origins allow-listed:
-  - analytics.umami.is : umami analytics script (script.js)
-  - gateway.umami.is : umami analytics beacons (POST /api/send)
-  - https: (img, media)  : historical posts embed badges, screenshots and
-  media from third-party CDNs (img.shields.io, user-images.githubusercontent.com,
-  *.gallerycdn.vsassets.io, docs.cloud.sdu.dk, fbcdn.net, media.springernature.com).
-  Enumerating them would break whenever a CDN changes, so images and media
-  accept any HTTPS origin; tighten by enumerating hosts if preferred.
-  -->
-{% endcomment %}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://analytics.umami.is; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https:; media-src 'self' https:; connect-src 'self' https://gateway.umami.is; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+{% include_cached my-content-security-policy.liquid %}
 
 {% comment %}
   <!--
@@ -40,8 +10,8 @@
 {% endcomment %}
 {% if page.layout == 'post' and page.image and page.hide_image != true %}
   {% assign hy_preload_src = page.image.path | default: page.image %}
-  {% if hy_preload_src and page.image.srcset %}
-    {% capture hy_preload_srcset %}{% for hash in page.image.srcset %}{% assign tmp = hash[1] %}{% include_cached smart-url url=tmp %} {{ hash[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    {% if hy_preload_src and page.image.srcset %}
+  {% capture hy_preload_srcset %}{% for hash in page.image.srcset %}{% assign tmp = hash[1] %}{% include_cached smart-url url=tmp %} {{ hash[0] }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
     {% comment %}
       Mirror the `sizes` attribute rendered by components/hy-img.liquid for the post
       hero (see components/post.liquid) so the preload and the <img> resolve to the
