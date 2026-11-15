@@ -40,6 +40,35 @@
   as="worker"
   id="_hrefSearch">
 
+{% comment %}
+  <!--
+  PageSpeed Insights (mobile report, 2026-11-15) for
+  /blog/2026-10-27-funding-apps-danish-universities-7-years-collaboration/
+  fetches the ES module bundle at the lowest network priority, so on slow
+  connections it arrives after the stylesheets, fonts and images
+  (~2.2 s on emulated slow 4G) even though the LCP paint is gated behind it
+  (LCP breakdown: element render delay 2,000 ms; "Network dependency tree":
+  HTML -> deepdive-9.1.7.min.js, 421 ms; module long task at 2,251 ms).
+
+  `rel="modulepreload"` promotes the module (and the chunks that define the
+  `hy-drawer` / `hy-push-state` web components) to preload priority, so the
+  bundle is fetched with the first wave of resources and executes as soon as
+  the CPU is free instead of after every other download. Browsers without
+  module support ignore the hint and keep the `nomodule` fallback; module
+  capable browsers deduplicate the preload against the module script tag, so
+  the bundle is downloaded once.
+  -->
+{% endcomment %}
+<link
+  rel="modulepreload"
+  href="{{ '/assets/js/deepdive-9.1.7.min.js' | relative_url }}">
+<link
+  rel="modulepreload"
+  href="{{ '/assets/js/drawer-deepdive-9.1.7.min.js' | relative_url }}">
+<link
+  rel="modulepreload"
+  href="{{ '/assets/js/push-state-deepdive-9.1.7.min.js' | relative_url }}">
+
 {% if site.kramdown.math_engine == 'katex' %}
   {% capture katex_url %}
     {{ 'assets/bower_components/katex/dist/katex.min.css' | relative_url }}{% endcapture %}

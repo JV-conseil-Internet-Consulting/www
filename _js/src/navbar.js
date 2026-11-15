@@ -24,10 +24,19 @@ import { hasCSSOM, getScrollTop, stylesheetReady, filterWhen } from './common';
   const navbarEl = document.getElementById('_navbar');
   if (!navbarEl) return;
 
-  // FIXME: update when size changes
-  const height = navbarEl.clientHeight;
-
   let offset = 0;
+
+  // FIXME: update when size changes
+  // PageSpeed Insights (mobile report, 2026-11-15) flags a 50 ms forced reflow at
+  // navbar-deepdive-9.1.7.min.js:1:669: measuring `clientHeight` during startup forces a
+  // synchronous layout while the drawer/push-state upgrades are still invalidating styles.
+  // The height is only needed once the navbar reacts to scrolling or focus, so measure it
+  // lazily on first use, after the initial layout has settled.
+  let height = 0;
+  const navbarHeight = () => {
+    if (!height) height = navbarEl.clientHeight;
+    return height;
+  };
 
   const tv = hasCSSOM ? new CSSTransformValue([new CSSTranslate(CSS.px(0), CSS.px(0))]) : null;
 
@@ -55,9 +64,9 @@ import { hasCSSOM, getScrollTop, stylesheetReady, filterWhen } from './common';
   // Certain events should make the navbar "jump" to a new position.
   const jump$ = merge(
     // Focusing any navbar element should show the navbar to enable keyboard-only interaction.
-    fromEvent(navbarEl, 'focus', { capture: true }).pipe(map(() => 2 * height)),
+    fromEvent(navbarEl, 'focus', { capture: true }).pipe(map(() => 2 * navbarHeight())),
     // Scrolling to a certain headline should hide the navbar to prevent hiding it.
-    hashchange$.pipe(map(() => -2 * height)),
+    hashchange$.pipe(map(() => -2 * navbarHeight())),
   );
 
   fromEvent(document, 'scroll', { passive: true })
@@ -71,7 +80,7 @@ import { hasCSSOM, getScrollTop, stylesheetReady, filterWhen } from './common';
       mergeWith(jump$),
       tap((x) => {
         offset += x;
-        offset = Math.max(-height, Math.min(0, offset));
+        offset = Math.max(-navbarHeight(), Math.min(0, offset));
         if (hasCSSOM) {
           tv[0].y.value = offset;
           navbarEl.attributeStyleMap.set('transform', tv);
