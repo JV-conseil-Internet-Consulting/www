@@ -1,0 +1,49 @@
+/*
+ * Self-hosted latin subsets of the web fonts configured in _config.yml
+ * (`google_fonts: Roboto+Slab:700|Noto+Sans:400,400i,700,700i`).
+ * Font files from @fontsource/noto-sans and @fontsource/roboto-slab (woff2).
+ * Noto Sans and Roboto Slab are licensed under the SIL Open Font License 1.1.
+ *
+ * Serving the fonts same-origin removes the fonts.googleapis.com and
+ * fonts.gstatic.com third-party requests and allows preloading the woff2
+ * files, which also removes the layout shift caused by late font swaps.
+ */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('noto-sans-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url('noto-sans-latin-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('noto-sans-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: url('noto-sans-latin-700-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('roboto-slab-latin-700-normal.woff2') format('woff2');
+}

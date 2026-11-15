@@ -19,11 +19,8 @@
     {%- endif -%}
 
     {%- if tag -%}
-      {%- if aria -%}
-        {%- capture content_temp -%}{{ content }}<a href="{{ tag.url | relative_url }}" class="flip-title" aria-label="{{ aria }} {{ tag.title }}">{{ tag.title }}</a>{{ iter_separator }}{%- endcapture -%}
-      {%- else -%}
-        {%- capture content_temp -%}{{ content }}<a href="{{ tag.url | relative_url }}" class="flip-title">{{ tag.title }}</a>{{ iter_separator }}{%- endcapture -%}
-      {%- endif -%}
+      {%- assign tag_label = site.data.strings.tag_page | default: 'tag' -%}
+      {%- capture content_temp -%}{{ content }}<a href="{{ tag.url | relative_url }}" class="flip-title" aria-label="{{ tag.title }} ({{ tag_label }})">{{ tag.title }}</a>{{ iter_separator }}{%- endcapture -%}
     {%- else -%}
       {%- capture content_temp -%}{{ content }}<span>{{ tag_slug | capitalize }}</span>{{ iter_separator }}{%- endcapture -%}
     {%- endif -%}
