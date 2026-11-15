@@ -74,11 +74,16 @@ _jvcl_::github_pages() {
     printf "\nERROR: bundle exec github-pages health-check failed\n"
 }
 
+_jvcl_::flush_jekyll_cache() {
+  rm -vrf "./_site" "./.jekyll-cache"
+}
+
 # shellcheck disable=SC2317
 _jvcl_::main() {
   if ! _jvcl_::brew_install_formula "ruby"; then
     return 1
   fi
+  _jvcl_::flush_jekyll_cache
   _jvcl_::gem_update
   _jvcl_::bundle_update
   # _jvcl_::github_pages
