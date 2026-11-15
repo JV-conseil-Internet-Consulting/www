@@ -12,6 +12,80 @@ sitemap: false
 * this list will be replaced by the toc
 {:toc .large-only}
 
+## v9.1.9
+
+Nov 15 2026
+{:.heading.post-date}
+
+## What's Changed
+
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/389>
+* Bump uri from 1.0.3 to 1.0.4 by @dependabot[bot] in <https://github.com/JV-conseil-Internet-Consulting/www/pull/370>
+* Bump glob from 10.3.10 to 10.5.0 by @dependabot[bot] in <https://github.com/JV-conseil-Internet-Consulting/www/pull/369>
+* PageSpeed Insights Report from May 24, 2026, 4:24:33 PM by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/390>
+* Update README.md by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/391>
+* #409 #408 #406 #405 #404 #403 #402 #401 #397 #396 #395 #394 #393 by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/410>
+* Update README.md by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/411>
+* Bump js-yaml from 3.14.2 to 3.15.0 by @dependabot[bot] in <https://github.com/JV-conseil-Internet-Consulting/www/pull/409>
+* Bump undici from 6.25.0 to 6.27.0 by @dependabot[bot] in <https://github.com/JV-conseil-Internet-Consulting/www/pull/405>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/412>
+* Bump @babel/core from 7.29.0 to 7.29.7 by @dependabot[bot] in <https://github.com/JV-conseil-Internet-Consulting/www/pull/397>
+* Bump @babel/core from 7.29.0 to 7.29.6 by @dependabot[bot] in <https://github.com/JV-conseil-Internet-Consulting/www/pull/408>
+* Bump @babel/plugin-transform-class-properties from 7.28.6 to 7.29.7 by @dependabot[bot] in <https://github.com/JV-conseil-Internet-Consulting/www/pull/394>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/414>
+* 2026-10-27-funding-apps-danish-universities-7-years-collaborat… by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/441>
+* is the last Danish university that recently adopted by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/442>
+* From Solo Developer to Tech Lead: A Team Grows Around the Vision by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/443>
+* A Fine-Grained Understanding of the EU Funding Ecosystem by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/444>
+* Update 2026-10-27-funding-apps-danish-universities-7-years-collaborat… by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/445>
+* links by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/446>
+* A tech lead (short for technical lead) is a software engineer respons… by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/447>
+* links by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/448>
+* links by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/449>
+* ruby 4.0.9 by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/450>
+* seo:   type: TechArticle by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/451>
+* Minimum Viable Product (MVP) by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/452>
+* senior full-stack developer is, in effect, a Swiss army knife by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/453>
+* FP10 heavily inspired by the Draghi report on the future of European … by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/454>
+* version bump by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/455>
+* typo fixed by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/456>
+* Scandinavian academic excellence by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/457>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/458>
+* AU Funding Tools by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/459>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/460>
+* Tech Lead by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/461>
+* independent developer by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/462>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/464>
+* prepend: "<https://bsky.app/profile/>" by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/465>
+* Update my-description.liquid by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/466>
+* _posts/2019-06-27-building-ageguess-drupal-citizen-science.md by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/467>
+* _includes/my-description.liquid by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/468>
+* bluesky: jv-conseil.dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/469>
+* _posts/2024-06-18-building-ageguess-drupal-citizen-science.md by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/470>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/471>
+* pictures _posts/2024-06-18-building-ageguess-drupal-citizen-science.md by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/475>
+* ../assets/posts/*.webp by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/476>
+* assets/posts/2026-10-27-funding-apps-danish-universities-7-years-coll… by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/477>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/479>
+* Update AGENTS.md by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/480>
+* AGENTS.md must remain in the exclude list of both _config.yml and_co… by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/482>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/483>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/485>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/487>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/489>
+* PageSpeed Insights: preconnect Google Fonts origins and disambiguate tag link labels by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/490>
+* Vibe/pagespeed mobile 3fc66a by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/492>
+* Dev by @JV-conseil in <https://github.com/JV-conseil-Internet-Consulting/www/pull/493>
+* perf: apply PageSpeed Insights recommendations to the AgeGuess post by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/495>
+* perf: modulepreload ES bundle (LCP render delay) + lazy navbar height (PSI mobile) by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/497>
+* perf: implement PageSpeed Insights homepage recommendations (LCP preload, image dimensions, heading order) by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/499>
+* perf: follow up PageSpeed Insights recommendations (responsive word cloud, badge dimensions) by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/501>
+* perf(cls): pin pre-upgrade sidebar overlay to remove mobile CLS by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/503>
+* perf(lcp): sync-decode the cover LCP image, preconnect badge origins by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/505>
+* perf(cls): pin the pre-upgrade cover overlay on desktop viewports by @JV-devops in <https://github.com/JV-conseil-Internet-Consulting/www/pull/507>
+
+**Full Changelog**: <https://github.com/JV-conseil-Internet-Consulting/www/compare/9.1.8...9.1.9>
+
 ## v9.1.7
 
 Mar 30 2023
