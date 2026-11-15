@@ -75,7 +75,7 @@ _jvcl_::github_pages() {
 }
 
 _jvcl_::flush_jekyll_cache() {
-  rm -vrf "./_site" "./.jekyll-cache"
+  rm -rf "./_site" "./.jekyll-cache"
 }
 
 # shellcheck disable=SC2317
