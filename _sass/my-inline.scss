@@ -24,3 +24,26 @@
     min-height: 100vh;
   }
 }
+
+// Desktop cover pages: the same guard at and above `$break-point-3`
+// (PageSpeed Insights 2026-11-15, desktop report ky17vj5r3d, CLS 0.405).
+// Pre-upgrade the critical CSS keeps `hy-drawer.cover` in flow
+// (`position:relative; width:100%`), so on cover pages `#_main.content`
+// starts below the 100vh cover; when the component lifts the sidebar into
+// its fixed shadow panel, main jumps to the document top. The drawer starts
+// `opened` on cover pages, so the upgraded panel is a full-viewport overlay
+// with the sticky content centered -- exactly what pinning the sidebar as a
+// fixed overlay reproduces. `#_main.content` already carries its desktop
+// margin-left (24rem at 64em, 25rem at 86em) in the inline critical CSS, so
+// no horizontal correction is needed. Non-cover desktop pages are untouched:
+// their drawer host is already `position:fixed` in the critical CSS
+// pre-upgrade, and the no-JS fallback keeps the in-flow cover.
+@media screen and (min-width: $break-point-3) {
+  html.js hy-drawer.cover:not(.loaded) .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+}

@@ -1,12 +1,12 @@
 <!-- @prettify-ignore -->
-<!--[if gt IE 10]><!---->
+<!-- [if gt IE 10]><!-- -->
 {% if site.kramdown.math_engine == 'mathjax' %}
-<script>
-  // Load MathJax only when the current page actually contains math markup.
-  // The kramdown mathjax engine renders formulas as <script type="math/tex"> elements.
-  // Pages without formulas save ~168 KiB of JavaScript (PageSpeed Insights:
-  // "Reduce unused JavaScript", "Avoid long main-thread tasks").
-  (function () {
+  <script>
+      // Load MathJax only when the current page actually contains math markup.
+      // The kramdown mathjax engine renders formulas as <script type="math/tex"> elements.
+      // Pages without formulas save ~168 KiB of JavaScript (PageSpeed Insights:
+      // "Reduce unused JavaScript", "Avoid long main-thread tasks").
+      (function () {
     var injected = false;
     var each = function (els, fn) { for (var i = 0; i < els.length; i++) fn(els[i]); };
     var typeset = function (root) {
@@ -39,18 +39,25 @@
       });
     }
     window._deepdiveLoadMathJax(document);
-  })();
-</script>
+      })();
+  </script>
 {% endif %}
-<script nomodule>{% include scripts/nomodule.min.js %}</script>
-<script src="{{ '/assets/js/deepdive-9.1.7.min.js' | relative_url }}" type="module"></script>
-<script src="{{ '/assets/js/legacy/deepdive-9.1.7.min.js' | relative_url }}" nomodule defer></script>
+<script nomodule>
+  {% include scripts/nomodule.min.js %}
+</script>
+<script src="{{ '/assets/js/deepdive-9.1.9.min.js' | relative_url }}" type="module"></script>
+<script
+  src="{{ '/assets/js/legacy/deepdive-9.1.9.min.js' | relative_url }}"
+  nomodule
+  defer></script>
 <!-- jQuery & jquery-migrate removed: custom.js no longer depends on jQuery
-     (PageSpeed Insights: "Reduce unused JavaScript", ~20 KiB of unused jQuery).
-     purify.min.js is deferred; custom.min.js only touches window.DOMPurify at
-     click time, after deferred scripts have executed. -->
+  (PageSpeed Insights: "Reduce unused JavaScript", ~20 KiB of unused jQuery).
+  purify.min.js is deferred; custom.min.js only touches window.DOMPurify at
+  click time, after deferred scripts have executed. -->
 <script src="/assets/vendor/purify.min.js" defer></script>
-<script>{% include scripts/custom.min.js %}</script>
+<script>
+  {% include scripts/custom.min.js %}
+</script>
 {% include my-scripts.liquid %}
 {% include body/analytics.liquid %}
 {% include body/analytics_gdpr_compliant.liquid %}
@@ -68,4 +75,4 @@
     /*{% endif %}*/
   }
 </script>
-<!--<![endif]-->
+<!-- <![endif] -->
