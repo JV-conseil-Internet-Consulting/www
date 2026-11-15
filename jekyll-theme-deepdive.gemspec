@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-deepdive"
-  spec.version       = "9.1.7"
+  spec.version       = "9.1.9"
   spec.authors       = ["JV conseil"]
   spec.email         = ["contact@jv-conseil.dev"]
 

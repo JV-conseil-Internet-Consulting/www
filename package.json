@@ -92,5 +92,5 @@
     "watch:css": "yarn run build:css && onchange '_sass/**/*.scss' -e '_sass/**/__*/*' -- yarn run build:css '{{changed}}'",
     "watch:js": "webpack --watch --mode development --progress --color"
   },
-  "version": "9.1.7"
+  "version": "9.1.9"
 }

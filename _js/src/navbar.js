@@ -28,7 +28,7 @@ import { hasCSSOM, getScrollTop, stylesheetReady, filterWhen } from './common';
 
   // FIXME: update when size changes
   // PageSpeed Insights (mobile report, 2026-11-15) flags a 50 ms forced reflow at
-  // navbar-deepdive-9.1.7.min.js:1:669: measuring `clientHeight` during startup forces a
+  // navbar-deepdive-9.1.9.min.js:1:669: measuring `clientHeight` during startup forces a
   // synchronous layout while the drawer/push-state upgrades are still invalidating styles.
   // The height is only needed once the navbar reacts to scrolling or focus, so measure it
   // lazily on first use, after the initial layout has settled.
