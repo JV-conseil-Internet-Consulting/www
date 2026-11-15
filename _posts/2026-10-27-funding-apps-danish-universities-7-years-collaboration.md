@@ -4,8 +4,8 @@ title: "7 Years Building Funding Apps for Danish Universities"
 image:
   path: /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.webp
   srcset:
-    - [900w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-900.webp]
-    - [1408w, /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.webp]
+    900w: /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-900.webp
+    1408w: /assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration.webp
   alt: "Map of Denmark locating the Funding Apps platforms of SDU, DTU, Aarhus University, Aalborg University, and Copenhagen Business School."
 description: >
   How an independent French senior full-stack developer spent seven years building AI-powered research funding tools for Danish universities
