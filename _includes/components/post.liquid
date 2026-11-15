@@ -68,7 +68,22 @@
             tabindex="-1">
           {% endunless %}
           <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
-            {% include_cached components/hy-img.liquid img=post.image alt=post.title width=864 height=486 eager=include.eager %}
+            {% comment %}
+              Explicit `sizes` so that srcset selection matches the rendered width of the
+              content column instead of the 100vw default, which makes wide viewports
+              download the largest variant. Keep in sync with the LCP preload emitted by
+              my-head.liquid (imagesizes): both must resolve to the same srcset candidate
+              or the hero image is downloaded twice.
+            {% endcomment %}
+            {% assign hy_vars = site.data.variables %}
+            {% capture hy_hero_sizes %}
+              (min-width: {{ hy_vars.break_point_5 | default: 86 }}em) {{ hy_vars.content_width_5 | default: 54 | plus: 2 }}rem,
+              (min-width: {{ hy_vars.break_point_2 | default: 54 }}em) {{ hy_vars.content_width_2 | default: 48 | plus: 2 }}rem,
+              (min-width: {{ hy_vars.break_point_1 | default: 42 }}em) {{ hy_vars.content_width | default: 42 | plus: 2 }}rem,
+              100vw
+            {% endcapture %}
+            {% assign hy_hero_sizes = hy_hero_sizes | strip_newlines %}
+            {% include_cached components/hy-img.liquid img=post.image alt=post.title sizes=hy_hero_sizes width=864 height=486 eager=include.eager %}
           </div>
           {% unless no_link_title %}
           </a>
