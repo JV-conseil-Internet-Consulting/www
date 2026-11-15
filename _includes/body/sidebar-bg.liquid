@@ -47,6 +47,11 @@
   is therefore eager with `fetchpriority="high"` (and preloaded in
   _includes/my-head.liquid); on regular pages it stays lazy: the drawer is
   below the fold and closed, so lazy-loading remains correct there.
+  On cover pages it also decodes synchronously (decoding="sync"): the report
+  of 2026-11-15 (9orl0p42um) measured a 2,000 ms LCP element render delay
+  because async decoding defers the image's first paint until the main
+  thread idles after the drawer JavaScript settles; regular pages keep
+  decoding="async".
   -->
 {% endcomment %}
 <div class="{{ bg_class }}" style="{{ bg_style }}">
@@ -59,7 +64,7 @@
       {% endif %}
       alt=""
       loading="{% if cover %}eager{% else %}lazy{% endif %}"
-      decoding="async"
+      decoding="{% if cover %}sync{% else %}async{% endif %}"
       {% if cover %}
       fetchpriority="high"
       {% endif %}>{% endif %}

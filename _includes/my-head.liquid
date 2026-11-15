@@ -2,6 +2,20 @@
 
 {% comment %}
   <!--
+  Preconnect to the third-party origins of the badge widgets (WakaTime
+  activity SVG, shields.io badges). PageSpeed Insights (report of
+  2026-11-15, 9orl0p42um) lists both as preconnect candidates: the DNS +
+  TCP + TLS handshake happens during the otherwise idle time while the
+  first-party resources load, removing connection setup from the first
+  render of those images. Keep the number of preconnect hints at four or
+  fewer.
+  -->
+{% endcomment %}
+<link rel="preconnect" href="https://img.shields.io">
+<link rel="preconnect" href="https://wakatime.com">
+
+{% comment %}
+  <!--
   Preload the post's lead image to improve the Largest Contentful Paint (LCP).
   The image is rendered above the fold by _includes/components/post.liquid.
   Pages without hide_image are preloaded, with imagesrcset/imagesizes matching
