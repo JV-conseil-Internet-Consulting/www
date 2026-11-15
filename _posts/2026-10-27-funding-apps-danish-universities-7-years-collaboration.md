@@ -46,9 +46,9 @@ For the past seven years, I have worked hand-in-hand with the research support d
 
 This is the story of the **[Funding Apps][SDU Funding Apps]** suite: a piece of software craftsmanship, built specifically for Scandinavian academic excellence.
 
-<!-- space --> 
+<!-- space --> 
 
-![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy"}
+![SDU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-sdu.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 The [Funding Apps][SDU Funding Apps] were first deployed at the [University of Southern Denmark][SDU] (SDU) in 2019.
 {:.figcaption}
@@ -63,7 +63,7 @@ The initial challenge was ambitious: how could we help busy researchers instantl
 
 By combining a highly resilient infrastructure with Natural Language Processing ([NLP][NLP]) pipelines, we built a suite of tailored, AI-powered research funding micro-applications. The platform's success at [SDU][SDU] quickly caught the attention of other major institutions across the country, leading to a nationwide expansion.
 
-<!-- space --> 
+<!-- space --> 
 
 | Since | Platform                                           | Institution                                  |
 | :---- | :------------------------------------------------- | -------------------------------------------- |
@@ -74,9 +74,9 @@ By combining a highly resilient infrastructure with Natural Language Processing 
 | 2026  | [CBS Funding Tools](https://funding-tools.cbs.dk/) | [Copenhagen Business School][CBS] (CBS)      |
 {:.stretch-table}
 
-<!-- space --> 
+<!-- space --> 
 
-![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp){:.lead loading="lazy"}
+![AAU EU Funding Apps](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aalborg.webp){:.lead loading="lazy" width="1200" height="1200"}
 
 [Aalborg University][AAU] (AAU) was the second Danish university to adopt the [AAU EU Funding Apps](https://eu-funding.aau.dk/) in 2022.
 {:.figcaption}
@@ -122,7 +122,7 @@ Rather than relying on static mailing lists or manual searches, the apps were bu
 
 The engineering challenge was never fetching these sources individually — it was reconciling them: resolving identities across systems, normalizing taxonomies that were never designed to meet, and maintaining one coherent graph that the [NLP][NLP] layer could reason over, night after night.
 
-<!-- space --> 
+<!-- space --> 
 
 ![AU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-aarhus.webp){:.lead loading="lazy"}
 
@@ -135,7 +135,7 @@ People often assume "full-stack" is a marketing label. The [Funding Apps][SDU Fu
 
 ### Back End Engineering
 
-The server side is anchored on a mature [Django](https://www.djangoproject.com/start/overview/) application, with scheduled batch jobs orchestrated nightly, enterprise-grade authentication wired into the universities' Microsoft identity stack, and secrets and storage delegated to [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview) and Azure blob services. Reliability engineering — caching, memoization, error resilience — is woven through every layer, because grant deadlines do not tolerate downtime.
+The server side is anchored on a mature [Django web framework](https://www.djangoproject.com/start/overview/) application, with scheduled batch jobs orchestrated nightly, enterprise-grade authentication wired into the universities' Microsoft identity stack, and secrets and storage delegated to [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview) and Azure blob services. Reliability engineering — caching, memoization, error resilience — is woven through every layer, because grant deadlines do not tolerate downtime.
 
 ### Database Engineering
 
@@ -153,12 +153,12 @@ Raw funding data arrives in every conceivable condition: HTML pages, PDF documen
 
 Finally, the intelligent layer that ties it all together: [NLP][NLP] and machine-learning libraries that tokenize, lemmatize, and vectorize publication abstracts and call texts, then use semantic similarity and fuzzy matching to connect the right researcher with the right opportunity. This is the engine behind EU Call Finder, EU Projects, EU Partners, and EU Evaluators.
 
-<!-- space --> 
+<!-- space --> 
 
 Five disciplines. One developer. That is the bar this project has set — and maintained — for seven years of continuous releases.
 {:.lead}
 
-<!-- space --> 
+<!-- space --> 
 
 ![DTU Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-dtu.webp){:.lead loading="lazy"}
 
@@ -197,7 +197,7 @@ Software alone does not make an ecosystem; its users do. Users from all five uni
 
 Caring for this community became yet another informal métier on the project — one part community management, one part product communication, and one part incident response — and a direct, human link between the people who build the tools and the thousands of researchers who use them every day.
 
-<!-- space --> 
+<!-- space --> 
 
 ![CBS Funding Tools](../assets/posts/2026-10-27-funding-apps-danish-universities-7-years-collaboration-cbs.webp){:.lead loading="lazy"}
 
@@ -246,7 +246,7 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 [Draghi]: https://commission.europa.eu/topics/competitiveness/draghi-report_en "The future of European competitiveness — Report by Mario Draghi (September 2024)"
 [DTU]: https://www.dtu.dk/english/about "About DTU – Technical University of Denmark"
 [FP10]: https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI%282025%29779234 "Horizon Europe 2028–2034: 10th EU research and innovation framework programme"
-[Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
+[Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union's primary funding programme for research and innovation for the period 2021–2027"
 [Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' LinkedIn Profile"
 [MVP]: https://en.wikipedia.org/wiki/Minimum_viable_product "Minimum Viable Product"
 [NLP]: https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"

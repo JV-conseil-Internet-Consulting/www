@@ -2,12 +2,12 @@
   font-family: 'icomoon';
   src: url('fonts/icomoon.eot?uz4ub1');
   src: url('fonts/icomoon.eot?uz4ub1#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?uz4ub1') format('truetype'),
     url('fonts/icomoon.woff?uz4ub1') format('woff'),
+    url('fonts/icomoon.ttf?uz4ub1') format('truetype'),
     url('fonts/icomoon.svg?uz4ub1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 [class^="icon-"],
