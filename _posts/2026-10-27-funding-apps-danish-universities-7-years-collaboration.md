@@ -248,7 +248,7 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 [DTU]: https://www.dtu.dk/english/about "About DTU – Technical University of Denmark"
 [FP10]: https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI%282025%29779234 "Horizon Europe 2028–2034: 10th EU research and innovation framework programme"
 [Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
-[Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' Link
+[Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' LinkedIn Profile"
 [MVP]: https://en.wikipedia.org/wiki/Minimum_viable_product "Minimum Viable Product"
 [NLP]: https://en.wikipedia.org/wiki/Natural_language_processing "Natural Language Processing"
 [Odense]: https://en.wikipedia.org/wiki/Odense "Odense is the third largest city in Denmark"
@@ -256,4 +256,3 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 [PoC]: https://en.wikipedia.org/wiki/Proof_of_concept "Proof of Concept"
 [SDU Funding Apps]: https://funding-apps.sdu.dk/ "SDU Funding Apps"
 [SDU]: https://www.sdu.dk/en/om-sdu "University of Southern Denmark (SDU)"
-edIn Profile"
