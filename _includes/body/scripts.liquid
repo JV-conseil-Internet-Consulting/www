@@ -1,5 +1,47 @@
 <!-- @prettify-ignore -->
 <!--[if gt IE 10]><!---->
+{% if site.kramdown.math_engine == 'mathjax' %}
+<script>
+  // Load MathJax only when the current page actually contains math markup.
+  // The kramdown mathjax engine renders formulas as <script type="math/tex"> elements.
+  // Pages without formulas save ~168 KiB of JavaScript (PageSpeed Insights:
+  // "Reduce unused JavaScript", "Avoid long main-thread tasks").
+  (function () {
+    var injected = false;
+    var each = function (els, fn) { for (var i = 0; i < els.length; i++) fn(els[i]); };
+    var typeset = function (root) {
+      if (!root || !window.MathJax || !MathJax.typesetPromise) return;
+      each(root.querySelectorAll('script[type="math/tex; mode=display"]'), function (el) {
+        el.outerHTML = el.textContent.replace('% <![CDATA[', '\\[').replace('%]]>', '\\]');
+      });
+      each(root.querySelectorAll('script[type="math/tex"]'), function (el) {
+        el.outerHTML = '\\(' + el.textContent + '\\)';
+      });
+      MathJax.typesetPromise();
+    };
+    window._deepdiveLoadMathJax = function (root) {
+      if (injected) return;
+      if (!root || !root.querySelector('script[type="math/tex"], script[type="math/tex; mode=display"]')) return;
+      injected = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.id = '_MathJax';
+      s.src = '{{ '/assets/bower_components/MathJax/es5/tex-mml-chtml.js' | relative_url }}';
+      s.addEventListener('load', function () { typeset(document); });
+      document.head.appendChild(s);
+    };
+    var pushState = document.getElementById('_pushState');
+    if (pushState) {
+      pushState.addEventListener('hy-push-state-load', function (e) {
+        var root = e.detail && e.detail.replaceEls ? e.detail.replaceEls[0] : null;
+        if (root && injected) typeset(root);
+        if (root && !injected) window._deepdiveLoadMathJax(root);
+      });
+    }
+    window._deepdiveLoadMathJax(document);
+  })();
+</script>
+{% endif %}
 <script nomodule>{% include scripts/nomodule.min.js %}</script>
 <script src="{{ '/assets/js/deepdive-9.1.7.min.js' | relative_url }}" type="module"></script>
 <script src="{{ '/assets/js/legacy/deepdive-9.1.7.min.js' | relative_url }}" nomodule defer></script>
