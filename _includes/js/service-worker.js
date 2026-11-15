@@ -42,7 +42,9 @@ const ICON_FONT = "{{ 'assets/icomoon/style.css' | relative_url }}";
 const KATEX_FONT = "{{ 'assets/bower_components/katex/dist/katex.min.css' | relative_url }}";
 
 // {% assign google_fonts = site.google_fonts %}
-// {% if google_fonts %}
+// {% if site.fonts_css %}
+const FONTS_CSS = "{{ site.fonts_css | relative_url }}";
+// {% elsif google_fonts %}
 const GOOGLE_FONTS =
   "{{ site.google_fonts_url | default:'https://fonts.googleapis.com' }}/css?family={{ google_fonts | uri_escape }}&display=swap";
 // {% endif %}
@@ -90,9 +92,6 @@ function matchAll(text, regExp) {
   while ((lastMatch = globalRegExp.exec(text))) matches.push(lastMatch);
   return matches;
 }
-
-// Returns the second element of an iterable (first match in RegExp match array)
-const second = ([, _]) => _;
 
 const toAbsoluteURL = (url) => new URL(url, self.location);
 
@@ -146,11 +145,12 @@ async function getMathJaxFiles() {
   */
 }
 
-async function getGoogleFontsFiles() {
-  const googleFontRes = await fetch(noCache(GOOGLE_FONTS)).catch(warn);
-  if (googleFontRes.ok) {
-    const text = await googleFontRes.text();
-    return [GOOGLE_FONTS, ...matchAll(text, RE_CSS_URL).map(second)];
+async function getFontsFiles() {
+  const fontsCssUrl = typeof FONTS_CSS !== 'undefined' ? FONTS_CSS : GOOGLE_FONTS;
+  const fontsCssRes = await fetch(noCache(fontsCssUrl)).catch(warn);
+  if (fontsCssRes.ok) {
+    const text = await fontsCssRes.text();
+    return [fontsCssUrl, ...matchAll(text, RE_CSS_URL).map(([, u]) => new URL(u, fontsCssUrl).href)];
   }
   return [];
 }
@@ -168,7 +168,7 @@ function addAll(cache, urls) {
 async function cacheShell(cache) {
   const fontFiles = await Promise.all([
     getIconFontFiles(),
-    /*{% if google_fonts %}*/ getGoogleFontsFiles() /*{% endif %}*/,
+    /*{% if site.fonts_css or google_fonts %}*/ getFontsFiles() /*{% endif %}*/,
     /*{% if site.kramdown.math_engine == 'katex' %}*/ getKaTeXFontFiles() /*{% endif %}*/,
     /*{% if site.kramdown.math_engine == 'mathjax' %}*/ getMathJaxFiles() /*{% endif %}*/,
   ]);
@@ -219,7 +219,11 @@ const isSameSite = ({ origin, pathname }) => origin === SITE_URL.origin && pathn
 const isAsset = ({ pathname }) => pathname.startsWith("{{ 'assets' | relative_url }}");
 const hasSWParam = ({ searchParams }) => searchParams.has(SW_CACHE_SEARCH_PARAM);
 const hasNoCacheParam = ({ searchParams }) => searchParams.has(NO_CACHE_SEARCH_PARAM);
+/*{% if site.fonts_css %}*/
+const isGoogleFonts = () => false;
+/*{% else %}*/
 const isGoogleFonts = ({ hostname }) => hostname === 'fonts.googleapis.com' || hostname === 'fonts.gstatic.com';
+/*{% endif %}*/
 
 async function cacheResponse(cacheName, req, res) {
   const cache = await caches.open(cacheName);

@@ -3,7 +3,9 @@
   {{ 'assets/css/deepdive-9.1.7.min.css' | relative_url }}{% endcapture %}
 {% capture icons_url %}
   {{ 'assets/icomoon/style.css' | relative_url }}{% endcapture %}
-{% if google_fonts %}
+{% if site.fonts_css %}
+  {% capture fonts_url %}{{ site.fonts_css | relative_url }}{% endcapture %}
+{% elsif google_fonts %}
   {% capture fonts_url %}
     {{ site.google_fonts_url | default: 'https://fonts.googleapis.com' }}/css?family={{ google_fonts | uri_escape }}&display=swap{% endcapture %}
 {% endif %}
@@ -18,21 +20,28 @@
   as="style"
   href="{{ icons_url }}"
   id="_iconsPreload">
-{% if google_fonts %}<link
+{% if fonts_url %}<link
     rel="preload"
     as="style"
     href="{{ fonts_url }}"
     id="_fontsPreload">{% endif %}
+{% if site.fonts_css %}
+  {% assign fonts_dir = site.fonts_css | replace: 'fonts.css', '' %}
+  {% assign font_files = 'noto-sans-latin-400-normal.woff2,noto-sans-latin-400-italic.woff2,noto-sans-latin-700-normal.woff2,noto-sans-latin-700-italic.woff2,roboto-slab-latin-700-normal.woff2' | split: ',' %}
+  {% for font_file in font_files %}
+<link rel="preload" href="{{ fonts_dir }}{{ font_file }}" as="font" type="font/woff2" crossorigin>
+  {% endfor %}
+{% endif %}
 
 <script>
   setRel('_stylePreload');
   setRel('_iconsPreload');
 
-/*{% if google_fonts %}*/
+/*{% if fonts_url %}*/
   setRel('_fontsPreload'); /*{% endif %}*/
 </script>
 <noscript>
   <link rel="stylesheet" href="{{ style_url }}">
   <link rel="stylesheet" href="{{ icons_url }}">
-  {% if google_fonts %}<link rel="stylesheet" href="{{ fonts_url }}">{% endif %}
+  {% if fonts_url %}<link rel="stylesheet" href="{{ fonts_url }}">{% endif %}
 </noscript>

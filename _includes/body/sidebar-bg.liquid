@@ -5,9 +5,13 @@
 {% if image.background %}
   {% capture bg_style %}background:{{ image.background }}{% endcapture %}
   {% capture bg_class %}sidebar-bg {% if image.overlay %}sidebar-overlay{% endif %}{% endcapture %}
+  {% assign bg_img = nil %}
 {% else %}
   {% assign bg_color = theme_color | default:site.theme_color | default:color %}
-  {% capture bg_style %}background-color:{{ bg_color }};{% if image != 'none' %}background-image:url({% include_cached smart-url url=image %}){% endif %}{% endcapture %}
+  {% capture bg_style %}background-color:{{ bg_color }};{% endcapture %}
   {% capture bg_class %}sidebar-bg {% if image != 'none' %}sidebar-overlay{% endif %}{% endcapture %}
+  {% if image != 'none' %}
+    {%- capture bg_img -%}{% include_cached smart-url url=image %}{%- endcapture -%}
+  {% endif %}
 {% endif %}
-<div class="{{ bg_class }}" style="{{ bg_style }}"></div>
+<div class="{{ bg_class }}" style="{{ bg_style }}">{% if bg_img %}<img class="sidebar-bg-img" src="{{ bg_img }}" alt="" loading="lazy" decoding="async">{% endif %}</div>
