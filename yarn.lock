@@ -2482,8 +2482,6 @@ __metadata:
     eslint: "npm:^10.15.0"
     eslint-config-prettier: "npm:^10.1.8"
     intersection-observer: "npm:^0.12.2"
-    jquery: "npm:^4.0.0"
-    jquery-migrate: "npm:^4.0.2"
     kv-storage-polyfill: "npm:^2.0.0"
     lit: "npm:^3.3.3"
     minisearch: "npm:^7.2.0"
@@ -3250,22 +3248,6 @@ __metadata:
     merge-stream: "npm:^2.0.0"
     supports-color: "npm:^8.0.0"
   checksum: 10c0/8c4737ffd03887b3c6768e4cc3ca0269c0336c1e4b1b120943958ddb035ed2a0fc6acab6dc99631720a3720af4e708ff84fb45382ad1e83c27946adf3623969b
-  languageName: node
-  linkType: hard
-
-"jquery-migrate@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "jquery-migrate@npm:4.0.2"
-  peerDependencies:
-    jquery: ">=4 <5"
-  checksum: 10c0/837f5bfdc1af8292b4f7a79c4dc50be6ecc7adf24260ea39119c1cfa4047391410de8bfc5b1118994ccacf6ddcbd0f2da195d9409abe95581412f3f5b9148d0a
-  languageName: node
-  linkType: hard
-
-"jquery@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "jquery@npm:4.0.0"
-  checksum: 10c0/06d8d0f51121af5a691f8b59c74823157bb5b60eea915b30eaa920d6c0ffd91e60ba81e9b97bd8203f331f9dd8d0ec9a4b010935ea314bdd2f15453c29bc780b
   languageName: node
   linkType: hard
 
