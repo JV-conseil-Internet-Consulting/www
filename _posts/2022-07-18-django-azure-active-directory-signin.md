@@ -4,8 +4,8 @@ title: "Django Azure Active Directory Sign-In 🔑"
 image:
   path: /assets/posts/2022-07-18-django-azure-active-directory-signin.webp
   srcset:
-    640w: /assets/posts/2022-07-18-django-azure-active-directory-signin-640.webp
-    960w: /assets/posts/2022-07-18-django-azure-active-directory-signin-960.webp
+    640w: /assets/posts/2022-07-18-django-azure-active-directory-signin-640x320.webp
+    960w: /assets/posts/2022-07-18-django-azure-active-directory-signin-960x480.webp
     1280w: /assets/posts/2022-07-18-django-azure-active-directory-signin.webp
   alt: "Diagram of a Django web application signing in users through Azure Active Directory with OAuth 2.0 and OpenID Connect."
 description: >
