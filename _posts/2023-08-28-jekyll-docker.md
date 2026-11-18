@@ -1,13 +1,32 @@
 ---
 layout: post
-title: Jekyll Docker
+title: "Jekyll Docker Image: Build and Deploy Jekyll 4 Sites with Docker for CI/CD and GitHub Pages"
 image:
   path: /assets/posts/2023-08-28-jekyll-docker.webp
+  srcset:
+    - [900w, /assets/posts/2023-08-28-jekyll-docker-900.webp]
+    - [1280w, /assets/posts/2023-08-28-jekyll-docker.webp]
+  alt: "Docker whale carrying shipping containers with the Jekyll logo, illustrating the jvconseil/jekyll-docker image used to build and deploy Jekyll 4 static sites."
 description: >
-  Docker image to deploy Jekyll v4.3.3 on GitHub Pages
+  Run Jekyll 4.3.3 in a Docker container for CI/CD and GitHub Pages — builder image, gem caching, rootless Podman, and environment variables like JEKYLL_UID and FORCE_POLLING.
+excerpt: >
+  jvconseil/jekyll-docker is an Alpine-based Docker image that ships Jekyll 4.3.3 with bundler, pre-installed gems and deployment tools (lftp, openssh) ready for CI pipelines. This guide covers the builder, standard and minimal variants, Docker usage on Linux, Windows and rootless Podman, Gemfile dependency resolution, bundle caching with a /usr/local/bundle volume, and the JEKYLL_UID, JEKYLL_GID and FORCE_POLLING environment variables.
 # hide_description: true
-category: projects
-tag: [docker, jekyll, ruby]
+hide_last_modified: true
+category: [projects]
+keywords: [Jekyll, Docker, Docker image, Jekyll Docker, static site generator, CI/CD, GitHub Pages, Alpine Linux, Ruby, Bundler, Gemfile, container, Podman, rootless containers, jekyll build, jekyll serve, deployment automation]
+tags: [docker, jekyll, ruby]
+author: "Julien Vieillefont"
+
+seo:
+  type: TechArticle
+  links:
+    - https://www.jv-conseil.dev/blog/2023-08-28-jekyll-docker/
+  json_ld:
+    dependencies: "Docker, Alpine Linux, Jekyll 4.3.3, Ruby, Bundler, Podman"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT8M"
+    keywords: "Jekyll Docker image, jvconseil/jekyll-docker, Docker container Jekyll 4, run Jekyll in Docker, jekyll build docker, jekyll serve docker port 4000, CI/CD Jekyll build, GitHub Pages Docker deployment, Alpine Linux Ruby gems, bundle install in container, Gemfile.lock Docker, docker volume /usr/local/bundle caching, JEKYLL_UID JEKYLL_GID, FORCE_POLLING jekyll serve, rootless Podman Jekyll, JEKYLL_ROOTLESS, .apk packages Alpine, static site generator Docker, automate Jekyll deployment"
 ---
 
 - &nbsp;

@@ -2,5 +2,6 @@
   "[liquid]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "sissel.shopify-liquid"
-  }
+  },
+  "mistral-vibe-code.openOnStartup": true
 }

@@ -4,7 +4,7 @@ Guidance for AI coding agents (Vibe Code and any agent honoring the AGENTS.md co
 
 ## Project Overview
 
-This repository builds and deploys the personal website and blog of JV conseil at <https://www.jv-conseil.dev>. It is a Jekyll 4 static site that embeds the custom theme `jekyll-theme-deepdive` and is published to GitHub Pages by a GitHub Actions workflow.
+This repository builds and deploys the personal website and blog of JV conseil at [https://www.jv-conseil.dev](https://www.jv-conseil.dev). It is a Jekyll 4 static site that embeds the custom theme `jekyll-theme-deepdive` and is published to GitHub Pages by a GitHub Actions workflow.
 
 The repository is public and its content is published live on the web through GitHub Pages: every file committed to `main` becomes publicly visible, both to developers reading the source and to every visitor of `www.jv-conseil.dev`. Treat every commit as a publication.
 
@@ -13,6 +13,17 @@ Stacks:
 - Ruby / Jekyll 4.4 managed with Bundler (`Gemfile`, `Gemfile.lock`); the pinned interpreter is in `.ruby-version`.
 - JavaScript toolchain managed with Yarn 4 (pinned via `packageManager` in `package.json`): webpack 5, Babel, Bootstrap 5.3 SCSS.
 - Git LFS tracks `*.webp` assets (`.gitattributes`).
+
+## Working Principles
+
+Apply these principles to every task; they reduce common agent mistakes.
+
+1. Fresh information first: never rely on cached knowledge for versions or APIs. Before touching dependencies, Jekyll plugins, Bootstrap, or GitHub Actions, verify the current versions and changelogs (GitHub Marketplace, RubyGems, yarn) — outdated patterns produce broken builds.
+2. Think before coding: state assumptions explicitly; when a request has several interpretations, present them instead of silently picking one; surface simpler alternatives and push back when warranted.
+3. Simplicity first: write the minimum change that solves the request; no speculative features, abstractions, or options that were not asked for.
+4. Surgical changes: touch only what the request requires. Do not "improve" adjacent code, comments, or formatting; match the existing Liquid, SCSS, and JavaScript style; remove only the orphans your own change created; mention unrelated dead code instead of deleting it.
+5. Goal-driven verification: define the success criterion before starting. This repository has no test suite, so the criterion is a clean local build plus visual inspection of the affected pages; verify it before opening a pull request.
+6. Hygiene: no hardcoded credentials or secrets, no new dependencies without justification, no suppressed linter errors, no empty exception handlers, and no commented-out code left behind.
 
 ## Repository Layout
 
@@ -29,6 +40,8 @@ Stacks:
 ## Commands
 
 Ruby / Jekyll:
+
+Always run Ruby/Jekyll commands through Bundler (`bundle exec …`), never bare `jekyll`, `ruby`, or `gem`. The system Ruby may differ from the pinned interpreter in `.ruby-version`, and only `bundle exec` activates the locked gem versions from `Gemfile.lock`.
 
 ```bash
 bundle install                                     # install gems
