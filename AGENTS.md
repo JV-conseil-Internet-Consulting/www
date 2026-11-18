@@ -122,6 +122,13 @@ seo:
     timeRequired: "PT13M"
     keywords: "Grant Management Software, Django Architecture, OpenAlex, NLP, ETL Pipelines, Academic Tech, Funding Apps Danish universities, research funding tools, Horizon Europe grant matching, university research support software, AI grant discovery, freelance full-stack developer, SDU, DTU, Aarhus University, Aalborg University, Copenhagen Business School"
 ---
+
+- &nbsp;
+{:toc .large-only}
+
+<!-- markdownlint-disable MD026 MD033 MD041 -->
+
+_Reading time: xx min._
 ```
 
 Do not publish posts with missing or placeholder SEO fields: every field above is required unless explicitly commented out in the example.
