@@ -1,17 +1,39 @@
 ---
 layout: post
-title: "5 Years Pioneering AI: Our Growth Path To Boost RM"
+title: "5 Years Pioneering AI: Our Growth Path To Boost Research Management (EARMA Odense 2024)"
 image:
   path: /assets/posts/2024-04-25-earma-conference-odense-2024.webp
+  srcset:
+    900w: /assets/posts/2024-04-25-earma-conference-odense-2024-900.webp
+    1600w: /assets/posts/2024-04-25-earma-conference-odense-2024.webp
+  alt: "EARMA Conference 2024 banner — Odense, Denmark, April 23-25, 2024 — with the logo of the European Association of Research Managers and Administrators."
 description: >
-  Adapting the Role of Research Managers in the Era of Artificial Intelligence: Insights from a University customizing and developing in-house AI tools for Research Management since 2018
-category: [science, europe, denmark]
+  How the University of Southern Denmark pioneered in-house AI tools for research management since 2018 — talk at EARMA Conference Odense 2024.
+excerpt: >
+  Since 2018, the University of Southern Denmark (SDU) has been customizing and developing in-house AI tools for research management. Presented as a thirty-minute talk at EARMA Conference Odense 2024, this presentation recounts five years of plugging AI into research support: where AI helps research managers, where its application is limited, and how the profession's skill set must evolve in the AI era.
+hide_last_modified: true
+category: [projects, europe, science, denmark, earma]
+keywords: [Artificial Intelligence, Research Management, EARMA, SDU, University of Southern Denmark, NLP, Large Language Models, Research Support, Horizon Europe, Odense 2024]
+tags: [python, django]
+author: "Julien Vieillefont"
+
+seo:
+  type: ScholarlyArticle
+  links:
+    - https://jv-conseil.dev/blog/2024-04-25-earma-conference-odense-2024/
+  json_ld:
+    dependencies: "Artificial Intelligence, Machine Learning, Natural Language Processing, Large Language Models, Django, Python, Research Management Software"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT2M"
+    keywords: "AI for research management, EARMA Conference Odense 2024, SDU University of Southern Denmark, in-house AI tools, research support, grant identification, proposal drafting, predictive modeling, human-powered AI, research manager skills, NLP, large language models, Horizon Europe"
 ---
 
 - &nbsp;
 {:toc .large-only}
 
 <!-- markdownlint-disable MD026 MD033 MD041 -->
+
+_Reading time: 2 min._
 
 ## Abstract
 

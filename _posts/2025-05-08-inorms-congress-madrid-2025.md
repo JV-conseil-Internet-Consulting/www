@@ -3,15 +3,37 @@ layout: post
 title: "AI And Open Data For Advancing Research Management"
 image:
   path: /assets/posts/2025-05-08-inorms-congress-madrid-2025.webp
+  srcset:
+    900w: /assets/posts/2025-05-08-inorms-congress-madrid-2025-900.webp
+    1280w: /assets/posts/2025-05-08-inorms-congress-madrid-2025.webp
+  alt: "INORMS Congress Madrid 2025 banner hosted by EARMA, with an orange line drawing of the Madrid skyline on a blue sky."
 description: >
-  Leveraging AI techniques and Open Data for designing and advancing research agendas
-category: [science, europe]
+  AI and open data for advancing research management: the Connect by YERUN platform used by 23 European universities, presented at INORMS Congress Madrid 2025.
+excerpt: >
+  Presented at INORMS Congress Madrid 2025, our talk shows how AI, natural language processing, and open research data can help universities find collaborators, identify relevant funding calls, and understand research trends — illustrated with Connect by YERUN, the multi-university collaboration and funding platform we built for the 23 universities of the YERUN network, backed by a database of over 35,000 researchers and close to 1 million publications.
+hide_last_modified: true
+category: [projects, europe, science, earma]
+keywords: [Artificial Intelligence, Open Data, Research Management, NLP, Large Language Models, GDPR, YERUN, INORMS, EARMA, Research Support, Horizon Europe]
+tags: [django]
+author: "Julien Vieillefont"
+
+seo:
+  type: ScholarlyArticle
+  links:
+    - https://jv-conseil.dev/blog/2025-05-08-inorms-congress-madrid-2025/
+  json_ld:
+    dependencies: "Django, NLP, Large Language Models, Open Data, ORCID, Google Scholar, EU Funding & Tenders Portal"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT3M"
+    keywords: "AI and open data for research management, INORMS Congress Madrid 2025, EARMA, Connect by YERUN, YERUN network, NLP, large language models, open data, GDPR, collaborator matching, research funding calls, research trends, university research policy, responsible AI, Horizon Europe, research support"
 ---
 
 - &nbsp;
 {:toc .large-only}
 
 <!-- markdownlint-disable MD026 MD033 MD041 -->
+
+_Reading time: 3 min._
 
 ## Abstract
 
