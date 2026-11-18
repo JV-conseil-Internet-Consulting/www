@@ -1,17 +1,39 @@
 ---
 layout: post
-title: Custom-Made Tools For Data-Driven Research Support
+title: "Custom-Made Tools For Data-Driven Research Support (EARMA Prague 2023)"
 image:
   path: /assets/posts/2023-04-25-earma-conference-prague-2023.webp
+  srcset:
+    900w: /assets/posts/2023-04-25-earma-conference-prague-2023-900.webp
+    1600w: /assets/posts/2023-04-25-earma-conference-prague-2023.webp
+  alt: "EARMA Conference 2023 banner — Prague, Czech Republic — with the logo of the European Association of Research Managers and Administrators."
 description: >
-  Data tools for EU funding applications made by research supporters for research support and researchers
-category: [science, europe]
+  Custom-made data and AI tools built in-house at SDU to help researchers find EU funding calls and partners — poster at EARMA Prague 2023.
+excerpt: >
+  Presented as a poster at EARMA Conference Prague 2023, this abstract describes the suite of custom web applications developed in-house at the University of Southern Denmark (SDU) to help researchers and research managers find the right EU funding calls, get an overview of EU-funded research, and find partners to complement a consortium — and how the tools expanded beyond pre-award support while their impact on SDU's EU funding performance is monitored.
+hide_last_modified: true
+category: [projects, europe, science, denmark, earma]
+keywords: [Data-Driven Research Support, EU Funding, Horizon Europe, Research Management, EARMA, Prague 2023, SDU, University of Southern Denmark, AI Tools, Web Applications, Consortium Building]
+tags: [python, django]
+author: "Julien Vieillefont"
+
+seo:
+  type: ScholarlyArticle
+  links:
+    - https://jv-conseil.dev/blog/2023-04-25-earma-conference-prague-2023/
+  json_ld:
+    dependencies: "Django, Python, PostgreSQL, Artificial Intelligence, NLP, ORCID, EU Funding & Tenders Portal, CORDIS"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT2M"
+    keywords: "custom-made data tools for data-driven research support, EARMA Conference Prague 2023, SDU University of Southern Denmark, EU research funding, Horizon Europe, funding call identification, partner search, consortium building, research support web applications, AI tools for researchers, research managers, pre-award support, in-house tool development, impact assessment"
 ---
 
 - &nbsp;
 {:toc .large-only}
 
 <!-- markdownlint-disable MD026 MD033 MD041 -->
+
+_Reading time: 2 min._
 
 ## Abstract
 

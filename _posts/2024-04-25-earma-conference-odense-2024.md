@@ -12,7 +12,7 @@ description: >
 excerpt: >
   Since 2018, the University of Southern Denmark (SDU) has been customizing and developing in-house AI tools for research management. Presented as a thirty-minute talk at EARMA Conference Odense 2024, this presentation recounts five years of plugging AI into research support: where AI helps research managers, where its application is limited, and how the profession's skill set must evolve in the AI era.
 hide_last_modified: true
-category: [projects, europe, science, denmark]
+category: [projects, europe, science, denmark, earma]
 keywords: [Artificial Intelligence, Research Management, EARMA, SDU, University of Southern Denmark, NLP, Large Language Models, Research Support, Horizon Europe, Odense 2024]
 tags: [python, django]
 author: "Julien Vieillefont"

@@ -12,7 +12,7 @@ description: >
 excerpt: >
   Presented at INORMS Congress Madrid 2025, our talk shows how AI, natural language processing, and open research data can help universities find collaborators, identify relevant funding calls, and understand research trends — illustrated with Connect by YERUN, the multi-university collaboration and funding platform we built for the 23 universities of the YERUN network, backed by a database of over 35,000 researchers and close to 1 million publications.
 hide_last_modified: true
-category: [projects, europe, science]
+category: [projects, europe, science, earma]
 keywords: [Artificial Intelligence, Open Data, Research Management, NLP, Large Language Models, GDPR, YERUN, INORMS, EARMA, Research Support, Horizon Europe]
 tags: [django]
 author: "Julien Vieillefont"

@@ -1,3 +1,5 @@
+# bypass_tool_permissions = true
+
 [tools.bash]
 permission = "always"
 
