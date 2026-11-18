@@ -17,7 +17,6 @@ selected_posts:
 ---
 
 {% include_cached my-description.liquid %}
-{% include_cached my-github-stats-card.liquid %}
 
 📈 **With over two decades of experience** in the tech industry, I am a seasoned Full Stack Developer, Web App Architect, and DevOps Specialist based in the Greater Paris Metropolitan Region.
 
