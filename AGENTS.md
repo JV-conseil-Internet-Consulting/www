@@ -51,6 +51,10 @@ bundle exec jekyll build                           # production build into _site
 
 The helper script `.bash/osx/jekyll.sh` wraps `jekyll clean`, `jekyll doctor`, and `jekyll serve` with the `_config-dev.yml` configuration (macOS-oriented, branch-aware).
 
+Python:
+
+Never run `pip install` (or `pip3 install`) globally — it pollutes the machine-wide Python environment. Always use a local virtual environment (`python3 -m venv .venv && source .venv/bin/activate`) or a project-local install so dependencies stay scoped to the task at hand.
+
 JavaScript / assets (all through Yarn):
 
 ```bash

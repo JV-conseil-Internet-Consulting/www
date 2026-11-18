@@ -1,13 +1,32 @@
 ---
 layout: post
-title: Dkim Php Mail Signature
+title: "DKIM PHP Mail Signature: Sign Your Emails with a Stand-Alone PHP Class Using SHA-256 and a 2048-bit RSA Key"
 image:
   path: /assets/posts/2019-11-17-dkim-php-mail-signature.webp
+  srcset:
+    - [900w, /assets/posts/2019-11-17-dkim-php-mail-signature-900.webp]
+    - [1280w, /assets/posts/2019-11-17-dkim-php-mail-signature.webp]
+  alt: "Envelope with a digital signature seal illustrating the dkim-php-mail-signature PHP library that signs outgoing emails with DKIM, SPF and DMARC using a 2048-bit RSA key and SHA-256."
 description: >
-  Stand-alone DKIM class to sign your emails with a 2048 bit private key hashed with SHA-256 algorithm 🔏
+  Stand-alone PHP class to DKIM-sign your emails with a 2048-bit RSA private key and SHA-256 — Composer package, DNS record setup, SPF and DMARC configuration included.
+excerpt: >
+  jv-conseil/dkim-php-mail-signature is a stand-alone PHP library that adds a DKIM-Signature header to your outgoing emails using a 2048-bit RSA private key hashed with SHA-256. Install it via Composer, generate your keys with OpenSSL, publish the public key in your DNS as a TXT record, and pair it with SPF and DMARC to prevent email spoofing.
 hide_description: true
-category: projects
-tag: [php]
+hide_last_modified: true
+category: [projects]
+keywords: [DKIM, PHP, email signature, DKIM-Signature header, RSA 2048, SHA-256, OpenSSL, SPF, DMARC, DNS TXT record, email authentication, anti-spoofing, PHP mail, Composer package, Packagist, email deliverability, selector domainkey]
+tags: [php, security]
+author: "Julien Vieillefont"
+
+seo:
+  type: TechArticle
+  links:
+    - https://www.jv-conseil.dev/blog/2019-11-17-dkim-php-mail-signature.png/
+  json_ld:
+    dependencies: "PHP, Composer, OpenSSL, RSA 2048-bit, SHA-256, DKIM, SPF, DMARC"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT10M"
+    keywords: "DKIM PHP mail signature, sign emails with DKIM PHP, dkim-php-mail-signature Composer, DKIM-Signature header PHP class, 2048-bit RSA key SHA-256 DKIM, openssl genrsa DKIM private key, DKIM DNS TXT record selector._domainkey, SPF DMARC configuration, prevent email spoofing PHP, PHP mail() DKIM signing, email authentication PHP library, Packagist jv-conseil dkim, email deliverability DKIM, PHP DKIMmail class, standalone DKIM signer without framework"
 ---
 
 - &nbsp;
