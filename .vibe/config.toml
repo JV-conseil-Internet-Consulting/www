@@ -1,0 +1,5 @@
+[tools.bash]
+permission = "always"
+
+[tools.edit]
+permission = "always"

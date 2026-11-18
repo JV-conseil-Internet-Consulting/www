@@ -39,6 +39,10 @@ Apply these principles to every task; they reduce common agent mistakes.
 
 ## Commands
 
+System packages (macOS):
+
+When a system package or CLI tool is needed (for example `cwebp` from the `webp` formula, or `git-lfs`), install it with Homebrew first (`brew install …`) — never download binaries manually or install packages outside Homebrew. Language-specific dependencies stay scoped to the project toolchain below (Bundler, Yarn, a local Python venv); never install them globally.
+
 Ruby / Jekyll:
 
 Always run Ruby/Jekyll commands through Bundler (`bundle exec …`), never bare `jekyll`, `ruby`, or `gem`. The system Ruby may differ from the pinned interpreter in `.ruby-version`, and only `bundle exec` activates the locked gem versions from `Gemfile.lock`.
