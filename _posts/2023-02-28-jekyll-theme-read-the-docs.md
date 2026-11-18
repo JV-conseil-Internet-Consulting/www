@@ -5,7 +5,6 @@ image:
   path: /assets/posts/2023-02-28-jekyll-theme-read-the-docs.webp
 description: >
   Read the Docs 📖 like Jekyll Theme for GitHub Pages
-hide_description: true
 category: projects
 tag: [jekyll]
 ---
