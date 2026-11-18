@@ -87,7 +87,7 @@ Every post must be SEO optimized. Scaffold the file with `bundle exec jekyll pos
 - `image` — hero picture with `path`, responsive `srcset` variants (a 900w variant and the full-width original, both under `assets/posts/`, produced with `cwebp` under Git LFS), and meaningful `alt` text for accessibility and image search.
 - `description` — the meta description served by `jekyll-seo-tag` (about 150 characters).
 - `excerpt` — one-paragraph summary shown on listing pages.
-- `category`, `tags`, `keywords` — lowercase taxonomies consistent with `_featured_categories/` and `_featured_tags/`; `author` must match an entry in `_data/authors.yml`.
+- `category`, `tags`, `keywords` — lowercase taxonomies consistent with `_featured_categories/` and `_featured_tags/`; `author` must match an entry in `_data/authors.yml`. Every `category` entry must exist as a `_featured_categories/<slug>.md` file and every `tags` entry as a `_featured_tags/<slug>.md` file: when introducing a new term, create that md file first, otherwise its listing page (`/<slug>/`, `/tag-<slug>/`) is never generated and the post is silently dropped from the taxonomy pages.
 - `seo` — structured-data block consumed by `jekyll-seo-tag`: `type` (for example `TechArticle`), canonical `links` to the post URL, and `json_ld` extras (`dependencies`, `proficiencyLevel`, `timeRequired`, `keywords`).
 
 Reference example from an existing post:

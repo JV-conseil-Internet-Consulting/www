@@ -12,7 +12,7 @@ description: >
 excerpt: >
   Behind a simple online game — look at a face, guess an age — lies a Drupal platform that has quietly collected hundreds of thousands of perceived age guesses for ageing research. This is the story of the ten years of freelance development behind AgeGuess.org.
 hide_last_modified: true
-category: [projects, science, drupal]
+category: [projects, science]
 keywords: [Freelance Development, Drupal, Citizen Science, Ageing Research, Perceived Age, Open Data, Open Source]
 tags: [php, drupal, mysql, bootstrap]
 author: "Julien Vieillefont"

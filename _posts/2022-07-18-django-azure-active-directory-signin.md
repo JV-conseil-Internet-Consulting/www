@@ -13,7 +13,7 @@ description: >
 excerpt: >
   django-azure-active-directory-signin wraps the MSAL Python package to sign in users with Azure Active Directory (OAuth 2.0 and OpenID Connect) in Django projects — complete with login, logout and callback views, a customizable authentication backend, a view decorator and site-wide middleware.
 hide_last_modified: true
-category: [projects, cloud, security, azure]
+category: [projects]
 keywords: [Django, Azure Active Directory, Microsoft Entra ID, OAuth 2.0, OpenID Connect, MSAL Python, Single Sign-On, SSO, Azure AD, Django Authentication, Python Web Security, Cloud Identity]
 tags: [python, django, azure, cloud]
 author: "Julien Vieillefont"
