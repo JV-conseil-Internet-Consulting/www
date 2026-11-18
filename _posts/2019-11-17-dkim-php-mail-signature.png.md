@@ -4,8 +4,8 @@ title: "DKIM PHP Mail Signature: Sign Your Emails with a Stand-Alone PHP Class U
 image:
   path: /assets/posts/2019-11-17-dkim-php-mail-signature.webp
   srcset:
-    - [900w, /assets/posts/2019-11-17-dkim-php-mail-signature-900.webp]
-    - [1280w, /assets/posts/2019-11-17-dkim-php-mail-signature.webp]
+    900w: /assets/posts/2019-11-17-dkim-php-mail-signature-900.webp
+    1280w: /assets/posts/2019-11-17-dkim-php-mail-signature.webp
   alt: "Envelope with a digital signature seal illustrating the dkim-php-mail-signature PHP library that signs outgoing emails with DKIM, SPF and DMARC using a 2048-bit RSA key and SHA-256."
 description: >
   Stand-alone PHP class to DKIM-sign your emails with a 2048-bit RSA private key and SHA-256 — Composer package, DNS record setup, SPF and DMARC configuration included.

@@ -4,14 +4,14 @@ title: "GitHubbing on UCloud: Clone and Run Your GitHub Repos in a Danish Resear
 image:
   path: /assets/posts/2023-03-11-githubbing-on-ucloud.webp
   srcset:
-    - [900w, /assets/posts/2023-03-11-githubbing-on-ucloud-900.webp]
-    - [1280w, /assets/posts/2023-03-11-githubbing-on-ucloud.webp]
+    900w: /assets/posts/2023-03-11-githubbing-on-ucloud-900.webp
+    1280w: /assets/posts/2023-03-11-githubbing-on-ucloud.webp
   alt: "Terminal screenshot showing a git clone of the JV-conseil/ucloud repository running on UCloud, the Danish e-infrastructure cloud for research, inside an Ubuntu terminal job."
 description: >
   Start GitHubbing on UCloud with a ready-made Bash skeleton — clone your GitHub repos into a UCloud Terminal Ubuntu job on SDU's Danish research cloud and run main.sh in one command.
 excerpt: >
   UCloud is Denmark's national digital research environment for computing and data management, hosted by the SDU eScience Center. This guide shows how to spin up a Terminal Ubuntu job on UCloud, clone the jv-conseil/ucloud Bash skeleton with git, and start working with your own GitHub repositories inside the cloud — no local setup required.
-hide_description: true
+# hide_description: true
 hide_last_modified: true
 category: [projects, denmark]
 keywords: [UCloud, SDU, University of Southern Denmark, Danish e-infrastructure, DeiC, research cloud, GitHub clone in cloud, Terminal Ubuntu UCloud, bash skeleton, git clone UCloud, cloud computing for researchers, HPC Denmark, digital research environment, cloud.sdu.dk]

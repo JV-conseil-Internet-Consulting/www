@@ -4,8 +4,8 @@ title: "Jekyll Docker Image: Build and Deploy Jekyll 4 Sites with Docker for CI/
 image:
   path: /assets/posts/2023-08-28-jekyll-docker.webp
   srcset:
-    - [900w, /assets/posts/2023-08-28-jekyll-docker-900.webp]
-    - [1280w, /assets/posts/2023-08-28-jekyll-docker.webp]
+    900w: /assets/posts/2023-08-28-jekyll-docker-900.webp
+    1280w: /assets/posts/2023-08-28-jekyll-docker.webp
   alt: "Docker whale carrying shipping containers with the Jekyll logo, illustrating the jvconseil/jekyll-docker image used to build and deploy Jekyll 4 static sites."
 description: >
   Run Jekyll 4.3.3 in a Docker container for CI/CD and GitHub Pages — builder image, gem caching, rootless Podman, and environment variables like JEKYLL_UID and FORCE_POLLING.
