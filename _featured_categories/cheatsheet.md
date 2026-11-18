@@ -10,7 +10,7 @@ slug: cheatsheet
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  Selection of Cheatsheets 🗒️ extracted from [docs.jv-conseil.net](https://docs.jv-conseil.net)
+  Selection of Cheatsheets 🗒️ extracted from [docs.jv-conseil.dev](https://docs.jv-conseil.dev)
 
 # (Optional) You can disable grouping posts by date.
 no_groups: true

@@ -1,17 +1,39 @@
 ---
 layout: post
-title: The AgeGuess database
+title: "The AgeGuess Database: An Open Online Resource on Chronological and Perceived Ages of People Aged 5–100"
 image:
   path: /assets/posts/2019-10-31-nature-scientific-data-ageguess-database.webp
+  srcset:
+    900w: /assets/posts/2019-10-31-nature-scientific-data-ageguess-database-900.webp
+    2687w: /assets/posts/2019-10-31-nature-scientific-data-ageguess-database.webp
+  alt: "Scientific Data open data descriptor cover for the paper 'The AgeGuess database, an open online resource on chronological and perceived ages of people aged 5–100', with Julien Vieillefont listed among the authors."
 description: >
-  An open online resource on chronological and perceived ages of people aged 5–100
-category: science
+  The AgeGuess database (Scientific Data, 2019): 220,000+ open perceived-age guesses and ~4,700 facial photos of people aged 5–100, collected via citizen science.
+excerpt: >
+  Published in Nature Scientific Data in 2019, the AgeGuess database is an open online resource on chronological and perceived ages of people aged 5–100. Collected through the AgeGuess.org citizen science game — where players upload facial photographs and guess the ages of others — it holds around 220,000 perceived age guesses from almost 4,500 citizen scientists in over 120 countries, spanning birth cohorts from 1877 to 2012. Because perceived age is an established biomarker of biological age, the data open research opportunities in ageing science, psychology, forensics, and computer vision.
+hide_last_modified: true
+category: [projects, science]
+keywords: [Citizen Science, Perceived Age, Chronological Age, Biological Age, Ageing Research, Open Data, Facial Age Estimation, AgeGuess, Scientific Data]
+tags: [php, security]
+author: "Julien Vieillefont"
+
+seo:
+  type: ScholarlyArticle
+  links:
+    - https://jv-conseil.dev/blog/2019-10-31-nature-scientific-data-ageguess-database/
+  json_ld:
+    dependencies: "Drupal, PHP, MySQL, Figshare, UK Data Service, CC BY-NC-SA 4.0"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT22M"
+    keywords: "AgeGuess database, citizen science, perceived age, chronological age, biological age, biomarker of ageing, open data, facial age estimation, age guessing, Scientific Data, Nature, GDPR, CNIL, Drupal, PHP, MySQL"
 ---
 
 - &nbsp;
 {:toc .large-only}
 
 <!-- markdownlint-disable MD026 MD033 MD041 -->
+
+_Reading time: 22 min._
 
 ## Abstract
 
