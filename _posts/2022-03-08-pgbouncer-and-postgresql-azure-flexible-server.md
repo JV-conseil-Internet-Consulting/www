@@ -1,12 +1,32 @@
 ---
 layout: post
-title: PgBouncer and PostgreSQL Azure Flexible Server a bumpy road 🛣
+title: "PgBouncer and Azure PostgreSQL Flexible Server: sslv3 alert handshake failure with sslmode=verify-full 🛣"
 image:
   path: /assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.webp
+  srcset:
+    900w: /assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server-900.webp
+    1280w: /assets/posts/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server.webp
+  alt: "Azure Portal server parameters showing pgbouncer.client_tls_sslmode set to verify-full on an Azure Database for PostgreSQL Flexible Server."
 description: >
-  Azure PostgreSQL Flexible Server and PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure
+  pgbouncer.client_tls_sslmode=verify-full on Azure PostgreSQL Flexible Server triggers SSL error sslv3 alert handshake failure — cause and workaround.
+excerpt: >
+  Enabling pgbouncer.client_tls_sslmode=verify-full on Azure Database for PostgreSQL Flexible Server breaks client connections on port 6432 with "SSL error: sslv3 alert handshake failure" (tlsv13 alert certificate required). This post documents the issue, the missing pgbouncer.client_tls_ca_file parameter, and the sslmode=require workaround.
 # hide_description: true
-tag: [azure, cloud, postgresql]
+hide_last_modified: true
+category: [azure, projects, cloud]
+keywords: [PgBouncer, Azure PostgreSQL Flexible Server, Azure Database for PostgreSQL, sslmode=verify-full, sslv3 alert handshake failure, tlsv13 alert certificate required, client_tls_sslmode, client_tls_ca_file, PostgreSQL connection pooling, psql, TLS, SSL certificate, DigiCert Global Root G2]
+tags: [azure, cloud, postgresql]
+author: "Julien Vieillefont"
+
+seo:
+  type: TechArticle
+  links:
+    - https://jv-conseil.dev/blog/2022-03-08-pgbouncer-and-postgresql-azure-flexible-server/
+  json_ld:
+    dependencies: "PostgreSQL 14.6, PgBouncer, Azure Database for PostgreSQL Flexible Server, TLS 1.3, psql (libpq)"
+    proficiencyLevel: "Expert"
+    timeRequired: "PT4M"
+    keywords: "PgBouncer Azure PostgreSQL Flexible Server, sslmode verify-full, sslv3 alert handshake failure, tlsv13 alert certificate required, pgbouncer.client_tls_sslmode, pgbouncer.client_tls_ca_file, PostgreSQL connection pooler, Azure Database for PostgreSQL port 6432, psql sslrootcert PGSSLROOTCERT, DigiCert Global Root G2 certificate, SSL certificate rotation, TLS handshake troubleshooting"
 ---
 
 - &nbsp;
@@ -26,6 +46,8 @@ tag: [azure, cloud, postgresql]
 <img alt="https://img.shields.io/badge/stack-overflow-orange.svg" src="https://img.shields.io/badge/stack-overflow-orange.svg">
 -->
 
+_Reading time: 4 min._
+
 The introduction of [PgBouncer](https://github.com/pgbouncer/pgbouncer), a lightweight connection pooler for PostgreSQL, on [Azure PostgreSQL Flexible Server](https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-pgbouncer#feedback) has been bumpy to say the least 😉
 {:lead}
 
@@ -35,7 +57,9 @@ Here is an excerpt of the [issue](https://github.com/MicrosoftDocs/azure-docs/is
 PgBouncer with sslmode=verify-full triggers SSL error sslv3 alert handshake failure
 {:lead}
 
-Once you have set up in your PostgreSQL flexible server parameters `pgbouncer.client_tls_sslmode` to `verify-full`, saved your changes and restarted your server, you end up with `SSL error: tlsv13 alert certificate required` when you attempt to run a `pqsl` connection command on your server.
+## Symptom: `SSL error: sslv3 alert handshake failure`
+
+Once you have set up in your PostgreSQL flexible server parameters `pgbouncer.client_tls_sslmode` to `verify-full`, saved your changes and restarted your server, you end up with `SSL error: tlsv13 alert certificate required` when you attempt to run a `psql` connection command on your server.
 
 This happens also when setting `pgbouncer.client_tls_sslmode` to `verify-ca`.
 
@@ -44,6 +68,8 @@ According to [documentation](https://docs.microsoft.com/en-us/azure/postgresql/c
 > This new certificate has been added to App Service at platform level. If you are using the SSL certificates included on App Service platform in your application, then no action is needed.
 
 Is `DigiCertGlobalRootG2.crt.pem` certificate only set for `postgresql` server but not for `pgbouncer`?
+
+## Workaround: `sslmode=require`
 
 As a workaround, the only way to successfully connect is by setting `pgbouncer.client_tls_sslmode` to `require`.
 
@@ -67,6 +93,8 @@ psql: error: connection to server at "myPgServer.postgres.database.azure.com" (i
 error: tlsv13 alert certificate required
 ```
 
+## Connection parameters for `sslmode=verify-full`
+
 According to PostgreSQL [documentation](https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-PARAMKEYWORDS) here are the parameters to provide when establishing a `sslmode=verify-full` connection:
 
 - `sslmode`: `verify-full` only try an SSL connection, verify that the server certificate is issued by a trusted CA and that the requested server host name matches that in the certificate.
@@ -79,7 +107,11 @@ According to pgBouncer [documentation](http://www.pgbouncer.org/config.html#tls-
 
 - `client_tls_ca_file`: Root certificate file to validate client certificates.
 
+## The missing `pgbouncer.client_tls_ca_file` parameter
+
 On Azure PostgreSQL flexible server parameters, there is a panel to set `pgbouncer.client_tls_sslmode` to `verify-full`, but there is not a `pgbouncer.client_tls_ca_file` allowing to specify the path to the file containing SSL certificate authority (CA).
+
+## Open questions
 
 The question is « When you activate  `pgbouncer.client_tls_sslmode` to `verify-full` how do you provide the accompanying file containing SSL certificate authority (CA) » ❓
 
