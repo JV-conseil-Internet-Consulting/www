@@ -11,7 +11,6 @@ description: >
   pgbouncer.client_tls_sslmode=verify-full on Azure PostgreSQL Flexible Server triggers SSL error sslv3 alert handshake failure — cause and workaround.
 excerpt: >
   Enabling pgbouncer.client_tls_sslmode=verify-full on Azure Database for PostgreSQL Flexible Server breaks client connections on port 6432 with "SSL error: sslv3 alert handshake failure" (tlsv13 alert certificate required). This post documents the issue, the missing pgbouncer.client_tls_ca_file parameter, and the sslmode=require workaround.
-# hide_description: true
 hide_last_modified: true
 category: [azure, projects, cloud]
 keywords: [PgBouncer, Azure PostgreSQL Flexible Server, Azure Database for PostgreSQL, sslmode=verify-full, sslv3 alert handshake failure, tlsv13 alert certificate required, client_tls_sslmode, client_tls_ca_file, PostgreSQL connection pooling, psql, TLS, SSL certificate, DigiCert Global Root G2]

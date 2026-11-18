@@ -11,7 +11,6 @@ description: >
   How an independent French senior full-stack developer has spent ten years building and maintaining the AgeGuess.org citizen science platform on Drupal, helping researchers assemble one of the world's largest open databases on perceived age.
 excerpt: >
   Behind a simple online game — look at a face, guess an age — lies a Drupal platform that has quietly collected hundreds of thousands of perceived age guesses for ageing research. This is the story of the ten years of freelance development behind AgeGuess.org.
-# hide_description: true
 hide_last_modified: true
 category: [projects, science, drupal]
 keywords: [Freelance Development, Drupal, Citizen Science, Ageing Research, Perceived Age, Open Data, Open Source]

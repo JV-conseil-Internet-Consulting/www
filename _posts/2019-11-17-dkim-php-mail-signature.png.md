@@ -11,7 +11,6 @@ description: >
   Stand-alone PHP class to DKIM-sign your emails with a 2048-bit RSA private key and SHA-256 — Composer package, DNS record setup, SPF and DMARC configuration included.
 excerpt: >
   jv-conseil/dkim-php-mail-signature is a stand-alone PHP library that adds a DKIM-Signature header to your outgoing emails using a 2048-bit RSA private key hashed with SHA-256. Install it via Composer, generate your keys with OpenSSL, publish the public key in your DNS as a TXT record, and pair it with SPF and DMARC to prevent email spoofing.
-hide_description: true
 hide_last_modified: true
 category: [projects]
 keywords: [DKIM, PHP, email signature, DKIM-Signature header, RSA 2048, SHA-256, OpenSSL, SPF, DMARC, DNS TXT record, email authentication, anti-spoofing, PHP mail, Composer package, Packagist, email deliverability, selector domainkey]

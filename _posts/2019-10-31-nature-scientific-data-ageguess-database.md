@@ -5,7 +5,6 @@ image:
   path: /assets/posts/2019-10-31-nature-scientific-data-ageguess-database.webp
 description: >
   An open online resource on chronological and perceived ages of people aged 5–100
-# hide_description: true
 category: science
 ---
 
