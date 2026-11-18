@@ -11,7 +11,6 @@ description: >
   Run Jekyll 4.3.3 in a Docker container for CI/CD and GitHub Pages — builder image, gem caching, rootless Podman, and environment variables like JEKYLL_UID and FORCE_POLLING.
 excerpt: >
   jvconseil/jekyll-docker is an Alpine-based Docker image that ships Jekyll 4.3.3 with bundler, pre-installed gems and deployment tools (lftp, openssh) ready for CI pipelines. This guide covers the builder, standard and minimal variants, Docker usage on Linux, Windows and rootless Podman, Gemfile dependency resolution, bundle caching with a /usr/local/bundle volume, and the JEKYLL_UID, JEKYLL_GID and FORCE_POLLING environment variables.
-# hide_description: true
 hide_last_modified: true
 category: [projects]
 keywords: [Jekyll, Docker, Docker image, Jekyll Docker, static site generator, CI/CD, GitHub Pages, Alpine Linux, Ruby, Bundler, Gemfile, container, Podman, rootless containers, jekyll build, jekyll serve, deployment automation]

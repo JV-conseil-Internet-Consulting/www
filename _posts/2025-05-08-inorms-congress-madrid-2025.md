@@ -5,7 +5,6 @@ image:
   path: /assets/posts/2025-05-08-inorms-congress-madrid-2025.webp
 description: >
   Leveraging AI techniques and Open Data for designing and advancing research agendas
-# hide_description: true
 category: [science, europe]
 ---
 

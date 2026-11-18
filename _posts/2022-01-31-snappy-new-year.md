@@ -5,7 +5,6 @@ image:
   path: /assets/posts/2022-01-31-snappy-new-year.webp
 description: >
   Can Happy New Year 🎇 be a Codable 👨‍💻 Task ⁉️
-# hide_description: true
 hide_image: true
 tag: [python]
 ---

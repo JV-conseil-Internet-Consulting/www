@@ -5,7 +5,6 @@ image:
   path: /assets/posts/2023-05-24-security-policy.webp
 description: >
   How to report a security vulnerability affecting one of our projects
-# hide_description: true
 category: projects
 tag: [security]
 ---

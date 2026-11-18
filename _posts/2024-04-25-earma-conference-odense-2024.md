@@ -5,7 +5,6 @@ image:
   path: /assets/posts/2024-04-25-earma-conference-odense-2024.webp
 description: >
   Adapting the Role of Research Managers in the Era of Artificial Intelligence: Insights from a University customizing and developing in-house AI tools for Research Management since 2018
-# hide_description: true
 category: [science, europe, denmark]
 ---
 

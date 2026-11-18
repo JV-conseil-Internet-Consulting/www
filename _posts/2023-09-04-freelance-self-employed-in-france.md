@@ -5,9 +5,6 @@ image:
   path: /assets/posts/2023-09-04-freelance-self-employed-in-france.webp
 description: >
   Quick Start Guide
-# hide_description: true
-# category: projects
-# tag: [docker, jekyll, ruby]
 ---
 
 - &nbsp;
