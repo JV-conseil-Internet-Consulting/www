@@ -41,6 +41,8 @@ Apply these principles to every task; they reduce common agent mistakes.
 
 Ruby / Jekyll:
 
+Always run Ruby/Jekyll commands through Bundler (`bundle exec …`), never bare `jekyll`, `ruby`, or `gem`. The system Ruby may differ from the pinned interpreter in `.ruby-version`, and only `bundle exec` activates the locked gem versions from `Gemfile.lock`.
+
 ```bash
 bundle install                                     # install gems
 bundle exec jekyll serve --config _config-dev.yml  # local preview on http://localhost:4000
