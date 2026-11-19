@@ -118,7 +118,8 @@ Rather than relying on static mailing lists or manual searches, the apps were bu
 **European datasets** describe what can be funded and by whom:
 
 - [CORDIS][CORDIS], the European Commission's reference portal on EU-funded research projects. Past and present projects, participants, results, and budgets are mined to verify the novelty of a proposed topic and to map potential consortium partners.
-- [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the EU Funding &amp; Tenders Portal. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
+- [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the [EU Funding &amp; Tenders Portal][EU Funding & Tenders Portal]. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
+- [EU WP Drafts][Comitology Register], the draft Work Programmes that the Horizon Europe programme committee tables in the European Commission's comitology register. Collected as soon as they are published there, they let the platforms anticipate upcoming topics, destinations, and deadlines well before the corresponding calls are formally released on the [EU Funding &amp; Tenders Portal][EU Funding & Tenders Portal].
 - The [EU Experts](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/experts) database, where the Commission registers its independent evaluators. Thematic profiles of past reviewers are matched against draft proposals to identify experienced contacts for mock evaluations.
 - [Pivot-RP][Pivot-RP], Clarivate's expert-curated database of global funding opportunities. It widens the horizon well beyond EU programmes: editorially maintained calls from foundations, national agencies, and private funders worldwide are synchronized with the platforms, giving researchers a single point of entry to the global funding landscape.
 
@@ -245,9 +246,11 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 [Azure]: https://azure.microsoft.com/ "Microsoft Azure"
 [CBS]: https://www.cbs.dk/en/about-cbs "About Copenhagen Business School (CBS)"
 [CICD]: https://en.wikipedia.org/wiki/CI/CD "Continuous Integration / Continuous Delivery"
+[Comitology Register]: https://ec.europa.eu/transparency/comitology-register/screen/home?lang=en "European Commission comitology register, where programme committees publish draft Work Programmes and related documents"
 [CORDIS]: https://cordis.europa.eu "Community Research and Development Information Service"
 [Draghi]: https://commission.europa.eu/topics/competitiveness/draghi-report_en "The future of European competitiveness — Report by Mario Draghi (September 2024)"
 [DTU]: https://www.dtu.dk/english/about "About DTU – Technical University of Denmark"
+[EU Funding & Tenders Portal]: https://ec.europa.eu/info/funding-tenders/opportunities/portal/ "The Funding and Tenders Portal is the single entry point (the Single Electronic Data Interchange Area) for applicants, contractors and experts in funding programmes and procurements managed by the European Commission."
 [FP10]: https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI%282025%29779234 "Horizon Europe 2028–2034: 10th EU research and innovation framework programme"
 [Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
 [Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' LinkedIn Profile"

@@ -7,7 +7,7 @@
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 -->
-[![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.dev%2F)](https://www.jv-conseil.dev "jv-conseil.net Health Status")
+[![Health Status](https://img.shields.io/website?down_color=red&down_message=down&label=www&up_color=green&up_message=up&url=https%3A%2F%2Fwww.jv-conseil.dev%2F)](https://www.jv-conseil.dev "jv-conseil.dev Health Status")
 [![Deploy Jekyll v4 to GitHub Pages](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/jekyll-gh-pages.yml)
 [![CodeQL](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml/badge.svg?branch=dev)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/codeql.yml)
 [![Dependabot Updates](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/JV-conseil-Internet-Consulting/www/actions/workflows/dependabot/dependabot-updates)
