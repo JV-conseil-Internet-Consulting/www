@@ -109,16 +109,17 @@ This knowledge had to be internalized down to the finest grain: a module that re
 
 Rather than relying on static mailing lists or manual searches, the apps were built to pull and interconnect siloed datasets, joining the scientific world and the European funding world into a single, coherent data model. Two families of sources feed the platform.
 
-**Scientific datasets** describe who the researchers are and what they publish:
+### Scientific datasets describe who the researchers are and what they publish
 
 - [OpenAlex](https://openalex.org), the open catalog to the global research system. It supplies indexed publications, affiliations, citation graphs, and research concepts, and its fully open [API][API] makes it the backbone for reconstructing each researcher's publication history.
 - [ORCID](https://orcid.org), the persistent digital identifier for researchers. It is the glue for identity resolution: the key that reliably links a PURE profile to the right author records in publication databases, despite homonymous names and career mobility across institutions and countries.
 - [PURE](https://www.elsevier.com/products/pure), the research information management system that each university operates internally. It is the authoritative institutional source for research profiles, activities, and outputs, and the starting point from which every grant match is computed.
 
-**European datasets** describe what can be funded and by whom:
+### European datasets describe what can be funded and by whom
 
 - [CORDIS][CORDIS], the European Commission's reference portal on EU-funded research projects. Past and present projects, participants, results, and budgets are mined to verify the novelty of a proposed topic and to map potential consortium partners.
-- [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the EU Funding &amp; Tenders Portal. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
+- [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the [EU Funding &amp; Tenders Portal][EU Funding & Tenders Portal]. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
+- [EU WP Drafts][Comitology Register], the draft Work Programmes that the Horizon Europe programme committee tables in the European Commission's comitology register. Collected as soon as they are published there, they let the platforms anticipate upcoming topics, destinations, and deadlines well before the corresponding calls are formally released on the [EU Funding &amp; Tenders Portal][EU Funding & Tenders Portal].
 - The [EU Experts](https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/how-to-participate/experts) database, where the Commission registers its independent evaluators. Thematic profiles of past reviewers are matched against draft proposals to identify experienced contacts for mock evaluations.
 - [Pivot-RP][Pivot-RP], Clarivate's expert-curated database of global funding opportunities. It widens the horizon well beyond EU programmes: editorially maintained calls from foundations, national agencies, and private funders worldwide are synchronized with the platforms, giving researchers a single point of entry to the global funding landscape.
 
@@ -245,9 +246,11 @@ Seven years. Five institutions. Countless métiers and working cultures. One dev
 [Azure]: https://azure.microsoft.com/ "Microsoft Azure"
 [CBS]: https://www.cbs.dk/en/about-cbs "About Copenhagen Business School (CBS)"
 [CICD]: https://en.wikipedia.org/wiki/CI/CD "Continuous Integration / Continuous Delivery"
+[Comitology Register]: https://ec.europa.eu/transparency/comitology-register/screen/home?lang=en "European Commission comitology register, where programme committees publish draft Work Programmes and related documents"
 [CORDIS]: https://cordis.europa.eu "Community Research and Development Information Service"
 [Draghi]: https://commission.europa.eu/topics/competitiveness/draghi-report_en "The future of European competitiveness — Report by Mario Draghi (September 2024)"
 [DTU]: https://www.dtu.dk/english/about "About DTU – Technical University of Denmark"
+[EU Funding & Tenders Portal]: https://ec.europa.eu/info/funding-tenders/opportunities/portal/ "The Funding and Tenders Portal is the single entry point (the Single Electronic Data Interchange Area) for applicants, contractors and experts in funding programmes and procurements managed by the European Commission."
 [FP10]: https://www.europarl.europa.eu/thinktank/en/document/EPRS_BRI%282025%29779234 "Horizon Europe 2028–2034: 10th EU research and innovation framework programme"
 [Horizon Europe]: https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en "Horizon Europe is the European Union’s primary funding programme for research and innovation for the period 2021–2027"
 [Maéva]: https://www.linkedin.com/in/maevavignes/ "Maéva Vignes' LinkedIn Profile"
