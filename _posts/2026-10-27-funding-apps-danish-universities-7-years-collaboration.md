@@ -109,13 +109,13 @@ This knowledge had to be internalized down to the finest grain: a module that re
 
 Rather than relying on static mailing lists or manual searches, the apps were built to pull and interconnect siloed datasets, joining the scientific world and the European funding world into a single, coherent data model. Two families of sources feed the platform.
 
-**Scientific datasets** describe who the researchers are and what they publish:
+### Scientific datasets describe who the researchers are and what they publish
 
 - [OpenAlex](https://openalex.org), the open catalog to the global research system. It supplies indexed publications, affiliations, citation graphs, and research concepts, and its fully open [API][API] makes it the backbone for reconstructing each researcher's publication history.
 - [ORCID](https://orcid.org), the persistent digital identifier for researchers. It is the glue for identity resolution: the key that reliably links a PURE profile to the right author records in publication databases, despite homonymous names and career mobility across institutions and countries.
 - [PURE](https://www.elsevier.com/products/pure), the research information management system that each university operates internally. It is the authoritative institutional source for research profiles, activities, and outputs, and the starting point from which every grant match is computed.
 
-**European datasets** describe what can be funded and by whom:
+### European datasets describe what can be funded and by whom
 
 - [CORDIS][CORDIS], the European Commission's reference portal on EU-funded research projects. Past and present projects, participants, results, and budgets are mined to verify the novelty of a proposed topic and to map potential consortium partners.
 - [SEDIA](https://ec.europa.eu/info/funding-tenders/opportunities/portal/), the Single Electronic Data Interchange Area — better known as the [EU Funding &amp; Tenders Portal][EU Funding & Tenders Portal]. It is the single entry point for Commission-managed programmes, and the source monitored in near real time for newly published calls, topics, and deadlines.
