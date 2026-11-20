@@ -29,3 +29,5 @@ _prompts
 webpack.config.*.js
 *.zip
 package-npm.json
+/.scratch-lh
+/.lighthouse/
