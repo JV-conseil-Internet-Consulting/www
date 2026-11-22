@@ -96,4 +96,6 @@ _jvcl_::main() {
   _jvcl_::cp_vendor
 }
 
-_jvcl_::main
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  _jvcl_::main
+fi
