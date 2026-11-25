@@ -41,7 +41,7 @@
     {
       "label": "lighthouse",
       "type": "shell",
-      "command": "npx lighthouse ${input:lighthousePath} --preset=desktop --output-path=./.lighthouse/ --view",
+      "command": "p=\"${input:lighthousePath}\"; npx lighthouse \"${p:-http://localhost:4000/}\" --preset=desktop --output-path=./.lighthouse/ --view",
       "detail": "PageSpeed local test",
       "problemMatcher": []
     },
@@ -59,14 +59,14 @@
       "label": "yarn",
       "command": ".bash/osx/yarn.sh",
       "detail": "Upgrade package.json"
-    },
+    }
   ],
   "inputs": [
     {
       "id": "lighthousePath",
       "type": "promptString",
       "description": "Page path to audit (default: /)",
-      "default": "http://localhost:4000"
+      "default": "http://localhost:4000/"
     }
   ]
 }
