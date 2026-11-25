@@ -17,14 +17,22 @@
     cwebp -resize 900 225 -q 60 nuage-de-mots.png -o nuage-de-mots-900x225.webp
     cwebp -resize 375 94 -q 60 nuage-de-mots.png -o nuage-de-mots-375x94.webp
     (a Git LFS binary) and declared in the srcset below.
+    The 768w candidate matches the rendered width at the 54-86em
+    breakpoints (48rem column), and the 768w/900w variants were
+    recompressed with a size target (report of 2026-11-25 flagged the
+    900w as under-compressed and oversized for its 736x184 display):
+    cwebp -size 18000 -resize 768 192 nuage-de-mots.png -o nuage-de-mots-768x192.webp
+    cwebp -size 22500 -resize 900 225 nuage-de-mots.png -o nuage-de-mots-900x225.webp
     -->
   {% endcomment %}
   <img
     src="/assets/img/nuage-de-mots-1600x400.webp"
-    srcset="/assets/img/nuage-de-mots-375x94.webp 375w, /assets/img/nuage-de-mots-450x113.webp 450w, /assets/img/nuage-de-mots-900x225.webp 900w, /assets/img/nuage-de-mots-1600x400.webp 1600w"
+    srcset="/assets/img/nuage-de-mots-375x94.webp 375w, /assets/img/nuage-de-mots-450x113.webp 450w, /assets/img/nuage-de-mots-768x192.webp 768w, /assets/img/nuage-de-mots-900x225.webp 900w, /assets/img/nuage-de-mots-1600x400.webp 1600w"
     sizes="(min-width: 86em) 54rem, (min-width: 54em) 48rem, (min-width: 42em) 42rem, 100vw"
     width="1600"
     height="400"
+    loading="eager"
+    fetchpriority="high"
     decoding="async"
     style="max-width:100%;height:auto"
     alt="DevOps • Full Stack Developer • Web App Architect • Python 🐍 Django • PostgreSQL 🐘 JavaScript • Node.js • Azure Cloud ☁️ NLP (Natural Language Processing) • ETL Developer (Extract, Transform, Load) • Paris, France 🇫🇷">

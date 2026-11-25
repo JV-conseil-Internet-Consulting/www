@@ -103,6 +103,27 @@
 
 {% comment %}
   <!--
+  Preload the word cloud banner to improve the Largest Contentful Paint (LCP)
+  on the pages that render it (layouts `welcome` and `about`, see
+  _includes/my-description.liquid): on the homepage it is the LCP element.
+  The imagesrcset/imagesizes mirror the rendered <img> exactly (same
+  candidates, same order, same `sizes`) so the preload and the <img>
+  deduplicate into a single download; `href` is the fallback for browsers
+  without `imagesrcset` support and matches the <img> src.
+  -->
+{% endcomment %}
+{% if page.layout == 'welcome' or page.layout == 'about' %}
+  <link
+    rel="preload"
+    as="image"
+    href="{{ '/assets/img/nuage-de-mots-1600x400.webp' | relative_url }}"
+    imagesrcset="{{ '/assets/img/nuage-de-mots-375x94.webp' | relative_url }} 375w, {{ '/assets/img/nuage-de-mots-450x113.webp' | relative_url }} 450w, {{ '/assets/img/nuage-de-mots-768x192.webp' | relative_url }} 768w, {{ '/assets/img/nuage-de-mots-900x225.webp' | relative_url }} 900w, {{ '/assets/img/nuage-de-mots-1600x400.webp' | relative_url }} 1600w"
+    imagesizes="(min-width: 86em) 54rem, (min-width: 54em) 48rem, (min-width: 42em) 42rem, 100vw"
+    fetchpriority="high">
+{% endif %}
+
+{% comment %}
+  <!--
   Using preload so that page rendering doesn't get blocked.
   Fill in href. You may have to adjust as and onload/rel, depending on content.
 
